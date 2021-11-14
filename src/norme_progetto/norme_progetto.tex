@@ -1,0 +1,43 @@
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\begin{document}
+	%RIDEFINIZIONE COMANDI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\renewcommand{\documentName}{\docNameNdP{}}
+	\renewcommand{\documentVersion}{4.0.0}
+	\renewcommand{\documentDate}{2019-02-18}
+	
+	\renewcommand{\documentEditors}{Giulio Piva}
+	\renewcommand{\documentVerifiers}{Simone Dal Pont}
+	\renewcommand{\documentApprovers}{Davide Barasti}
+	
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentAddressee}{\commitNameM, \commitNameS}
+	\renewcommand{\documentSummary}{Il documento raccoglie le norme previste dal gruppo \groupName{} definendone il way of working.}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%PRIMA PAGINA
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{gobble}
+	\pagestyle{empty}
+	\input{../template/source/firstpage}
+	\pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CHANGELOG E INDICI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{contenuto/changelog} \pagebreak
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents \pagebreak
+	\listoftables \pagebreak
+	%\listoffigures \pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CONTENUTO
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagestyle{styleDocPages}
+	\input{contenuto/contenuto.tex}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

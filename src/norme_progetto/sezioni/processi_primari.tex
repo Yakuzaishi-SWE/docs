@@ -1,0 +1,382 @@
+% !TeX encoding = UTF-8
+\section{Processi primari}\label{section:Processi primari}
+I processi primari raccolgono le seguenti categorie di processo, volte a generare un output destinato all'azienda proponente o al gruppo BitCraft, sotto forma di documenti, di valutazioni provenienti da una delle parti e di prodotto software:
+\begin{itemize}
+	\item Processo di acquisizione;
+	\item Processo di fornitura;
+	\item Processo di sviluppo;
+	\item Processo operativo;
+	\item Processo di manutenzione.
+\end{itemize}
+
+\subsection{Processi primari esclusi}
+I processi di acquisizione, manutenzione e il processo operativo non vengono trattati nell'attuale versione del documento per i seguenti motivi:
+\begin{itemize}
+	\item Il processo di acquisizione contiene prevalentemente attività e tasks dell'acquirente. Joint Review e Audit (ovvero le revisioni previste dal calendario di progetto) con proponente e commitenti sono discusse all'interno di questo documento nella sezione \ref{Section:revisioni} \nameref{Section:revisioni};
+	\item Il processo operativo riguarda la messa in uso del prodotto software e il supporto all'utenza che, viste le richieste del proponente \proposerName{}, non risulta essere un vincolo di progetto per \groupName{};
+	\item Il processo di manutenzione viene attivato quando il codice e la documentazione subiscono variazioni, dovute a un bisogno di miglioramento, in seguito al rilascio del software. Tale processo, come in questo caso per \projectName{}, spesso non è a carico del fornitore, pertanto non sono state definite norme in merito. Tuttavia la normativa relativa verrà inserita all'interno di questo documento, qualora ne sorgesse il bisogno.
+\end{itemize}
+\subsection{Processo di fornitura}
+Il processo di fornitura consiste di attività del gruppo \groupName{} volte a svolgere il ruolo di fornitore per il capitolato di nostro interesse.\\
+Tali attività sono le seguenti:
+\begin{itemize}
+	\item Iniziazione;
+	\item Preparazione di una proposta di fornitura;
+	\item Contrattazione;
+	\item Pianificazione;
+	\item Controllo ed esecuzione;
+	\item Revisione e valutazione;
+	\item Consegna e completamento.
+\end{itemize}
+\noindent{}Il processo continua poi con la selezione e l'attuazione di procedure che assicurino la buona riuscita del progetto.\\
+Di seguito vengono riportate le attività che vengono istanziate per questo processo.
+
+\subsubsection{Studio di Fattibilità - Iniziazione}
+L'attività consiste di una valutazione dei requisiti di ogni capitolato proposto che è stata, successivamente alla presa a carico del capitolato C3, approfondita nel documento \docNameVersionAdR{}.\\
+Tale studio dei requisiti è stato raccolto all'interno del documento \docNameVersionSdF{}.\\
+Come conseguenza della suddetta valutazione è stata presa la decisione di accettare o rifiutare le singole proposte di progetto.\\
+Ogni studio dei requisiti ha la seguente struttura:
+\begin{itemize}
+	\item \textbf{Descrizione generale:} breve riassunto del capitolato proposto. Raccoglie in poche righe le tecnologie relative alla proposta di progetto e la destinazione d'uso;
+	\item \textbf{Obiettivo del progetto:} sezione che raccoglie lo scopo e gli ambiti d'uso, assieme a richieste e vincoli imposti;
+	\item \textbf{Tecnologie utilizzate:} principali tecnologie di sviluppo richieste, estratte dal capitolato. Include inoltre vincoli tecnologici imposti dall'acquirente;
+	\item \textbf{Valutazione finale:} raccoglie pro e contro facendo attenzione ai possibili rischi emersi durante la valutazione della complessità in termini tecnici e organizzativi del capitolato. Si conclude con la scelta di accettazione o rifiuto del capitolato.
+\end{itemize}
+
+\subsubsection{Preparazione di una proposta di fornitura}
+Questa attività è stata svolta dal gruppo \groupName{} preparando una lettera di presentazione da allegare ai documenti consegnati in sede di Revisione dei Requisiti. In tale lettera il gruppo si propone come fornitore del plug-in di monitoraggio \projectName{} richiesto dal proponente \proposerName{} nel capitolato C3.
+
+
+\subsubsection{Contrattazione}
+L'attività di Contrattazione prevede la discussione dei termini di sviluppo del progetto sia per quanto concerne l'aspetto economico, sia per quanto riguarda l'aspetto dei requisiti che il prodotto finale deve rispettare. Come base di discussione \groupName{} propone il preventivo all'interno del \docNameVersionPdP{} e la lista dei requisiti esposti all'interno dell'\docNameVersionAdR{}. Il gruppo si impegna ad aggiornare tali valutazioni proposte sulla base del feedback e della discussione con il committente.
+
+\subsubsection{Piano di Progetto - Piano di Qualifica - Pianificazione}\label{paragraph:PdP}
+L'attività di pianificazione prevede: 
+	\begin{itemize}
+		\item La scelta di un modello di sviluppo per il progetto;
+		\item La definizione delle risorse disponibili e del grado di coinvolgimento di committente e proponente;
+		\item La strutturazione di piani di gestione del progetto, dal punto di vista normativo, di pianificazione e di qualifica.
+	\end{itemize}
+\paragraph{Modello di sviluppo}
+Il gruppo ha identificato il modello incrementale come modello di riferimento, come specificato nel documento \docNameVersionPdP{}.
+\paragraph{Risorse disponibili e coinvolgimento di committente e proponente}
+L'impiego di risorse per lo sviluppo del plug-in è fissato con limite minimo di 13.000\euro{} di budget e limite temporale massimo di 105 ore a testa per ciascun membro del gruppo. L'uso di tali risorse è regolato secondo quanto previsto nel documento \docNameVersionPdP{}.\\
+ \groupName{} prevede inoltre di coinvolgere il proponente \proposerName{}  nell'analisi dei requisiti e nello sviluppo del progetto \projectName{} tramite incontri su appuntamento. Il coinvolgimento del committente è invece garantito dalla presenza di revisioni periodiche, come previsto in §\ref{Section:revisioni} \nameref{Section:revisioni}.
+\paragraph{Piani di gestione del progetto}
+Il gruppo \groupName{} ha redatto i documenti \docNameVersionNdP{}, \docNameVersionPdP{}, \docNameVersionPdQ{}, entro i quali vengono definiti i piani di gestione del progetto \projectName{}.\\
+Tali piani rispondono in particolar modo ai seguenti aspetti pianificativi:
+\begin{itemize}
+	\item Struttura organizzativa del progetto con regolamentazione delle responsabilità di ciascuna unità organizzativa, come descritto in §\ref{section:Processi organizzativi} \nameref{section:Processi organizzativi};
+	\item Ambiente di sviluppo comprensivo di ambiente di testing, librerie, strumenti, standard e procedure. Tale aspetto è descritto in §\ref{section:Processi di supporto} \nameref{section:Processi di supporto};
+	\item Strutturazione del lavoro all'interno del ciclo di vita di processi e attività, incluso lo sviluppo del prodotto software, con budget, risorse impiegate e pianificazione associati ai vari compiti previsti. Tale pianificazione è inclusa all'interno del documento \docNameVersionPdP{};
+	\item Gestione delle caratteristiche di qualità del prodotto software \projectName{}. Tale aspetto è affrontato nel documento \docNameVersionPdQ{};
+	\item Garanzia di qualità, aspetto affrontato in §\ref{subsection:qualita} \nameref{subsection:qualita};
+	\item Verifica e validazione, aspetti affrontati in §\ref{subsection:verifica} \nameref{subsection:verifica} e §\ref{subsection:validazione} \nameref{subsection:validazione};
+	\item Coinvolgimento di proponente e committente: ciò riguarda joint review, audit, incontri, verbali, richieste di modifica sui requisiti, implementazione, approvazione e accettazione. Tali aspetti sono affrontati all'interno del documento \docNameVersionNdP{};
+	\item Trattamento dei rischi, affrontato all'interno del documento \docNameVersionPdP{};
+	\item Strumenti di gestione di pianificazione, tracciamento e resoconti. Tali strumenti sono descritti in §\ref{paragraph:strumenti} \nameref{paragraph:strumenti};
+	\item Formazione dei membri del gruppo, affrontata in §\ref{subsection:formazione} \nameref{subsection:formazione}.
+\end{itemize}
+\paragraph{Piano di Progetto}
+Il documento \docNameVersionPdP{} definisce le linee guida per la gestione e la realizzazione del progetto e garantisce il raggiungimento degli obiettivi entro i termini in esso fissati.\\
+Per far sì che il piano redatto rimanga di utilità per il gruppo \groupName{}, si effettueranno su questo variazioni, anche significative, qualora i requisiti cambino o alcuni dei rischi previsti, o imprevisti, si verifichino.\\
+Il \docNameVersionPdP{} si ispira alla struttura dell'approccio plan-driven e consiste delle seguenti parti:
+\begin{itemize}
+	\item \textbf{Introduzione:} descrive in breve obiettivi e limiti imposti che possono influire sulla gestione del progetto;
+	\item  \textbf{Organizzazione del progetto:} descrive l'organizzazione del team \groupName{}, i ruoli e i tempi di rotazione di questi;
+	\item \textbf{Analisi dei rischi:} studio dei rischi relativi al progetto, con valutazioni riguardo alla probabilità che essi diventino reali e le modalità della loro gestione;
+	\item \textbf{Suddivisione del lavoro:} il progetto viene suddiviso in attività e vengono identificate milestone e i prodotti che le attività hanno come output;
+	\item \textbf{Pianificazione:} necessaria per identificare le dipendenze tra le attività che verranno avviate. Limita la quantità di lavoro tra due milestone successive, stima i tempi, assegna i ruoli ai membri del gruppo e definisce i compiti che ciascuno deve svolgere;
+	\item \textbf{Preventivo e consuntivo:} grazie al \docNameVersionPdP{} realizzato è possibile stimare i costi del progetto che vengono presentati al proponente \proposerName{}.\\ 
+	Arrivati alle milestone è possibile riesaminare il lavoro svolto sulla base di tempi e dati organizzativi raccolti. Viene quindi redatto un consuntivo di periodo che aiuta a migliorare le previsioni per la milestone successiva.
+\end{itemize}
+\paragraph{Piano di Qualifica}
+Il documento \docNameVersionPdQ{} raccoglie gli obiettivi delle strategie di verifica e le metriche di qualifica approvate e istanziate dal gruppo e riguarda ogni forma di materiale prodotto e ogni processo che viene eseguito. \\La struttura del \docNameVersionPdQ{} consiste delle seguenti parti:
+\begin{itemize}
+	\item \textbf{Introduzione:} descrive il documento, contestualizzando la necessità di strategie di verifica volte a garantire qualità di processi e prodotto;
+	\item \textbf{Qualità di processo:} definisce gli obiettivi di qualità di processo, contestualizzandoli rispetto allo standard ISO/IEC 15504 e descrive metriche adottate nel loro perseguimento. Tali metriche sono elencate nella sezione \ref{subsection:qualita} \nameref{subsection:qualita} di questo documento e normate nelle sezioni attinenti ai processi ad esse relativi;
+	\item \textbf{Qualità di prodotto:} definisce gli obiettivi di qualità di prodotto, contestualizzandone la scelta rispetto a quelli previsti nello standard ISO/IEC 9126 e descrive metriche adottate nel loro perseguimento. Tali metriche sono elencate nella sezione \ref{subsection:qualita} \nameref{subsection:qualita} di questo documento e normate nelle sezioni attinenti ai processi ad esse relativi;
+	\item \textbf{Resoconto delle attività di verifica:} Al termine delle attività di verifica, organizzate secondo i periodi previsti dal \docNameVersionPdP{}, vengono raccolte in questa appendice i loro esiti e le misurazioni dei test effettuati.
+\end{itemize}
+\paragraph{Norme di Progetto}
+Il documento \docNameVersionNdP{} definisce le linee guida normative che il gruppo si è imposto nello svolgimento del progetto. Tale documento stabilisce il way of working del gruppo ed è strutturato impiegando come modello di riferimento lo standard ISO/IEC 12207:1997.
+\paragraph{Metriche di Pianificazione} Al fine di valutare la qualità dell'attività di pianificazione svolta \groupName{} ha deciso di istanziare delle metriche, da calcolare durante la redazione del consuntivo di periodo. Tali metriche sono:
+\begin{itemize}
+	\item \textbf{Schedule Variance (SV):}\label{metrics:SV} Permette di calcolare l'allineamento delle tempistiche raggiunte alla data corrente rispetto alla pianificazione delle attività prevista. 
+	Rappresenta un indicatore di efficacia importante per il committente. Viene calcolata manualmente in fase di consuntivo di periodo ed è definita nel seguente modo:
+	$$
+	SV[\%]=\frac{BCWP-BCWS}{BCWP} 
+	$$ 	
+	dove:
+	\begin{itemize}
+		\item \textbf{BCWP(Budgeted Cost for Work Performed):} indica il valore delle attività realizzate alla data
+		corrente;
+		\item \textbf{BCWS(Budgeted Cost for Work Scheduled):}  indica il costo pianificato per realizzare le attività
+		di progetto alla data corrente.
+	\end{itemize}
+	Se positivo, lo SV indica che il lavoro viene svolto in anticipo rispetto quanto pianificato, se è negativo indica che il lavoro è in ritardo.
+	
+	\item \textbf{Budget Variance (BV):}\label{metrics:BV} Permette di controllare i costi sostenuti alla data corrente rispetto al budget preventivato. È un indicatore contabile e finanziario. Viene calcolata manualmente in fase di consuntivo di periodo ed è definita nel seguente modo:
+	$$
+	BV[\%]=\frac{BCWS-ACWP}{ACWP} 
+	$$ 
+	dove: 
+	\begin{itemize}
+		\item \textbf{BCWS(Budgeted Cost for Work Scheduled):}  indica il costo pianificato per realizzare le attività di progetto alla data corrente;
+		\item \textbf{ACWP(Actual Cost of Work Performed):} indica il costo effettivamente sostenuto per realizzare le attività di progetto alla data corrente.
+	\end{itemize}
+	Se positivo, il BV indica che il budget sta venendo speso in maniera più lenta di quanto pianificato, se invece è negativo indica che il budget sta venendo speso più velocemente rispetto a quanto pianificato.
+	\item \textbf{Percentuale Ore di Verifica (POV): }\label{metrics:POV} Permette di valutare, ricavando le informazioni dal consuntivo di periodo, se le ore di verifica svolte nel periodo di riferimento siano una percentuale sufficiente rispetto alle ore totali. Viene calcolata manualmente in fase di consuntivo di periodo ed è definita nel seguente modo:
+	$$
+	POV[\%]=\frac{\#ore\_verifica}{\#ore\_totali} 
+	$$ 
+	
+\end{itemize}
+\subsubsection{Controllo ed esecuzione}
+L'attività di esecuzione riguarda il rispetto delle pratiche stabilite nei documenti \docNameVersionPdP{} e \docNameVersionPdQ{} da parte di \groupName{} per quanto riguarda i seguenti aspetti:
+\begin{itemize}
+	\item Monitoraggio dei progressi e del livello della performance tecnica del gruppo;
+	\item Costi;
+	\item Pianificazione;
+	\item Report dello stato di avanzamento del progetto;
+	\item Identificazione, analisi e risoluzione di problematiche.
+\end{itemize}
+Il gruppo si impegna a seguire le norme stabilite in questo documento in merito all'esecuzione del progetto nel corso del processo di sviluppo e a stabilire con il proponente \proposerName{} un rapporto di collaborazione continua nei limiti del tempo e delle risorse disponibili da parte di quest'ultimo.
+
+\subsubsection{Revisione e valutazione}
+Le attività di revisione e valutazione si articolano nello svolgimento dei seguenti compiti:
+\begin{itemize}
+\item Gestione delle attività di revisione del contratto e comunicazione con il proponente secondo quanto descritto in §\ref{section:incontri} \nameref{section:incontri};
+\item Organizzazione di incontri, collaudo, joint review e audit con proponente e committente come definito in §\ref{Section:revisioni} \nameref{Section:revisioni} e in accordo con il calendario di progetto presente al seguente link \href{https://www.math.unipd.it/~tullio/IS-1/2018/Dispense/P01.pdf}{calendario Review};
+\item Esecuzione delle attività di §\ref{subsection:verifica} \nameref{subsection:verifica} e §\ref{subsection:validazione} \nameref{subsection:validazione} al fine di dimostrare il completo soddisfacimento dei requisiti concordati per il prodotto \projectName{};
+\item Rendere disponibili a proponente e committente i risultati di valutazioni, revisioni, audit, test e risoluzioni di problemi nei documenti esterni \docNameVersionPdP{} e \docNameVersionPdQ{};
+\item Attività che garantiscono qualità come definito in §\ref{subsection:qualita} \nameref{subsection:qualita}.
+\end{itemize}
+
+\subsubsection{Consegna e completamento}
+La consegna del prodotto \projectName{} verrà svolta tramite la consegna al committente di un CD, o simile forma di supporto fisico, prima della data di collaudo. Il software del plug-in verrà inoltre caricato su repository pubblico con licenza MIT.
+
+\subsection{Processo di sviluppo}
+Il processo di sviluppo consiste delle attività e dei compiti dello sviluppatore.\\
+Fra di esse si annoverano la realizzazione dell'analisi dei requisiti del prodotto, con successiva progettazione, codifica e testing. Tutto ciò concorre allo sviluppo del software.\\
+Il gruppo \groupName{} in quanto sviluppatore del software \projectName{} si impegna a svolgere i seguenti compiti:
+\begin{itemize}
+	\item Impiego del modello di sviluppo incrementale come riferimento in accordo con quanto previsto nel documento \docNameVersionPdP{};
+	\item Documentazione degli output del processo di sviluppo in conformità con quanto previsto in §\ref{subsection:documentazione} \nameref{subsection:documentazione};
+	\item Gestione degli output del processo di sviluppo secondo quanto previsto in §\ref{subsection:configurazione} \nameref{subsection:configurazione};
+	\item Problemi e non conformità individuate nel prodotto software vengono documentati e risolti come descritto in §\ref{subsection:risoluzione_problemi} \nameref{subsection:risoluzione_problemi};
+	\item Impiego dei processi di supporto come previsto in §\ref{section:Processi di supporto} \nameref{section:Processi di supporto}.
+\end{itemize}
+Per garantire metriche specifiche sul progetto e sul suo avanzamento e per garantire qualità e sicurezza sul prodotto finito, il gruppo \groupName{} intende servirsi della pianificazione, delle norme, delle metriche e degli impegni descritti in \docNameVersionPdP{}, \docNameVersionPdQ{} e nel presente documento.
+
+
+\subsubsection{Analisi dei Requisiti - Analisi dei requisiti del sistema}
+L'attività di analisi dei requisiti è condotta in maniera documentata dagli analisti nel documento \docNameVersionAdR{}. I punti da seguire per descrivere le specifiche sono i seguenti, estratti ed adattati dallo standard ISO 12207:1997:\\
+\begin{itemize}
+	\item \textbf{Funzioni e capacità:} descrivono cosa il prodotto è in grado di fare e le funzioni che può svolgere;
+	\item \textbf{Requisiti dell'utente:} caratteristiche ricavate dal capitolato \projectName{} e dalle comunicazioni avvenuti con il proponente \proposerName{};
+	\item \textbf{Sicurezza di utilizzo e di sistema:} specificano le caratteristiche richieste e attese di sicurezza in senso lato;
+	\item \textbf{Vincoli di progettazione:} restrizioni riguardanti la progettazione del sistema imposte dal proponente o vincoli dovuti a norme del gruppo \groupName{};
+	\item \textbf{Vincoli di qualifica:} restrizioni riguardanti la qualità di sviluppo del sistema imposte dal proponente o vincoli dovuti a norme del gruppo \groupName{}.
+\end{itemize}
+Il gruppo \groupName{} valuta i requisiti di sistema individuati con particolare attenzione ai seguenti criteri:
+\begin{itemize}
+	\item Tracciabilità;
+	\item Coerenza con le richieste del proponente;
+	\item Testabilità;
+	\item Fattibilità architetturale del sistema;
+	\item Attuabilità della messa in uso e manutenzione del prodotto.
+\end{itemize}
+\paragraph{Analisi dei Requisiti}
+Il documento \docNameVersionAdR{} ha lo scopo di garantire la conformità del prodotto rispetto ai vincoli e ai requisiti richiesti dal proponente.\\
+Tale documento ha un insieme di utenti destinatari che variano dal \roleDesigner{} al proponente del progetto.\\
+La diversità di utenti del documento richiedono che si trovi un compromesso tra la chiarezza nell'esporre i requisiti al proponente e al commitente, la precisione nel definire i requisiti al \roleDesigner{} e la necessità di lasciare spazio a possibili evoluzioni future, non compromettendone la leggibilità.\\
+Le parti di cui è formato il documento sono le seguenti:
+\begin{itemize}
+	\item \textbf{Introduzione:} definisce in breve le funzioni del sistema e il suo posizionamento rispetto ad altri sistemi. Descrive inoltre in che ambito e quando nasce il suo bisogno nell'azienda rappresentata da \proposerName{} ed eventuali usi esterni, trattandosi di un prodotto open source;
+	\item \textbf{Casi d'uso:} i casi d'uso vengono definiti in maniera testuale secondo la struttura nella sezione \ref{RappresentazioneUC} al paragrafo \nameref{RappresentazioneUC} e successivamente come modello grafico UML.
+	Dai casi d'uso è possibile ricavare requisiti con livello di dettaglio più alto;
+	\item \textbf{Definizione requisiti:} vengono descritte in maniera non ambigua quali funzionalità sono fornite all'utente del sistema. Quelle che rientrano nella categoria dei requisiti obbligatori hanno valore di vincolo contrattuale per il progetto \projectName{}. I requisiti funzionali e non funzionali espansi con l'aiuto dei casi d'uso e incontri con il proponente vengono poi descritti con ampio livello di dettaglio. I requisiti di sistema contengono abbastanza dettagli da poter essere testati. Rappresentano una soluzione astratta al problema evidenziato dai requisiti utente;
+	\item \textbf{Tracciamento:} ci sono due motivazioni principali per cui il il gruppo \groupName{} svolge tracciamento sui requisiti: in primo luogo i requisiti possono avere legami di dipendenza tra loro ed è quindi necessario tenere traccia di questo, in modo che al variare di un requisito si possa facilmente risalire ai requisiti ad esso collegati per poterne verificarne al bisogno la consistenza. In secondo luogo per assicurarsi che il prodotto rispetti le caratteristiche richieste, serve poter tracciare ogni requisito alla fonte che ne ha determinato la presenza all'interno del documento.
+\end{itemize}
+
+\paragraph{Rappresentazione dei requisiti}
+I requisiti all'interno del documento avranno la seguente struttura:
+\begin{itemize}
+	\item \textbf{Funzione:} viene indicato il compito che la specifica rappresenta; 
+	\item \textbf{Descrizione:} breve e chiara descrizione del requisito;
+	\item \textbf{Inputs:} indica cosa questa funzione richiede in input;
+	\item \textbf{Outputs:} indica cosa questa funzione produca come output;
+	\item \textbf{Azione:} indica ad alto livello le azioni intraprese dal sistema per svolgere la funzione;
+	\item \textbf{Requisiti:} descrive cosa è richiesto a priori dal sistema per portare a termine il compito;
+	\item \textbf{Precondizione:} situazione in cui il sistema deve trovarsi per poter soddisfare il requisito;
+	\item \textbf{Postcondizione:} condizione in cui il sistema si troverà dopo aver soddisfatto il requisito;
+	\item \textbf{Side effects:} effetti collaterali causati dalle azioni intraprese dal sistema per soddisfare il requisito.
+\end{itemize}
+Questa modalità di stesura dei requisiti limita la libertà di descrizione del requisito, la standardizza e permette di ottenere uniformità nelle specifiche.\\
+Durante la stesura è possibile omettere alcuni campi della rappresentazione, qualora non richiesti dal requisito.
+
+
+\paragraph{Classificazione dei requisiti}
+I requisiti sono classificati nel seguente modo:\\\\
+{\centering R[importanza][tipo][ID]
+	
+}
+\begin{itemize}
+	\item \textbf{Importanza:} indica l'importanza del requisito su scala da 1 a 3 con:
+	\begin{itemize}
+		\item \textbf{1:} requisito opzionale;
+		\item \textbf{2:} requisito desiderabile;
+		\item \textbf{3:} requisito obbligatorio.
+	\end{itemize}
+	\item \textbf{Tipo:} indica la categoria di appartenenza del requisito:
+	\begin{itemize}
+		\item \textbf{F:} requisito funzionale. Descrive una funzione fornita all'utente dal sistema;
+		\item \textbf{V:} requisito di vincolo. Descrive limitazioni sulle modalità di realizzazione del sistema;
+		\item \textbf{Q:} requisito di qualità. Requisito non funzionale; descrive i criteri di qualità del sistema.
+	\end{itemize}
+	\item \textbf{ID:} codice univoco, viene assegnato in base all'ordine di definizione dei requisiti utente nel documento. Per i requisiti di sistema invece il codice è gerarchico; la prima parte rappresenta l'ID del requisito utente da cui deriva e la seconda indica l'annidamento raggiunto \es{ID requisito utente: 4, ID requisito di sistema corrispondente: 4.2}. 
+\end{itemize}
+
+\paragraph{Rappresentazione dei casi d'uso}\label{RappresentazioneUC}
+I casi d'uso, anche indicati come use cases o UC, sono una tecnica per identificare requisiti. L'insieme degli use cases rappresenta le possibili interazioni descritte nei requisiti di sistema.\\
+Il gruppo \groupName{} adotta per questi la seguente rappresentazione:
+\begin{itemize}
+	\item \textbf{Titolo:} sintetica indicazione sullo UC rappresentato; 
+	\item \textbf{Descrizione:} viene descritta in breve l'interazione  degli attori con il sistema;
+	\item \textbf{Attori:} vengono elencati i partecipanti all'interazione con il sistema. Gli attori nel processo possono essere umani o altri sistemi;
+	\item \textbf{Precondizioni:} vengono elencate le condizioni del sistema prima dell'interazione descritta nel caso d'uso;
+	\item \textbf{Postcondizioni:} vengono elencate le condizioni del sistema in seguito all'interazione descritta nel caso d'uso;
+	\item \textbf{Scenario principale:} viene descritto nel dettaglio lo scenario che rappresenta l'interazione fra gli attori e il sistema;
+	\item \textbf{Estensioni:} vengono descritti scenari ed esiti alternativi allo scenario principale.
+\end{itemize}
+I casi d'uso sono rappresentati graficamente usando UML 2.x. Per ogni requisito possono essere realizzati numerosi UC, variando il livello di dettaglio. Questo approccio aiuta a far emergere ulteriori requisiti.
+
+\paragraph{Classificazione dei casi d'uso}
+I casi d'uso sono classificati nel seguente modo:\\\\
+{\centering UC[ID]
+	
+}
+\begin{itemize}
+	\item \textbf{ID:} codice univoco incrementale assegnato seguendo l'ordine di definizione. Se lo UC è collegato per livello di dettaglio ad un altro, l'ID si indica in maniera gerarchica \es{se uno UC rappresenta in dettaglio maggiore lo UC con ID x, il suo ID sarà x.y, dove y indica l'annidamento raggiunto, anch'esso definito secondo la regola incrementale}.
+\end{itemize}
+
+\subsubsection{Technology Baseline - Progettazione architetturale di sistema}
+In questa attività viene definita un'architettura ad alto livello, nella quale ciascun componente identificato deve rispondere a requisiti identificati in \docNameVersionAdR{}. Tale architettura viene realizzata nel \textit{Proof of Concept}, ovvero un prototipo eseguibile del sistema. \\In tale prototipo vengono identificate le scelte progettuali ad alto livello che il prodotto finale dovrà presentare, con attenzione principale all'integrazione delle tecnologie adottate. Lo scopo del \textit{PoC} è quello di mettere in evidenza la fattibilità tecnica del progetto e definire una baseline tecnologica sulla quale sia possibile lavorare per lo sviluppo delle funzionalità identificate dai requisiti di sistema.\\
+Il codice del \textit{PoC} è sottoposto a qualifica secondo le caratteristiche qualitative individuate nello standard ISO/IEC 9126 e riportate nel documento \docNameVersionPdQ{}.\\
+Nel corso di questa attività verranno definiti i test di sistema, riportati nel \docNameVersionPdQ{}, che serviranno a valutare il soddisfacimento dei requisiti da parte del prodotto. 
+\paragraph{Struttura dei test di sistema}
+Ogni test di sistema è definito con la seguente codifica:
+\begin{center}
+	\textbf{TS[codice test]}
+\end{center}
+Ciascun test viene inserito in una riga della tabella dei test di sistema in cui sono presenti:
+\begin{itemize}
+	\item  Il codice del test;
+	\item  Il requisito su cui tale test è stato definito;
+	\item  La descrizione dello scopo del test;
+	\item  L’esito della sua implementazione, che può essere successo (S), insuccesso (I), non implementato (N.I.).
+\end{itemize}
+Il gruppo ha presentato il \textit{Proof of Concept} sostenendo un colloquio privato con il committente. La \textit{Technology Baseline} raggiunta e rappresentata dal \textit{PoC} è stata presentata in sede di revisione di progettazione.
+
+\subsubsection{Product Baseline - Progettazione architetturale software}
+L'attività di progettazione architetturale del software viene svolta con il vincolo di poter dimostrare in qualsiasi momento il rispetto dei requisiti di sistema documentati nell'\docNameVersionAdR{}. Il suo scopo è quello di definire l'architettura del software a livello di componenti, con un livello di dettaglio sufficiente ad essere impiegato come riferimento nella successiva attività di codifica.\\
+Si procede con lo sviluppo della \textit{Product Baseline}. In essa viene definita approfonditamente la struttura e le relazioni dei vari componenti del prodotto in relazione ai requisiti obbligatori, basandosi sull'architettura identificata dal \textit{Proof of Concept}.\\
+Viene inoltre sviluppata la prima versione dei manuali \docNameMU{} e \docNameMS{}. Questo materiale viene fornito in ingresso alla revisione di qualifica.\\
+Uno dei compiti all'interno di questa attività è quello di definire test di integrazione fra le componenti del sistema. La struttura di tali test è definita in §\ref{subsubsection:test} \nameref{subsubsection:test}.
+
+\subsubsection{Progettazione di dettaglio} \label{subsubsection:progettazione_dettaglio}
+Il gruppo deve definire un'architettura dettagliata per ciascun componente del software arrivando a descriverlo a livello di unità, con attenzione al fatto che i requisiti del software trovino in essa corrispondenza.\\
+Tale architettura viene documentata all'interno del \docNameVersionMS{}, con l'ausilio di diagrammi, con sufficiente precisione da permettere la codifica senza la necessità di ulteriori informazioni.\\
+Qualora necessario il gruppo modificherà la pianificazione dei test di integrazione software.
+In quanto sviluppatore, \groupName{} presta particolare attenzione che l'architettura di dettaglio progettata rispetti le seguenti caratteristiche:
+\begin{itemize}
+	\item Tracciabilità delle unità rispetto ai requisiti del software;
+	\item Conformità con il design architetturale ad alto livello;
+	\item Coerenza interna fra unità e componenti software;
+	\item Correttezza nella scelta di metodi e standard utilizzati per la progettazione;
+	\item Fattibilità dei test;
+	\item Fattibilità della manutenzione e dell'impiego da parte del programmatore.
+\end{itemize}
+
+\paragraph{Diagrammi UML}
+Il gruppo \groupName{} utilizza tre tipologie di diagrammi UML a supporto dell'attivit\`a di progettazione, seguendo la notazione della versione 2.0:
+\begin{itemize}
+	\item \textbf{Diagrammi delle classi:} definiscono l'architettura delle classi, pertanto struttura, variabili e metodi, e le relazioni presenti fra esse;
+	\item \textbf{Diagrammi di sequenza:} rappresentano la sequenza dettagliata dei passaggi svolti durante l'esecuzione di specifiche porzioni di codice conoscendo le condizioni precise in cui essa viene svolta. Pertanto in questo tipo di diagramma non sono previsti cammini alternativi n\'e possibili scelte;
+	\item \textbf{Diagrammi di attivit\`a:} rappresentano i passaggi da seguire per il completamento di un'attivit\`a ammettendo flussi alternativi nel suo svolgimento.
+\end{itemize}
+
+\paragraph{Obiettivi di qualità della progettazione}
+L'attività di progettazione deve essere svolta dai progettisti con lo scopo di raggiungere gli obiettivi di qualità del prodotto, descritti in §3.4 del documento \docNameVersionPdQ{}. Le caratteristiche principali che deve avere il prodotto sono infatti:
+\begin{itemize}
+	\item Funzionalità;
+	\item Affidabilità;
+	\item Efficienza;
+	\item Usabilità;
+	\item Manutenibilità;
+	\item Portabilità.
+\end{itemize}
+
+\subsubsection{Codifica}
+A seguito dell'attività di progettazione si procede alla codifica dei componenti.
+Per ogni componente oggetto di codifica identificato tramite la \textit{Product Baseline} si sviluppano test di unità, che sono riportati nel \docNameVersionPdQ{}. I test riguardano non solo le unità, ma anche i database impiegati.\\
+L'esito di tali test viene a sua volta documentato nel \docNameVersionPdQ{}.
+
+\paragraph{Strumenti di codifica}
+Per lo sviluppo del codice si è deciso di utilizzare IntelliJ IDEA\footnote{\href{https://www.jetbrains.com/idea/}{IntelliJ IDEA}} come IDE per la scrittura in linguaggio Javascript. Per aver accesso alla funzione di simulazione e gestione di chiamate HTTP si è invece usato WebStorm\footnote{\href{https://www.jetbrains.com/webstorm/}{WebStorm}}, con licenza studenti. La scelta di questi due strumenti è data dall'alta adattabilità al sistema operativo impiegato (Windows, Linux, macOS) e dalla flessibilità nell'integrazione di plugin che ne aumentano le già molte funzionalità presenti.
+
+\paragraph{Norme di codifica}
+Per migliorare la leggibilità del codice il gruppo \groupName{} adotta la funzionalità di riformattazione presente nelle due IDE impiegate per la codifica. Viene inoltre impiegata la linting utility ESLint\footnote{\href{https://www.jetbrains.com/help/idea/eslint.html}{installazione di ESLint su IntelliJ IDEA}} \footnote{\href{https://www.jetbrains.com/help/webstorm/eslint.html}{installazione di ESLint su WebStorm}}, che aiuta a rispettare la style guide standard di JavaScript e la style guide Airbnb\footnote{\href{https://github.com/airbnb/javascript}{style guide Airbnb}}.
+Il gruppo \groupName{} adotta inoltre le seguenti regole:
+\begin{itemize}
+	\item \textbf{Indentazione: }si utilizzano due spazi per ogni livello di indentazione;
+	\item \textbf{Parentesi graffe: }la parentesi graffa di apertura di un comando multiriga viene aperta sulla stessa riga di dichiarazione di tale comando preceduta da uno spazio e chiusa in una nuova riga;
+	\item \textbf{Commenti: }i commenti vengono inseriti su una riga propria posta al di sopra del codice oggetto del commento;
+	\item \textbf{CamelCase: }i nomi di classi e metodi devono sottostare alla codifica a CamelCase, facendo attenzione che i nomi delle classi comincino per lettera maiuscola e quelli dei metodi per lettera minuscola;
+	\item \textbf{Ricorsione: }la ricorsione viene evitata a vantaggio di funzioni iterative, riducendo la complessità del codice e migliorandone l'esecuzione.
+\end{itemize}
+%Si inserisce inoltre un'intestazione sotto forma di commento multiriga a inizio di ogni file, che specifica le seguenti caratteristiche:
+%
+%\giacomo{
+%\begin{itemize}
+%	\item \textbf{File: }nome file;
+%	\item \textbf{Version: }versione file in formato X.Y, dove X è la più recente versione stabile del file, Y il numero dell'ultima modifica apportato all'attuale versione stabile;
+%	\item \textbf{Type: }tipo di file;
+%	\item \textbf{Date: }data creazione;
+%	\item \textbf{Author: }autore del file;
+%	\item \textbf{E-mail: }email dell'autore del file;
+%	\item \textbf{License: }licenza del file;
+%	\item \textbf{Warnings: }lista avvertenze e limitazioni;
+%	\item \textbf{Registro modifiche: }autore | data | descrizione modifiche effettuate.
+%\end{itemize}}
+Per verificare il livello di qualità del codice prodotto il gruppo \groupName{} impiega SonarQube\footnote{\href{https://www.sonarqube.org/}{SonarQube}} come strumento di ispezione del codice e ha inoltre deciso di adottare le seguenti metriche:
+\begin{itemize}
+	\label{metrics:CCM}
+	\item \textbf{Complessità Ciclomatica Media (CCM): }permette di valutare la complessità media del codice tramite il numero dei cammini linearmente indipendenti che l'esecuzione di tale codice può generare. Un valore elevato di tale metrica indica che il codice presenta una complessità media elevata, che ne limita la manutenibilità e che potrebbe essere ridotta tramite la suddivisione in moduli di dimensioni inferiori, ridividendo dunque le loro responsabilità. Un valore troppo ridotto di questa metrica indica talvolta la scarsa efficienza del codice prodotto. Si calcola con la formula:    
+	$$	v(G)=e-n+2p $$
+	dove:
+	\begin{itemize}	
+	\item v(G) = complessità ciclomatica del grafo G, ovvero il grafo di controllo di flusso del programma;
+	\item e = il numero di archi del grafo;
+	\item n = il numero di nodi del grafo;
+	\item p = il numero di componenti connesse.
+	\end{itemize}	
+	Tale calcolo viene svolto con l'ausilio dei tool di calcolo metriche presenti all'interno di SonarQube.
+	%\label{metrics:DC}
+	%\item \textbf{Dipendenza fra Classi (DC): }permette di valutare il livello di dipendenza di una classe rispetto ad altre classi. Una classe si dice dipendente da un'altra se usa metodi di quest'ultima o se quest'ultima usa metodi della prima. Maggiore il numero di dipendenze di una classe minore la modularità del codice. Il suo calcolo viene svolto con l'ausilio dei tool integrati nelle IDE IntelliJ IDEA e WebStorm.
+	\label{metrics:CPM}
+	\item \textbf{Complessità Pesata dei Metodi (CPM): }questa metrica definisce una somma pesata della complessità ciclomatica dei metodi di una classe. Maggiore il valore di questa metrica minore sarà la tendenza alla riusabilità della classe. Tipicamente una classe di dimensioni ridotte tende a diminuire questa metrica. Il suo calcolo viene svolto con l'ausilio dei tool di calcolo metriche presenti all'interno di SonarQube.
+	%\label{metrics:VAC}
+	%\item \textbf{Volume degli Attributi di Classe (VAC): }per ciascuna classe viene conteggiato il numero dei campi dati interni, eccezion fatta per i campi dati statici che essa eredita. Un valore basso indica un buon grado di manutenibilità del codice relativo a tale classe. Il suo calcolo viene svolto con l'ausilio dei tool integrati nelle IDE IntelliJ IDEA e WebStorm.
+	\label{metrics:NP}
+	\item \textbf{Numero di Parametri (NP): }per ciascun metodo vengono conteggiati i parametri da esso richiesti. Un valore basso indica un buon grado di manutenibilità del codice relativo a tale metodo. Il suo calcolo viene svolto con l'ausilio dei tool di calcolo metriche presenti all'interno di SonarQube.
+	\label{metrics:NLC}
+	\item \textbf{Numero di Linee di Codice (NLC): }calcola per ciascun metodo il numero delle linee di codice, escludendo commenti e linee vuote. Un valore basso per questa metrica indica una complessità ridotta di tale metodo. Il suo calcolo viene svolto con l'ausilio dei tool di calcolo metriche presenti all'interno di SonarQube.
+	%\label{metrics:PAB}
+	%\item \textbf{Profondità di Annidamento dei Blocchi (PAB): }calcola il valore della massima profondità di annidamento del codice all'interno di un blocco. Un valore alto indica alta complessità del codice. Il suo calcolo viene svolto con l'ausilio dei tool integrati nelle IDE IntelliJ IDEA e WebStorm.
+	%\label{metrics:I}
+	%\item \textbf{Instabilità (I): }è una metrica che definisce la percentuale di instabilità dovuta a una modifica su un package. Si calcola con la seguente formula:
+	%$$ Instabilita(\%) = \frac{\#riferimenti\_in\_uscita}{\#riferimenti\_in\_uscita+\#riferimenti\_in\_ingresso} $$
+	%Tale metrica indica il peso di una modifica su un package rispetto agli altri all'interno dell'applicazione. Il suo calcolo viene svolto con l'ausilio dei tool integrati nelle IDE IntelliJ IDEA e WebStorm.
+\end{itemize}

@@ -1,0 +1,41 @@
+\fancypagestyle{styleDocPages}{
+	\thispagestyle{empty}
+	\thispagestyle{fancy}
+	\pagestyle{fancy}
+	% HEADER
+	\setlength{\topmargin}{-40pt}
+	\setlength{\headsep}{60pt}
+	\fancyhf{}
+	\lhead{Yakuzaishi}
+	\setlength{\headheight}{15pt}
+	\rhead{\includegraphics[width=1cm]{../template/images/logo_header}}
+	
+
+	% FOOTER
+	\fancyfoot{}
+	\fancyfoot[L]{\documentName}
+	\fancyfoot[R]{Pagina \thepage~di~\pageref{LastPage}}
+	\futurelet\TMPfootrule\def\footrule{\TMPfootrule}
+	\setcounter{page}{0}
+	\pagenumbering{arabic}
+	\renewcommand{\footrulewidth}{0.3pt}
+}
+
+\lstdefinestyle{codestyle}{
+	morekeywords={*,renewcommand,begin,multicolumn,color,textbf,rowcolor,centering,arraystretch,end,hline,includegraphics,caption,label,parbox,pie,legend,normalsize,footnotesize,textwidth,addplot,rowcolors},
+	keywordstyle=\bfseries\color{red},
+	commentstyle=\color{gray},
+	morecomment=[l]{//},
+	tabsize={2},
+	breaklines=true,
+	frame=single,
+	basicstyle=\footnotesize\ttfamily
+}
+
+\lstset{style=codestyle}
+
+\makeatletter
+
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}

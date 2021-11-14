@@ -1,0 +1,699 @@
+\section{Processi di supporto}\label{section:Processi di supporto}
+I processi di supporto raccolgono tutte le categorie di processo volte a definire un supporto alle attività dei processi primari e organizzativi. Essi sono:
+\begin{itemize}
+\item Processo di documentazione;
+\item Processo di configurazione;
+\item Processo di qualità;
+\item Processo di verifica;
+\item Processo di validazione;
+\item Processo di joint review e audit;
+\item Processo di risoluzione problemi.
+\end{itemize}
+
+\subsection{Documentazione}\label{subsection:documentazione}
+La documentazione fornisce un utile strumento volto a documentare e descrivere ogni aspetto dell'attività di \groupName{}.\\
+Durante la scrittura di ogni documento si dovranno seguire le norme definite di seguito riguardanti template, struttura, versionamento, norme tipografiche, elementi grafici e classificazione dei documenti. L'insieme di tali norme garantisce consistenza e omogeneità nella stesura di testi. La consultazione dei documenti risulta così più semplice, portando benefici anche all'utenza finale.
+
+\subsubsection{Ciclo di vita di un documento}
+Il ciclo di vita di un documento può essere diviso in 4 fasi principali:
+\begin{itemize}
+	\item \textbf{Sviluppo:} creazione del documento, definizione della sua struttura e prima stesura di tutte le parti che lo compongono;
+	\item \textbf{Verifica:} un documento entra in fase di verifica successivamente al completamento della sua stesura. Il \roleProjectManager{} assegna il compito a due verificatori. Questi ultimi devono applicare le procedure di verifica e segnalare eventuali modifiche da apportare al documento. \\Il \roleProjectManager{} assegna il compito di attuare tali modifiche ad un redattore e successivamente opera un riesame del documento per giudicare lo stato di verifica. Qualora la verifica risulti svolta in maniera adeguata si prosegue alla fase di approvazione;
+	\item \textbf{Approvazione:} superata la fase di verifica il \roleProjectManager{} approva il documento che da questo momento sarà considerato completo nella sua versione attuale;
+	\item \textbf{Rivisitazione e Ampliamento:} con l'avanzare del progetto si prevede di espandere alcune sezioni di ciascun documento e di migliorare quanto scritto in precedenza. \\Il \roleProjectManager{} istanzia una fase di sviluppo per le nuove parti da aggiungere e per le modifiche alle sezioni preesistenti. Al termine di essa viene operata una fase di verifica in cui vengono verificate e corrette le sezioni nuove e quelle modificate. Viene infine svolta una nuova fase di approvazione in cui si riconferma il documento ottenendone una nuova versione.
+\end{itemize}
+
+\subsubsection{Uso dei documenti}
+I documenti possono essere adibiti ad uso interno o esterno.
+\begin{itemize}
+	\item \textbf{Interno:} documenti utilizzati all'interno del gruppo, tipicamente raccolgono riflessioni o norme per lo svolgimento delle attività di \groupName;
+	\item \textbf{Esterno:} documenti con destinatari esterni a \groupName, ovvero committenti e proponente.
+\end{itemize}
+
+\subsubsection{Tipologie di documento}
+\begin{itemize}
+	\item \textbf{Studio di Fattibilità (SdF): } documento di uso interno. Raccoglie l'analisi di ciascun capitolato e le riflessioni emerse dal gruppo riguardo ad essi al fine di decidere quale progetto intraprendere;
+	
+	\item \textbf{Analisi dei Requisiti (AdR): } documento di uso esterno. Identifica e descrive i requisiti necessari per l’implementazione del progetto e i casi d’uso con relativi grafici di interazione tra utente e sistema;
+	
+	\item \textbf{Glossario (Glo): } documento di uso esterno. Contiene definizioni dettagliate dei termini utilizzati nella documentazione che possono generare ambiguità o richiedere spiegazioni;
+	
+	\item \textbf{Norme di Progetto (NdP): } documento di uso interno. Raccoglie tutte le attività, norme, procedure e strumenti scelti dal gruppo che verranno utilizzati durante tutto lo sviluppo del progetto;
+	
+	\item \textbf{Piano di Progetto (PdP): } documento di uso esterno. Contiene la pianificazione delle attività con relative tempistiche e descrizione dei possibili rischi per lo svolgimento del progetto. Definisce inoltre le risorse utilizzate da ciascuna attività;
+	
+	\item \textbf{Piano di Qualifica (PdQ): } documento di uso esterno. Raccoglie le strategie adottate per garantire qualità di processi e di prodotto. Comprende attività di verifica con i relativi test che saranno implementati..
+\end{itemize}
+
+\subsubsection{Template}
+Per permettere il mantenimento di uno standard all’interno dei documenti redatti è stato creato un template in \LaTeX. Questo template dovrà essere rigorosamente impiegato per la stesura di tutta la documentazione. A meno di dicitura esplicita, tutto il testo segue allineamento “Giustificato”.\\
+\groupName{} utilizza TeXstudio come editor di documenti \LaTeX, con l'installazione della lingua italiana. \\Per installarlo in tal modo bisogna far riferimento alla seguente procedura:
+\begin{itemize}
+	\item Scaricare il seguente file di estensione \href{https://extensions.libreoffice.org/extensions/italian-dictionary-thesaurus-hyphenation-patterns/4.2/@@download/file/dict-it.oxt}{italian dictionary extension} ed estrarlo in una directory da cui non si intende spostarlo;
+	\item In TeXstudio seguire il seguente path: opzioni, configura texstudio, controllo linguistico;
+	\item All'opzione "directory dei dizionari per il controllo ortografico" selezionare la cartella "dict-it" presente nella directory dov'è stato estratto il file scaricato;
+	\item Verrà selezionato automaticamente it\_IT come lingua;
+	\item Il dizionario dei sinonimi  si trova nella cartella dict-it/dictionaries dove bisogna selezionare il file th\_it\_IT\_v2.dat.
+\end{itemize}
+
+\subsubsection{Struttura documenti}
+
+\paragraph{Frontespizio}
+Il frontespizio contiene le informazioni principali del documento. Tutto il contenuto della pagina è centrato orizzontalmente e gli elementi rispettano l’ordine seguente:
+
+\begin{itemize}
+	%\item Logo proponente;
+	\item Logo del gruppo;
+	\item E-mail del gruppo;
+	\item Informazioni documento;
+	\item Nome documento;
+	\item Versione;
+	\item Redattori;
+	\item Verificatori;
+	\item Responsabile;
+	\item Uso;
+	\item Sommario.
+\end{itemize}
+
+Precisazioni:
+\begin{itemize}
+	
+	%\item \textbf{Logo proponente:} è stato deciso dal gruppo \groupName{} di porre il logo del proponente nel frontespizio solo dopo la vincita dell'appalto;
+	%\item \textbf{Data redazione:} scritta nel formato “aaaa-mm-gg” in cui:
+	%	\begin{itemize}
+	%		\item \textbf{aaaa:} numero intero positivo che indica l’anno;
+	%		\item \textbf{mm:} numero intero positivo che indica il mese, per i primi 9 mesi viene posto uno 0 antecedente alla cifra del mese interessato;
+	%		\item \textbf{gg:} numero intero positivo che indica il giorno, per i primi 9 giorni viene posto uno 0 antecedente alla cifra del giorno interessato.
+	%	\end{itemize}
+	\item \textbf{Redattori, Verificatori, Responsabile}: per ciascun ruolo che interessa il documento viene indicato il cognome e il nome del/dei membro/i di \groupName{} che lo ha svolto;
+	\item \textbf{Uso:} indica il tipo di utilizzo, esterno o interno, del documento;
+	\item \textbf{Sommario:} consiste in una breve descrizione del documento.
+\end{itemize}
+
+\paragraph{Registro delle modifiche}
+Il registro delle modifiche permette di tenere uno storico delle modifiche subite dal documento durante il suo ciclo di vita. Questa sezione è strutturata con il titolo in alto seguito da una tabella costituita dalle seguenti colonne:
+
+\begin{itemize}
+	\item \textbf{Descrizione:} contiene un breve commento che riassume le modifiche apportate;
+	\item \textbf{Autore:} cognome e nome della persona che ha apportato la modifica;
+	\item \textbf{Ruolo:} ruolo della persona che ha apportato la modifica;
+	\item \textbf{Data:} data della modifica;
+	\item \textbf{Versione:} versione del documento dopo la modifica.
+\end{itemize}
+
+\paragraph{Contenuti}
+L’indice dei contenuti permette di navigare agevolmente tra sezioni e sottosezioni. Si presenta come tabella dei contenuti. È presente anche una voce per ogni tabella o immagine del documento ad esclusione della tabella iniziale di versionamento.
+
+\paragraph{Introduzione} la sezione di introduzione si trova prima dei contenuti specifici del documento. Essa prevede le seguenti sottosezioni:
+\begin{itemize}
+	\item \textbf{Scopo del documento:} è una sottosezione in cui si fornisce una breve spiegazione sullo scopo del documento;
+	\item \textbf{Glossario:} è una sottosezione in cui si spiega che per le parole contrassegnate è disponibile la definizione all'interno del documento \docNameVersionGlo{}. Il contenuto di questa sottosezione viene inserito tramite il comando \code{gloDesc\{\}};
+	\item \textbf{Evoluzione del documento:} è una sottosezione in cui si discute in breve l'eventualità che il documento subisca modifiche evolutive; in essa si avvisa il lettore di far riferimento al registro di versionamento per assicurarsi che stia visionando la versione più aggiornata. Quando si prevedono evoluzioni su specifiche sezioni esse possono venire elencate in questa sottosezione;
+	\item \textbf{Riferimenti:} è una sottosezione in cui si inseriscono, qualora presenti, i riferimenti importanti per il lettore, suddividendoli in tre diverse sottosottosezioni:
+	\begin{itemize}
+		\item \textbf{Riferimenti normativi:} riguardano tutti i documenti \es{\docNameVersionNdP{}, Standard ISO, Standard IEEE} a cui si fa riferimento in termini normativi;
+		\item \textbf{Riferimenti bibliografici:} riguardano le fonti di informazione utilizzate da \groupName{} nella stesura del documento;
+		\item \textbf{Riferimenti informativi:} riguardano link e fonti utili al lettore per ottenere informazioni complementari a quelle presenti nel documento.
+	\end{itemize}
+	\item \textbf{Sottosezioni addizionali:} qualora necessario è possibile inserire delle sottosezioni specifiche richieste dal documento all'interno della sezione di introduzione.
+\end{itemize}
+La struttura delle sue pagine è la stessa descritta qui di seguito per le pagine di contenuto.
+
+\paragraph{Pagine di contenuto}
+Le pagine di contenuto con le informazioni effettive del documento vengono strutturate nel seguente modo:
+
+\begin{itemize}
+	\item \textbf{Intestazione:} fascia azzurra caratterizzata dal logo del gruppo sulla sinistra, numero e nome della sezione principale sulla destra;
+	\item \textbf{Corpo:} informazioni della pagina;
+	\item \textbf{Piè di pagina:} separata dal corpo con una linea azzurra e caratterizzata dal nome del documento seguito dall’identificativo dell’ultima versione sulla sinistra. Sulla destra compare l’indicazione numerica della pagina nel formato “Pagina X di Y” con la seguente definizione:
+	\begin{itemize}
+		\item \textbf{X:} numero della pagina corrente;
+		\item \textbf{Y:} numero totale delle pagine del documento escludendo dal conteggio frontespizio, registro versionamento e indice.
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Appendice}
+L'appendice è una macrosezione aggiuntiva che si trova a fine documento e la cui presenza è opzionale. Può essere composta da più sezioni ciascuna indicizzata in ordine alfabetico nell'indice dei contenuti. Si usa per fornire contenuto di accompagnamento a quello previsto dal documento.
+
+
+\subsubsection{Versionamento e manutenzione}
+Ogni documento ha un codice identificativo della versione, che sarà caratterizzato nel modo seguente:
+\begin{center}
+	vX.Y.Z
+\end{center}
+
+\begin{itemize}
+	\item \textbf{X:} numero intero positivo per indicare l’ultima versione del documento approvata. L’incremento avviene di una unità alla volta. Quando questo accade, i valori di Y e Z vengono riportati a 0;
+	\item \textbf{Y:} numero intero positivo per indicare l’ultima versione del documento che ha passato la fase di verifica. L’incremento avviene di una unità alla volta. Quando questo accade, il valore Z viene riportato a 0;
+	\item \textbf{Z:} numero intero positivo per indicare l’ultima modifica apportata al documento da parte del redattore. L’incremento avviene di una unità alla volta.
+\end{itemize}
+\paragraph{Manutenzione correttiva}
+La manutenzione correttiva della documentazione viene svolta mediante le attività dei processi di verifica e approvazione. Un documento dopo la sua creazione e stesura iniziale viene sottoposto a verifica, la quale può portare a modifiche sul documento oppure alla sua approvazione.
+Il superamento di quest'ultima fase porta ad una versione del documento che costituisce baseline per future modifiche. Questo processo viene svolto rispettando le norme indicate nel presente documento.
+\paragraph{Manutenzione migliorativa}
+Nel corso del ciclo di vita dei documenti è possibile che essi vengano sottoposti a incrementi migliorativi, anch'essi sottoposti a verifica e approvazione. Tali incrementi vengono svolti al fine di far rispecchiare l'avanzamento dei processi in un grado maggiore di maturità della documentazione. Ricadono in questa tipologia di manutenzione gli ampliamenti tramite nuove sezioni e la modifica di sezioni volta all'aggiornamento dei contenuti.
+
+\subsubsection{Norme tipografiche}
+Ogni documento deve rispettare queste norme in modo tale da renderne uniforme la stesura.
+
+\paragraph{Stile del testo}
+
+\begin{itemize}
+	\item \textbf{Grassetto:} usato nei titoli, negli attributi delle tabelle e negli elenchi puntati quando un punto contiene una definizione o descrizione di una parola. Comando \code{textbf};
+	\item \textbf{Corsivo:} usato nelle citazioni, per i riferimenti a documenti e per i ruoli. Comando \code{textit};
+	\item \textbf{Maiuscolo:} usato per gli acronimi. Non c'è un comando specifico;
+	\item \textbf{Collegamenti:} usato per link esterni. Comando \code{href\{<url>\}\{<text to display>\}};
+	\item \textbf{Codice:} usato per frammenti di codice.\\
+	Se il codice da inserire è composto da una riga allora si usa il comando \code{code}. \`E un comando ridefinito nel file commands.tex sotto il commento “\% Testo stile codice”.\\
+	Se il codice da inserire è composto da più righe, allora si usa il comando \code{begin\{lstlist\} \textbackslash{}end\{lstlist\}};
+	\item \textbf{Glossario:} usato per parole da \docNameVersionGlo{}. Queste parole si riconoscono attraverso una G che compare a pedice alla fine della parola. Viene usato ad ogni occorrenza all'interno di ogni documento. Comando \code{glo\{<text>\}} che viene ridefinito nel file commands.tex sotto il commento “\% Testo glossario”. La procedura di marcamento delle parole avviene in modo automatizzato tramite uno script sviluppato in linguaggio Python;
+	\item \textbf{Elenchi puntati:} usati per dare una lista di informazioni, di definizioni o descrizioni di una parola. La parola deve essere divisa dalla sua descrizione attraverso i due punti (:). La parola deve iniziare con la prima lettera maiuscola, mentre la sua descrizione con la prima lettera minuscola. Al primo livello vengono rappresentati con un punto, al secondo con un trattino, al terzo con un asterisco. Ogni elemento deve finire con il punto e virgola tranne l'ultimo che finisce con il punto. \\Comando di ambiente\\ \code{begin\{itemize\}\\\textbackslash{}item\\ \textbackslash{}end\{itemize\}};
+	\item \textbf{Elemento centrato:} usato per centrare sia immagini che testo.\\ Comando di ambiente per il testo \code{begin\{center\} \textbackslash{}end\{center\}};
+	\item \textbf{Commento:} Usato per la correzione del testo da parte dei verificatori. Ogni \roleVerifier{} ha il proprio comando, il quale colora il testo in modo univoco. Questo permette di identificare in modo rapido chi ha fatto verifica.
+	\begin{itemize}
+		\item \textbf{Testo barrato:} usato per proporre l'eliminazione di una porzione del testo. Comando \code{nome\_personaDel\{<text>\}};
+		\item \textbf{Testo inserito:} usato per proporre l'inserimento del testo colorato. Comando \code{nome\_persona\{<text>\}}.
+	\end{itemize}
+	
+	Questi due comandi sono stati ridefiniti nel file commands.tex sotto il commento “\% Commenti”.
+	Utilizzando i due comandi in modo combinato è possibile indicare una porzione di testo da eliminare e sostituire con il testo aggiunto;
+	
+	\item \textbf{Esempio:} usato per unificare la modalità con cui vengono riportati gli esempi. Comando \code{es\{<text>\}} che viene ridefinito nel file commands.tex sotto il commento “\% Stile font”;
+	\item \textbf{Nuova pagina:} usato per mandare il testo che compare sotto questo comando, nella pagina successiva.\\
+	Comando \code{pagebreak}.
+\end{itemize}
+
+\subsubsection{Immagini}
+Ogni elemento grafico deve essere centrato orizzontalmente e deve essere distanziato dal testo per permettere una lettura più agevole. Sarà presente una breve didascalia e un numero identificativo dell'elemento nel formato:
+\begin{center}
+	Figura x: didascalia
+\end{center}
+x: indica il numero dell'immagine all'interno del documento.
+Comando:
+\begin{lstlisting}
+\begin{figure}[htbp]
+\makebox[\textwidth][c]{
+\includegraphics[scale = <number>]{<path>}}
+\caption{<text to display>}
+\end{figure}
+\end{lstlisting}
+
+
+\subsubsection{Tabelle}
+\paragraph{Tabella generica}: questa tabella è usata come base per tutte le tabelle. Ogni tabella verrà codificata modificando il codice fornito secondo le esigenze.\\
+Comando:
+\begin{lstlisting}
+\begin{table}[H]
+	\caption {Table Title} \label{table:title}
+	\centering
+	\renewcommand{\arraystretch}{1.8}
+	\rowcolors{2}{cyan!100!black!15}{cyan!100!black!25}
+	// modificare c con p{X cm} (dove X e' la larghezza della colonna) solo sulle colonne che hanno del testo di lunghezza variabile
+	\begin{tabular}{c c c c}
+		\rowcolor[HTML]{009ABB} 
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Attributo}} &
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Attributo}} &
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Attributo}} &
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Attributo}} \\
+		\rowcolor[HTML]{CCE6EA}
+		testo & testo & testo & testo \\
+	\end{tabular}
+\end{table}
+\end{lstlisting}	
+Varie tipologie di tabelle potranno essere trovate all'interno dei documenti dove necessario e saranno indicizzate nell'apposita sezione. È presente una didascalia con la descrizione del contenuto prima di tali tabelle, con lo scopo di renderle più facilmente consultabili, ad eccezione della tabella di registro delle modifiche che non ne necessita. Il formato della didascalia è il seguente:\\
+\begin{center}
+	Tabella x: descrizione
+\end{center}
+x: indica il numero della tabella all'interno del documento.
+
+\subsubsection{Grafici generici}
+I seguenti comandi sono da considerarsi generici ovvero, per ogni loro uso, verranno modificati in base alle esigenze.
+	\begin{itemize}
+		\item \textbf{A torta:}\\
+		Comando:
+		\begin{lstlisting}
+\begin{figure}[htbp]
+	\begin{tikzpicture}
+	[
+	pie chart,
+	// slice identifica la fetta del ruolo e il colore
+	slice type={re}{Garancione},
+	slice type={am}{Grosso},
+	slice type={an}{Ggiallo},
+	slice type={pt}{Gviola},
+	slice type={pr}{Gverde},
+	slice type={ve}{Gazzurro},
+	pie values/.style={font={\normalsize}},
+	scale=2.5,
+	]
+	// gli argomenti di pie identificano la percentuale di ogni ruolo, la loro somma deve essere 100
+	\pie[text=white]{}{9/re,28/am,26/an, 37/ve}
+	\legend[shift={(2cm,1cm)}]{{Responsabile}/re, {Amministratore}/am, {Analista}/an, {Progettista}/pt, {Programmatore}/pr, {Verificatore}/ve}
+
+	\end{tikzpicture}
+// aggiungere sempre una descrizione nella caption
+\caption{<text to display>}
+\end{figure}
+		\end{lstlisting}
+		
+		\item \textbf{A barre:}\\
+		Comando:
+		\begin{lstlisting}
+\begin{figure}[htbp]
+	\begin{tikzpicture}
+		\begin{axis}[
+			xbar stacked,
+			legend style={
+				legend columns=6,
+				at={(xticklabel cs:0.5)},
+				anchor=north,
+				draw=none
+			},
+			ytick=data,
+			axis y line*=none,
+			axis x line*=bottom,
+			tick label style={font=\footnotesize},
+			legend style={font=\footnotesize},
+			label style={font=\footnotesize},
+			xtick={0,5,10,15,20,25,30},
+			width=.9\textwidth,
+			bar width=4mm,
+			xlabel={Time in ms},
+			yticklabels={Ranzato Matteo, Pontara Giacomo, Piva Giulio, Lain Gianluca, Dalla Via Riccardo, Dal Pont Simone, Barasti Davide},
+			xmin=0,
+			xmax=35,
+			area legend,
+			y=6mm,
+			enlarge y limits={abs=0.625},
+			]
+			// gli argomenti di \addplot racchiusi dalle parentesi graffe identificano, per ogni parentesi rotonda: (lunghezza asse x, posizione asse y)
+			\addplot[Garancione,fill=Garancione] coordinates
+			{(0,0) (2,1) (0,2) (13,3) (0,4) (0,5) (2,6)};
+			\addplot[Grosso,fill=Grosso] coordinates
+			{(12,0) (10,1) (8,2) (7,3) (5,4) (4,5) (6,6)};
+			\addplot[Ggiallo,fill=Ggiallo] coordinates
+			{(4,0) (2,1) (8,2) (0,3) (13,4) (12,5) (10,6)};
+			\addplot[Gviola,fill=Gviola] coordinates
+			{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+			\addplot[Gverde,fill=Gverde] coordinates
+			{(0,0) (0,1) (0,2) (0,3) (0,4) (0,5) (0,6)};
+			\addplot[Gazzurro,fill=Gazzurro] coordinates
+			{(10,0) (14,1) (8,2) (8,3) (8,4) (10,5) (10,6)};
+			
+			\legend{Responsabile,Amministratore,Analista,Progettista,Programmatore,Verificatore}
+		\end{axis}
+	\end{tikzpicture}
+// aggiungere sempre una descrizione nella caption
+\caption{<text to display>}
+\end{figure}
+		\end{lstlisting}
+		Se un ruolo viene tolto, bisogna togliere anche un argomento (coppia di coordinate) di ogni \code{addplot}.
+	\end{itemize}
+
+\subsubsection{Appendice} È possibile aggiungere una macrosezione di appendice a fine documento. Al suo interno si possono inserire sezioni e sottosezioni. \\Comando \code{appendix}.
+
+\subsubsection{Citare sezioni} \label{subsubsection:Citare_sezioni}
+Per creare un rimando a una sezione/sottosezione/sottosottosezione bisogna creare una label a fianco alla sua dichiarazione nel codice del file .tex.\\
+Comando \code{label\{Nomelabel\}}.\\
+Tale label può essere richiamata con il comando \code{ref\{Nomelabel\}}, che inserisce nel testo il numero della sezione con la funzione di link ad essa. \\
+Quando si cita una sezione è sempre necessario posporre al numero il nome di tale sezione utilizzando il comando \code{nameref\{Nomelabel\}}, che genera anch'esso un link a tale sezione.
+
+\subsubsection{Comandi}
+Sono stati creati nuovi comandi per rendere la stesura il più uniforme possibile. Si possono trovare nel file commands.tex.
+
+\subsection{Configurazione}\label{subsection:configurazione}
+
+\subsubsection{Controllo di versione}
+
+\paragraph{Descrizione}
+Il VCS scelto dal gruppo per il versionamento delle componenti del progetto è Git.
+
+\paragraph{Struttura del repository}
+Il repository di \groupName{} è organizzato nelle seguenti cartelle:
+
+\begin{itemize}
+	\item \textbf{Consegne:} è presente una cartella per ogni revisione da sostenere. Queste conterranno tutti i documenti, in formato PDF, utili alla revisione a cui la cartella si riferisce. Essi verranno suddivisi in cartelle differenti in base alla tipologia di utilizzo (interno o esterno);
+	\item \textbf{Documenti:} contiene una cartella per ogni tipologia di documento con al suo interno tutto il necessario per la sua compilazione. In aggiunta sono presenti le cartelle \textit{template}, contenente le configurazioni e lo stile delle componenti strutturali  di un documento, e \textit{standard\_documento}, contenente la configurazione che unisce le singole parti del \textit{template} in un unico file per fornire uno stampo di partenza per ogni nuovo documento creato;
+	\item \textbf{Presentazioni:} è presente una cartella per ogni revisione da sostenere. Queste cartelle conterranno l'eventuale presentazione relativa alla revisione a cui la cartella si riferisce;
+	\item \textbf{Script:} contiene tutti gli script di supporto al progetto.
+\end{itemize}
+
+\subsubsection{Strumenti}\label{paragraph:strumenti}
+\paragraph{\LaTeX}
+
+La scrittura della documentazione viene svolta utilizzando il linguaggio di markup \LaTeX , per via delle sue caratteristiche:
+
+\begin{itemize}
+	\item È versionabile ed adatto al lavoro parallelo;
+	\item Permette di creare documenti formali e divisi in sezioni.
+	
+\end{itemize} 
+
+\paragraph{TexStudio}
+TexStudio è un editor che consente la scrittura del codice \LaTeX. Permette inoltre di compilarlo e visualizzare in PDF il risultato.
+
+\paragraph{Slack}
+Slack è uno strumento di messaggistica che permette una facile collaborazione in un gruppo di lavoro. L’applicazione è gratuita ed è necessaria la registrazione di un dominio per il proprio team. All'interno dell'applicazione è possibile integrare servizi esterni come Google Drive e GitLab. È possibile inoltre creare più canali di comunicazione all'interno del dominio;  in ognuno di essi viene trattato uno specifico argomento. 
+
+\paragraph{Git} 
+Git è un sistema software di controllo di versione distribuito con un ampio insieme di comandi ed operazioni disponibili. Viene utilizzato per il versionamento della documentazione e del codice del progetto. Ci si interagisce da linea di comando o tramite il software GitKraken per una migliore gestione dei conflitti;
+
+\paragraph{GitLab}
+GitLab è un'applicazione web open source che permette la gestione delle repository Git e fornisce un supporto completo a tutte le fasi del processo di DevOps.   
+
+\paragraph{GitLab issue board}
+GitLab issue board è l'ITS di GitLab che permette la creazione e gestione di issue, board e milestone. La board è strutturata in 4 colonne intitolate "Open", "To Do", "Doing", "Closed" il cui uso viene approfondito nella sezione Processi Organizzativi di questo documento.
+
+\paragraph{Google Drive}
+Servizio cloud offerto da Google che permette la condivisone e modifica collaborativa di file. Viene utilizzato dal gruppo BitCraft per la condivisione dei file che non necessitano di versionamento.
+
+\paragraph{Google Docs}
+Suite di software Google che permette la creazione e modifica di documenti tramite web. Per la stesura preliminare dei verbali durante gli incontri viene utilizzato un template fornito da Google Docs e strutturato come segue:
+\begin{itemize}
+	\item Titolo;
+	\item Data/ora/luogo;
+	\item Partecipanti;
+	\item Argomenti principali;
+	\item Verbale e azioni da intraprendere.
+\end{itemize}
+
+Successivamente i verbali vengono riportati in \LaTeX{} riportando la sezione \textit{Verbale e azioni da intraprendere} in \textit{Resoconto} e aggiungendo una tabella per il tracciamento di tali decisioni.
+
+\paragraph{Microsoft Project}
+Software di pianificazione utilizzato per creare i diagrammi di Gantt riportati nel documento \docNameVersionPdP{}. Il software è stato impiegato con la licenza gratuita per studenti.
+
+\subsection{Qualità}\label{subsection:qualita}
+
+Gli obiettivi definiti nel documento \docNameVersionPdQ{}, assieme a un'adeguata istanziazione dei processi di verifica, validazione e risoluzione di problemi, costituisce il way of working attraverso cui il gruppo \groupName{} si impegna a garantire qualità dei suoi processi e prodotti.\\ Sono state da noi definite metriche distinte in tre categorie, ovvero quelle riguardanti processi, quelle riguardanti la documentazione e quelle riguardanti la codifica. Per ciascuna metrica è indicato, nella sezione di questo documento in cui essa viene calcolata, il motivo per cui è stata scelta e la procedura di calcolo.\\
+Nelle prossime sezioni si elencano per comodità di consultazione tutte le metriche ordinate per categoria, con il link alla sezione di questo documento in esse sono definite.
+
+\subsubsection{Metriche per i processi}
+\begin{itemize}
+	\item \textbf{Schedule Variance (SV):} sezione \ref{metrics:SV} \nameref{metrics:SV};
+	\item \textbf{Budget Variance (BV):} sezione \ref{metrics:BV} \nameref{metrics:BV};
+	\item \textbf{Percentuale Ore di Verifica (POV):} sezione \ref{metrics:POV} \nameref{metrics:POV};
+	\item \textbf{Numero di Rischi Imprevisti (NRI):} sezione \ref{metrics:NRI} \nameref{metrics:NRI};
+	\item \textbf{Successo del Piano di Contingenza (SPC):} sezione \ref{metrics:SPC} \nameref{metrics:SPC}.
+\end{itemize}
+
+%\begin{center}
+%	\renewcommand{\arraystretch}{1.8}
+%	\begin{longtable}{p{3cm}p{10cm}}
+%		\rowcolor[HTML]{009ABB} 
+%		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Nome}} &
+%		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}\\
+%		
+%		\rowcolor[HTML]{CCE6EA}
+%		\centering Schedule Variance (SV)& Permette di calcolare l'allineamento delle tempistiche raggiunte alla data
+%		corrente rispetto alla pianificazione delle attività prevista. 
+%		Rappresenta un indicatore di efficacia importante per il committente. Viene calcolata manualmente in fase di consuntivo di periodo ed è definita nel seguente modo:
+%		$$
+%		SV[\%]=\frac{BCWP-BCWS}{BCWP} 
+%		$$ 
+%		  
+%		dove:
+%		
+%		\begin{itemize}[leftmargin=*]
+%			\item \textbf{BCWP(Budgeted Cost for Work Performed):} indica il valore delle attività realizzate alla data
+%			corrente;
+%			\item \textbf{BCWS(Budgeted Cost for Work Scheduled):}  indica il costo pianificato per realizzare le attività
+%			di progetto alla data corrente.
+%		\end{itemize}
+%		Se positivo, lo SV indica che il lavoro viene
+%		svolto in anticipo rispetto quanto pianificato, se è
+%		negativo indica che il lavoro è in ritardo.\\
+%		\rowcolor[HTML]{ACDCE5} 
+%		Budget Variance (BV) & Permette di controllare i costi sostenuti alla data corrente
+%		rispetto al budget preventivato. È un indicatore contabile e finanziario. Viene calcolata manualmente in fase di consuntivo di periodo ed è definita nel seguente modo:
+%		$$
+%		BV[\%]=\frac{BCWS-ACWP}{ACWP} 
+%		$$ 
+%		dove: 
+%		\begin{itemize}[leftmargin=*]
+%			\item \textbf{BCWS(Budgeted Cost for Work Scheduled):}  indica il costo pianificato per realizzare le attività
+%			di progetto alla data corrente;
+%			\item \textbf{ACWP(Actual Cost of Work Performed):} indica il costo effettivamente sostenuto per
+%			realizzare le attività di progetto alla data corrente.
+%		\end{itemize}
+%	Se positivo, il BV indica che il budget sta venendo speso 
+%	in maniera più lenta di quanto pianificato,
+%	se invece è negativo indica che il budget sta venendo speso più
+%	velocemente rispetto a quanto pianificato.\\
+%	
+%		\rowcolor[HTML]{CCE6EA}
+%		Percentuale Ore di Verifica (POV) & Permette di valutare, ricavando le informazioni dal consuntivo di periodo, se le ore di verifica svolte nel periodo di riferimento siano una %percentuale sufficiente rispetto alle ore totali. Viene calcolata manualmente in fase di consuntivo di periodo ed è definita nel seguente modo:
+%		$$
+%		POV[\%]=\frac{\#ore\_verifica}{\#ore\_totali} 
+%		$$ 
+%		\\
+%		\rowcolor[HTML]{ACDCE5} 
+%		Numero di Rischi Imprevisti (NRI) & Permette di valutare e comprendere l'esaustività della tabella di analisi dei rischi presente nel \docNameVersionPdP{}. Al termine di ogni periodo del %progetto, il \roleProjectManager{} stila un bilancio del numero di nuovi rischi che si sono manifestati, non precedentemente previsti dall'analisi dei rischi. \\
+%		\rowcolor[HTML]{CCE6EA}
+%		Successo del Piano di Contingenza (SPC) & Permette di rilevare quanto sono stati efficaci i piani di contingenza previsti rispetto ai rischi che si sono verificati all'interno di un %periodo. Questa metrica viene calcolata al termine di ogni periodo ed è definita nel seguente modo: 
+%		$$
+%		SPC[\%]=\frac{\#PDC\_positivi}{\#PDC\_totali} 
+%		$$ 
+%		dove:
+%		\begin{itemize}[leftmargin=*]
+%			\item \textbf{\#PDC\_positivi: }indica il numero dei piani di contingenza che hanno avuto successo rispetto ai rischi che si sono presentati durante il periodo;
+%			\item \textbf{\#PDC\_totali: }indica il numero totale di rischi che si sono presentati durante il periodo.
+%		\end{itemize}
+%		
+%		Questa metrica viene calcolata manualmente ed è agevolata dalla consultazione dell'appendice Attualizzazione dei Rischi presente all'interno del \docNameVersionPdP{}.
+%		Nel caso in cui non si verificasse nemmeno un rischio durante il periodo corrente, la misurazione di questa metrica verrà considerata come accettata.
+%
+%		
+%	\end{longtable}
+%\end{center}
+
+
+%\pagebreak
+\subsubsection{Metriche per i documenti}
+\begin{itemize}
+	\item \textbf{Indice di Gulpease (IG)} sezione \ref{metrics:IG} \nameref{metrics:IG};
+	\item \textbf{Media Errori Residui della Verifica} sezione \ref{metrics:MERV} \nameref{metrics:MERV}.
+\end{itemize}
+
+\subsubsection{Metriche per la codifica}
+\begin{itemize}
+	\item \textbf{Complessità Ciclomatica Media (CCM)} sezione \ref{metrics:CCM} \nameref{metrics:CCM};
+	%\item \textbf{Dipendenza fra Classi (DC)} sezione	\ref{metrics:DC} \nameref{metrics:DC};
+	\item \textbf{Complessità Pesata dei Metodi (CPM)} sezione	\ref{metrics:CPM} \nameref{metrics:CPM};
+	%\item \textbf{Volume degli Attributi di Classe (VAC)} sezione	\ref{metrics:VAC} \nameref{metrics:VAC};
+	\item \textbf{Numero di Parametri (NP)} sezione	\ref{metrics:NP} \nameref{metrics:NP};
+	\item \textbf{Numero di Linee di Codice (NLC)} sezione	\ref{metrics:NLC} \nameref{metrics:NLC};
+	%\item \textbf{Profondità di Annidamento dei Blocchi (PAB)} sezione	\ref{metrics:PAB} \nameref{metrics:PAB};
+	%\item \textbf{Instabilità (I)} sezione	\ref{metrics:I} \nameref{metrics:I}.
+\end{itemize}
+%\begin{center}
+%	\renewcommand{\arraystretch}{1.8}
+%	\begin{longtable}{p{3cm}p{10cm}}
+%		\rowcolor[HTML]{009ABB} 
+%		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Nome}} &
+%		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}\\
+%		\rowcolor[HTML]{CCE6EA}
+%		Indice
+%		Gulpease (IG)&
+%		L’indice Gulpease è un indice di leggibilità di un testo
+%		tarato sulla lingua italiana e basato su due variabili
+%		linguistiche: la lunghezza della parola e la lunghezza della
+%		frase rispetto al numero delle lettere. La formula per il suo
+%		calcolo è:
+%		$$IG = 89+\frac{300\cdot (\# frasi) - 10\cdot (\# lettere)}{\# parole}$$
+%		Il risultato è un valore compreso nell’intervallo tra 0 e 100,
+%		dove il valore 100 indica la più alta leggibilità. Un indice
+%		inferiore a 80 indica documenti di difficile leggibilità per
+%		chi ha la licenza elementare, inferiore a 60 per chi ha la licenza media, inferiore a 40 per chi ha un diploma superiore.\newline
+%		Alcune considerazioni riguardanti questo indice:
+%		
+%		\begin{itemize}[leftmargin=*]
+%			\item Non indica la comprensibilità del testo. Il significato delle frasi potrebbe essere incomprensibile ma avere comunque un indice alto;
+%			\item I termini tecnici usati all'interno dei documenti non possono essere sostituiti;
+%			\item Usare frasi troppo dirette potrebbe risultare poco professionale.
+%		\end{itemize}
+%	
+%		Questo indice viene calcolato automaticamente in seguito all'attività di approvazione mediante uno script in linguaggio Python presente nella cartella Script/Gulpease/gulpease.py. %Tale script è eseguibile da terminale tramite il comando "python gulpease.py". Durante l'esecuzione verrà chiesto in input il nome del file di cui si vuole calcolare l'indice di leggibilità.
+%		\\
+%	
+%		\rowcolor[HTML]{ACDCE5} 
+%		\centering Media Errori Residui dalla Verifica (MERV)& Permette di calcolare la qualità e l'efficacia dell'attività di verifica. Durante l'approvazione, viene contato il numero degli %errori che non sono stati rilevati dalla verifica. Al termine di tutte le attività di approvazione previste all'interno di un periodo, viene calcolata manualmente questa metrica nel %seguente modo:
+%		$$
+%		MERV=\left\lfloor  \frac{\sum \#errori}{\#documenti} \right \rfloor 
+%		$$ 
+%		
+%	\end{longtable}
+%\end{center}
+
+\subsubsection{Test}\label{subsubsection:test}
+Il gruppo \groupName{} ha sviluppato e continuerà a sviluppare test sul codice per garantirne la qualità. I test previsti dal gruppo \groupName{} sono riportati nel \docNameVersionPdQ{} e divisi in 4 categorie:
+\begin{itemize}
+	\item Validazione (V);
+	\item Sistema (S);
+	\item Integrazione (I);
+	\item Unità (U).
+\end{itemize}
+Essi sono identificati dal seguente codice:\begin{center}\textbf{T[categoria][sotto-categoria (se presente)][codice identificativo univoco]}\end{center}
+I test vengono riportati nella corrispondente tabella insieme al requisito di riferimento (se di validazione o sistema), alla loro descrizione e al loro stato, che può essere:
+\begin{itemize}
+	\item Superato (S.);
+	\item Fallito (F.);
+	\item Implementato (I.);
+	\item Non Implementato (N.I.).
+\end{itemize}
+Per svolgere i test di unità il gruppo ha impiegato il framework Jasmine\footnote{\href{https://jasmine.github.io/}{Jasmine}}. 
+Vengono seguite le style guide specificate nel documento non ufficiale.\\
+\href{https://github.com/CareMessagePlatform/jasmine-styleguide}{Style guide per Jasmine}\\
+
+\subsection{Verifica}\label{subsection:verifica}
+Il processo di verifica introduce un'analisi volta a verificare il rispetto degli standard fissati per lo svolgimento delle attività del progetto.\\
+Viene quindi fornita una descrizione di strumenti e pratiche utilizzati per eseguire i controlli sui documenti e sul codice nel processo di verifica.
+
+\subsubsection{Strumenti}
+\paragraph{Correzione ortografica}
+La verifica ortografica viene eseguita principalmente basandosi sugli strumenti integrati in TexStudio, il quale fornisce un dizionario italiano e sottolinea in rosso le parole che non vi appartengono. In questo modo è possibile verificare rapidamente la presenza di errori durante l'impiego della tecnica di Walkthrough descritta nella sezione \ref{paragraph:analisi_statica} \nameref{paragraph:analisi_statica}. Chiaramente è possibile che non tutti gli errori ortografici siano identificati da questi strumenti, pertanto il \roleVerifier{} deve prestare particolare attenzione durante la lettura dei testi.
+
+%\paragraph{Validazione HTML e CSS}
+%NON PERTINENTE ALLA RR
+
+%\paragraph{Validazione JavaScript e Typescript}
+%NON PERTINENTE ALLA RR
+
+\subsubsection{Analisi statica}\label{paragraph:analisi_statica}
+L'attività di analisi statica viene svolta sui documenti e sul codice. Questo tipo di analisi serve per rilevare varie tipologie di anomalie.\\
+Questa attività viene svolta con l'ausilio di due tecniche diverse:
+\begin{itemize}
+	\item \textbf{Walkthrough:} con questa tecnica si effettua una lettura meticolosa di documenti e/o codice alla ricerca di errori. Una volta individuato un errore, esso viene riportato al redattore al fine di discutere la soluzione migliore da adottare per correggerlo. È possibile preparare una checklist degli errori comuni durante questa lettura, utile nella tecnica di Inspection.\\
+	Si tratta di un procedimento che viene maggiormente impiegato nelle prime fasi dello sviluppo del progetto, in quanto non sono ancora presenti e/o definiti gli strumenti di analisi e non si ha una visione d'insieme del documento/codice.\\
+	È quindi una tecnica fortemente consigliata finchè non si hanno a disposizione tutti quegli strumenti che permettono un'analisi automatica dei documenti e del codice, che tipicamente adopera maggiormente la tecnica di Inspection;
+	\item \textbf{Inspection:} con questa tecnica si effettua una lettura mirata dei documenti e/o codice per ricercare errori. Essi vengono analizzati usando una checklist dei tipici errori di programmazione del codice o redazione dei documenti. Questa tecnica permette quindi di aumentare l'efficienza dello sviluppo, diminuendo i tempi dell'analisi statica.
+\end{itemize}
+Le due tecniche sono da considerarsi complementari e vengono entrambe impiegate per la verifica di ogni documento e file di codice.
+\paragraph{Checklist di errori}
+Durante l'impiego della tecnica di Walkthrough nella verifica dei documenti sono stati rilevati i seguenti errori nella stesura dei documenti:
+
+\begin{table}[H]
+	\caption {Errori rilevati da walkthrough su documenti} \label{table:checklisterroriNdP}
+	\centering
+	\renewcommand{\arraystretch}{1.8}
+	\rowcolors{2}{cyan!100!black!15}{cyan!100!black!25}
+	\begin{tabular}{p{4 cm} p{9 cm}}
+		\rowcolor[HTML]{009ABB} 
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Nome errore}} &
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione errore}}\\
+		\rowcolor[HTML]{CCE6EA}
+		Maiuscole in elenco puntato mancanti & Negli elenchi puntati la prima lettera di ogni punto risulta essere minuscola invece che maiuscola, come previsto dalle norme tipografiche.\\
+		Punteggiatura scorretta in elenco puntato & Negli elenchi puntati non viene rispettato l'uso del punto e virgola alla fine di ciascun punto, ad eccezione dell'ultimo punto che prevede il punto fermo finale.\\
+		Errori di battitura & Tipici errori di battitura dovuti alla vicinanza delle lettere sulla tastiera, ad esempio la lettera "a" al posto della "s", "i" al posto di "o", "m" al posto di "n".\\
+		Uso di comandi & Ci si dimentica di usare i comandi specifici per la visualizzazione di nomi del gruppo, di documenti, committenti o proponente e invece tali nomi vengono scritti manualmente.\\
+		Rimandi ad altre sezioni & Si scrivono manualmente i numeri e i nomi di sezioni invece di usare i comandi appositi che generano numero di sezione e nome in maniera automatica e con la funzionalità aggiuntiva di link a tale sezione.\\
+		Gerarchia delle sezioni & Non viene scritta la gerarchia delle sezioni dei documenti in maniera adeguata, ovvero section, subsection, subsubsection e infine paragraph.\\
+		Caporiga & I paragrafi talvolta risultano mandati a caporiga tramite l'uso del tasto invio sul file .tex, ma nel pdf per far ciò bisogna usare il comando "\textbackslash\textbackslash".\\
+		Spaziatura & Dopo i segni di punteggiatura non sempre viene inserito uno spazio. Talvolta invece capita di trovarne due.	
+	\end{tabular}
+\end{table}
+Questa tabella verrà aggiornata mano a mano che verranno riscontrati altri errori comuni nei documenti.
+%\subsubsection{Analisi dinamica}COMMENTATA POICHE' non pertinente alla RR
+%L'attività di analisi dinamica può essere applicata solamente allo sviluppo del codice, e non alla redazione dei documenti. È possibile analizzare tutto il codice o solo una parte di esso.\\
+%Il codice viene analizzato con test automatici precedentemente definiti, volti a verificarne il corretto funzionamento. Si utilizza quindi uno strumento automatico di verifica il quale, in caso di errori, riporta dei messaggi per identificarli con precisione.\\
+%Questi test devono poter essere effettuati in qualsiasi momento e per tutta la durata dello sviluppo del codice.\\
+%I test devono rispettare delle caratteristiche precise, ovvero:
+%\begin{itemize}
+%	\item \textbf{Specifica:} devono poter essere riportati i dati di input e output, al fine di poter effettuare i test di congruenza;
+%	\item \textbf{Ambiente:} deve poter essere riportato l'ambiente hardware e software nel quale vengono eseguiti i test;
+%	\item \textbf{Procedure:} devono poter essere specificate ulteriori parametri per eseguire i test e per la corretta lettura dei risultato.
+%\end{itemize}
+
+%\subsubsection{Verifica diagrammi UML}
+%NON PERTINENTE ALLA RR
+
+\subsubsection{Gestione di difetti di documentazione e codice}
+Nel caso venissero riscontrati errori durante il controllo di un documento o del codice, il \roleVerifier{} dovrà riportarli al redattore responsabile della parte in questione, coerentemente con quanto descritto nella sezione \ref{paragraph:assegnazione_anomalie} \nameref{paragraph:assegnazione_anomalie}. Il redattore si occuperà quindi di correggerli nei tempi previsti, stabiliti nella sezione \ref{paragraph:priorita_anomalie} \nameref{paragraph:priorita_anomalie}.
+
+\subsubsection{Priorità risoluzione difetti}\label{paragraph:priorita_anomalie}
+Gli errori che vengono riscontrati nei testi di verifica hanno un indice di priorità per la loro risoluzione.\\
+La definizione degli indici è la seguente:
+\begin{itemize}
+	\item \textbf{Critical:} priorità critica, che richiede una risoluzione entro 24 ore;
+	\item \textbf{Major:} priorità elevata, che richiede una risoluzione entro 2 giorni;
+	\item \textbf{Minor:} priorità media, che richiede una risoluzione entro 5 giorni;
+	\item \textbf{Low:} priorità bassa, che richiede una risoluzione entro 7 giorni.
+\end{itemize}
+L'indice di priorità di un difetto determina la data di scadenza per la risoluzione di un errore, la quale dovrà essere comunicata attraverso il canale "\#verifica" di Slack, coerentemente con quanto descritto nella sezione \ref{paragraph:assegnazione_anomalie} \nameref{paragraph:assegnazione_anomalie}.
+
+\subsubsection{Assegnazione del compito di risoluzione dei difetti}\label{paragraph:assegnazione_anomalie}
+Quando un \roleVerifier{} riscontra degli errori e propone delle correzioni, l'assegnazione del compito di correzione avviene tramite il canale "\#verifica" presente su Slack.\\
+Il \roleVerifier{} crea un messaggio copiando al suo interno il messaggio del commit su GitLab in cui sono presenti le proposte di modifica e le segnalazioni. In questo messaggio viene taggato il/i redattore/i della sezione o del codice su cui è stata operata la verifica e viene inoltre inserito l'indice di priorità.\\
+Qualora richiesto dal/dai redattore/i, il \roleVerifier{} aprirà per conto del \roleProjectManager{} una issue sulla board di GitLab assegnata al/ai redattore/i interessato/i.\\
+La issue deve seguire le norme descritte nella sezione \ref{paragraph:ticketing} al paragrafo \nameref{paragraph:ticketing}.
+
+\subsubsection{Tracciamento}
+L'attività di tracciamento ha la funzione di verificare che i documenti e/o il codice redatti vengano sottoposti a verifica secondo quanto riportato in questa sezione. Essa viene svolta dal \roleProjectManager{}, il quale, alla chiusura del processo di verifica, controlla che ogni sezione del documento o del codice da verificare sia stata presa a carico da un \roleVerifier{} e che il redattore di tale sezione abbia accettato eventuali proposte di modifica o correzioni di errori prima di passare alla fase di approvazione.
+
+\subsubsection{Approvazione}
+L'attività di approvazione viene eseguita in seguito all'ultima attività di verifica all'interno di un periodo. Poichè l'approvazione permette la distribuzione esterna del documento e/o codice, essa ha la funzione di trovare eventuali errori non rilevati dalla precedente attività di verifica. Inoltre l'approvazione ha il ruolo di controllo e valutazione sulla qualità dell'attività di verifica, tramite l'impiego di metriche.\\
+Durante l'approvazione deve essere utilizzata la tecnica di Inspection e deve essere tenuto il conto di eventuali errori residui individuati. Nel caso in cui vengano riscontrati uno o più errori, deve essere assegnato un compito di risoluzione degli stessi tramite la procedura descritta in \ref{paragraph:assegnazione_anomalie}. 
+Le metriche calcolate durante l'approvazione sono le seguenti:
+\begin{itemize}
+	\item \textbf{Indice Gulpease (IG):}\label{metrics:IG} L’indice Gulpease è un indice di leggibilità di un testo
+	tarato sulla lingua italiana e basato su due variabili
+	linguistiche: la lunghezza della parola e la lunghezza della
+	frase rispetto al numero delle lettere. La formula per il suo
+	calcolo è:
+	$$IG = 89+\frac{300\cdot (\# frasi) - 10\cdot (\# lettere)}{\# parole}$$
+	Il risultato è un valore compreso nell’intervallo tra 0 e 100,
+	dove il valore 100 indica la più alta leggibilità. Un indice
+	inferiore a 80 indica documenti di difficile leggibilità per
+	chi ha la licenza elementare, inferiore a 60 per chi ha la licenza media, inferiore a 40 per chi ha un diploma superiore.\newline
+	Alcune considerazioni riguardanti questo indice:
+	
+	\begin{itemize}
+		\item Non indica la comprensibilità del testo. Il significato delle frasi potrebbe essere incomprensibile ma avere comunque un indice alto;
+		\item I termini tecnici usati all'interno dei documenti non possono essere sostituiti;
+		\item Usare frasi troppo dirette potrebbe risultare poco professionale.
+	\end{itemize}
+	
+	Questo indice viene calcolato automaticamente in seguito all'attività di approvazione mediante uno script in linguaggio Python presente nella cartella Script/Gulpease/gulpease.py. Tale script è eseguibile da terminale tramite il comando "python gulpease.py". Durante l'esecuzione verrà chiesto in input il nome del file di cui si vuole calcolare l'indice di leggibilità.
+	Se il documento e/o codice non presenta errori, viene approvato ed è pronto per una distribuzione esterna.
+	
+	\item \textbf{Media Errori Residui dalla Verifica (MERV):}\label{metrics:MERV} Permette di calcolare la qualità e l'efficacia dell'attività di verifica. Durante l'approvazione, viene contato il numero degli errori che non sono stati rilevati dalla verifica. Al termine di tutte le attività di approvazione previste all'interno di un periodo, viene calcolata manualmente questa metrica nel seguente modo:
+	$$
+	MERV=\left\lfloor  \frac{\sum \#errori}{\#documenti} \right \rfloor 
+	$$ 
+\end{itemize}
+Se il documento e/o codice non presenta errori, viene approvato ed è pronto per una distribuzione esterna.
+
+\subsection{Validazione} \label{subsection:validazione}
+Il processo di validazione permette di verificare che quanto prodotto da \groupName{} rispetti tutti i requisiti concordati e sia efficace nel rispondere alle attese. Esso avviene tramite test pianificati dal \roleDesigner{} ed in seguito eseguiti dal \roleVerifier{}.\\ Tali test sono soggetti a tracciamento rispetto ai requisiti concordati e sono riportati all'interno del \docNameVersionPdQ{}.
+\paragraph{Struttura dei test di validazione}
+Ogni test di validazione è definito con la seguente codifica:
+\begin{center}
+	\textbf{TV[codice test]}
+\end{center}
+Ciascun test viene inserito in una riga della tabella dei test di validazione in cui sono presenti:
+\begin{itemize}
+	\item  Il codice del test;
+	\item  Il requisito su cui tale test è stato definito;
+	\item  La descrizione dello scopo del test e la sua procedura di esecuzione;
+	\item  L’esito della sua implementazione, che può essere successo (S), insuccesso (I), non implementato (N.I.).
+\end{itemize}
+
+\subsection{Revisione esterna e revisione interna}\label{Section:revisioni}
+Questo processo ha come scopo quello di normare i termini delle revisioni previste, denominate audit e joint review nello standard ISO/IEC 12207:1997. Le scadenze per tali incontri sono definite nel calendario fornito al seguente link: \href{https://www.math.unipd.it/~tullio/IS-1/2018/Dispense/P01.pdf}{calendario Review}.\\ 
+\groupName{} si impegna a fornire tutta la documentazione richiesta in ingresso in tali date. Le date previste dal gruppo, riportate nel \docNameVersionPdP{}, sono le seguenti:
+\begin{itemize}
+	\item \textbf{Revisione dei Requisiti (audit): }2019/01/21;
+	\item \textbf{Revisione di Progettazione (joint review): }2019/03/15;
+	\item \textbf{Revisione di Qualifica (joint review): }2019/04/19;
+	\item \textbf{Revisione di Accettazione (audit): }2019/05/17.
+\end{itemize}
+
+\subsection{Risoluzione problemi}\label{subsection:risoluzione_problemi}
+Questo processo descrive l'approccio di \groupName{} alle problematiche e alle metodologie adottate comunemente per affrontare problemi e risolverli. Si distinguono quattro tipologie di problemi:
+\begin{itemize}
+	\item Errori di documentazione;
+	\item Errori di codifica;
+	\item Problemi di natura organizzativa;
+	\item Problemi di pianificazione.	
+\end{itemize}
+Gli errori di stesura di documentazione e codifica vengono comunemente gestiti tramite i meccanismi previsti dalla verifica. Qualora un errore venisse rilevato al di fuori di questa attività esso viene notificato al \roleProjectManager{} che lo affiderà a un \roleVerifier{} tramite l'apertura di una issue a suo nome sulla issue board di GitLab, con una descrizione dettagliata di esso. Il \roleVerifier{} procederà a eseguire il processo di verifica in modo adeguato.\\
+I problemi di natura organizzativa e di pianificazione solitamente vengono affrontati dall'intero gruppo \groupName{}. Una volta rilevati essi vengono segnalati tramite comunicazione sul canale "\#generale" di Slack. Sulla base della loro impellenza e gravità essi possono essere discussi per iscritto direttamente tramite Slack oppure inserendo il problema tra i punti dell'ordine del giorno della successiva riunione.
