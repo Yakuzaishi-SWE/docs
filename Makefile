@@ -9,7 +9,7 @@ all: studio_di_fattibilita verbali clean
 studio_di_fattibilita: studio_di_fattibilita.pdf
 
 studio_di_fattibilita.pdf:
-	cd ${BASE_DIR}/src/studio_fattibilita/ ; \
+	cd "${BASE_DIR}/src/studio_fattibilita/" ; \
 	pdflatex -output-directory ${OUT_DIR} "studio_fattibilita.tex"
 
 clean: outclean verbaliclean
@@ -23,7 +23,7 @@ verbaliclean:
 verbali: $(VERBALI_FILES)
 
 $(VERBALI_FILES): FORCE
-	cd $(shell dirname $@); \
+	cd "$(shell dirname $@)"; \
 	pdflatex -output-directory ${OUT_VERBALI} $@
 
 FORCE:
