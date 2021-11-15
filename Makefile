@@ -10,14 +10,15 @@ all: dirs studio_di_fattibilita verbali clean
 studio_di_fattibilita:
 	@echo "Studio di Fattibilita: $(STUDIO_F)";
 	@cd "$(shell dirname $(STUDIO_F))" ; \
-	pdflatex -output-directory ${OUT_DIR} $(STUDIO_F) > /dev/null
+	pdflatex -output-directory ${OUT_DIR} $(shell basename $(STUDIO_F)) > /dev/null
 
 verbali: $(VERBALI_FILES)
 
 $(VERBALI_FILES):
 	@echo "Verbale: $@";
-	@cd "$(shell dirname $@)" ; \
-	pdflatex -output-directory ${OUT_VERBALI} "$@" > /dev/null
+	mkdir -p "${OUT_VERBALI}/$(shell basename $@ .tex)/"
+	cd "$(shell dirname $@)" ; \
+	pdflatex -output-directory ${OUT_VERBALI}/$(shell basename $@ .tex)/ $(shell basename $@) > /dev/null
 
 clean:
 	@echo "cleaning aux files";
