@@ -16,9 +16,9 @@ verbali: $(VERBALI_FILES)
 
 $(VERBALI_FILES):
 	@echo "Verbale: $@";
-	@mkdir -p "${OUT_VERBALI}/$(shell basename $@ .tex)/"
 	@cd "$(shell dirname $@)" ; \
-	pdflatex -output-directory ${OUT_VERBALI}/$(shell basename $@ .tex)/ $(shell basename $@) > /dev/null
+	pdflatex $(shell basename $@) > /dev/null; \
+	mv "$(shell basename $@ .tex).pdf" $(OUT_VERBALI);
 
 clean:
 	@echo "cleaning aux files";
