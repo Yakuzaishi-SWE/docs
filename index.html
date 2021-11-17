@@ -9,7 +9,7 @@
 
         <script>
             async function loadVerbali() {
-                const response = await fetch("https://api.github.com/repos/Yakuzaishi-SWE/docs/contents/docs?ref=gh-pages");
+                const response = await fetch("https://api.github.com/repos/Yakuzaishi-SWE/docs/contents/docs/verbali?ref=gh-pages");
                 const verbali = await response.json();
                 const ulEL = document.getElementById("verbali");
                 for (let verbale of verbali) {
