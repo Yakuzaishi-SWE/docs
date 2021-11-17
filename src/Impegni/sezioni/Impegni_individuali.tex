@@ -1,43 +1,34 @@
-\section{Impegni individuali}\label{section:Impegni_individuali}
-%TUTTO QUELLO CHE SEGUE E' COMMENTATO IN VISTA DELLE MODIFICHE
-\begin{comment}
+\section{Impegni individuali} \label{section:Impegni_individuali}
 
-\subsection{Informazioni generali}
-	\begin {itemize}
-		\item \textbf{Nome:} \textit{CC4D};
-		\item \textbf{Proponente:} \textit{San Marco Informatica S.p.A.};
-		\item \textbf{Committente:} \textit{Prof. Tullio Vardanega e Prof. Riccardo Cardin}.
-	\end{itemize}
+% Please add the following required packages to your document preamble:
+%\usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 
-\subsection{Descrizione del capitolato}
-	Il controllo statistico consente di contenere l'esito di un processo all'interno di specifici limiti, determinati attraverso lo studio della variazione naturale dei limiti del processo.\\
-	Uno degli strumenti utilizzati a tale scopo sono le carte di controllo, le quali permettono di identificare visivamente tramite grafici tali variazioni.\\
-	Questi controlli verranno effettuati su diverse misurazioni di pezzi prodotti da determinate macchine produttive.
+\paragraph{Prospetto orario rendicontato}
+Riepilogo della distribuzione oraria rendicontata:
 
-\subsection{Finalità del progetto}
-	Il capitolato richiede la creazione di:
-	\begin{itemize}
-		\item \textbf{Console Amministrativa}: WEBAPP per il censimento delle macchine produttive e le relative caratteristiche le quali determineranno la regolarità delle misurazioni ricevute;
-		\item \textbf{API Raccolta Dati}: API per l'immisione delle misurazioni di una determinata caratteristica e salvataggio in un time series database\glo;
-		\item \textbf{Motore di Calcolo}: responsabile della valutazione della conformità delle nuove misurazioni ed eventuale ricalcolo dei limiti sulla base delle ultime N rilevazioni;
-		\item \textbf{Visualizzazione Dati}: WEBAPP per la visualizzazione a rotazione delle molteplici carte di controllo.
-	\end{itemize}
+\begin{table}
+\begin{tabular}{l|llllll|l}
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Nome}                       & \textbf{Re}               & \textbf{Am}               & \textbf{An}              & \textbf{Pg}               & \textbf{Pr}               & \textbf{Ve}               & \textbf{Totale}            \\ \hline
+\rowcolor[HTML]{EFEFEF} 
+Bugno Francesco                     & 10                        & 8                         & 8                        & 25                        & 21                        & 28                        & 100                        \\
+\rowcolor[HTML]{DEDEDE} 
+Busacca Luca                        & 7                         & 12                        & 9                        & 22                        & 24                        & 26                        & 100                        \\
+\rowcolor[HTML]{E8E8E8} 
+Carturan Luca                       & 9                         & 11                        & 8                        & 24                        & 23                        & 25                        & 100                        \\
+\rowcolor[HTML]{DEDEDE} 
+Filosofo Michele                    & 6                         & 12                        & 9                        & 22                        & 26                        & 25                        & 100                        \\
+\rowcolor[HTML]{E8E8E8} 
+Furlan Dario 						&  10						& 10						& 8						   & 23 					   & 25						   & 24 					   & 100						\\
+\rowcolor[HTML]{DEDEDE}
+Mattarello Francesco                & 6                         & 8                         & 9                        & 24                        & 24                        & 29                        & 100                        \\
+\rowcolor[HTML]{E8E8E8} 
+Midena Matteo                       & 7                         & 9                         & 8                        & 26                        & 27                        & 23                        & 100                        \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Totale}                     & 55                        & 70                        & 59                       & 166                       & 170                       & 180                       & \textbf{700}              
+\end{tabular}
+\caption{Tabella contenente il prospetto orario preventivato tenendo conto delle ore rendicontate}
+\end{table}
 
-\subsection{Tecnologie interessate}
-	\begin{itemize}
-		\item \textbf{React/Angular/Vue}: Frameworks consigliati per la WEBAPP admin e utente;
-		\item \textbf{d3js}: Libreria grafica per la realizzazione dei grafici delle carte di controllo;
-		\item \textbf{Java/NodeJS}: Linguaggi consigliati per il motore di calcolo e API collezione dati;
-		\item \textbf{TSDB}: Time Series Database a scelta tra: MongoDb, MariaDb ColumnStore (MariaDb), TimeScale (Postgresql), ClickHouse.
-	\end{itemize}
-
-\subsection{Aspetti Positivi}
-	Il sistema oltre al particolare caso proposto, in quanto generico potrebbe risultare utile per una vastità di applicazioni differenti.
-
-\subsection{Criticità e fattori di rischio}
-	Lo scoglio più grande deriva delle conoscenze che vanno oltre la nostra preparazione statistica di base, per la realizzazione ottimale del motore di calcolo.
-
-\subsection{Conclusioni}
-	Il team di sviluppo inizialmente espresse un grande interesse e curiosità verso questo capitolato nonostante le sue difficoltà, non è stato scelto in quanto non ha retto a confronto delle altre scelte. 
-\end{comment}
-	%\textbf{GLOSSARIO}: time series database: è un software ottimizzato per salvare e fornire dati definiti come coppia tempo e valore. 
+%\textbf{GLOSSARIO}: time series database: è un software ottimizzato per salvare e fornire dati definiti come coppia tempo e valore. 
