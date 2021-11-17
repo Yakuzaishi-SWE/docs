@@ -29,4 +29,13 @@ dirs:
 	mkdir -p $(OUT_DIR)
 	mkdir -p $(OUT_VERBALI)
 
+gh-pages: all
+	git checkout gh-pages
+	mkdir -p docs
+	mkdir -p docs/verbali/
+	cp -r out/* docs/
+	git add docs/
+	git commit -m "updated gh-pages"
+	git push
+
 .PHONY: $(VERBALI_FILES)
