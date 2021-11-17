@@ -37,5 +37,6 @@ gh-pages: all
 	git add docs/
 	git commit -m "updated gh-pages"
 	git push
+	git checkout dev
 
 .PHONY: $(VERBALI_FILES)
