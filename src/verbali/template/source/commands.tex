@@ -62,7 +62,7 @@
 \newcommand{\roleDesigner}{\textit{Progettista}}
 \newcommand{\roleVerifier}{\textit{Verificatore}}
 
-% Referenti e commitenti (M = master, S = slave)
+% Referenti e commitenti
 \newcommand{\proposerName}{Fabio Pallaro - Sync Lab S.r.l.}
 \newcommand{\commitNameM}{Prof. Tullio Vardanega}
 \newcommand{\commitNameS}{Prof. Riccardo Cardin}
@@ -70,7 +70,7 @@
 % Nome dei documenti
 \newcommand{\docNameGlo}{\textit{Glossario}} % Glossario
 \newcommand{\docNameNdP}{\textit{Norme di Progetto}} % Norme di Progetto
-\newcommand{\docNameSdF}{\textit{Studio di Fattibilità}} % Studio di Fattibilità
+\newcommand{\docNameSdF}{\textit{Studio dei Capitolati}} % Studio dei Capitolati
 \newcommand{\docNameST}{\textit{Specifica Tecnica}} % Specifica Tecnica
 \newcommand{\docNameDdP}{\textit{Definizione di Prodotto}} % Definizione di Prodotto
 \newcommand{\docNamePdP}{\textit{Piano di Progetto}} % Piano di Progetto
@@ -96,41 +96,3 @@
 
 % Descrizione del glossario
 \newcommand{\gloDesc}{I termini utilizzati in questo documento potrebbero generare dubbi riguardo al loro significato, richiedendo pertanto una definizione al fine di evitare ambiguità. Tali termini vengono contrassegnati da una G maiuscola finale a pedice della parola. La loro spiegazione è riportata nel \docNameVersionGlo{}.}
-
-% Comandi per la generazione di grafici a torta e a barre
-\newcommand{\pie}[3][]{
-	\begin{scope}[#1]
-		\pgfmathsetmacro{\curA}{90}
-		\pgfmathsetmacro{\r}{1}
-		\def\c{(0,0)}
-		\node[pie title] at (90:1.3) {#2};
-		\foreach \v\s in{#3}{
-			\pgfmathsetmacro{\deltaA}{\v/100*360}
-			\pgfmathsetmacro{\nextA}{\curA + \deltaA}
-			\pgfmathsetmacro{\midA}{(\curA+\nextA)/2}
-			
-			\path[slice,\s] \c
-			-- +(\curA:\r)
-			arc (\curA:\nextA:\r)
-			-- cycle;
-			\pgfmathsetmacro{\d}{max((\deltaA * -(.5/50) + 1) , .5)}
-			
-			\begin{pgfonlayer}{foreground}
-				\path \c -- node[pos=\d,pie values,values of \s]{$\v\%$} +(\midA:\r);
-			\end{pgfonlayer}
-			
-			\global\let\curA\nextA
-		}
-	\end{scope}
-}
-
-\newcommand{\legend}[2][]{
-	\begin{scope}[#1]
-		\path
-		\foreach \n/\s in {#2}
-		{
-			++(0,-5pt) node[\s,legend box] {} +(5pt,0) node[legend label] {\n} % ++(x,y) -> y: spazio tra i vari campi della legenda, x: l'obliquità
-		}
-		;
-	\end{scope}
-}

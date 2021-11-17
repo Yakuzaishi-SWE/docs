@@ -14,15 +14,25 @@ In base al prospetto orario, quello economico sarà il seguente:
 		& \color[HTML]{FFFFFF}\textbf{Compenso orario (€/h)}
 		& \color[HTML]{FFFFFF}\textbf{Costo (€)} \\
 		\hline
-		Responsabile		& 55	& 30	& 1650,00 \\
-		Amministratore	& 70  & 20	& 1400,00 \\
-		Analista        & 59  & 25	& 1475,00 \\
-		Progettista     & 166 & 25	& 4150,00 \\
-		Programmatore 	& 170 & 15	& 2550,00	\\
-		Verificatore		& 180 & 15	& 2700,00 \\
+		Responsabile		& 55	& 30,00	& 1650,00 \\
+		Amministratore	& 70  & 20,00	& 1400,00 \\
+		Analista        & 105 & 25,00	& 2625,00 \\
+		Progettista     & 150 & 25,00	& 3750,00 \\
+		Programmatore 	& 150 & 15,00	& 2250,00	\\
+		Verificatore		& 170 & 15,00	& 2550,00 \\
 		\hline
 		\rowcolor[HTML]{125E28}
-		\color[HTML]{FFFFFF}\textbf{Totale} & \color[HTML]{FFFFFF}700 & \multicolumn{2}{c}{\color[HTML]{FFFFFF}\textbf{13925,00}}
+		\color[HTML]{FFFFFF}\textbf{Totale}
+		& \color[HTML]{FFFFFF}700
+		&& \color[HTML]{FFFFFF}\textbf{14225,00}
 	\end{tabular}
 	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
 \end{table}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\pie[text=legend, color={red, yellow, green, cyan, magenta, orange}]{8/Responsabile, 10/Amministratore, 15/Analista, 22/Progettista, 21/Programmatore, 24/Verificatore} 
+	\end{tikzpicture}
+	\caption{Diagramma contenente le distribuzione delle ore in percentuale}
+\end{figure}
