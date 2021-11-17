@@ -5,6 +5,22 @@
     </head>
     <body>
         <a href="docs/studio_fattibilita.pdf">Studio Di Fattibilita</a>
-        <a href="docs/verbali/">Verbali</a>
+        <ul id="verbali"></ul>
+
+        <script>
+            function loadVerbali() {
+                const response = await fetch("https://api.github.com/repos/Yakuzaishi-SWE/docs/contents/docs?ref=gh-pages");
+                const verbali = await response.json();
+                const ulEL = document.getElementById("verbali");
+                for (let verbale of verbali) {
+                    let li = document.createElement("li");
+                    let a = document.createElement("a");
+                    a.setAttribute("href", verbale.path);
+                    a.innerText = verbale.name;
+                    li.appendChild(a);
+                    ulEL.appendChild(li);
+                }
+            }
+        </script>
     </body>
 </html>
