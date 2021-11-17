@@ -1,0 +1,67 @@
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\newglossarystyle{myaltlistgroup}{%
+	\setglossarystyle{altlistgroup}%
+	\renewcommand*{\glsgroupheading}[1]{%
+		\pagebreak%
+		\item\makebox[\linewidth]{\Large\textbf{\glsgetgrouptitle{##1}}}%
+		\vspace*{-\baselineskip}%
+		\item\makebox[\linewidth]{\hspace*{3cm}\hrulefill\hspace*{3cm}}%
+		\phantomsection%
+		\addcontentsline{toc}{subsection}{##1}%
+	}%
+}%
+
+
+\setglossarystyle{myaltlistgroup}
+
+
+\makeglossaries
+
+
+\begin{document}
+	%RIDEFINIZIONE COMANDI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\renewcommand{\documentName}{Glossario}
+	\renewcommand{\documentVersion}{1.0.0}
+	\renewcommand{\documentDate}{2021-11-17}
+	
+	\renewcommand{\documentEditors}{Franceso Bugno\\&Luca Busacca\\&Luca Carturan\\&Matteo Midena}
+	\renewcommand{\documentVerifiers}{Michele Filosofo\\&Dario Furlan}
+	\renewcommand{\documentApprovers}{Francesco Mattarella}
+	
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentAddressee}{\commitNameM, \commitNameS}
+	\renewcommand{\documentSummary}{Documento di uso esterno contenente descrizioni più dettagliate dei termini utilizzati nella documentazione che possono risultare ambigui o estremamente specifici da richiedere una definizione accurata.}
+	\renewcommand*{\glossaryname}{}%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%PRIMA PAGINA
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{gobble}
+	\pagestyle{empty}
+	\input{../template/source/firstpage}
+	\pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CHANGELOG E INDICI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{contenuto/changelog} \pagebreak
+	\tableofcontents
+	%\listoftables \pagebreak
+	%\listoffigures \pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CONTENUTO
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagestyle{styleDocPages}
+	\input{contenuto/contenuto}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\glsaddall
+\printglossary[nonumberlist]
+
+\end{document}
