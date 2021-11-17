@@ -1,30 +1,27 @@
-\section{Preventivo costi}\label{section:Preventivo_costi}
-
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\section{Preventivo costi}\label{section:preventivo_costi}
 
 \paragraph{Prospetto economico rendicontato}
 In base al prospetto orario, quello economico sarà il seguente:
 
-\begin{table}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
 	\begin{tabular}{l|cc}
-	\rowcolor[HTML]{C0C0C0} 
-	\textbf{Ruolo}                       & \textbf{Ore (h)}           & \textbf{Costo (€)}             \\ \hline
-	\rowcolor[HTML]{EFEFEF} 
-	Responsabile                         & 55                         & 1650,00                        \\
-	\rowcolor[HTML]{DEDEDE} 
-	Amministratore                       & 70                         & 1400,00                        \\
-	\rowcolor[HTML]{E8E8E8} 
-	Analista                             & 59                         & 1475,00                        \\
-	\rowcolor[HTML]{DEDEDE} 
-	Progettista                          & 166                        & 4150,00                        \\
-	\rowcolor[HTML]{E8E8E8} 
-	Programmatore 						 & 170 						  & 2550,00						   \\
-	\rowcolor[HTML]{DEDEDE} 
-	Verificatore                         & 180                        & 2700,00                        \\ \hline
-	\rowcolor[HTML]{C0C0C0}
-	\textbf{Totale}                      & 700                        & \textbf{13925,00}             
+		\rowcolor[HTML]{125E28}
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+		& \color[HTML]{FFFFFF}\textbf{Ore (h)}
+		& \color[HTML]{FFFFFF}\textbf{Costo (€)} \\
+		\hline
+		Responsabile		& 55	& 1650,00 \\
+		Amministratore	& 70  & 1400,00 \\
+		Analista        & 59  & 1475,00 \\
+		Progettista     & 166 & 4150,00 \\
+		Programmatore 	& 170 & 2550,00	\\
+		Verificatore		& 180 & 2700,00 \\
+		\hline
+		\rowcolor[HTML]{125E28}
+		\color[HTML]{FFFFFF}\textbf{Totale} & \color[HTML]{FFFFFF}700 & \color[HTML]{FFFFFF}\textbf{13925,00}             
 	\end{tabular}
 	\caption{Tabella contenente il prospetto economico in riferimento al prospetto orario}
 \end{table}
