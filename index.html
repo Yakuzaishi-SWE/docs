@@ -8,7 +8,7 @@
         <ul id="verbali"></ul>
 
         <script>
-            function loadVerbali() {
+            async function loadVerbali() {
                 const response = await fetch("https://api.github.com/repos/Yakuzaishi-SWE/docs/contents/docs?ref=gh-pages");
                 const verbali = await response.json();
                 const ulEL = document.getElementById("verbali");
@@ -21,6 +21,7 @@
                     ulEL.appendChild(li);
                 }
             }
+            loadVerbali().then(() => {}).catch(err => console.error(err));
         </script>
     </body>
 </html>
