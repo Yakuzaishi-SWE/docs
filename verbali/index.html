@@ -24,7 +24,7 @@
                     let a = document.createElement('a');
                     let img = document.createElement('img');
                     img.setAttribute('src', '/docs/res/pdf.svg');
-                    a.setAttribute('href', `/docs/${row}`);
+                    a.setAttribute('href', row);
                     a.append(img, row);
                     li.appendChild(a);
                     nodes.push(li);
