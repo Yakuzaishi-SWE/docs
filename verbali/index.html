@@ -3,7 +3,7 @@
 
 <head>
     <title>Yakuzaishi - Documenti</title>
-    <link rel="stylesheet" href="/docs/index.css" />
+    <link rel="stylesheet" href="/docs/res/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -14,7 +14,7 @@
         <ul id="verbali"></ul>
     </div>
     <script>
-        fetch('https://raw.githubusercontent.com/Yakuzaishi-SWE/docs/gh-pages/docs/verbali/list')
+        fetch('list')
             .then(res => res.text())
             .then(data => {
                 let nodes = [];
