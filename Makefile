@@ -64,7 +64,7 @@ gh-pages-only:
 	git checkout gh-pages
 	mkdir -p verbali/
 	cp -r out/* ./
-	ls verbali/verbale_* -w 1 > verbali/list
+	cd verbali/; ls verbale_* -w 1 > list
 	git add .
 	git commit -m "updated gh-pages"
 	git push
