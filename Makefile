@@ -64,6 +64,7 @@ gh-pages-only:
 	git checkout gh-pages
 	mkdir -p docs
 	mkdir -p docs/verbali/
+	ls docs/verbali/verbale_* -w 1 > docs/verbali/list
 	cp -r out/* docs/
 	git add docs/
 	git commit -m "updated gh-pages"
