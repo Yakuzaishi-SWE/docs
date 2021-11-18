@@ -3,13 +3,13 @@
 
 <head>
     <title>Yakuzaishi - Documenti</title>
-    <link rel="stylesheet" href="docs/index.css" />
+    <link rel="stylesheet" href="/docs/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="container">
-        <a href="docs/">Home</a>
+        <a href="/docs/">Home</a>
         <h1>Verbali</h1>
         <ul id="verbali"></ul>
     </div>
@@ -23,8 +23,8 @@
                     let li = document.createElement('li');
                     let a = document.createElement('a');
                     let img = document.createElement('img');
-                    img.setAttribute('src', 'docs/res/pdf.svg');
-                    a.setAttribute('href', `docs/${row}`);
+                    img.setAttribute('src', '/docs/res/pdf.svg');
+                    a.setAttribute('href', `/docs/${row}`);
                     a.append(img, row);
                     li.appendChild(a);
                     nodes.push(li);
