@@ -1,0 +1,51 @@
+\thispagestyle{empty}
+
+%Logo gruppo
+\begin{figure}
+	\centering
+	\includegraphics[width=150px]{../template/images/logo}
+\end{figure}
+
+\hspace{2pt}
+
+%Nome documento
+\begin{center}
+	\textbf{\Large \documentName}\\[0.2cm]
+%	\textbf{\Large Progetto \projectName}
+\end{center}
+
+\vspace{2pt}
+
+%Email
+\begin{center}
+	\groupEmail
+\end{center}
+
+\vspace{2pt}
+
+%Informazioni documento
+\begin{center}
+	\textbf{Informazioni sul documento}
+\end{center}
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabular}{r|l}
+		Responsabile & \documentApprovers\vspace{2.5pt}\\
+		Redattori & \documentEditors\vspace{2.5pt}\\
+		Verificatori & \documentVerifiers\vspace{2.5pt}\\
+		Uso & \documentUsage\vspace{2.5pt}\\
+		Destinatari & \documentAddressee\vspace{2.5pt}\\
+		Versione & \documentVersion\\
+	\end{tabular}
+\end{table}
+
+\vspace{10pt}
+
+%Sommario
+\begin{center}
+	\textbf{Sommario}\\\documentSummary
+\end{center}
+
+\tikz[remember picture,overlay] \node[opacity=0.2,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{../template/images/sfondo}};

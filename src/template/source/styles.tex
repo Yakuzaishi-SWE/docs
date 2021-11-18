@@ -1,0 +1,22 @@
+\fancypagestyle{styleDocPages}{
+	\thispagestyle{empty}
+	\thispagestyle{fancy}
+	\pagestyle{fancy}
+	% HEADER
+	\setlength{\topmargin}{-40pt}
+	\setlength{\headsep}{60pt}
+	\fancyhf{}
+	\lhead{Yakuzaishi}
+	\setlength{\headheight}{15pt}
+	\rhead{\includegraphics[width=1cm]{../template/images/logo_header}}
+	
+
+	% FOOTER
+	\fancyfoot{}
+	\fancyfoot[L]{\documentName}
+	\fancyfoot[R]{Pagina \thepage~di~\pageref{LastPage}}
+	\futurelet\TMPfootrule\def\footrule{\TMPfootrule}
+	\setcounter{page}{0}
+	\pagenumbering{arabic}
+	\renewcommand{\footrulewidth}{0.3pt}
+}

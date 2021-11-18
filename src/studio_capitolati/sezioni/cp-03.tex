@@ -1,0 +1,40 @@
+\section{Capitolato C3 - CC4D}\label{section:c3}
+
+\subsection{Informazioni generali}
+	\begin {itemize}
+		\item \textbf{Nome:} \textit{CC4D};
+		\item \textbf{Proponente:} \textit{San Marco Informatica S.p.A.};
+		\item \textbf{Committente:} \textit{Prof. Tullio Vardanega e Prof. Riccardo Cardin}.
+	\end{itemize}
+
+\subsection{Descrizione generale}
+	Il controllo statistico consente di contenere l'esito di un processo all'interno di specifici limiti, determinati attraverso lo studio della variazione naturale dei limiti del processo.\\
+	Uno degli strumenti utilizzati a tale scopo sono le carte di controllo, le quali permettono di identificare visivamente tramite grafici tali variazioni.\\
+	Questi controlli verranno effettuati su diverse misurazioni di pezzi prodotti da determinate macchine produttive.
+
+\subsection{Finalità del progetto}
+	Il capitolato richiede la creazione di:
+	\begin{itemize}
+		\item \textbf{Console Amministrativa}: WEBAPP per il censimento delle macchine produttive e le relative caratteristiche le quali determineranno la regolarità delle misurazioni ricevute;
+		\item \textbf{API Raccolta Dati}: API per l'immisione delle misurazioni di una determinata caratteristica e salvataggio in un time series database\glo;
+		\item \textbf{Motore di Calcolo}: responsabile della valutazione della conformità delle nuove misurazioni ed eventuale ricalcolo dei limiti sulla base delle ultime N rilevazioni;
+		\item \textbf{Visualizzazione Dati}: WEBAPP per la visualizzazione a rotazione delle molteplici carte di controllo.
+	\end{itemize}
+
+\subsection{Tecnologie interessate}
+	\begin{itemize}
+		\item \textbf{React/Angular/Vue}: Frameworks consigliati per la WEBAPP admin e utente;
+		\item \textbf{d3js}: Libreria grafica per la realizzazione dei grafici delle carte di controllo;
+		\item \textbf{Java/NodeJS}: Linguaggi consigliati per il motore di calcolo e API collezione dati;
+		\item \textbf{TSDB}: Time Series Database a scelta tra: MongoDb, MariaDb ColumnStore (MariaDb), TimeScale (Postgresql), ClickHouse.
+	\end{itemize}
+
+\subsection{Aspetti Positivi}
+	Il sistema oltre al particolare caso proposto, in quanto generico potrebbe risultare utile per una vastità di applicazioni differenti.
+
+\subsection{Criticità e fattori di rischio}
+	Lo scoglio più grande deriva delle conoscenze che vanno oltre la nostra preparazione statistica di base, per la realizzazione ottimale del motore di calcolo.
+
+\subsection{Conclusioni}
+	Il team di sviluppo inizialmente espresse un grande interesse e curiosità verso questo capitolato nonostante le sue difficoltà, non è stato scelto in quanto non ha retto a confronto delle altre scelte. 
+%\textbf{GLOSSARIO}: time series database: è un software ottimizzato per salvare e fornire dati definiti come coppia tempo e valore. 

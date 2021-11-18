@@ -1,0 +1,50 @@
+\section{Capitolato C4 - Guida Michelin @ social}\label{section:c4}
+
+\subsection {Informazioni generali}
+    \begin{itemize}
+        \item \textbf{Nome:} \textit{Guida Michelin @ social};
+        \item \textbf{Proponente:} \textit{Zero12};
+        \item \textbf{Committente:} \textit{Prof. Tullio Vardanega e Prof. Riccardo Cardin}.
+    \end{itemize}
+
+\subsection{Descrizione del capitolato}
+    L'obiettivo del capitolato è quello di sviluppare una Guida Michelin social basata su storie e post di Tik Tok e Instagram, incrociando i dati dei post con le recensioni online, il risultato sarà una mappa di posti suggeriti e comparazione di recensioni tra social e stories.
+    Dato che non tutti gli utenti hanno gli stessi gusti e lo stesso stile di vita la piattaforma deve essere in grado di monitorare le recensioni e di seguire determinate persone per la realizzazione della guida (i.e. un utente che frequenta solitamente ristoranti stellati non potrà fornire un giudizio veritiero ed affidabile se va a mangiare in una trattoria).
+
+\subsection {Finalità del progetto}
+    L'azienda prevede il seguente flusso di operazioni per la realizzazione della guida:
+    Svolgere un'analisi sulle API di Tik Tok e Instagram per identificare il miglior approccio alla realizzazione della guida al fine di: 
+    \begin{itemize}
+        \item Creare un sistema di crawling efficiente;
+        \item Valutare eventuali strategie di Voice to Text se le informazioni quali testi, tag e commenti non siano sufficienti;
+        \item Identificare le tecnologie cloud adeguate a questo tipo di attività.
+\end{itemize}
+
+\subsection{Tencnologie interessate}
+    Il software richiesto dal capitolato farà uso delle seguenti tecnologie:
+    \begin{itemize}
+        \item \textbf{AWS Fargate\glo:} servizio serverless per gestione a container;
+        \item \textbf{AWS AppSync\glo:} servizio gestito per lo sviluppo rapido di API GraphQL;
+        \item \textbf{Amazon Neptune\glo:} database a grafo ideale per questo tipo di progetti e tracciare efficientemente le relazioni tra i dati.
+    \end{itemize}
+    E dei seguenti linguaggi di programmazione:
+    \begin{itemize}
+        \item \textbf{NodeJS:} ideale per lo sviluppo di API Restful JSON a supporto dell’applicativo;
+        \item \textbf{Swift:} linguaggio di programmazione per lo sviluppo di app in ambito iOS/MacOS;
+        \item \textbf{Kotlin:} linguaggio di programmazione per lo sviluppo di app in ambito Android.
+    \end{itemize}
+
+\subsection{Aspetti positivi}
+    \begin{itemize}
+        \item Utilizzo (e apprendimento) di diversi linguaggi di programmazione;
+        \item Utilizzo (e apprendimento) di Amazon Web Services.
+    \end{itemize}
+
+\subsection{Criticità e fattori di rischio}
+    \begin{itemize}
+        \item Utilità limitata dell'app;
+        \item Complicato estrarre dati da social network che di solito lo impediscono, rendendo troppo onerosa l'idea di progetto.
+    \end{itemize}
+    
+\subsection{Conclusioni}
+Nonostante il team di sviluppo inizialmente espresse un grande interesse verso questo capitolato, considerando stimolante l'utilizzo e di conseguenza l'apprendimento di diversi linguaggi di programmazione e dei web services di Amazon, esso è stato scartato a causa della troppa complessità dell'argomento.
