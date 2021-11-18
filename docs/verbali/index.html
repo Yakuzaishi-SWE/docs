@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yakuzaishi - Documenti</title>
+    <link rel="stylesheet" href="/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <a href="/">Home</a>
+        <h1>Verbali</h1>
+        <ul id="verbali"></ul>
+    </div>
+    <script>
+        fetch('https://raw.githubusercontent.com/Yakuzaishi-SWE/docs/gh-pages/docs/verbali/list')
+            .then(res => res.text())
+            .then(data => {
+                let nodes = [];
+                for (let row of data.split('\n')) {
+                    if (row === '') continue;
+                    let li = document.createElement('li');
+                    let a = document.createElement('a');
+                    let img = document.createElement('img');
+                    img.setAttribute('src', '/res/pdf.svg');
+                    a.setAttribute('href', `/${row}`);
+                    a.append(img, row);
+                    li.appendChild(a);
+                    nodes.push(li);
+                }
+                document.getElementById('verbali').append(...nodes);
+            })
+            .catch(err => console.error(err));
+    </script>
+</body>
+
+</html>
