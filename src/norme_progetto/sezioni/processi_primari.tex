@@ -4,15 +4,15 @@
 \@startsection {subparagraph}{5}{0mm}{-\baselineskip}{.5\baselineskip}{\normalfont \normalsize \bfseries }}
 \makeatother
 
-\section{Processi primari}\label{section:processi_primari}
-\subsection{Fornitura}
+\section{Processi primari}\label{section:Processi_primari}
+\subsection{Fornitura} \label{subsection:Fornitura}
 
-\subsection{Sviluppo}
-    \subsubsection{Scopo}
+\subsection{Sviluppo} \label{subsection:Sviluppo}
+    \subsubsection{Scopo} \label{subsubsection:Scopo}
     Scopo del processo di sviluppo è quello di descrivere i compiti e le attività da svolgere relative allo sviluppo del prodotto software.
     In questa sezione vengono dunque descritte le attività, le norme e le convenzioni adottate per la composizione di tale processo.
 
-    \subsubsection{Aspettative}
+    \subsubsection{Aspettative} \label{subsubsection:Aspettative}
     Le aspettative nell’applicazione del processo di sviluppo sono:
     \begin{itemize}
         \item Determinare vincoli tecnologici;
@@ -21,11 +21,11 @@
         \item Realizzare un prodotto finale che superi i test e soddisfi requisiti e richieste del proponente.
     \end{itemize}
 
-    \subsubsection{Descrizione}
+    \subsubsection{Descrizione} \label{subsubsection:Descrizione}
     Il processo di sviluppo contiene le attività e i compiti dello sviluppatore, tra cui le attività per l’analisi dei requisiti, la progettazione, 
     la codifica, l’integrazione, il test, l’installazione e l’accettazione relative ai prodotti software.
 
-    \subsubsection{Attività}
+    \subsubsection{Attività} \label{subsubsection:Attività}
     Di seguito sono elencate e successivamente trattate le attività caratterizzanti tale processo:
     \begin{itemize}
         \item Analisi dei requisiti;
@@ -33,12 +33,12 @@
         \item Codifica.
     \end{itemize}
     
-    \paragraph{Analisi dei requisiti}
+    \paragraph{Analisi dei requisiti} \label{paragraph:Analisi dei requisiti}
         \subparagraph{Scopo}
         Lo scopo dell’analisi dei requisiti è quello di individuare i requisiti diretti e indiretti, impliciti ed espliciti che il proponente richiede 
         per la realizzazione del prodotto e i vari casi d'uso del prodotto stesso.
     
-        \subparagraph{Descrizione}
+        \subparagraph{Descrizione} \label{subparagraph:Descrizione}
         i requisiti vengono raccolti da diverse fonti quali:
        \begin{itemize}
            \item Lettura investigativa del capitolato;
@@ -47,11 +47,11 @@
            \item Analisi dei casi d'uso.
        \end{itemize}
 
-        \subparagraph{Aspettative}
+        \subparagraph{Aspettative} \label{subparagraph:Analisi dei requisiti}
         L’obiettivo dell’attività di analisi dei requisiti consiste nella creazione della documentazione formale contenente tutti i requisiti 
         richiesti dal proponente, che siano essi stati definiti all'inizio o che siano stati concordati in fase di sviluppo.
 
-        \subparagraph{Classificazione dei requisiti}
+        \subparagraph{Classificazione dei requisiti} \label{subparagraph:Classificazione dei requisiti}
         Ciascun requisito viene classificato mediante l'uso di un codice identificativo. Per tale codice è stato definito uno standard dal gruppo che viene spiegato nel seguito:\\\\
         \textbf{Codice Identificativo:}\\
         \begin{center}
@@ -85,9 +85,16 @@
             \item \textbf{Fonte}: L'origine del requisito viene riportata in questa sezione.
         \end{itemize}
 
-        %Aggiungere esempio tabella
+        \begin{longtable}{cccc}
+            \rowcolor[HTML]{125E28}
+                {\color[HTML]{FFFFFF} \textbf{Requisito}} & {\color[HTML]{FFFFFF} \textbf{Descrizione}}         & {\color[HTML]{FFFFFF} \textbf{Classificazione}} & {\color[HTML]{FFFFFF} \textbf{Fonti}} \\
+                \cellcolor[HTML]{b3ffb3}R1V1              &  \cellcolor[HTML]{b3ffb3}Creazione smart contract   &  \cellcolor[HTML]{b3ffb3}Obbligatorio           &  \cellcolor[HTML]{b3ffb3}Capitolato C2\\
+                %\cellcolor[HTML]{99ff99}R1V1              &  \cellcolor[HTML]{99ff99}Creazione smart contract   &  \cellcolor[HTML]{99ff99}Obbligatorio           &  \cellcolor[HTML]{99ff99}Capitolato C2\\ questa riga è il secondo colore di riga nelle tabelle
+                \caption{Classificazione di un requisito}
+                \label{tab:my-table}\\
+        \end{longtable}
 
-        \subparagraph{Classificazione dei casi d'uso}
+        \subparagraph{Classificazione dei casi d'uso} \label{subparagraph:Classificazione dei casi d'uso}
 
 
 
