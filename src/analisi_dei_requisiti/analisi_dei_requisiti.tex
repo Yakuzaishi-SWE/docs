@@ -1,0 +1,42 @@
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\begin{document}
+	%RIDEFINIZIONE COMANDI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\renewcommand{\documentName}{Analisi dei requisiti}
+	\renewcommand{\documentVersion}{1.0.0}
+	
+	\renewcommand{\documentEditors}{Michele Filoso\\&Dario Furlan\\&Matteo Midena}
+	\renewcommand{\documentVerifiers}{Nome Cognome}
+	\renewcommand{\documentApprovers}{Nome Cognome}
+	
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentAddressee}{\commitNameM\\&\commitNameS\\&\proposerName}
+	\renewcommand{\documentSummary}{Il seguente documento ha come fine la presentazione dei requisiti espliciti e impliciti emersi dall'analisi del capitolato e dagli incontri con il proponente.}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%PRIMA PAGINA
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{gobble}
+	\pagestyle{empty}
+	\input{../template/source/firstpage}
+	\pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CHANGELOG E INDICI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{contenuto/changelog} \pagebreak
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents \pagebreak
+	%\listoftables \pagebreak
+	%\listoffigures \pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CONTENUTO
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagestyle{styleDocPages}
+	\input{contenuto/contenuto}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
