@@ -2,7 +2,15 @@
 \input{../template/source/commands}
 \input{../template/source/styles}
 
-\setcounter{tocdepth}{5}
+\setcounter{tocdepth}{5}	%aggiunge paragrafi e sottoparagrafi all'indice
+\setcounter{secnumdepth}{5}	%aggiunge numero indicizazzione a paragrafi e sottoparagrafi
+
+%indentazione sottoparagrafi
+\makeatletter
+\renewcommand\subparagraph{
+\@startsection {subparagraph}{5}{0mm}{-\baselineskip}{.5\baselineskip}{\normalfont \normalsize \bfseries }}
+\makeatother
+
 \begin{document}
 	%RIDEFINIZIONE COMANDI
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

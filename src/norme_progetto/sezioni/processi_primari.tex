@@ -1,8 +1,3 @@
-\setcounter{secnumdepth}{5}
-\makeatletter
-\renewcommand\subparagraph{
-\@startsection {subparagraph}{5}{0mm}{-\baselineskip}{.5\baselineskip}{\normalfont \normalsize \bfseries }}
-\makeatother
 
 \section{Processi primari}\label{section:Processi_primari}
 \subsection{Fornitura} \label{subsection:Fornitura}
@@ -89,7 +84,7 @@ Di seguito sono riportati gli strumenti utilizzati dal tream di sviluppo per la 
     Il processo di sviluppo contiene le attività e i compiti dello sviluppatore, tra cui le attività per l’analisi dei requisiti, la progettazione, 
     la codifica, l’integrazione, il test, l’installazione e l’accettazione relative ai prodotti software.
 
-    \subsubsection{Attività} \label{subsubsection:Attività}
+    \subsubsection{Attività} \label{subsubsection:Attivita'}
     Di seguito sono elencate e successivamente trattate le attività caratterizzanti tale processo:
     \begin{itemize}
         \item Analisi dei requisiti;
@@ -97,68 +92,121 @@ Di seguito sono riportati gli strumenti utilizzati dal tream di sviluppo per la 
         \item Codifica.
     \end{itemize}
     
-    \paragraph{Analisi dei requisiti} \label{paragraph:Analisi dei requisiti}
-        \subparagraph{Scopo}
-        Lo scopo dell’analisi dei requisiti è quello di individuare i requisiti diretti e indiretti, impliciti ed espliciti che il proponente richiede 
-        per la realizzazione del prodotto e i vari casi d'uso del prodotto stesso.
-    
-        \subparagraph{Descrizione} \label{subparagraph:Descrizione}
-        i requisiti vengono raccolti da diverse fonti quali:
-       \begin{itemize}
-           \item Lettura investigativa del capitolato;
-           \item Confronto interno tra i memmbri del gruppo;
-           \item Confronto con il proponente;
-           \item Analisi dei casi d'uso.
-       \end{itemize}
+        \paragraph{Analisi dei requisiti} \label{paragraph:Analisi dei requisiti}
+            \subparagraph{Scopo}
+            Lo scopo dell’analisi dei requisiti è quello di individuare i requisiti diretti e indiretti, impliciti ed espliciti che il proponente richiede 
+            per la realizzazione del prodotto e i vari casi d'uso del prodotto stesso.
 
-        \subparagraph{Aspettative} \label{subparagraph:Analisi dei requisiti}
-        L’obiettivo dell’attività di analisi dei requisiti consiste nella creazione della documentazione formale contenente tutti i requisiti 
-        richiesti dal proponente, che siano essi stati definiti all'inizio o che siano stati concordati in fase di sviluppo.
+            \subparagraph{Aspettative} \label{subparagraph:Aspettative}
+            L’obiettivo dell’attività di analisi dei requisiti consiste nella creazione della documentazione formale contenente tutti i requisiti 
+            richiesti dal proponente, che siano essi stati definiti all'inizio o che siano stati concordati in fase di sviluppo.
 
-        \subparagraph{Classificazione dei requisiti} \label{subparagraph:Classificazione dei requisiti}
-        Ciascun requisito viene classificato mediante l'uso di un codice identificativo. Per tale codice è stato definito uno standard dal gruppo che viene spiegato nel seguito:\\\\
-        \textbf{Codice Identificativo:}\\
-        \begin{center}
-            \textbf{\LARGE{R[Importanza][Tipologia][Codice]}}
-        \end{center}
-        dove:
-
-        \textbf{Importanza}: indica l'importanza associata ad un requisito e può assumere un valore numerico compreso tra 1 e 3 con il seguente significato:
-            \begin{itemize}[label={}]
-                \item \textbf{1} : Requisito obbligatorio;
-                \item \textbf{2} : Requisito desiderabile ma non obbligatorio;
-                \item \textbf{3} : Requisito opzionale.
+            \subparagraph{Requisiti} \label{subparagraph:Requisiti}
+            I requisiti vengono raccolti da diverse fonti quali:
+            \begin{itemize}
+               \item Lettura investigativa del capitolato;
+                \item Confronto interno tra i membri del gruppo;
+                \item Confronto con il proponente;
+                \item Analisi dei casi d'uso.
             \end{itemize}
 
-        \textbf{Tipologia}: rappresenta una tipologia di requisito e può assumere uno fra i seguenti valori letterali:
-        \begin{itemize}[label={}]
-            \item \textbf{V} : Vincolo;
-            \item \textbf{P} : Prestazionale;
-            \item \textbf{Q} : Qualitativo;
-            \item \textbf{F} : Funzionale.
-        \end{itemize}
+            \subparagraph{Classificazione dei requisiti} \label{subparagraph:Classificazione dei requisiti}
+            Ciascun requisito viene classificato mediante l'uso di un codice identificativo. Per tale codice è stato definito uno standard dal gruppo che viene spiegato nel seguito:\\\\
+            \textbf{Codice Identificativo:}\\
+            \begin{center}
+                \textbf{\Large{R[Importanza][Tipologia][Codice]}}
+            \end{center}
+            dove:\\
 
-        \textbf{Codice}: è un identificativo univoco del requisito espresso in forma gerarchica padre/figlio.
-        \\
-        \\
-        Una volta associato ad un requisito, l'identificativo è immutabile.
-        Ogni requisito deve inoltre essere accompagnato da una serie di informazioni aggiuntive:
-        \begin{itemize}
-            \item \textbf{Descrizione}: Descrizione sintetica ed esplicativa del requisito in questione;
-            \item \textbf{Classificazione}: Al fine di rendere la tabella più leggibile viene rimarcata ancora una volta l'importanza del requisito anche se già presente nel codice identificativo;
-            \item \textbf{Fonte}: L'origine del requisito viene riportata in questa sezione.
-        \end{itemize}
+            \textbf{Importanza}: indica l'importanza associata ad un requisito e può assumere un valore numerico compreso tra 1 e 3 con il seguente significato:
+                \begin{itemize}[label={}]
+                    \item \textbf{1} : Requisito obbligatorio;
+                    \item \textbf{2} : Requisito desiderabile ma non obbligatorio;
+                    \item \textbf{3} : Requisito opzionale.
+                \end{itemize}
 
-        \begin{longtable}{cccc}
-            \rowcolor[HTML]{125E28}
-                {\color[HTML]{FFFFFF} \textbf{Requisito}} & {\color[HTML]{FFFFFF} \textbf{Descrizione}}         & {\color[HTML]{FFFFFF} \textbf{Classificazione}} & {\color[HTML]{FFFFFF} \textbf{Fonti}} \\
-                \cellcolor[HTML]{b3ffb3}R1V1              &  \cellcolor[HTML]{b3ffb3}Creazione smart contract   &  \cellcolor[HTML]{b3ffb3}Obbligatorio           &  \cellcolor[HTML]{b3ffb3}Capitolato C2\\
-                %\cellcolor[HTML]{99ff99}R1V1              &  \cellcolor[HTML]{99ff99}Creazione smart contract   &  \cellcolor[HTML]{99ff99}Obbligatorio           &  \cellcolor[HTML]{99ff99}Capitolato C2\\ questa riga è il secondo colore di riga nelle tabelle
-                \caption{Classificazione di un requisito}
-                \label{tab:my-table}\\
-        \end{longtable}
+            \textbf{Tipologia}: rappresenta una tipologia di requisito e può assumere uno fra i seguenti valori letterali:
+            \begin{itemize}[label={}]
+                \item \textbf{V} : Vincolo;
+                \item \textbf{P} : Prestazionale;
+                \item \textbf{Q} : Qualitativo;
+                \item \textbf{F} : Funzionale.
+            \end{itemize}
 
-        \subparagraph{Classificazione dei casi d'uso} \label{subparagraph:Classificazione dei casi d'uso}
+            \textbf{Codice}: è un identificativo univoco del requisito espresso in forma gerarchica padre/figlio.
+            \\
+            \\
+            Una volta associato ad un requisito, l'identificativo è immutabile.
+            Ogni requisito deve inoltre essere accompagnato da una serie di informazioni aggiuntive:
+            \begin{itemize}
+                \item \textbf{Descrizione}: Descrizione sintetica ed esplicativa del requisito in questione;
+                \item \textbf{Classificazione}: Al fine di rendere la tabella più leggibile viene rimarcata ancora una volta l'importanza del requisito anche se già presente nel codice identificativo;
+                \item \textbf{Fonte}: L'origine del requisito viene riportata in questa sezione.
+            \end{itemize}
+            
+            \begin{table}[H]
+              \centering
+              \renewcommand{\arraystretch}{1.8}
+              \rowcolors{2}{green!100!black!40}{green!100!black!30}
+              \begin{tabular}{cccc}
+                \rowcolor[HTML]{125E28} 
+                \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Requisito}} 
+                & \color[HTML]{FFFFFF}\textbf{Descrizione} 
+                & \color[HTML]{FFFFFF}\textbf{Classificazione} 
+                & \color[HTML]{FFFFFF}\textbf{Fonte}\\
+            
+                R1V1  &  Creazione smart contract  &  Obbligatorio  &  Capitolato C2\\    
+            
+              \end{tabular}
+              \caption{Classificazione di un requisito}
+            \end{table}
+                        
+            \subparagraph{Casi d'uso} \label{subparagraph:Casi d'uso}
+            I casi d'uso esprimono un comportamento o un modo di utilizzare il prodotto.\\
+            Vengono descritti graficamente mediante l'ausilio di diagrammi UML 2.0.\\
+            Ciascun caso d'uso è costituito da:
+            \begin{itemize}
+                \item Codice identificativo;
+                \item Attore Primario;
+                \item Precondizioni;
+                \item Postcondizioni;
+                \item Scenario principale;
+                \item Generalizzazioni;
+                \item Estensioni.
+            \end{itemize}
 
+            \subparagraph{Classificazione dei casi d'uso} \label{subparagraph:Classificazione dei casi d'uso}
+            Ciascun caso d'uso viene classificato mediante l'uso di un codice identificativo. Per tale codice è stato definito uno standard dal gruppo che viene spiegato nel seguito:\\\\
+            \textbf{Codice Identificativo:}\\
+            \begin{center}
+                \textbf{\Large{UC[Numero caso d’uso](.[Caso d’uso figlio])* - [Titolo caso d’uso]}}
+            \end{center}
+            dove:
+            \begin{itemize}[label={}]
+                \item \textbf{UC} : Acronimo di "use case";
+                \item \textbf{Numero caso d'uso} : Numero associato al caso d'uso principale;
+                \item \textbf{Caso d'uso figlio} : Numero associato al sottocaso del caso d'uso principale;
+                \item \textbf{Titolo caso d'uso} : Titolo assegnato al caso d'uso
+            \end{itemize}
 
+            Una volta associato ad un caso d'uso, l'identificativo è immutabile.
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{../template/images/useCases/useCase.png}
+                \caption{Esempio di caso d'uso}
+            \end{figure}
+            
+            \subparagraph{UML} \label{subparagraph:UML}
+            I diagrammi UML\glo\ verranno realizzati usando la versione UML 2.0 del linguaggio.
+          
+        \paragraph{Progettazione} \label{paragraph:Progettazione}
 
+            \subparagraph{Scopo} \label{subparagraph:Scopo}
+
+            \subparagraph{Aspettative} \label{subparagraph:Aspettative}
+
+            \subparagraph{Requirement \& Tecnology Baseline} \label{subparagraph:Requirement_Tecnology Baseline}
+
+            \subparagraph{Product Baseline} \label{subparagraph:Product Baseline}
+
+            
