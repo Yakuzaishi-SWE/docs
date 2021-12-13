@@ -67,11 +67,11 @@ Di seguito sono riportati gli strumenti utilizzati dal tream di sviluppo per la 
     \url{https://app.agantty.com/?locale=en/}
 \end{itemize}
 \subsection{Sviluppo} \label{subsection:Sviluppo}
-    \subsubsection{Scopo} \label{subsubsection:Scopo}
+    \subsubsection{Scopo} \label{subsubsection:Sviluppo_Scopo}
     Scopo del processo di sviluppo è quello di descrivere i compiti e le attività da svolgere relative allo sviluppo del prodotto software.
     In questa sezione vengono dunque descritte le attività, le norme e le convenzioni adottate per la composizione di tale processo.
 
-    \subsubsection{Aspettative} \label{subsubsection:Aspettative}
+    \subsubsection{Aspettative} \label{subsubsection:Sviluppo_Aspettative}
     Le aspettative nell’applicazione del processo di sviluppo sono:
     \begin{itemize}
         \item Determinare vincoli tecnologici;
@@ -80,7 +80,7 @@ Di seguito sono riportati gli strumenti utilizzati dal tream di sviluppo per la 
         \item Realizzare un prodotto finale che superi i test e soddisfi requisiti e richieste del proponente.
     \end{itemize}
 
-    \subsubsection{Descrizione} \label{subsubsection:Descrizione}
+    \subsubsection{Descrizione} \label{subsubsection:Sviluppo_Descrizione}
     Il processo di sviluppo contiene le attività e i compiti dello sviluppatore, tra cui le attività per l’analisi dei requisiti, la progettazione, 
     la codifica, l’integrazione, il test, l’installazione e l’accettazione relative ai prodotti software.
 
@@ -94,10 +94,12 @@ Di seguito sono riportati gli strumenti utilizzati dal tream di sviluppo per la 
     
         \paragraph{Analisi dei requisiti} \label{paragraph:Analisi dei requisiti}
             \subparagraph{Scopo}
-            Lo scopo dell’analisi dei requisiti è quello di individuare i requisiti diretti e indiretti, impliciti ed espliciti che il proponente richiede 
-            per la realizzazione del prodotto e i vari casi d'uso del prodotto stesso.
+            Lo scopo dell’analisi dei requisiti è quello di individuare, a partire da un'approfondito studio del capitolato, i requisiti diretti e indiretti,
+            impliciti ed espliciti che il proponente richiede per la realizzazione del prodotto e i vari casi d'uso del prodotto stesso. In questa attività è importante
+            suddividere il problema iniziale in requisiti quanto più elementari possibile, così da diminuire la complesssità del problema oriinale
+             facilitando il lavoro durante la fase di sviluppo.
 
-            \subparagraph{Aspettative} \label{subparagraph:Aspettative}
+            \subparagraph{Aspettative} \label{subparagraph:ADR_Aspettative}
             L’obiettivo dell’attività di analisi dei requisiti consiste nella creazione della documentazione formale contenente tutti i requisiti 
             richiesti dal proponente, che siano essi stati definiti all'inizio o che siano stati concordati in fase di sviluppo.
 
@@ -150,10 +152,10 @@ Di seguito sono riportati gli strumenti utilizzati dal tream di sviluppo per la 
               \rowcolors{2}{green!100!black!40}{green!100!black!30}
               \begin{tabular}{cccc}
                 \rowcolor[HTML]{125E28} 
-                \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Requisito}} 
-                & \color[HTML]{FFFFFF}\textbf{Descrizione} 
-                & \color[HTML]{FFFFFF}\textbf{Classificazione} 
-                & \color[HTML]{FFFFFF}\textbf{Fonte}\\
+                \color[HTML]{FFFFFF}\textbf{Requisito}
+              & \color[HTML]{FFFFFF}\textbf{Descrizione} 
+              & \color[HTML]{FFFFFF}\textbf{Classificazione} 
+              & \color[HTML]{FFFFFF}\textbf{Fonte}\\
             
                 R1V1  &  Creazione smart contract  &  Obbligatorio  &  Capitolato C2\\    
             
@@ -201,12 +203,111 @@ Di seguito sono riportati gli strumenti utilizzati dal tream di sviluppo per la 
           
         \paragraph{Progettazione} \label{paragraph:Progettazione}
 
-            \subparagraph{Scopo} \label{subparagraph:Scopo}
+            \subparagraph{Scopo} \label{subparagraph:Progettazione_Scopo}
+            Lo scopo dell'attività di progettazione è quello di incorporare le parti ottenute durante l'analisi dei requisiti, specificando le funzionalità dei sottosistemi
+            e riconducendo ad un’unica soluzione. 
 
-            \subparagraph{Aspettative} \label{subparagraph:Aspettative}
+            \subparagraph{Aspettative} \label{subparagraph:Progettazione_Aspettative}
+            L’obiettivo dell’attività di progettazione consiste nel realizzare l’architettura del sistema, inizialmente realizzata da un Proof of Concept\glo\ sviluppato come
+            una demo prototipale del sistema alla Requirements \& Technology Baseline,ed inseguito approfondita e descritta nel documento tecnico allegato alla Product Baseline.
 
-            \subparagraph{Requirement \& Tecnology Baseline} \label{subparagraph:Requirement_Tecnology Baseline}
+            \subparagraph{Requirements \& technology baseline} \label{subparagraph:Requirements & technology baseline}
+            Questa fase fissa i requisiti che il fornitore si impegna a soddisfare, in accordo con il proponente e vengono motivate le tecnologie,
+            i framework\glo\ e le librerie selezionate per la realizzazione del prodotto.\\
+            Dimostra adeguatezza e fattibillità coerente con gli obbiettivi.\\
+            Documenti utili a tali fini sono:
+            \begin{itemize}
+                \item Piano di progetto;
+                \item Piano di qualifica;
+                \item Norme di progetto;
+                \item Verbali interni ed esterni.
+            \end{itemize}
+            Salvo i verbali, i documenti sopracitati vanno mantenuti ed evoluti anche per le fasi successive.\\
 
-            \subparagraph{Product Baseline} \label{subparagraph:Product Baseline}
 
+            \subparagraph{Product baseline} \label{subparagraph:Product baseline}
+            Questa fase illustra le linee guida architetturali del prodotto.
+            Oltre all'evoluzione dei documenti sopracitati, in questa fase risulteranno necessari:
+            \begin{itemize}
+                \item Manuale utente;
+                \item Verbali di periodo.
+            \end{itemize}
+            Come per la fase precedente, anche i documenti di questa fase vanno mantenuti ed evoluti fino alla fase di consegna ed accettazione del prodotto finale.
+
+        \paragraph{Codifica}    \label{paragraph:Codifica}
+            \subparagraph{Scopo}    \label{subparagraph:Codifica_Scopo}
+            L’attività di codifica ha il fine di concretizzare la progettazione con la programmazione del software vero e proprio.
+
+            \subparagraph{Aspettative}    \label{subparagraph:Codifica_Aspettative}
+            Questa attività dovrà avere come risultato un prodotto software avente le caratteristiche e i requisiti concordati con il proponente. Il codice generato dovrà 
+            rispettare alcune norme per poter essere leggibile e per poter facilmente intervenire in seguito nelle attività di manutenzione, modifica, verifica e validazione.
+
+            \subparagraph{Stile della codifica}    \label{subparagraph:Stile della codifica}
+            \begin{itemize}
+                \item \textbf{Indentazione}: I blocchi di codice innestati dovranno avere un'indentazione di quattro spazi;
+                \item \textbf{Parentesi}: La parentesi aperta dovrà essere inserita nella stessa riga di dichiarazione del costrutto, separata da uno spazio, mentre
+                                          la parentesi chiusa dovrà essere inserita con la giusta indentazione alla riga immediatamente successiva all'ultima riga di
+                                          codice del costrutto;
+                \item \textbf{Metodi}: il nome dei metodi dovrà iniziare con lettera minuscola e, se composto da più parole, le successive dovranno iniziare con lettera
+                                       maiuscola. È preferibile mantenere metodi brevi, con poche righe di codice;
+                \item \textbf{Classi}: il nome delle classi dovrà sempre iniziare con la lettera maiuscola e, come per i metodi, se composto da più parole, le successive 
+                                       dovranno iniziare con la lettere maiuscola;
+                \item \textbf{Variabili}: il nome delle variabili deve sempre essere scritto in minuscolo e in inglese. Se il nome è composta da più parole, la seconda 
+                                          dovrà iniziare con la lettera maiuscola;
+                \item \textbf{Costanti}: il nome deve essere sempre scritto in maiuscolo e in inglese. Se il nome è composto da più parole, queste dovranno essere separate
+                                        dal carattere '\textunderscore';
+                \item \textbf{Univocità dei nomi}: tutti i costrutti dovranno avere nomi univoci e significativi;
+                \item \textbf{Commenti}: i commenti dovranno essere inseriti prima dell’inizio del costrutto e presentati in lingua italiana;
+                \item \textbf{File}: dovranno avere un nome che inizia per lettera maiuscola che ne specifichi il contenuto.
+            \end{itemize}
+
+        \paragraph{Metriche}    \label{paragraph:Metriche}
+        Per la valutazione dei prodotti del processo di codifica, il gruppo adotterà delle opportune metriche di qualità:
+        \begin{itemize}
+            \item Metriche per le funzionalità
+            \begin{table}[H]
+                \centering
+                \rowcolors{2}{green!100!black!40}{green!100!black!30}
+                \begin{tabular}{ccp{7cm}c}
+                  \rowcolor[HTML]{125E28} 
+                  \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Codice}} &
+                  \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Nome}} &
+                  \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}} & 
+                  \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Formula}}\\
+                  
+                  MSC1  &  Copertura dei requisiti  &  indica i requisiti implementati nel prodotto software rispetto a quelli attesi, calcolato in percentuale  & \Large$(1-\frac{N_f}{N_i})\cdot100$ \\    
+                  \end{tabular}
+            \end{table}
+            dove:
+            \begin{itemize}
+                \item[] $N_f$ := \#Funzionalità non implementate;
+                \item[] $N_i$ := \#Funzionalità implementate.
+            \end{itemize}
+            \item Metriche per l'affidabilità
+            \begin{table}[H]
+                \centering
+                \rowcolors{2}{green!100!black!40}{green!100!black!30}
+                \begin{tabular}{ccp{7cm}c}
+                  \rowcolor[HTML]{125E28} 
+                  \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Codice}} &
+                  \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Nome}} &
+                  \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}} & 
+                  \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Formula}}\\
+                  
+                  MSC2  &  Grado di affidabilità  &  indica l'affidabilità del prodotto, calcolata in percentuale.  & \Large$(\frac{T\mysubscript{fault}}{T\mysubscript{ex}})\cdot100$ \\    
+                  \end{tabular}
+            \end{table}
+            dove:
+            \begin{itemize}
+                \item[] T\mysubscript{fault} := \#Test falliti;
+                \item[] T\mysubscript{ex} := \#Test eseguiti.
+            \end{itemize}
+
+        \end{itemize}
             
+	
+
+
+        \paragraph{Strumenti}    \label{paragraph:Strumenti}
+        Inserire qui le tecnologie usate per Analisi Dei Requisiti Progettazione e Codifica... \\
+        \LARGE...[Da completare]

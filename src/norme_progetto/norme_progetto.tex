@@ -11,6 +11,12 @@
 \@startsection {subparagraph}{5}{0mm}{-\baselineskip}{.5\baselineskip}{\normalfont \normalsize \bfseries }}
 \makeatother
 
+%indentazione sottoparagrafi
+\makeatletter
+\renewcommand\paragraph{
+\@startsection {paragraph}{4}{0mm}{-\baselineskip}{.5\baselineskip}{\normalfont \normalsize \bfseries }}
+\makeatother
+
 \begin{document}
 	%RIDEFINIZIONE COMANDI
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
