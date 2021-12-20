@@ -4,29 +4,33 @@
 \begin{enumerate}
 	\item \textbf{Modello di sviluppo e pianificazione}
 	\begin{itemize}
-		\item Ok modello incrementale;
-		\item Buona idea dividere in milestone interne.
+		\item Il gruppo Yakuzaishi ha proposto come modello di sviluppo il modello incrementale. Il proponente si è trovato in accordo con la decisione, sottolineando che per questo tipo di progetti che non sono ben defniti dall'inizio, il modello incrementale è un buon approccio allo sviluppo;
+		\item In fase di pianificazione è buona norma dividere l'intero periodo con milestone interne.
 	\end{itemize}
 	\item \textbf{Tecnologie con cui sviluppare}
 	\begin{itemize}
-		\item Back-end: Express.js (javascript è buono per comunicare con la blockchain);
-		\item Front-end: Angular (buono a livello didattico), React (più facile di angular), Vue.js (buono per interfacce di poche pagine).
+		\item Back-end: Il gruppo ha proposto Express.js ed il proponente si è trovato in accordo poiché javascript è buono per comunicare con la blockchain;
+		\item Front-end: A seguito di una discussione tra i vari framework ci è stata lasciata la possibilità di scelta tra Angular (buono a livello didattico), React (più facile di angular ma meno utilizzato) e Vue.js (buono per interfacce di poche pagine).
 	\end{itemize}
-	\item \textbf{Proof of Concept}
+	\item \textbf{Proof of Concept}\\
+		Per quanto riguarda il proof of concept si è stabilito che questo dovrà essere un eseguibile che dovrà implementare:
 	\begin{itemize}
-		\item Landing page dove far partire il pagamento;
-		\item No moneybox;
-		\item Smart contract minimo;
-		\item Pagina per lo sblocco dei soldi da parte del compratore.
+		\item Landing page da dove far partire il pagamento e contenente le informazioni di riepilogo dell'ordine;
+		\item Pagina per lo sblocco dei soldi da parte del compratore;
+		\item implementazione di smart contract minima;
+		\item Non c'è bisogno di implementare la funzionalità di moneybox.
 	\end{itemize}
 	\item \textbf{Casi d'uso}
 	\begin{itemize}
-		\item Il venditore deve vedere tutte le transazioni? Si.
+		\item A seguito di una discussione su uno specifico caso d'uso è emerso che potrebbe essere conveniente per i venditore essere a conoscenza di tutte le transazioni.
 	\end{itemize}
 	\item \textbf{Consigli del proponente}
 	\begin{itemize}
-		\item Forse un database non è necessario;
-		\item C'è un esempio dello smart contract da realizzare all'interno della documentazione solidity (\url{https://docs.soliditylang.org/en/v0.8.10/solidity-by-example.html#safe-remote-purchase})
+		\item Si può valutare di escludere un database poiché si potrebbero registrare tutti i dati di cui si ha bisogno nella blockchain stessa;
+		\item È possibile trovare un esempio simile allo smart contract da realizzare all'interno della documentazione Solidity al seguente link:\\
+		\begin{center}
+			\url{https://docs.soliditylang.org/en/v0.8.10/solidity-by-example.html#safe-remote-purchase}
+		\end{center}
 	\end{itemize}
 \end{enumerate}
 \pagebreak
