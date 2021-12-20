@@ -1,11 +1,8 @@
 \section{Processi di supporto}\label{section:processi_supporto}
-\subsection{Documentazione}
+\subsection{Documentazione}\label{subsection: documentazione}
 \subsubsection{Scopo}\label{subsubsection: scopo}
 Scopo di questa sezione è quello di normare la documentazione dei vari processi e le attività di sviluppo.
 Ci occuperemo quindi di definire le norme per la definizione della struttura che i vari documenti redatti dal gruppo Yakuzaishi devono avere.
-\subsection{Gestione della configurazione}\label{subsection:gestione_configurazione}
-\subsubsection{Scopo}
-Scopo di questa sezione è definire come il team di sviluppo ha deciso di affrontare la tematica della gestione della configurazione, ovvero come il team di sviluppo ha deciso di mantenere tracciata la documentazione redatta.
 \subsubsection{Aspettative}
 Le aspettative del gruppo Yakuzaishi in questo processo sono:
 \begin{itemize}
@@ -13,7 +10,98 @@ Le aspettative del gruppo Yakuzaishi in questo processo sono:
     \item Definire una convenzione che accomuni tutti i tipi di documentazione redatta.
  \end {itemize}
 \subsubsection{Descrizione}
-Lo scopo della documentazione è quello di trascrivere i fatti accaduti durante un progetto
+Lo scopo della documentazione è quello di trascrivere i fatti accaduti e le decisioni prese dal gruppo durante l' intera durata del progetto, 
+\subsubsection{Ciclo di vita del documento}
+
+\subsubsection{Template}
+
+\subsubsection{Struttura del documento}
+\paragraph{Prima pagina}
+
+\paragraph{Registro delle modifiche}
+\paragraph{Indice}
+\paragraph{Struttura delle pagine}
+\paragraph{Verbali}
+
+\subsubsection{Convenzioni}
+\paragraph{Nomi dei file}
+Di seguito viene descritta la rappresentazione dei nomi dei file, i quali sono validi per tutti i documenti:
+\begin{itemize}
+    \item I nomi dei file iniziano tutti con la lettera minuscola;
+    \item Se il nome comprende più parole allora ognuna di esse è separata dal simbolo di underscore;
+\end {itemize}
+Esempi corretti:
+\begin{itemize}
+    \item introduzione;
+    \item norme\textunderscore di\textunderscore progetto.
+\end {itemize}
+Esempi non corretti:
+\begin{itemize}
+    \item Norme\textunderscore di\textunderscore Progetto (sono presenti lettere maiuscole);
+    \item NormeDiProgetto (sono presenti lettere maiuscole e sono assenti i caratteri separatori).
+\end {itemize}
+
+\paragraph{Stile di testo}
+Nella sezione sottostante vengono riportati i vari stili di testo utilizzati nei documenti e i contesti in cui essi sono utilizzati:
+\begin {itemize}
+    \item \textbf{Grassetto:} lo stile grassetto viene utilizzato per indicare i termini negli elenchi puntati e per i titoli delle sezioni;
+    \item \textbf{Corsivo:} lo stile corsivo viene utilizzato per indicare il nome del gruppo, per il nome del proponente e per le parole di particolare rilevanza all' interno dei documenti;
+    \item \textbf{Link:} i link rappresentano dei collegamenti esterni al documento, essi verranno rappresentati di colore blu e sottolineati;
+    \item \textbf{Nome dei documenti:} essi vengono rappresentati in corsivo con la lettera maiuscola tranne la preposizione, se si fa un riferimento specifico ad un particolare documento bisogna indicarne anche la versione (sempre in corsivo).
+    Se il nome del documento è presente nel titolo allora non verrà applicato il corsivo, ma il grassetto.
+    \item \textbf{Collegamenti interni:} le parole che si riferiscono ad una parte del documento vanno sottolineate.
+\end {itemize}
+\paragraph{Glossario}
+Le norme relative al \textit{Glossario} sono:
+\begin{itemize}
+    \item Ogni parola presente nel \textit{Glossario} viene contrassegnata con una 'G' a pedice;
+    \item Non vengono riportate nel \textit{Glossario} le parole presenti in un titolo o in una didascalia;
+    \item Se un termine compare nella sua stessa definizione all' interno del \textit{Glossario} esso non viene contrassegnato.
+\end{itemize}
+\paragraph{Elenchi puntati e numerati}
+Di seguito viene la descrizione di come il team di sviluppo ha deciso di utilizzare gli elenchi puntati e numerati.
+\begin {itemize}
+    \item Ogni punto dell' elenco inizia con la lettera maiuscola;
+    \item Alla fine di ogni punto vi è un ';';
+    \item Dopo l'ultima voce vi è un '.';
+    \item Se vi è un concetto da spiegare esso viene scritto in grassetto seguito da ':' e segue la spiegazione di esso.
+\end {itemize}
+\paragraph{Sigle}
+Le sigle presenti nei vari documenti rappresentano i ruoli che ogni membro del gruppo a rotazione deve svolgere:
+\begin{itemize}
+    \item \textbf{RE:} Responsabile di Progetto;
+    \item \textbf{AM:} Amministratore;
+    \item \textbf{AN:} Analista;
+    \item \textbf{PT:} Progettista;
+    \item \textbf{PR:} Programmatore;
+    \item \textbf{VE:} Verificatore.
+\end {itemize}
+... inserire altre sigle usate negli altri documenti...
+\paragraph{Data}
+Il team di sviluppo ha deciso di adottare la seguente convenzione per la rappresentazione delle date che compaiono nei vari documenti:\\
+\textbf{YYYY-MM-DD}\\
+dove \textbf{YYYY} indica l'anno, \textbf{MM} indica il mese e \textbf{DD} indica il giorno.
+
+\subsubsection{Elementi grafici}
+\paragraph{Tabelle}
+
+\paragraph{Immagini}
+Le immagini sono collocate al centro della pagina in questione e contengono un numero e una descrizione esplicativa.
+\paragraph{Diagrammi}
+\subsubsection{Metriche}
+\subsubsection{Strumenti}
+Seguono gli strumenti utilizzati in questa fase. (Da inserire passo a passo)
+\begin{itemize}
+    \item \LaTeX: linguaggio di markup per la preparazione di testi, basato sul programma di composizione tipografica TEX;\\
+         \url{https://www.latex-project.org}
+    
+\end{itemize}
+
+
+
+\subsection{Gestione della configurazione}\label{subsection:gestione_configurazione}
+\subsubsection{Scopo}
+Scopo di questa sezione è definire come il team di sviluppo ha deciso di affrontare la tematica della gestione della configurazione, ovvero come il team di sviluppo ha deciso di mantenere tracciata la documentazione redatta.
 \subsubsection{Versionamento}
 \paragraph{Codice di versione}
 \paragraph{Sistemi software utilizzati}
@@ -22,6 +110,9 @@ Lo scopo della documentazione è quello di trascrivere i fatti accaduti durante 
 Non ci sono metriche.
 \subsubsection{Strumenti}
 Non ci sono strumenti.
+
+
+
 
 \subsection{Gestione della qualità}\label{subsection: gestione_qualita}
 \subsubsection{Scopo}
@@ -50,7 +141,11 @@ Non ci sono metriche particolari.
 \subsubsection{Strumenti}
 Non ci sono strumenti particolari.
 
+
+
 \subsection{Verifica}
+
+
 
 \subsection{Validazione}\label{subsection: validazione}
 \subsubsection{Scopo}
