@@ -10,19 +10,94 @@ Le aspettative del gruppo Yakuzaishi in questo processo sono:
     \item Definire una convenzione che accomuni tutti i tipi di documentazione redatta.
  \end {itemize}
 \subsubsection{Descrizione}
-Lo scopo della documentazione è quello di trascrivere i fatti accaduti e le decisioni prese dal gruppo durante l' intera durata del progetto, 
+Lo scopo della documentazione è quello di trascrivere i fatti accaduti e le decisioni prese dal gruppo durante l' intera durata del progetto.
 \subsubsection{Ciclo di vita del documento}
-
+Le fasi del ciclo di vita del documento sono le seguenti:
+\begin {itemize}
+    \item Il documento viene pensato e vengono organizzate le varie parti;
+    \item Viene creata la bozza e la struttura del documento;
+    \item Viene redatto il contenuto del documento;
+    \item Ogni sezione del documento è soggetta a revisioni correttive e per sistemare le varie parti;
+    \item L' approvatore stabilisce che il documento è stato completato ed è pronto per il rilascio.
+\end{itemize}
 \subsubsection{Template}
-
+Il team di sviluppo ha deciso di realizzare un template mediante l'utilizzo di \LaTeX in modo da avere una struttura uniforme di tutte le pagine nei vari documenti.
+Un altro scopo del template è quello di velocizzare la stesura dei documenti stessi, dato che con la struttura già disponibile, i membri del gruppo che si occupano di redigere i documenti dovranno solamente occuparsi della stesura degli stessi, senza badare alla parte grafica.
+Il template in particolare definisce la prima pagina, il registro delle modifiche e l'indicizzazione del documento.
 \subsubsection{Struttura del documento}
 \paragraph{Prima pagina}
-
+La struttura di ogni prima pagina dei vari documenti è la seguente:
+\begin {itemize}
+    \item \textbf{Logo:} il logo del gruppo \groupName\ è collocato in alto ed è centralizzato;
+    \item \textbf{Nome del documento:} sotto il logo e centralizzato vi è il nome del documento in questione;
+    \item \textbf{Nome del capitolato:} sotto il nome del documento e centralizzato vi è il nome del capitolato scelto;
+    \item \textbf{Informazioni sul documento:} esse comprendono:
+        \begin{itemize}
+            \item \textbf{Responsabile:} indica il nome del \roleProjectManager\ in quel preciso momento;
+            \item \textbf{Redattori:} indica chi si è occupato della redazione del documento;
+            \item \textbf{Verificatori: }indica chi sono stati i verificatori in quel preciso documento;
+            \item \textbf{Uso:} indica se il documento è destinato a uso interno o esterno;
+            \item \textbf{Destinatari:} indica a chi è destinato il documento;
+            \item \textbf{Versione:} indica la versione del documento. 
+        \end{itemize}
+    \item \textbf{Sommario:} spiega brevemente le finalità del documento che si sta per redigere.        
+\end {itemize}
 \paragraph{Registro delle modifiche}
+Il registro delle modifiche consiste nel file \textit{changelog.tex} ed è presente in ogni singolo documento.
+Esso corrisponde ad una tabella nella quale si tiene traccia di ogni attività svolta (stesura, modifica, verifica, approvazione) e viene aggiornato ogni volta che avviene una delle attiità precedentemente citate.
+La tabella del registro delle modifiche contiene le seguenti voci:
+\begin{itemize}
+    \item \textbf{Versione:} indica la versione attuale del documento;
+    \item \textbf{Data:} indica la data in cui accade un determinato evento;
+    \item \textbf{Autore:} indica chi ha apportato dei cambiamenti al documento;
+    \item \textbf{Ruolo:} indica il ruolo che l'autore svolgeva in quel preciso momento;
+    \item \textbf{Descrizione:} una breve descrizione della modifica effettuata.
+\end {itemize}
 \paragraph{Indice}
+L'indice viene posto in seguito al registro delle modifiche e deve contenere tutte le varie sezioni in cui si compone il documento, compresi grafici e tabelle.
 \paragraph{Struttura delle pagine}
+Ogni pagina di contenuto è strutturata come segue:
+\begin {itemize}
+    \item \textbf{Intestazione} in alto composta da:
+    \begin {itemize}
+        \item \textbf{Nome del gruppo} in alto a sinistra;
+        \item \textbf{Logo del gruppo} in alto a destra.
+    \end{itemize}
+    \item \textbf{Piè di pagina} in basso composto da:
+    \begin{itemize}
+        \item \textbf{Nome del documento} in basso a sinistra;
+        \item \textbf{Numero di pagina} in basso a destra, contenente sia il numero di pagina corrente sia il numero di pagine totali.
+    \end {itemize}
+    \item \textbf{Contenuto} compreso tra l'intestazione e il piè di pagina.
+\end {itemize}
 \paragraph{Verbali}
-
+I verbali vengono redatti successivamente alla riunione del gruppo oppure dopo un incontro con il proponente, essi contengono il rapporto dettagliato delle tematiche discusse durante il meeting. 
+Essi prevedono una singola stesura, dato che contengono delle decisioni che non vengono modificate successivamente.
+La struttura di un verbale è la seguente:
+\begin {itemize}
+    \item \textbf{Prima pagina:} contenente:
+    \begin{itemize}
+        \item \textbf{Logo del gruppo:} collocato in alto ed in posizione centrale;
+        \item \textbf{Titolo:} collocato sotto al logo del gruppo in posizione centrale, contenente data e specificando se si tratta di un verbale interno o esterno;
+        \item \textbf{Informazioni su documento:} contenenti:
+        \begin{itemize}
+            \item \textbf{Responsabile};
+            \item \textbf{Redattori};
+            \item \textbf{Verificatori};
+            \item \textbf{Uso:} specificando se è interno o esterno;
+            \item \textbf{Destinatari}.
+        \end{itemize}
+        \item \textbf{Sommario:} contenente una breve descrizione del documento.
+    \end {itemize}
+    \item \textbf{Contenuti:} collocati nella seconda pagina del verbale, si tratta di un indice che raccoglie i vari punti di cui si tratta nel verbale;
+    \item \textbf{Pagine di contenuto:} situate dopo l'indice esse contengono:
+    \begin {itemize}
+        \item \textbf{Informazioni sulla riunione:} contenenti data, ora di inizio, ora di fine, luogo e partecipanti dell'incontro;
+        \item \textbf{Ordine del giorno:} contenente i temi trattati durante la riunione.
+        \item \textbf{Resoconto:} contenente le decisioni prese;
+        \item \textbf{Tracciamento delle decisioni:} contiene le decisioni prese, riportate in forma tabellare.
+    \end {itemize}
+\end {itemize}
 \subsubsection{Convenzioni}
 \paragraph{Nomi dei file}
 Di seguito viene descritta la rappresentazione dei nomi dei file, i quali sono validi per tutti i documenti:
@@ -84,11 +159,17 @@ dove \textbf{YYYY} indica l'anno, \textbf{MM} indica il mese e \textbf{DD} indic
 
 \subsubsection{Elementi grafici}
 \paragraph{Tabelle}
-
+Ad eccezione del registro delle modifiche, le tabelle di ogni documento seguono le seguenti convenzioni:
+\begin{itemize}
+    \item Ogni tabella contiene al di sotto di essa, in posizione centrale, una didascalia descrittiva;
+    \item Ogni tabella viene identificata con un numero progressivo a partire da 1, che la identifica univocamente all' interno del documento.
+\end{itemize}
 \paragraph{Immagini}
 Le immagini sono collocate al centro della pagina in questione e contengono un numero e una descrizione esplicativa.
 \paragraph{Diagrammi}
+Sia i diagrammi UML\glo\ che i diagrammi di Gantt\glo\ vengono riportati come immagini, quindi sono soggetti alle regole sopra riportate.
 \subsubsection{Metriche}
+... da discuterne con gli altri ...
 \subsubsection{Strumenti}
 Seguono gli strumenti utilizzati in questa fase. (Da inserire passo a passo)
 \begin{itemize}
