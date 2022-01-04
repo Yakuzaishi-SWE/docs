@@ -252,12 +252,12 @@ Seguono gli strumenti utilizzati in questa fase. (Da inserire passo a passo)
         \paragraph{Yakuzaishi-SWE/docs}
         L'organizzazione della repo è così riassunta:
         \begin{itemize}
-            \item \textbf{Branch\glo\ master}: è il branch principale in cui è presente la sola documentazione, in formato tex, pronta alla revisione;
-            \item \textbf{Branch\glo\ gh-pages} è un branch nel quale vengono caricati i file compilati in formato pdf della documentazione presente nel master. I file presenti in questo branch vengono automaticamente aggiunti e resi consultabili in formato pdf alla seguente pagina web:
+            \item \textbf{Branch\glo\ master}: è il branch\glo\ principale in cui è presente la sola documentazione, in formato tex, pronta alla revisione;
+            \item \textbf{Branch\glo\ gh-pages} è un branch\glo\ nel quale vengono caricati i file compilati in formato pdf della documentazione presente nel master. I file presenti in questo branch\glo\ vengono automaticamente aggiunti e resi consultabili in formato pdf alla seguente pagina web:
             \begin{center}
                 \url{https://yakuzaishi-swe.github.io/docs/};
             \end{center}
-            \item \textbf{Branch\glo\ derivanti dal master}: sono diversi in numero e ciascuno di questi ha un nome parlante riferito al singolo documento. Ognuno è dedicato alla stesura del documento da cui prende il nome e, quando il lavoro su uno di questi branch sarà finito e sottoposto a revisione, il branch in questione verrà unito al master.
+            \item \textbf{Branch\glo\ derivanti dal master}: sono diversi in numero e ciascuno di questi ha un nome parlante riferito al singolo documento. Ognuno è dedicato alla stesura del documento da cui prende il nome e, quando il lavoro su uno di questi branch\glo\ sarà finito e sottoposto a revisione, il branch\glo\ in questione verrà unito al master.
         \end{itemize}
 
         Nel main sono attualmente presenti:
@@ -271,10 +271,10 @@ Seguono gli strumenti utilizzati in questa fase. (Da inserire passo a passo)
             \end{itemize}
             \item un file .gitignore che dichiara esplicitamente l’estensione dei file da non tracciare poiché poco utili allo scopo del repository\glo;
             \item un makefile (da spiegare bene quando sarà completamente sistemato);
-            \item un readmefile.md classico della gran parte dei repository\glo\ git contenente una breve descrizione di quello che lo stesso repository\glo\ contiene.
+            \item un readmefile.md classico della gran parte dei repository\glo\ git\glo\ contenente una breve descrizione di quello che lo stesso repository\glo\ contiene.
         \end{enumerate}
             \subparagraph{Gestione dei cambiamenti in Yakuzaishi-SWE/docs}
-            La separazione del flusso di lavoro tra i vari documenti da redarre permette una notevole diminuzione dei conflitti. Il punto focale è che il branch master rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo fino a che ciascun responsabile non abbia dato l’approvazione al corrispettivo documento. Solo in quel momento è permesso il merge\glo\ di uno dei branch minori nel master. I cambiamenti da gestire sui documenti possono essere:
+            La separazione del flusso di lavoro tra i vari documenti da redarre permette una notevole diminuzione dei conflitti. Il punto focale è che il branch\glo\ master rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo fino a che ciascun responsabile non abbia dato l’approvazione al corrispettivo documento. Solo in quel momento è permesso il merge\glo\ di uno dei branch\glo\ minori nel master. I cambiamenti da gestire sui documenti possono essere:
             \begin{itemize}
                 \item \textbf{Modifiche minori}: riguardano errori grammaticali, lessicali o di sintassi, che possono essere corretti dai redattori o dai verificatori senza l’approvazione del responsabile;
                 \item \textbf{Modifiche generali}: riguardano cambiamenti più generali come la struttura del documento o convenzioni da utilizzare e richiedono il consulto con il responsabile, il quale potrà accettare o declinare la proposta di modifica.
@@ -370,7 +370,7 @@ Non ci sono strumenti particolari.
             \begin{itemize}
                 \item \textbf{A}: test di accettazione, vengono eseguiti immediatamente prima del rilascio del prodotto;
                 \item \textbf{I}: test di integrazione, servono a testare che i moduli quando integrati funzionino come previsto, ovvero testare che i moduli che funzionano bene individualmente non abbiano problemi quando integrati;
-                \item \textbf{R}: test di regressione, servono per verificare il corretto funzionamento del software, dopo la modifica di una funzionalità o la risoluzione di eventuali bug;
+                \item \textbf{R}: test di regressione, servono per verificare il corretto funzionamento del software, dopo la modifica di una funzionalità o la risoluzione di eventuali bug\glo;
                 \item \textbf{S}: test di sistema, condotti su un sistema integrato completo, servono per valutare la conformità del sistema ai requisiti specificati;
                 \item \textbf{U}: test di unità, condotti su una parte di codice, servono per verificare che tale parte funzioni correttamente.
             \end{itemize}
