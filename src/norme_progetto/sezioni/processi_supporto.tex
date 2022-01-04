@@ -21,7 +21,7 @@ Le fasi del ciclo di vita del documento sono le seguenti:
     \item L' approvatore stabilisce che il documento è stato completato ed è pronto per il rilascio.
 \end{itemize}
 \subsubsection{Template}
-Il team di sviluppo ha deciso di realizzare un template mediante l'utilizzo di \LaTeX in modo da avere una struttura uniforme di tutte le pagine nei vari documenti.
+Il team di sviluppo ha deciso di realizzare un template mediante l'utilizzo di \LaTeX\ in modo da avere una struttura uniforme di tutte le pagine nei vari documenti.
 Un altro scopo del template è quello di velocizzare la stesura dei documenti stessi, dato che con la struttura già disponibile, i membri del gruppo che si occupano di redigere i documenti dovranno solamente occuparsi della stesura degli stessi, senza badare alla parte grafica.
 Il template in particolare definisce la prima pagina, il registro delle modifiche e l'indicizzazione del documento.
 \subsubsection{Struttura del documento}
@@ -44,7 +44,7 @@ La struttura di ogni prima pagina dei vari documenti è la seguente:
 \end {itemize}
 \paragraph{Registro delle modifiche}
 Il registro delle modifiche consiste nel file \textit{changelog.tex} ed è presente in ogni singolo documento.
-Esso corrisponde ad una tabella nella quale si tiene traccia di ogni attività svolta (stesura, modifica, verifica, approvazione) e viene aggiornato ogni volta che avviene una delle attiità precedentemente citate.
+Esso corrisponde a una tabella nella quale si tiene traccia di ogni attività svolta (stesura, modifica, verifica, approvazione) e viene aggiornato ogni volta che avviene una delle attività precedentemente citate.
 La tabella del registro delle modifiche contiene le seguenti voci:
 \begin{itemize}
     \item \textbf{Versione:} indica la versione attuale del documento;
@@ -77,7 +77,7 @@ La struttura di un verbale è la seguente:
 \begin {itemize}
     \item \textbf{Prima pagina:} contenente:
     \begin{itemize}
-        \item \textbf{Logo del gruppo:} collocato in alto ed in posizione centrale;
+        \item \textbf{Logo del gruppo:} collocato in alto, in posizione centrale;
         \item \textbf{Titolo:} collocato sotto al logo del gruppo in posizione centrale, contenente data e specificando se si tratta di un verbale interno o esterno;
         \item \textbf{Informazioni su documento:} contenenti:
         \begin{itemize}
@@ -103,7 +103,7 @@ La struttura di un verbale è la seguente:
 Di seguito viene descritta la rappresentazione dei nomi dei file, i quali sono validi per tutti i documenti:
 \begin{itemize}
     \item I nomi dei file iniziano tutti con la lettera minuscola;
-    \item Se il nome comprende più parole allora ognuna di esse è separata dal simbolo di underscore;
+    \item Se il nome comprende più parole allora ognuna di esse è separata dal simbolo '\_';
 \end {itemize}
 Esempi corretti:
 \begin{itemize}
@@ -122,9 +122,9 @@ Nella sezione sottostante vengono riportati i vari stili di testo utilizzati nei
     \item \textbf{Grassetto:} lo stile grassetto viene utilizzato per indicare i termini negli elenchi puntati e per i titoli delle sezioni;
     \item \textbf{Corsivo:} lo stile corsivo viene utilizzato per indicare il nome del gruppo, per il nome del proponente e per le parole di particolare rilevanza all' interno dei documenti;
     \item \textbf{Link:} i link rappresentano dei collegamenti esterni al documento, essi verranno rappresentati di colore blu e sottolineati;
-    \item \textbf{Nome dei documenti:} essi vengono rappresentati in corsivo con la lettera maiuscola tranne la preposizione, se si fa un riferimento specifico ad un particolare documento bisogna indicarne anche la versione (sempre in corsivo).
+    \item \textbf{Nome dei documenti:} essi vengono rappresentati in corsivo con la lettera maiuscola tranne la preposizione, se si fa un riferimento specifico a un particolare documento bisogna indicarne anche la versione (sempre in corsivo).
     Se il nome del documento è presente nel titolo allora non verrà applicato il corsivo, ma il grassetto.
-    \item \textbf{Collegamenti interni:} le parole che si riferiscono ad una parte del documento vanno sottolineate.
+    \item \textbf{Collegamenti interni:} le parole che si riferiscono a una parte del documento vanno sottolineate.
 \end {itemize}
 \paragraph{Glossario}
 Le norme relative al \textit{Glossario} sono:
@@ -188,13 +188,13 @@ Seguono gli strumenti utilizzati in questa fase. (Da inserire passo a passo)
     Le aspettative del gruppo Yakuzaishi nell'utilizzo di questo processo sono:
     \begin{itemize}
         \item Possibilità di tracciare tutte le modifiche effettuate;
-        \item Possibilità di ripristino, qualora fosse necessario, ad una versione precedente;
+        \item Possibilità di ripristino, qualora fosse necessario, a una versione precedente;
         \item Possibilità di condivisione dei file configurati tra tutti i membri del gruppo;
         \item Possibilità di individuare e correggere eventuali errori e/o conflitti.
     \end{itemize}
 
     \subsubsection{Descrizione}
-    Il processo di gestione della configurazione ha lo scopo di mantenere organizzata e traccibile la documentazione redatta ed il codice sviluppato, creando una storia per ciascun file prodotto.
+    Il processo di gestione della configurazione ha lo scopo di mantenere organizzata e tracciabile la documentazione redatta e il codice sviluppato, creando una storia per ciascun file prodotto.
     In particolare si vuole gestire la struttura e la disposizione delle varie parti di ogni file all'interno di repository\glo\ facilmente accessibili e navigabili.
 
     \subsubsection{Versionamento}
@@ -243,7 +243,7 @@ Seguono gli strumenti utilizzati in questa fase. (Da inserire passo a passo)
         \end{itemize} 
 
     \subsubsection{Struttura del repository}
-    Al fine di organizzare meglio il lavoro si è deciso di creare due repository\glo\ distinti, entrambi pubblici, con lo scopo di tenere separati i documenti ed il software:
+    Al fine di organizzare meglio il lavoro si è deciso di creare due repository\glo\ distinti, entrambi pubblici, con lo scopo di tenere separati i documenti e il software:
     \begin{itemize}
         \item \textbf{Yakuzaishi-SWE/docs}: per il versionamento dei documenti;
         \item \textbf{Yakuzaishi-SWE/shopchain}: per il versionamento del codice.
@@ -253,7 +253,7 @@ Seguono gli strumenti utilizzati in questa fase. (Da inserire passo a passo)
         L'organizzazione della repo è così riassunta:
         \begin{itemize}
             \item \textbf{Branch\glo\ master}: è il branch principale in cui è presente la sola documentazione, in formato tex, pronta alla revisione;
-            \item \textbf{Branch\glo\ gh-pages} è un branch nel quale vengono caricati i file compilati in formato pdf della documentazione presente nel master. I file prensenti in questo branch vengono automaticamente aggiunti e resi consultabili in formato pdf alla seguente pagina web:
+            \item \textbf{Branch\glo\ gh-pages} è un branch nel quale vengono caricati i file compilati in formato pdf della documentazione presente nel master. I file presenti in questo branch vengono automaticamente aggiunti e resi consultabili in formato pdf alla seguente pagina web:
             \begin{center}
                 \url{https://yakuzaishi-swe.github.io/docs/};
             \end{center}
@@ -267,7 +267,7 @@ Seguono gli strumenti utilizzati in questa fase. (Da inserire passo a passo)
                 \item Una cartella per ciascun documento tra quelli da consegnare;
                 \item Una cartella contenente i verbali interni ed esterni;
                 \item una cartella per il glossario;
-                \item una cartella per il template \LaTeX dei documenti.
+                \item una cartella per il template \LaTeX\ dei documenti.
             \end{itemize}
             \item un file .gitignore che dichiara esplicitamente l’estensione dei file da non tracciare poiché poco utili allo scopo del repository\glo;
             \item un makefile (da spiegare bene quando sarà completamente sistemato);
@@ -305,13 +305,13 @@ Le aspettative del team di sviluppo durante questo processo sono le seguenti:
 \end {itemize}
 \subsubsection{Descrizione}
 La gestione di qualità è un processo che viene descritto nel \textit{Piano di Qualifica}, esso infatti ha il compito di determinare le metriche e le modalità usate per valutare la qualità di prodotti e processi.
-Il team di sviluppo ritiene fondamentale raggiungere una buona qualità del prodotto, e ha ritenuto che il modo migliore per raggiungere questo obiettivo è mediante un approccio di tipo sistematico, ovvero assegnndo a ciascun componente del gruppo un compito ed un ruolo, svolgendo così diversi processi simultaneamente e ottenendo così un ottimizzazione delle risorse, effettuando infine dei test sul prodotto finito. 
+Il team di sviluppo ritiene fondamentale raggiungere una buona qualità del prodotto, e ha ritenuto che il modo migliore per raggiungere questo obiettivo è mediante un approccio di tipo sistematico, ovvero assegnando a ciascun componente del gruppo un compito e un ruolo, svolgendo così diversi processi simultaneamente e ottenendo così un ottimizzazione delle risorse, effettuando infine dei test sul prodotto finito. 
 \subsubsection{Attività}
-Affinchè il prodotto software e la documentazione redatta raggiungano una buona qualità, ogni componente del gruppo Yakuzaishi deve:
+Affinché il prodotto software e la documentazione redatta raggiungano una buona qualità, ogni componente del gruppo Yakuzaishi deve:
 \begin{itemize}
     \item Attenersi al \textit{Piano di Qualifica};
     \item Porsi obiettivi incrementali, in modo da ridurre il margine di errore;
-    \item Creare un avanzamento continuo della formazione personale, mediante conoscienze pregresse, conoscienze di altri membri del gruppo o mediante autoformazione. 
+    \item Creare un avanzamento continuo della formazione personale, mediante conoscenze pregresse, conoscenze di altri membri del gruppo o mediante autoformazione. 
  \end {itemize}   
 \paragraph{Classificazione delle metriche}
 ...Da discuterne con gli altri...
@@ -346,14 +346,14 @@ Non ci sono strumenti particolari.
     Il processo di verifica della documentazione può essere svolto mediante l'uso di strumenti automatici, oppure può essere condotta a mano. In questo secondo caso si possono utilizzare due diverse tecniche di analisi descritte nel seguito:
     \begin{itemize}
         \item \textbf{Walktrough}: Il verificatore esegue un controllo completo del documento alla ricerca di eventuali errori;
-        \item \textbf{Inspection}: Il verificatore esegue un controllo mirato ai soli punti del documento nei qualli vi è una più ampia possibilità di errori. Il controllo mirato avviene grazie all'esperienza del verificatore e ad una lista di controllo\glo.
+        \item \textbf{Inspection}: Il verificatore esegue un controllo mirato ai soli punti del documento nei quali vi è una più ampia possibilità di errori. Il controllo mirato avviene grazie all'esperienza del verificatore e a una lista di controllo\glo.
     \end{itemize}
-    La tecnica \textbf{Walkthrough} risulta molto onerosa a causa dell’adozione di una ricerca esaustiva degli errori. Questa metologia sarà applicata come fase iniziale di verifica della documentazione. Con l'avanzare dell’attività di progetto ed il ripetersi del processo di verifica sulla documentazione, si stilerà una lista di controllo\glo\ grazie alla quale, successivamente, sarà possibile passare alla tipologia di verifica \textbf{Inspection} che risulta essere più rapida.
+    La tecnica \textbf{Walkthrough} risulta molto onerosa a causa dell’adozione di una ricerca esaustiva degli errori. Questa metodologia sarà applicata come fase iniziale di verifica della documentazione. Con l'avanzare dell’attività di progetto e il ripetersi del processo di verifica sulla documentazione, si stilerà una lista di controllo\glo\ grazie alla quale, successivamente, sarà possibile passare alla tipologia di verifica \textbf{Inspection} che risulta essere più rapida.
 
     \subsubsection{Verifica del codice}
-    Il processo di verifica del codice farà uso di test automatici appositamente creati e si servirà inoltre di analisi statica e dinamica per quanto riguarda il codice scritto ed in particolare:
+    Il processo di verifica del codice farà uso di test automatici appositamente creati e si servirà inoltre di analisi statica e dinamica per quanto riguarda il codice scritto e in particolare:
     \begin{itemize}
-        \item \textbf{Analisi statica}: verificatori e programmatoti durante le fasi di stesura e verifica del codice si accertano che siano stati rispettati i proncipi di buona programmazione preimpostati dal team;
+        \item \textbf{Analisi statica}: verificatori e programmatoti durante le fasi di stesura e verifica del codice si accertano che siano stati rispettati i principi di buona programmazione preimpostati dal team;
         \item \textbf{Analisi dinamica}: verificatori e programmatori durante la fase di test vanno alla ricerca di bug\glo\ ed errori tramite l'esecuzione del software.  
     \end{itemize}
 
@@ -378,7 +378,7 @@ Non ci sono strumenti particolari.
             \textbf{IdNumerico} è un valore crescente che parte da 1 e serve per distinguere i diversi test riguardanti la stessa tipologia.
 
     \subsubsection{Metriche}
-    Da discutre con gli altri
+    Da discutere con gli altri
 
     \subsubsection{Strumenti}
     Da discutere con gli altri
@@ -396,7 +396,7 @@ Le aspettative del team di sviluppo nell'utilizzo di questo processo sono le seg
     \item  Dimostrare la correttezza delle attività svolte in fase di verifica.
 \end{itemize}
 \subsubsection{Descrizione}
-Tale processo consiste nell' esaminazione del prodotto nella fase di verifica e si assicura che esso sia in linea con i requisiti concordati con i proponente e che soddisfi i bisongni del committente.
+Tale processo consiste nell' esaminare il prodotto nella fase di verifica e assicurarsi che esso sia in linea con i requisiti concordati con il proponente e che soddisfi i bisogni del committente.
 Sarà il \textit{Responsabile di Progetto} che avrà la responsabilità di controllare i risultati decidendo se:
 \begin{itemize}
     \item Accettare il prodotto;
