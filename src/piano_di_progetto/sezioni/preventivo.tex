@@ -1,17 +1,488 @@
 \section{Preventivo} \label{section:preventivo}
+Ogni componente del gruppo può ricoprire più ruoli, sia contemporaneamente che in distinti periodi del progetto, purchè sia garantita l'assenza di conflitto di interessi tra i ruoli assunti.
+La suddivisione del lavoro che verrà presentata di seguito garantirà un'equa ripartizione del carico di lavoro individuale e della distribuzione dei ruoli.
+\subsection{Dettaglio periodi} \label{subsection:preventivo_dettaglio_periodi}
+In questa sezione vengono presentati più nel dettaglio la suddivisone del lavoro e il costo preventivato per ogni periodo di sviluppo del progetto. Nelle tabelle
+verranno utilizzate delle abbreviazioni per i nomi dei ruoli, come indicato nella seguente tabella:
 
-\subsection{Requirements and Technology Baseline} \label{subsection:preventivo_rtb}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c|c}
+      \rowcolor[HTML]{125E28} 
+      \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Abbreviazione}}\\
+      \hline
+      Responsabile      & Re\\
+      Amministratore    & Am\\
+      Analista          & An\\
+      Progettista       & Pt\\
+      Programmatore     & Pr\\
+      Verificatore      & Ve
+    \end{tabular}
+    \caption{Abbreviazioni dei ruoli}
+  \end{table}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Analisi preliminare}
+Nel periodo di Analisi preliminare, ciascun componente rivestirà i ruoli secondo la seguente suddivisione:
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c|c|c|c|c|c|c|c}
+      \rowcolor[HTML]{125E28} 
+      \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Nominativo }}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Re }}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Am}}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ An }}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pt }}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pr }}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ve }}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ore totali }}\\
+      \hline
+      Bugno Francesco       & 11    & -     & 9     & - & - & 11    & 31\\
+      Busacca Luca          & -     & 17    & 5     & - & - & 9     & 31\\
+      Carturan Luca         & 12    & 5     & 5     & - & - & 9     & 31\\
+      Filosofo Michele      & -     & 5     & 15    & - & - & 11    & 31\\
+      Furlan Dario          & -     & -     & 19    & - & - & 12    & 31\\
+      Mattarello Francesco  & -     & 15    & 6     & - & - & 10    & 31\\
+      Midena Matteo         & -     & -     & 23    & - & - & 9     & 32\\
+      \textbf{Ore totali} & \textbf{23} & \textbf{42} & \textbf{82} & \textbf{-} & \textbf{-} & \textbf{71} & \textbf{218}
+    \end{tabular}
+    \caption{Distribuzione delle ore nel periodo di Analisi preliminare}
+  \end{table}
+
+I valori sono riassunti graficamente nel seguente grafico:
+
+\begin{figure}[H]
+    \centering
+     \includegraphics[scale=1.2]{immagini/ore_lavoro_analisi.png}
+     \caption{Suddivisione delle ore di lavoro - Analisi preliminare}
+   \end{figure}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In questo periodo i costi da affrontare per ogni ruolo sono i seguenti:
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c|c|c}
+      \rowcolor[HTML]{125E28} 
+      \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ore}}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Costo (€)}}\\
+      \hline
+      Responsabile      & 23 & 690,00\\
+      Amministratore    & 42 & 840,00\\
+      Analista          & 82 & 2050,00\\
+      Progettista       & - & -\\
+      Programmatore     & - & -\\
+      Verificatore      & 71 & 1065,00\\
+      \textbf{Totale} & \textbf{218} & \textbf{4645,00}
+    \end{tabular}
+    \caption{Prospetto dei costi per ruolo nel periodo di Analisi preliminare}
+  \end{table}
+
+  \begin{figure}[H]
+    \centering
+     \includegraphics[scale=1]{immagini/ore_ruolo_analisi.png}
+     \caption{Ore per ruolo sul totale - Analisi preliminare}
+   \end{figure}
+
+  \begin{figure}[H]
+    \centering
+     \includegraphics[scale=1]{immagini/costo_ruolo_analisi.png}
+     \caption{Costo per ruolo sul totale - Analisi preliminare}
+   \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Product Baseline} \label{subsection:preventivo_pb}
-
+\subsubsection{Progettazione Technology Baseline}
+Nel periodo di Progettazione per la Technology Baseline, ciascun componente rivestirà i ruoli secondo la seguente suddivisione:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c|c|c|c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Nominativo }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Re }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Am}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ An }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pt }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pr }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ve }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ore totali }}\\
+         \hline
+         Bugno Francesco        & - & 2 & 3 & 3 & - & 3 & 11\\
+         Busacca Luca           & - & - & - & 6 & - & 4 & 10\\
+         Carturan Luca          & - & - & 5 & 6 & - & - & 11\\
+         Filosofo Michele       & - & 3 & - & 4 & - & 4 & 11\\
+         Furlan Dario           & 7 & - & - & 5 & - & - & 12\\
+         Mattarello Francesco   & - & - & 4 & 4 & - & 3 & 11\\
+         Midena Matteo          & - & 3 & - & 5 & - & 3 & 11\\
+         \textbf{Ore totali} & \textbf{7} & \textbf{8} & \textbf{12} & \textbf{33} & \textbf{-} & \textbf{17} & \textbf{77}
+       \end{tabular}
+       \caption{Distribuzione delle ore nel periodo di Progettazione Technology Baseline}
+     \end{table}
+   
+   I valori sono riassunti graficamente nel seguente grafico:
+   
+   \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1.2]{immagini/ore_lavoro_TB.png}
+        \caption{Suddivisione delle ore di lavoro - Progettazione Technology Baseline}
+      \end{figure}
+   
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   In questo periodo i costi da affrontare per ogni ruolo sono i seguenti:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ore}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Costo (€)}}\\
+         \hline
+         Responsabile   & 7 & 210,00\\
+         Amministratore & 8 & 160,00\\
+         Analista       & 12 & 300,00\\
+         Progettista    & 33 & 825,00\\
+         Programmatore  & - & -\\
+         Verificatore   & 17 & 255,00\\
+         \textbf{Totale} & \textbf{77} & \textbf{1750,00}
+       \end{tabular}
+       \caption{Prospetto dei costi per ruolo nel periodo di Progettazione Technology Baseline}
+     \end{table}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1]{immagini/ore_ruolo_TB.png}
+        \caption{Ore per ruolo sul totale - Progettazione Technology Baseline}
+      \end{figure}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1]{immagini/costo_ruolo_TB.png}
+        \caption{Costo per ruolo sul totale - Progettazione Technology Baseline}
+      \end{figure}
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Codifica Proof of Concept}
+Nel periodo di Codifica del Proof of Concept, ciascun componente rivestirà i ruoli secondo la seguente suddivisione:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c|c|c|c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Nominativo }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Re }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Am}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ An }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pt }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pr }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ve }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ore totali }}\\
+         \hline
+         Bugno Francesco        & - & - & - & 7 & 4 & 6 & 17\\
+         Busacca Luca           & - & - & 3 & 5 & 7 & 4 & 19\\
+         Carturan Luca          & - & - & - & 6 & 8 & 3 & 17\\
+         Filosofo Michele       & - & - & 4 & 4 & 7 & 3 & 18\\
+         Furlan Dario           & - & 2 & - & 8 & 8 & - & 18\\
+         Mattarello Francesco   & - & 3 & - & 6 & 2 & 7 & 18\\
+         Midena Matteo          & 8 & - & - & 2 & 8 & - & 18\\
+         \textbf{Ore totali} & \textbf{8} & \textbf{5} & \textbf{7} & \textbf{38} & \textbf{44} & \textbf{23} & \textbf{125}
+       \end{tabular}
+       \caption{Distribuzione delle ore nel periodo di Codifica Proof of Concept}
+     \end{table}
+   
+   I valori sono riassunti graficamente nel seguente grafico:
+   
+   \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1.2]{immagini/ore_lavoro_PoC.png}
+        \caption{Suddivisione delle ore di lavoro - Codifica Proof of Concept}
+      \end{figure}
+   
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   In questo periodo i costi da affrontare per ogni ruolo sono i seguenti:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ore}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Costo (€)}}\\
+         \hline
+         Responsabile   & 8 & 240,00\\
+         Amministratore & 5 & 100,00\\
+         Analista       & 7 & 175,00\\
+         Progettista    & 38 & 950,00\\
+         Programmatore  & 44 & 660,00\\
+         Verificatore   & 23 & 345,00\\
+         \textbf{Totale} & \textbf{125} & \textbf{2470,00}
+       \end{tabular}
+       \caption{Prospetto dei costi per ruolo nel periodo di Codifica Proof of Concept}
+     \end{table}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1]{immagini/ore_ruolo_PoC.png}
+        \caption{Ore per ruolo sul totale - Codifica Proof of Concept}
+      \end{figure}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1]{immagini/costo_ruolo_PoC.png}
+        \caption{Costo per ruolo sul totale - Codifica Proof of Concept}
+      \end{figure}
+   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Customer Acceptance} \label{subsection:preventivo_ca}
-
+\subsubsection{Progettazione di dettaglio e codifica requisiti obbligatori}
+Nel periodo di Progettazione di dettaglio e codifica dei requisiti obbligatori, ciascun componente rivestirà i ruoli secondo la seguente suddivisione:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c|c|c|c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Nominativo }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Re }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Am}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ An }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pt }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pr }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ve }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ore totali }}\\
+         \hline
+         Bugno Francesco        & - & - & - & 4 & 7 & 4 & 15\\
+         Busacca Luca           & - & - & 2 & - & 10 & 3 & 15\\
+         Carturan Luca          & - & - & - & 4 & 6 & 6 & 16\\
+         Filosofo Michele       & 6 & - & - & 5 & - & 4 & 15\\
+         Furlan Dario           & - & 4 & - & 5 & - & 5 & 14\\
+         Mattarello Francesco   & - & - & - & 6 & 9 & - & 15\\
+         Midena Matteo          & - & - & - & 7 & 7 & - & 14\\
+         \textbf{Ore totali} & \textbf{6} & \textbf{4} & \textbf{2} & \textbf{31} & \textbf{39} & \textbf{22} & \textbf{104}
+       \end{tabular}
+       \caption{Distribuzione delle ore nel periodo di Progettazione di dettaglio e codifica requisiti obbligatori}
+     \end{table}
+   
+   I valori sono riassunti graficamente nel seguente grafico:
+   
+   \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1.2]{immagini/ore_lavoro_reqObbligatori.png}
+        \caption{Suddivisione delle ore di lavoro - Progettazione di dettaglio e codifica requisiti obbligatori}
+      \end{figure}
+   
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   In questo periodo i costi da affrontare per ogni ruolo sono i seguenti:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ore}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Costo (€)}}\\
+         \hline
+         Responsabile   & 6 & 180,00\\
+         Amministratore & 4 & 80,00\\
+         Analista       & 2 & 50,00\\
+         Progettista    & 31 & 775,00\\
+         Programmatore  & 39 & 585,00\\
+         Verificatore   & 22 & 330,00\\
+         \textbf{Totale} & \textbf{104} & \textbf{2000,00}
+       \end{tabular}
+       \caption{Prospetto dei costi per ruolo nel periodo di Progettazione di dettaglio e codifica requisiti obbligatori}
+     \end{table}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=0.9]{immagini/ore_ruolo_reqObbligatori.png}
+        \caption{Ore per ruolo sul totale - Progettazione di dettaglio e codifica requisiti obbligatori}
+      \end{figure}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=0.9]{immagini/costo_ruolo_reqObbligatori.png}
+        \caption{Costo per ruolo sul totale - Progettazione di dettaglio e codifica requisiti obbligatori}
+      \end{figure}
+   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Riepilogo complessivo}
-\subsubsection{Ore totali}
-\subsubsection{Ore rendicontate}
+\subsubsection{Progettazione di dettaglio e codifica requisiti opzionali}
+Nel periodo di Progettazione di dettaglio e codifica dei requisiti opzionali, ciascun componente rivestirà i ruoli secondo la seguente suddivisione:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c|c|c|c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Nominativo }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Re }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Am}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ An }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pt }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pr }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ve }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ore totali }}\\
+         \hline
+         Bugno Francesco        & - & 3 & - & 3 & 5 & - & 11\\
+         Busacca Luca           & 4 & - & - & 3 & - & 4 & 11\\
+         Carturan Luca          & - & - & - & 2 & 5 & 4 & 11\\
+         Filosofo Michele       & - & - & - & 5 & 6 & - & 11\\
+         Furlan Dario           & - & - & - & 3 & 4 & 4 & 11\\
+         Mattarello Francesco   & - & - & 2 & 5 & 5 & - & 12\\
+         Midena Matteo          & - & - & - & 2 & 5 & 4 & 11\\
+         \textbf{Ore totali} & \textbf{4} & \textbf{3} & \textbf{2} & \textbf{23} & \textbf{30} & \textbf{16} & \textbf{78}
+       \end{tabular}
+       \caption{Distribuzione delle ore nel periodo di Progettazione di dettaglio e codifica requisiti opzionali}
+     \end{table}
+   
+   I valori sono riassunti graficamente nel seguente grafico:
+   
+   \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1.2]{immagini/ore_lavoro_reqOpzionali.png}
+        \caption{Suddivisione delle ore di lavoro - Progettazione di dettaglio e codifica requisiti opzionali}
+      \end{figure}
+   
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   In questo periodo i costi da affrontare per ogni ruolo sono i seguenti:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ore}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Costo (€)}}\\
+         \hline
+         Responsabile   & 4 & 120,00\\
+         Amministratore & 3 & 60,00\\
+         Analista       & 2 & 50,00\\
+         Progettista    & 23 & 575,00\\
+         Programmatore  & 30 & 450,00\\
+         Verificatore   & 16 & 240,00\\
+         \textbf{Totale} & \textbf{104} & \textbf{1495,00}
+       \end{tabular}
+       \caption{Prospetto dei costi per ruolo nel periodo di Progettazione di dettaglio e codifica requisiti opzionali}
+     \end{table}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=0.9]{immagini/ore_ruolo_reqOpzionali.png}
+        \caption{Ore per ruolo sul totale - Progettazione di dettaglio e codifica requisiti opzionali}
+      \end{figure}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=0.9]{immagini/costo_ruolo_reqOpzionali.png}
+        \caption{Costo per ruolo sul totale - Progettazione di dettaglio e codifica requisiti opzionali}
+      \end{figure}
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Validazione e collaudo}
+Nel periodo di Validazione e collaudo, ciascun componente rivestirà i ruoli secondo la seguente suddivisione:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c|c|c|c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Nominativo }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Re }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Am}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ An }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pt }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pr }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ve }}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ore totali }}\\
+         \hline
+         Bugno Francesco        & - & - & - & 3 & 7 & 5 & 15\\
+         Busacca Luca           & - & - & - & 6 & 8 & - & 14\\
+         Carturan Luca          & - & - & - & 5 & 9 & - & 14\\
+         Filosofo Michele       & - & - & - & 6 & 4 & 4 & 14\\
+         Furlan Dario           & - & 4 & - & 3 & 3 & 4 & 14\\
+         Mattarello Francesco   & 7 & - & - & 2 & - & 4 & 13\\
+         Midena Matteo          & - & 4 & - & - & 6 & 4 & 14\\
+         \textbf{Ore totali} & \textbf{7} & \textbf{8} & \textbf{-} & \textbf{25} & \textbf{37} & \textbf{21} & \textbf{98}
+       \end{tabular}
+       \caption{Distribuzione delle ore nel periodo di Validazione e collaudo}
+     \end{table}
+   
+   I valori sono riassunti graficamente nel seguente grafico:
+   
+   \begin{figure}[H]
+       \centering
+        \includegraphics[scale=1]{immagini/ore_lavoro_Validazione.png}
+        \caption{Suddivisione delle ore di lavoro - Validazione e collaudo}
+      \end{figure}
+   
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   In questo periodo i costi da affrontare per ogni ruolo sono i seguenti:
+   
+   \begin{table}[H]
+       \centering
+       \renewcommand{\arraystretch}{1.8}
+       \rowcolors{2}{green!100!black!40}{green!100!black!30}
+       \begin{tabular}{c|c|c}
+         \rowcolor[HTML]{125E28} 
+         \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ore}}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Costo (€)}}\\
+         \hline
+         Responsabile   & 7 & 210,00\\
+         Amministratore & 8 & 160,00\\
+         Analista       & - & -\\
+         Progettista    & 25 & 625,00\\
+         Programmatore  & 37 & 555,00\\
+         Verificatore   & 21 & 315,00\\
+         \textbf{Totale} & \textbf{98} & \textbf{1865,00}
+       \end{tabular}
+       \caption{Prospetto dei costi per ruolo nel periodo di Validazione e collaudo}
+     \end{table}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=0.8]{immagini/ore_ruolo_Validazione.png}
+        \caption{Ore per ruolo sul totale - Validazione e collaudo}
+      \end{figure}
+   
+     \begin{figure}[H]
+       \centering
+        \includegraphics[scale=0.8]{immagini/costo_ruolo_validazione.png}
+        \caption{Costo per ruolo sul totale - Validazione e collaudo}
+      \end{figure}
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
