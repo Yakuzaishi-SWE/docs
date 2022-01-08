@@ -6,9 +6,128 @@ riferimento alle funzionalità dell’applicazione.
 
 \subsection{Attori}
 Come accordato con il proponente, la webapp deve essere usata sia dal venditore che dal cliente,
-sono quindi presenti quattro attori nella gerarchia: la piattaforma E-Commerce da cui parte l'ordine, Metamask, l'utente seller, l'utente customer.
+sono quindi presenti tre attori nella gerarchia: la piattaforma E-Commerce da cui parte l'ordine, Metamask\glo, l'utente generico.
+L'utente generico ha poi due specializzazioni possibili: l'utente propietario dell'ordine e l'utente venditore.
 
-\subsection{UC1 - lorem ipsum}
+\subsection{UC1 - Inizializzazione delle Transazione}
+
+\begin{itemize}
+    \item Attore primario: E-Commerce.
+    \item Attore secondario: Utente Customer.
+    \item Precondizioni: il sistema è raggiungibile e funzionante.
+    \item Postcondizioni: la transazione viene caricata dnel sistema, l'utente viene reindirizzato alla pagina di checkout.
+    \item Scenario principale: L'E-Commerce delega il pagamento comunicando la somma richiesta e l'indirizzo del destinatario.
+\end{itemize}
+
+\paragraph{UC1.1 - }
+
+\subsection{UC2 - Tipo Pagamento}
+
+\begin{itemize}
+    \item Attore primario: Utente propietario dell'ordine.
+    \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1].
+    \item Postcondizioni: viene visualizzato il riepilogo dell'ordine e scelta la modalità di pagamento.
+    \item Scenario principale: l'utente seleziona la tiopologia del pagamento tra quelle disponibili.
+    \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni\begin{itemize}
+        \item pagamento unico [UC2.1].
+        \item pagamento moneybox UC[2.2].
+    \end{itemize}
+\end{itemize}
+
+\paragraph{UC2.1 - Selezionato Pagamento Unico}
+
+\begin{itemize}
+    \item Attore primario: propietario dell'ordine.
+    \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1].
+    \item Postcondizioni: l'utente ha selezionato pagamento unico come metodo di pagamento e ha pagato con lo stesso.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente seleziona pagamento unico come metodo di pagamento.
+        \item l'utente effettua il pagamento [UC4].
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{UC2.2 -  Selezionato Pagamento MoneyBox}
+
+\begin{itemize}
+    \item Attore primario: utente customer.
+    \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1].
+    \item Postcondizioni: l'utente ha selezionato pagamento MoneyBox come metodo di pagamento e ha pagato con lo stesso.
+    \item Scenario principale:\begin{enumerate}
+        \item l'utente seleziona pagamento MoneyBox come metodo di pagamento.
+        \item l'utente visualizza lo stato di completamento [UC2.2.1].
+        \item l'utente visualizza l'invito alla partecipazione della MoneyBox [2.2.2].
+        \item l'utente partecipa alla MoneyBox [2.2.3].
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{UC2.2.1 - Visualizzazione Stato Completamento}
+
+\begin{itemize}
+    \item Attore primario: utente customer.
+    \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox.
+    \item Postcondizioni: l'utente ha visualizzato lo stato del completamento.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza lo stato del completamento in formato percentuale e il saldo mancante.
+        \item l'utente visualizza una lista delle transazioni avvenute [UC2.2.1.1].
+    \end{enumerate}
+    \end{itemize}
+
+\paragraph{UC2.2.2 - Visualizzazione Invito Partecipazione MoneyBox}
+
+\begin{itemize}
+    \item Attore primario: utente customer.
+    \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox.
+    \item Postcondizioni: l'utente ha visualizzato l'invito alla MoneyBox.
+    \item Scenario principale: l'utente visualizza l'invito alla MoneyBox.
+\end{itemize}
+
+\paragraph{UC2.2.3 - Scelta Quota Partecipazione}
+
+\begin{itemize}
+    \item Attore primario: utente customer.
+    \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox.
+    \item Postcondizioni: l'utente ha selezionato la quota da versare e ha effettuato il pagamento.
+    \item Scenario principale:\begin{enumerate}
+        \item l'utente seleziona la quota da versare, compresa tra zero escluso e il minimo tra il saldo disponibile nel wallet e il rimanente della MoneyBox.
+        \item l'utente effettua il pagamento [UC4].
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC3 - Visualizzazione Riepilogo Ordine}
+
+\begin{itemize}
+    \item Attore primario: utente customer.
+    \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1].
+    \item Postcondizioni: l'utente ha visualizzato il riepilogo dell'ordine.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza il totale dell'ordine.
+        \item l'utente visualizza un elenco degli item ordinati.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC4 - Pagamento}
+
+\begin{itemize}
+    \item Attore primario: utente customer.
+    \item Attore secondario: Metamask.
+    \item Precondizioni: l'utente ha scelto il Tipo di Pagamento [UC2].
+    \item Postcondizioni: l'utente ha effettuato il pagamento.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente effettuata una verifica del saldo del wallet.
+        \item l'utente visualizza il Pop-Up\glo\ di Metamask.
+        \item l'utente autorizza il pagamento.
+        \item l'utente visualizza un messagio di conferma di avvenuto pagamento.
+    \end{enumerate}
+    \item Generalizzazioni: \begin{itemize}
+        \item 
+        \item 
+    \end{itemize}
+    \item Estensioni: \begin{enumerate}
+        \item 1
+    \end{enumerate}
+\end{itemize}
+
+
 
 \begin{itemize}
     \item Attore primario:
@@ -27,7 +146,6 @@ sono quindi presenti quattro attori nella gerarchia: la piattaforma E-Commerce d
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC1.1 - lorem ipsum}
 
 \begin{itemize}
     \item Attore primario:
@@ -46,7 +164,7 @@ sono quindi presenti quattro attori nella gerarchia: la piattaforma E-Commerce d
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC1.2 - lorem ipsum}
+
 
 \begin{itemize}
     \item Attore primario:
@@ -64,4 +182,24 @@ sono quindi presenti quattro attori nella gerarchia: la piattaforma E-Commerce d
         \item 1
     \end{enumerate}
 \end{itemize}
+
+
+
+\begin{itemize}
+    \item Attore primario:
+    \item Precondizioni:
+    \item Postcondizioni:
+    \item Scenario principale: \begin{enumerate}
+        \item 1
+        \item 2
+    \end{enumerate}
+    \item Generalizzazioni: \begin{itemize}
+        \item 1
+        \item 2
+    \end{itemize}
+    \item Estensioni: \begin{enumerate}
+        \item 1
+    \end{enumerate}
+\end{itemize}
+
 
