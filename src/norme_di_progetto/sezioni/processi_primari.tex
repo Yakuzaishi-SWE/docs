@@ -12,7 +12,7 @@ Le aspettative nell' applicazione del processo di fornitura sono:
 \end {itemize}
 \subsubsection{Descrizione}\label{subsubsection: descrizione_fornitura}
 Il processo di fornitura determina ogni compito, attività e risorsa necessaria allo svolgimento del progetto.
-Tale processo verrà avviato solamente in seguito alla comprensione delle richieste del proponente, alla redazione dello \textit{Studio di Fattibilità} ed infine alla definizione di un accordo contrattuale con il proponente.
+Tale processo verrà avviato solamente in seguito alla comprensione delle richieste del proponente, alla redazione dello \textit{studio di fattibilità} ed infine alla definizione di un accordo contrattuale con il proponente.
 Il processo di fornitura consiste nelle seguenti fasi:
 \begin {itemize}
     \item Avvio;
@@ -36,8 +36,8 @@ Il team di sviluppo vuole avere un costante contatto con il proponente riguardo 
 \end{itemize}
 \subsubsection {Documenti}\label{subsubsection: documenti_fornitura}
 Di seguito sono descritti i documenti redatti in questa fase.
-\paragraph{Piano di qualifica}\label{paragraph: PdQ_fornitura}
-Il \textit{Piano di Qualifica} viene redatto dal \textit{verificatore} e contiene le misure necessarie a garantire la qualità del prodotto e dei processi.
+\paragraph{\docNamePdQ}\label{paragraph: PdQ_fornitura}
+Il \docNamePdQLow\ viene redatto dal \roleVerifierLow\ e contiene le misure necessarie a garantire la qualità del prodotto e dei processi.
 Esso è formato dalle seguenti parti:
 \begin{itemize}
     \item Qualità di processo;
@@ -45,8 +45,8 @@ Esso è formato dalle seguenti parti:
     \item Specifica dei test;
     \item Resoconto attività di verifica.
 \end{itemize}
-\paragraph{Piano di progetto}\label{paragraph: PdP_fornitura}
-Il \textit{piano di progetto} viene redatto dagli amministratori e dal \textit{responsabile di progetto}, esso verrà seguito per tutta la durata del progetto, ed è diviso nelle seguenti parti:
+\paragraph{\docNamePdP}\label{paragraph: PdP_fornitura}
+Il \docNamePdPLow\ viene redatto dagli amministratori e dal \roleProjectManagerLow\ di progetto, esso verrà seguito per tutta la durata del progetto, ed è diviso nelle seguenti parti:
 \begin{itemize}
     \item Analisi dei rischi;
     \item Modello di sviluppo;
@@ -99,15 +99,15 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo per la r
         \item Codifica.
     \end{itemize}
     
-        \paragraph{Analisi dei requisiti} \label{paragraph:Analisi dei requisiti}
+        \paragraph{\docNameAdR} \label{paragraph:Analisi dei requisiti}
             \subparagraph{Scopo}
-            Lo scopo dell’\textit{analisi dei requisiti} è quello di individuare, a partire da un approfondito studio del capitolato, i requisiti diretti e indiretti,
+            Lo scopo dell’\docNameAdRLow\ è quello di individuare, a partire da un approfondito studio del capitolato, i requisiti diretti e indiretti,
             impliciti ed espliciti che il proponente richiede per la realizzazione del prodotto e i vari casi d'uso del prodotto stesso. In questa attività è importante
             suddividere il problema iniziale in requisiti quanto più elementari possibile, così da diminuire la complessità del problema originale
              facilitando il lavoro durante la fase di sviluppo.
 
             \subparagraph{Aspettative} \label{subparagraph:ADR_Aspettative}
-            L’obiettivo dell’attività di \textit{analisi dei requisiti} consiste nella creazione della documentazione formale contenente tutti i requisiti 
+            L’obiettivo dell’attività di \docNameAdRLow\ consiste nella creazione della documentazione formale contenente tutti i requisiti 
             richiesti dal proponente, che siano essi stati definiti all'inizio o che siano stati concordati in fase di sviluppo.
 
             \subparagraph{Requisiti} \label{subparagraph:Requisiti}
@@ -211,7 +211,7 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo per la r
         \paragraph{Progettazione} \label{paragraph:Progettazione}
 
             \subparagraph{Scopo} \label{subparagraph:Progettazione_Scopo}
-            Lo scopo dell'attività di progettazione è quello di incorporare le parti ottenute durante l'\textit{analisi dei requisiti}, specificando le funzionalità dei sottosistemi
+            Lo scopo dell'attività di progettazione è quello di incorporare le parti ottenute durante l'\docNameAdRLow, specificando le funzionalità dei sottosistemi
             e riconducendo a un’unica soluzione. 
 
             \subparagraph{Aspettative} \label{subparagraph:Progettazione_Aspettative}
@@ -224,20 +224,20 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo per la r
             Dimostra adeguatezza e fattibilità coerente con gli obbiettivi.\\
             Documenti utili a tali fini sono:
             \begin{itemize}
-                \item Piano di progetto;
-                \item Piano di qualifica;
-                \item Norme di progetto;
-                \item Verbali interni ed esterni.
+                \item \docNamePdP;
+                \item \docNamePdQ;
+                \item \docNameNdP;
+                \item \textit{Verbali} interni ed esterni.
             \end{itemize}
-            Salvo i verbali, i documenti sopracitati vanno mantenuti ed evoluti anche per le fasi successive.\\
+            Salvo i \textit{verbali}, i documenti sopracitati vanno mantenuti ed evoluti anche per le fasi successive.\\
 
 
             \subparagraph{Product baseline} \label{subparagraph:Product baseline}
             Questa fase illustra le linee guida architetturali del prodotto.
             Oltre all'evoluzione dei documenti sopracitati, in questa fase risulteranno necessari:
             \begin{itemize}
-                \item Manuale utente;
-                \item Verbali di periodo.
+                \item \docNameMU;
+                \item \textit{Verbali di periodo}.
             \end{itemize}
             Come per la fase precedente, anche i documenti di questa fase vanno mantenuti ed evoluti fino alla fase di consegna e accettazione del prodotto finale.
 
