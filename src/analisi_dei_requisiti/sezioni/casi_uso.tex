@@ -13,13 +13,11 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 
 \begin{itemize}
     \item Attore primario: E-Commerce.
-    \item Attore secondario: Utente Customer.
+    \item Attore secondario: utente propietario dell'ordine.
     \item Precondizioni: il sistema è raggiungibile e funzionante.
     \item Postcondizioni: la transazione viene caricata dnel sistema, l'utente viene reindirizzato alla pagina di checkout.
     \item Scenario principale: L'E-Commerce delega il pagamento comunicando la somma richiesta e l'indirizzo del destinatario.
 \end{itemize}
-
-\paragraph{UC1.1 - }
 
 \subsection{UC2 - Tipo Pagamento}
 
@@ -30,7 +28,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
     \item Scenario principale: l'utente seleziona la tiopologia del pagamento tra quelle disponibili.
     \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni\begin{itemize}
         \item pagamento unico [UC2.1].
-        \item pagamento moneybox UC[2.2].
+        \item pagamento moneybox [UC2.2].
     \end{itemize}
 \end{itemize}
 
@@ -42,28 +40,29 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
     \item Postcondizioni: l'utente ha selezionato pagamento unico come metodo di pagamento e ha pagato con lo stesso.
     \item Scenario principale: \begin{enumerate}
         \item l'utente seleziona pagamento unico come metodo di pagamento.
-        \item l'utente effettua il pagamento [UC4].
+        \item l'utente effettua il pagamento [UC5].
     \end{enumerate}
 \end{itemize}
 
 \paragraph{UC2.2 -  Selezionato Pagamento MoneyBox}
 
 \begin{itemize}
-    \item Attore primario: utente customer.
+    \item Attore primario: utente generico, utente propietario dell'ordine.
     \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1].
     \item Postcondizioni: l'utente ha selezionato pagamento MoneyBox come metodo di pagamento e ha pagato con lo stesso.
     \item Scenario principale:\begin{enumerate}
         \item l'utente seleziona pagamento MoneyBox come metodo di pagamento.
         \item l'utente visualizza lo stato di completamento [UC2.2.1].
-        \item l'utente visualizza l'invito alla partecipazione della MoneyBox [2.2.2].
-        \item l'utente partecipa alla MoneyBox [2.2.3].
+        \item l'utente visualizza l'invito alla partecipazione della MoneyBox [UC2.2.2].
+        \item l'utente, opzionalmente, partecipa alla MoneyBox [UC2.2.3].
+        \item l'utente propietario dell'ordine, opzionalmente, può chiudere una MoneyBox [UC2.2.4].
     \end{enumerate}
 \end{itemize}
 
 \paragraph{UC2.2.1 - Visualizzazione Stato Completamento}
 
 \begin{itemize}
-    \item Attore primario: utente customer.
+    \item Attore primario: utente generico.
     \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox.
     \item Postcondizioni: l'utente ha visualizzato lo stato del completamento.
     \item Scenario principale: \begin{enumerate}
@@ -75,7 +74,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 \paragraph{UC2.2.2 - Visualizzazione Invito Partecipazione MoneyBox}
 
 \begin{itemize}
-    \item Attore primario: utente customer.
+    \item Attore primario: utente generico.
     \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox.
     \item Postcondizioni: l'utente ha visualizzato l'invito alla MoneyBox.
     \item Scenario principale: l'utente visualizza l'invito alla MoneyBox.
@@ -84,19 +83,31 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 \paragraph{UC2.2.3 - Scelta Quota Partecipazione}
 
 \begin{itemize}
-    \item Attore primario: utente customer.
+    \item Attore primario: utente generico.
     \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox.
     \item Postcondizioni: l'utente ha selezionato la quota da versare e ha effettuato il pagamento.
     \item Scenario principale:\begin{enumerate}
         \item l'utente seleziona la quota da versare, compresa tra zero escluso e il minimo tra il saldo disponibile nel wallet e il rimanente della MoneyBox.
-        \item l'utente effettua il pagamento [UC4].
+        \item l'utente effettua il pagamento [UC5].
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{UC2.2.4 - Chiusura MoneyBox}
+
+\begin{itemize}
+    \item Attore primario: utente propietario.
+    \item Precondizioni: l'utente ha connesso il proprio Metamask [UC4].
+    \item Postcondizioni: l'utente ha chiuso la MoneyBox e i fondi vengono restituiti.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente chiude la MoneyBox.
+        \item viene annullata ogni transazione e quindi effettuati i rimborsi.
     \end{enumerate}
 \end{itemize}
 
 \subsection{UC3 - Visualizzazione Riepilogo Ordine}
 
 \begin{itemize}
-    \item Attore primario: utente customer.
+    \item Attore primario: utente generico.
     \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1].
     \item Postcondizioni: l'utente ha visualizzato il riepilogo dell'ordine.
     \item Scenario principale: \begin{enumerate}
@@ -105,101 +116,175 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
     \end{enumerate}
 \end{itemize}
 
-\subsection{UC4 - Pagamento}
+\subsection{UC4 - Connessione Metamask}
 
 \begin{itemize}
-    \item Attore primario: utente customer.
+    \item Attore primario: utente generico.
+    \item Precondizioni: il sistema è raggiungibile e funzionante.
+    \item Postcondizioni: l'utente ha connesso Metamask a ShopChain.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza il pop-up di Metamask per la connessione a ShopChain.
+        \item l'utente autorizza la connessione a ShopChain.
+    \end{enumerate}
+    \item Estensioni: \begin{enumerate}
+        \item Nel caso in cui l'estensione Metamask risultasse assente nel browser: \begin{itemize}
+            \item la connessione non ha successo.
+            \item viene visualizzato errore estensione mancante [UC4.1].
+        \end{itemize}
+        \item Nel caso in cui l'utente abbia connesso il proprio wallet ma non abbia configurato la stessa blockchain di ShopChain: \begin{itemize}
+            \item la connessione non viene completata.
+            \item viene visualizzato errore blockchain non registrata [UC4.2].
+        \end{itemize}
+        \item Nel caso in cui l'utente abbia configurato la stessa blockchain di ShopChain ma non selezionato un account compatibile: \begin{itemize}
+            \item la connessione non viene completata.
+            \item viene visualizzato errore account non compatibile [UC4.3].
+        \end{itemize}
+        \item Nel caso l'utente rifiuti la connessione, visualizza errore connessione non completata [UC4.4].
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{UC4.1 - Visualizzazione Errore Estensione Mancante}
+
+\begin{itemize}
+    \item Attore primario: utente generico,
+    \item Precondizioni: l'utente utilizza un browser sprovvisto di estensione Metamask.
+    \item Postcondizioni: l'utente ha visualizzato l'errore e la connessione fallisce.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza un messaggio di errore per mancata connessione.
+        \item l'utente viene invitato a scaricare l'estensione Metamask.
+        \item l’utente clicca ”OK” per continuare.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{UC4.2 - Visualizzazione Errore Blockchain non registrata}
+
+\begin{itemize}
+    \item Attore primario: utente generico,
+    \item Precondizioni:l'utente ha connesso il proprio wallet ma non ha configurato la stessa blockchain di ShopChain.
+    \item Postcondizioni: l'utente ha visualizzato l'errore e la connessione fallisce.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza un messaggio di errore per mancata connessione.
+        \item l'utente visualizza i dati per configurare la blockchain.
+        \item l’utente clicca ”OK” per continuare.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{UC4.3 - Visualizzazione Errore account non compatibile}
+
+\begin{itemize}
+    \item Attore primario: utente generico,
+    \item Precondizioni: l'utente ha configurato la stessa blockchain di ShopChain ma non ha selezionato un account compatibile.
+    \item Postcondizioni: l'utente ha visualizzato l'errore e la connessione fallisce.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza un messaggio di errore per mancata connessione.
+        \item l'utente viene invitato a cambiare account o a registrare un account compatibile.
+        \item l’utente clicca ”OK” per continuare.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{UC4.4 - Visualizzazione Errore connessione non completata}
+
+\begin{itemize}
+    \item Attore primario: utente generico,
+    \item Precondizioni: l'utente rifiuta la connessione.
+    \item Postcondizioni: l'utente ha visualizzato l'errore e la connessione fallisce.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza un messaggio di errore per mancata connessione.
+        \item l'utente viene invitato a ritentare.
+        \item l’utente clicca ”OK” per continuare.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC5 - Pagamento}
+
+\begin{itemize}
+    \item Attore primario: utente generico.
     \item Attore secondario: Metamask.
-    \item Precondizioni: l'utente ha scelto il Tipo di Pagamento [UC2].
+    \item Precondizioni: l'utente ha scelto il Tipo di Pagamento [UC2], l'utente ha connesso il proprio wallet tramite Metamask [UC4].
     \item Postcondizioni: l'utente ha effettuato il pagamento.
     \item Scenario principale: \begin{enumerate}
-        \item l'utente effettuata una verifica del saldo del wallet.
-        \item l'utente visualizza il Pop-Up\glo\ di Metamask.
-        \item l'utente autorizza il pagamento.
-        \item l'utente visualizza un messagio di conferma di avvenuto pagamento.
+        \item l'utente visualizza il pop-up di Metamask con i dettagli della transazione, solo in caso di saldo sufficente.
+        \item l'utente autorizza la transazione.
+        \item l'utente visualizza un messaggio di conferma di avvenuto pagamento.
     \end{enumerate}
-    \item Generalizzazioni: \begin{itemize}
-        \item 
-        \item 
-    \end{itemize}
     \item Estensioni: \begin{enumerate}
-        \item 1
+        \item Nel caso l'utente rifiuti il pagamento: \begin{itemize}
+            \item la transazione viene annullata.
+            \item l'utente visualizza errore transazione annullata [UC5.1].
+        \end{itemize}
+        \item Nel caso venisse raggiunta la somma totale dovuta, viene generato e mostrato il codice di sblocco [UC5.2].
     \end{enumerate}
 \end{itemize}
 
-
+\paragraph{UC5.1 - Visualizzazione errore transazione annullata}
 
 \begin{itemize}
-    \item Attore primario:
-    \item Precondizioni:
-    \item Postcondizioni:
+    \item Attore primario: utente generico.
+    \item Precondizioni: l'utente ha rifiutato la transazione.
+    \item Postcondizioni: l'utente ha visualizzato l'errore e la transazione fallisce.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza un messaggio di errore per rifiuto della transazione.
+        \item l’utente clicca ”OK” per continuare.
+    \end{enumerate}
+\end{itemize}
+
+\paragraph{UC5.2 - Generazione Codice di Sblocco}
+
+\begin{itemize}
+    \item Attore primario: utente generico.
+    \item Precondizioni: il versamento raggiunge la somma totale dovuta.
+    \item Postcondizioni: l'utente ha visualizzato il codice di sblocco.
+    \item Scenario principale: \begin{enumerate}
+        \item viene generato il codice di sblocco.
+        \item l'utente visualizza il codice di sblocco.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC6 - Sblocco Ordine}
+
+\begin{itemize}
+    \item Attore primario: utente propietario dell'ordine.
+    \item Attore secondario: utente venditore.
+    \item Precondizioni: il sistema ha generato il codice di sblocco [UC5.2]. 
+    \item Postcondizioni: l'utente propietario ha sbloccato l'ordine e il denaro è stato trasferito all'utente venditore.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente inserisce il codice di sblocco.
+        \item il sistema trasferisce il denaro sul wallet dell'utente venditore.
+    \end{enumerate}
+    \item Estensioni: \begin{itemize}
+        \item ? nel caso di mancato inserimento del codice di sblocco, entro i termini prestabiliti, viene visualizzato un messaggio di errore [UC6.1].
+        \item rifiuta? %[UC6.2]
+        \end{itemize}
+\end{itemize}
+
+\subsection{UC7}
+
+\begin{itemize}
+    \item Attore primario: utente generico.
+    \item Attore secondario: Metamask.
+    \item Precondizioni: 
+    \item Postcondizioni: 
     \item Scenario principale: \begin{enumerate}
         \item 1
         \item 2
+        \item 3
     \end{enumerate}
-    \item Generalizzazioni: \begin{itemize}
+    \item Estensioni: \begin{itemize}
         \item 1
-        \item 2
-    \end{itemize}
-    \item Estensioni: \begin{enumerate}
-        \item 1
-    \end{enumerate}
+        \end{itemize}
 \end{itemize}
 
-
 \begin{itemize}
-    \item Attore primario:
-    \item Precondizioni:
-    \item Postcondizioni:
+    \item Attore primario: utente generico.
+    \item Attore secondario: Metamask.
+    \item Precondizioni: 
+    \item Postcondizioni: 
     \item Scenario principale: \begin{enumerate}
         \item 1
         \item 2
+        \item 3
     \end{enumerate}
-    \item Generalizzazioni: \begin{itemize}
+    \item Estensioni: \begin{itemize}
         \item 1
-        \item 2
-    \end{itemize}
-    \item Estensioni: \begin{enumerate}
-        \item 1
-    \end{enumerate}
+        \end{itemize}
 \end{itemize}
-
-
-
-\begin{itemize}
-    \item Attore primario:
-    \item Precondizioni:
-    \item Postcondizioni:
-    \item Scenario principale: \begin{enumerate}
-        \item 1
-        \item 2
-    \end{enumerate}
-    \item Generalizzazioni: \begin{itemize}
-        \item 1
-        \item 2
-    \end{itemize}
-    \item Estensioni: \begin{enumerate}
-        \item 1
-    \end{enumerate}
-\end{itemize}
-
-
-
-\begin{itemize}
-    \item Attore primario:
-    \item Precondizioni:
-    \item Postcondizioni:
-    \item Scenario principale: \begin{enumerate}
-        \item 1
-        \item 2
-    \end{enumerate}
-    \item Generalizzazioni: \begin{itemize}
-        \item 1
-        \item 2
-    \end{itemize}
-    \item Estensioni: \begin{enumerate}
-        \item 1
-    \end{enumerate}
-\end{itemize}
-
-
