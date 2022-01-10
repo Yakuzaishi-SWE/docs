@@ -1,15 +1,74 @@
 \section{Consuntivo di periodo} \label{section:consuntivo}
-
-\subsection{Requirements and Technology Baseline} \label{subsection:consuntivo_rtb}
-
+Questa sezione riporta le spese effettivamente sostenute dal gruppo \groupName.
+Vengono riportate le ore ed i costi impiegati in ciascun ruolo per svolgere le attività pianificate.
+Viene inoltre presentato un bilancio in termini di costo, dato dalla differenza tra il consuntivo di periodo ed il preventivo, che potrà essere:
+\begin{itemize}
+    \item \textbf{Positivo:} se la spesa effettiva è minore di quanto preventivato;
+    \item \textbf{In pareggio:} se la spesa effettiva è uguale a quanto preventivato;
+    \item \textbf{Negativo:} se la spesa effettiva è maggiore di quanto preventivato.
+\end{itemize}
+Il bilancio viene riportato tra parentesi a fianco dei valori rilevati dal consuntivo di periodo. 
+\\Se il valore tra parentesi non è presente indica che l'aspettativa del preventivo è stata rispettata.
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Product Baseline} \label{subsection:consuntivo_pb}
+\subsection{Analisi preliminare} \label{subsection:consuntivo_analisi}
+Di seguito viene presentato il consuntivo di periodo dell'analisi preliminare.
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c|c|c}
+      \rowcolor[HTML]{125E28} 
+      \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ore}}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Costo (€)}}\\
+      \hline
+      Responsabile      & 26 (+3) & 780,00 (+90,00)\\
+      Amministratore    & 45 (+3) & 900,00 (+60,00)\\
+      Analista          & 79 (-4) & 1950,00 (-100,00)\\
+      Progettista       & - & -\\
+      Programmatore     & - & -\\
+      Verificatore      & 65 (-6) & 975,00 (-90,00)\\
+      \textbf{Totale Consuntivo} & \textbf{214} & \textbf{4605,00}\\
+      \textbf{Totale Preventivo} & \textbf{218} & \textbf{4645,00}\\
+      \textbf{Bilancio} & \textbf{-4} & \textbf{-40,00}\\
+    \end{tabular}
+    \caption{Analisi preliminare - Consuntivo di periodo}
+  \end{table}
 
+
+\subsubsection{Ragione degli scostamenti} \label{subsubsection:ragione_scostamenti}
+\begin{itemize}
+    \item \textbf{Responsabile (+3 ore):} inizialmente, a causa dell'inesperienza, la seguente figura ha riscontrato problemi nella suddivisione del carico del lavoro, richiedendo un'analisi più minuziosa;
+    \item \textbf{Amministratore (+3 ore):} la stesura delle \docNameNdP ha richiesto più tempo del previsto data l'elevata dipendenza con gli altri documenti;
+    \item \textbf{Analista (-4 ore):} grazie alle conoscenze pregresse di alcuni membri del gruppo si è riusciti ad ottimizzare i tempi previsti per l'\docNameAdR;
+    \item \textbf{Verificatore (-6 ore):} durante questo periodo, avendo solamente documentazione da verificare, il controllo è risultato più rapido del previsto.
+\end{itemize}
+
+\subsubsection{Considerazioni rispetto al preventivo} \label{subsubsection:considerazioni_finali}
+Il bilancio risulta essere positivo rispetto al preventivo per questo periodo. Non si ritiene comunque necessaria alcuna ripianificazione del prossimo periodo in quanto la somma risparmiata non è abbastanza significativa.
+Inoltre, avendo raggiunto tutti gli obiettivi precedentemente pianificati, l'avanzamento delle attività non ha subito alcun rallentamento.
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Customer Acceptance} \label{subsection:consuntivo_ca}
+\subsection{Preventivo a finire} \label{subsection:preventivo_a_finire}
+Di seguito viene riportato il preventivo a finire mediante una tabella.
+Per ogni periodo che è stato ultimato viene riportato il preventivo ed il consuntivo di periodo.
+Se il valore del consuntivo di un periodo non risulta essere ancora presente, per il conteggio del totale verrà utilizzato il valore del preventivo.
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c|c|c}
+      \rowcolor[HTML]{125E28} 
+      \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Periodo}}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Preventivo}}
+      & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Consuntivo}}\\
+      \hline
+      Analisi preliminare     & 4645,00 & 4605,00\\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Riepilogo}
+      \textbf{Totale} & \textbf{14225,00} & \textbf{14185,00}\\
+    \end{tabular}
+    \caption{Preventivo a finire}
+  \end{table}
