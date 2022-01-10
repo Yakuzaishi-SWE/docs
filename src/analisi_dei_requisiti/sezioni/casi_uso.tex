@@ -257,35 +257,44 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
         \end{itemize}
 \end{itemize}
 
-\subsection{UC7}
+\subsection{UC7 - Visualizzazione Transazioni}
 %baseline 2 incrementi, poc 3, requisiti obbl 2, opzionali 1, +1 bonus
 
 \begin{itemize}
-    \item Attore primario: utente generico.
-    \item Attore secondario: Metamask.
-    \item Precondizioni: 
-    \item Postcondizioni: 
-    \item Scenario principale: \begin{enumerate}
-        \item 1
-        \item 2
-        \item 3
-    \end{enumerate}
-    \item Estensioni: \begin{itemize}
-        \item 1
-        \end{itemize}
+    \item Attore primario: utente venditore.
+    \item Precondizioni: il sistema è raggiungibile e funzionante.
+    \item Postcondizioni: l'utente ha selezionato lo stato delle transazioni che vuole visualizzare.
+    \item Scenario principale: l'utente sceglie lo stato delle transazioni da visualizzare tra quelli disponibili.
+    \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni\begin{itemize}
+        \item visualizza transazioni non completate [UC7.1].
+        \item visualizza transazioni pagate [UC7.2].
+        \item visualizza transazioni pagate e sbloccate [UC7.3].
+    \end{itemize}
 \end{itemize}
 
+\paragraph{UC7.1 - Visualizza Transazioni Non Completate}
+
 \begin{itemize}
-    \item Attore primario: utente generico.
-    \item Attore secondario: Metamask.
-    \item Precondizioni: 
-    \item Postcondizioni: 
-    \item Scenario principale: \begin{enumerate}
-        \item 1
-        \item 2
-        \item 3
-    \end{enumerate}
-    \item Estensioni: \begin{itemize}
-        \item 1
-        \end{itemize}
+    \item Attore primario: utente venditore.
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni non completate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non completate.
+    \item Scenario principale: l'utente visualizza la lista di transazioni non completate.
+\end{itemize}
+
+\paragraph{UC7.2 - Visualizza Transazioni Pagate}
+
+\begin{itemize}
+    \item Attore primario: utente venditore.
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate.
+    \item Scenario principale: l'utente visualizza la lista di transazioni pagate.
+\end{itemize}
+
+\paragraph{UC7.3 - Visualizza Transazioni Pagate e Sbloccate}
+
+\begin{itemize}
+    \item Attore primario: utente venditore.
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate e sbloccate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate e sbloccate.
+    \item Scenario principale: l'utente visualizza la lista di transazioni pagate e sbloccate.
 \end{itemize}
