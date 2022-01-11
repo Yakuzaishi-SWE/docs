@@ -1,5 +1,9 @@
 \section{Studio delle tecnologie}
 
+Poichè per il seguente capitolato è stata offerta una libera scelta riguardo le migliori tecnologie da adottare allo scopo, il gruppo ha svolto un'attenta valutazione
+riguardo le tecnologie compatibili con il compito da svolgere.
+Qui sotto sono riassunte le principali caratteristiche e motivazioni che hanno decretato le tecnologie scelte.
+
 \subsection{Cos'è una blockchain}
 La blockchain, che letteralmente significa "catena di blocchi", è una struttura dati condivisa e
 immutabile. Viene definita come un registro digitale le cui voci sono raggruppate a blocchi che
@@ -20,7 +24,7 @@ completamente libere e non soggiogate ad un ente centrale.
 
 \subsection{Differenze tra blockchain di layer 0, 1, 2}
 Le blockchain possono essere catalogate in base al tipo di architettura su cui si basano, in particolare possono basarsi su un layer 0, 1 o 2.
-In base a questo tipo di differenziazione offrono un diverso grado di astrazione e funzionalità. Come funziona per una linguaggio di programmazione
+In base a questo tipo di differenziazione offrono un diverso grado di astrazione e funzionalità. Come funziona per un linguaggio di programmazione
 più si sale di livello, più ci si allontana dallo "strato fisico".
     
     \subsubsection{Layer 0}
@@ -44,8 +48,8 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
     \end{itemize}
     \paragraph{Contro}
     \begin{itemize}
-        \item Inefficient Consensus Protocol: alcuni protocolli di consenso non sono adatti a gestire grandi traffici di transazioni e conseguentemente a un'adozione di massa;
-        \item Excessive Workload: il carico di lavoro su questo livello può diventare eccessivo e provocare grandi rallentamenti (è quello che succede con Ethereum e le sue conseguenti
+        \item Inefficient Consensus Protocol: alcuni protocolli di consenso non sono adatti a gestire grandi traffici di transazioni e conseguentemente queste strutture non sono pronte per un'adozione di massa;
+        \item Excessive Workload: il carico di lavoro su questo livello può diventare eccessivo e provocare grandi rallentamenti (è il caso di Ethereum e le sue conseguenti
         elevate gas fee).        
     \end{itemize}
 
@@ -56,13 +60,13 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
         Questo permette di diminuire di molto i tempi di attesa visto che viene a mancare la componente terza, come ad esempio le azioni dei miner.
         Come funziona:
         \begin{itemize}
-            \item Una porzione di blockchain viene ritagliata (viene usata l’espressione “sealed off, ovvero sigillata) tramite multi-firma o sotto smart-contract previo accordo tra le due parti coinvolte;
-            \item Quest’ultime possono interagire tra loro senza preoccuparsi di firmare le transazioni ecc…
-            \item Quando l’interazione è finita, lo stato finale viene registrato sulla blockchain
+            \item Una porzione di blockchain viene ritagliata (viene usata l’espressione “sealed off, ovvero sigillata) tramite multi-firma o sotto smart-contract, previo accordo tra le due parti coinvolte;
+            \item Quest’ultime possono interagire tra loro senza preoccuparsi di firmare le transazioni eseguite
+            \item Quando la sequenza di scambi termina, solo lo stato finale viene registrato sulla blockchain.
         \end{itemize}
         La metafora più facile è quella del conto, è come se una persona aprisse un conto con un’altra e poi lo saldasse “a rate”. Invece di registrare ogni singola rata sulla rete, viene 
         registrato solo il saldo finale.\\
-        Le soluzioni di questo tipo più comuni sono: “Bitcoin’s Lightning Network” (permette di eseguire tante microtransazioni) e “Ethereum’s Raiden Network” (permette anche di eseguire smart contracts 
+        Le soluzioni di questo tipo più comuni sono: la “Bitcoin’s Lightning Network” (permette di eseguire tante microtransazioni) e la “Ethereum’s Raiden Network” (permette anche di eseguire smart contracts 
         sui canali). Entrambe utilizzano Hashed Timelock Contracts (HTLCs) per creare state channels.
     \end{itemize}
     \begin{itemize}
@@ -112,17 +116,17 @@ rispettivamente alle esigenze del problema. Qui sotto sono riportati i pro e con
     \end{itemize}
     \paragraph{Contro}
     \begin{itemize}
-        \item Non è una blockchain Ethereum compatibile, quindi gli smart contract non possono essere scritti in Solidity. Il linguaggio necessario assomiglia al C e a RUST ed è più complesso;
+        \item Non è una blockchain Ethereum compatibile, quindi gli smart contract non possono essere scritti in Solidity. Il linguaggio necessario assomiglia al C e a RUST e risulta essere più complesso per chi si trova alla prima esperienza con queste tecnologie;
         \item I suoi punti di forza la rendono anche una scelta azzardata per un primo approccio al mondo delle blockchain;
     \end{itemize}
     
     \subsubsection{Moonriver}
-    Questo tipo di soluzione non presenta particolari caratteristiche se non quella di implementare gli smart contract su una parachain. Una parachain è una blockchain “specializzata” che si connette ad esempio a Polkadot (un altro esempio è Kusama), quest’ultimo è un protocollo di rete che permette di trasferire non solo tokens ma anche dati tra più blockchain. Quindi Polkadot è a tutti gli effetti un’applicazione che permette di avere registri e computazioni cross-chain.
-    Le operazioni tra queste vengono eseguite in parallelo e non sequenzialmente su una relay chain che funge da main chain del sistema, una chain rimane connessa finchè è in grado di compilare in codice Wasm* e aderisce alla Relay Chain API.
+    Questo tipo di soluzione non presenta particolari caratteristiche se non quella di implementare gli smart contract su una parachain. Una parachain è una blockchain “specializzata” che si connette ad esempio a Polkadot (una blockchain layer 0, un altro esempio è Kusama), quest’ultimo è un protocollo di rete che permette di trasferire non solo tokens ma anche dati tra più blockchain. Quindi Polkadot è a tutti gli effetti un’applicazione che permette di avere registri e computazioni cross-chain.
+    Le operazioni tra queste vengono eseguite in parallelo e non sequenzialmente su una relay chain che funge da main chain del sistema, una chain quindi rimane connessa finchè è in grado di compilare in codice Wasm* e aderisce alla Relay Chain API.
     \paragraph{Pro}
     \begin{itemize}
         \item Sviluppo su una parachain, tecnologia molto interessante e valida per impieghi futuri;
-        \item Fee basse rispetto ad Ethereum;
+        \item Fee più basse rispetto ad Ethereum;
         \item Ambiente Ethereum compatibile, quindi possibilità di usare Solidity per lo sviluppo di Smart Contract
         \item Progetto recente ma dal grande potenziale;
     \end{itemize}
@@ -169,3 +173,10 @@ rispettivamente alle esigenze del problema. Qui sotto sono riportati i pro e con
     \begin{itemize}
         \item Meno conosciuta rispetto ad Ethereum;
     \end{itemize}
+
+\subsection{Conclusioni}
+Concludendo quanto riportato da quest'analisi, le blockchain che hanno suscitato maggior interesse nel gruppo, relativamente agli aspetti positivi e negativi contestualizzati per lo scopo di questo progetto,
+sono Avalanche e Fantom. Entrambe sono due blockchain giovani, la prima è nata nel 2020, mentre la seconda nel 2018. La prima risulta essere più decentralizzata per via della presenza di un numero molto maggiore di nodi validatori, mentre la seconda
+offre costi per transazione molto minori.\\
+Ambedue si presentano quindi come valide soluzioni, poichè differiscono di piccoli aspetti legati alle scelte e agli obiettivi ai quali li sviluppatori delle due reti vogliono aspirare. Alla fine dopo diversi incontri con il proponente, si è giunti
+alla scelta di sviluppare l'applicazione su Fantom.
