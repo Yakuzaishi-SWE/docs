@@ -205,16 +205,29 @@
      \begin{center}
       \textbf{\Large{R[Tipo][ID Numerico]}}
     \end{center}
-    dove \textbf{tipo} può essere:
-    \begin{itemize}
-      \item \textbf{T:} tecnologico;
-      \item \textbf{I:} interno;
-      \item \textbf{O:} organizzativo;
-      \item \textbf{R:} requisiti.
+    dove:
+    \begin{itemize}[label={}]
+      \item \textbf{R}: Sta per rischio;
+      \item \textbf{Tipo}: Rappresenta la tipologia del rischio e può assumere uno dei seguenti valori letterali:
+      \begin{table}[H]
+        \centering
+        \renewcommand{\arraystretch}{1.8}
+        \rowcolors{2}{green!100!black!40}{green!100!black!30}
+        \begin{tabular}{c|c}
+          \rowcolor[HTML]{125E28} 
+          \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Sigla}}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}\\
+          \hline
+          T & Tecnologico\\
+          R & Requisito\\
+          O & Organizzativo\\
+          I & Interno\\
+        \end{tabular}
+        \caption{Sigle utilizzate per la codifica dei rischi}
+      \end{table} 
+      \item \textbf{ID numerico}: È un id crescente che parte da 1 e viene incrementato di 1 per ciascun rischio.\\
     \end{itemize}
-    
-
-
+    La codifica di ciascun rischio è univoca. Non possono esserci due rischi dello stesso tipo con lo stesso ID numerico.
         \subsection{Formazione} \label{subsection: formazione}
         \subsubsection {Scopo}
         Lo scopo di questa sezione è quello di definire le norme riguardanti il processo di formazione dei membri del gruppo \groupName\ e quindi lo studio delle tecnologie utilizzate per produrre i documenti e costruire il prodotto richiesto.

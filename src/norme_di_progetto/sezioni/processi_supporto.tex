@@ -113,7 +113,14 @@ La tabella del registro delle modifiche contiene le seguenti voci:
     \item \textbf{Descrizione}: breve descrizione della modifica effettuata.
 \end {itemize}
 \subparagraph{Indice}
-L'indice viene posto in seguito al registro delle modifiche e deve contenere tutte le varie sezioni di cui si compone il documento.
+L'indice, posto in seguito al registro delle modifiche, deve contenere tutte le varie sezioni di cui si compone il documento.
+\subparagraph{Elenco delle tabelle}
+L'elenco delle tabelle, successivo all'indice, deve contenere tutte le tabelle che compaiono nel documento.\\
+Questo non sarà presente qualora il documento in questione non prevede che vi siano tabelle al suo interno.
+\subparagraph{Elenco delle figure}
+L'elenco delle tabelle,posto a seguito dell'elenco delle tabelle, deve contenere tutte le figure che compaiono nel documento.\\
+Questo non sarà presente qualora il documento in questione non prevede che vi siano immagini al suo interno.
+
 \subparagraph{Struttura delle pagine}
 Ogni pagina di contenuto è strutturata come segue:
 \begin {itemize}
@@ -183,7 +190,7 @@ In questa sezione vengono raccolte e spiegate le sigle presenti nei vari documen
         \begin{tabular}{c|c}
           \rowcolor[HTML]{125E28} 
           \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}}
-          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Abbreviazione}}\\
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Sigla}}\\
           \hline
           Responsabile      & Re\\
           Amministratore    & Am\\
@@ -192,7 +199,7 @@ In questa sezione vengono raccolte e spiegate le sigle presenti nei vari documen
           Programmatore     & Pr\\
           Verificatore      & Ve
         \end{tabular}
-        \caption{Abbreviazioni dei ruoli}
+        \caption{Sigle dei ruoli}
       \end{table}
     \item\textbf{...inserire altre sigle usate negli altri documenti...}
 \end{itemize}
@@ -419,17 +426,31 @@ Non ci sono strumenti particolari.
             \begin{center}
                 \large{\textbf{T[TipologiaTest][ImportanzaRequisito]*[TipologiaRequisito]*[IdNumerico]}}
             \end{center}
-            dove:\\
-            \textbf{TipologiaTest} può assumere uno tra i seguenti valori:
-            \begin{itemize}
-                \item \textbf{A}: test di accettazione, vengono eseguiti immediatamente prima del rilascio del prodotto;
-                \item \textbf{I}: test di integrazione, servono a testare che i moduli quando integrati funzionino come previsto, ovvero testare che i moduli che funzionano bene individualmente non abbiano problemi quando integrati;
-                \item \textbf{R}: test di regressione, servono per verificare il corretto funzionamento del software, dopo la modifica di una funzionalità o la risoluzione di eventuali bug\glo;
-                \item \textbf{S}: test di sistema, condotti su un sistema integrato completo, servono per valutare la conformità del sistema ai requisiti specificati;
-                \item \textbf{U}: test di unità, condotti su una parte di codice, servono per verificare che tale parte funzioni correttamente.
+            dove:
+            \begin{itemize}[label={}]
+                \item \textbf{TipologiaTest} può assumere uno tra i seguenti valori letterali:
+                \begin{table}[H]
+                    \centering
+                    \renewcommand{\arraystretch}{1.8}
+                    \rowcolors{2}{green!100!black!40}{green!100!black!30}
+                    \begin{tabular}{c|c|p{12cm}}
+                        \rowcolor[HTML]{125E28} 
+                        \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Sigla}}
+                        & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Significato}}
+                        & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}\\
+                        \hline
+                        \textbf{A} & Test di accettazione & Vengono eseguiti immediatamente prima del rilascio del prodotto\\
+                        \textbf{I} & Test di integrazione & Servono a testare che i moduli quando integrati funzionino come previsto, ovvero testare che i moduli che funzionano bene individualmente non abbiano problemi quando integrati\\
+                        \textbf{R} & Test di regressione  & Servono per verificare il corretto funzionamento del software dopo la modifica di una funzionalità o la risoluzione di eventuali bug\glo\\
+                        \textbf{S} & Test di sistema      & Condotti su un sistema integrato completo, servono per valutare la conformità del sistema ai requisiti specificati\\
+                        \textbf{U} & Test di unità        & Condotti su una parte di codice, servono per verificare che tale parte funzioni correttamente\\
+                    \end{tabular}
+                    \caption{Tipologie test}
+                \end{table}
+                \item \textbf{ImportanzaRequisito} e \textbf{TipologiaRequisito} sono presenti solo nei codici per i test di sistema e accettazione. Questi campi identificano il requisito che si vuole testare, possono assumere i valori riportati e precedentemente descritti al paragrafo \ref{subparagraph:Classificazione dei requisiti}\\\\
+                \item \textbf{IdNumerico} è un valore crescente che parte da 1 e serve per distinguere i diversi test riguardanti la stessa tipologia.
             \end{itemize}
-            \textbf{ImportanzaRequisito} e \textbf{TipologiaRequisito} sono presenti solo nei codici per i test di sistema e accettazione. Questi campi identificano il requisito che si vuole testare, possono assumere i valori riportati e precedentemente descritti al paragrafo \ref{subparagraph:Classificazione dei requisiti}\\\\
-            \textbf{IdNumerico} è un valore crescente che parte da 1 e serve per distinguere i diversi test riguardanti la stessa tipologia.
+
 
     \subsubsection{Metriche}
     Da discutere con gli altri

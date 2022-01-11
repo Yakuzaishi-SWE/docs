@@ -23,7 +23,7 @@ Il processo di fornitura consiste nelle seguenti fasi:
     \item Consegna e completamento.
 \end {itemize}
 \subsubsection{Proponente}\label{subsubsection: proponente_fornitura}
-Il team di sviluppo si è accordato con il proponente per avere un continuo contatto sul buon proseguo del progetto, organizzando periodicamente incontri e mantenendo un costante contatto asincrono mediante un apposito canale sulla piattaforma Discord.
+Il team di sviluppo si è accordato con il proponente per avere un continuo contatto sul buon proseguo del progetto, organizzando periodicamente incontri e mantenendo un costante contatto asincrono mediante un apposito canale sulla piattaforma Discord\glo.
 Il team di sviluppo vuole avere un costante contatto con il proponente riguardo alle seguenti tematiche:
 \begin {itemize}
     \item Chiarimento su eventuali dubbi;
@@ -61,13 +61,13 @@ Il processo di fornitura non fa uso di metriche qualitative particolari.
 \paragraph{Strumenti}\label{paragraph: strumenti_fornitura}
 Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo per la realizzazione del processo di fornitura:
 \begin{itemize}
-    \item Microsoft Excel: utilizzato per creare grafici, eseguire calcoli e presentare tabelle organizzative; 
+    \item \textbf{Microsoft Excel}: Utilizzato per creare grafici, eseguire calcoli e presentare tabelle organizzative; 
     \begin{center}
         \url{https://www.microsoft.com/it-it/microsoft-365/excel}
     \end{center}
-    \item Agantty: utilizzato per creare i grafici di Gantt relativi alla pianificazione. 
+    \item \textbf{Microsoft Project}: Utilizzato per creare i grafici di Gantt relativi alla pianificazione. 
     \begin{center}
-        \url{https://app.agantty.com/?locale=en/}
+        \url{https://www.microsoft.com/it-it/microsoft-365/project/project-management-software}
     \end{center}
 \end{itemize}
 
@@ -125,26 +125,45 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo per la r
             \begin{center}
                 \textbf{\Large{R[Importanza][Tipologia][Codice]}}
             \end{center}
-            dove:\\
-
-            \textbf{Importanza}: indica l'importanza associata a un requisito e può assumere un valore numerico compreso tra 1 e 3 con il seguente significato:
-                \begin{itemize}[label={}]
-                    \item \textbf{1}: Requisito obbligatorio;
-                    \item \textbf{2}: Requisito desiderabile ma non obbligatorio;
-                    \item \textbf{3}: Requisito opzionale.
-                \end{itemize}
-
-            \textbf{Tipologia}: rappresenta una tipologia di requisito e può assumere uno fra i seguenti valori letterali:
+            dove:
             \begin{itemize}[label={}]
-                \item \textbf{V}: Vincolo;
-                \item \textbf{P}: Prestazionale;
-                \item \textbf{Q}: Qualitativo;
-                \item \textbf{F}: Funzionale.
-            \end{itemize}
-
-            \textbf{Codice}: è un identificativo univoco del requisito espresso in forma gerarchica padre/figlio.
-            \\
-            \\
+                \item \textbf{Importanza}: indica l'importanza associata a un requisito e può assumere un valore numerico compreso tra 1 e 3 con il seguente significato:
+                
+                \begin{table}[H]
+                    \centering
+                    \renewcommand{\arraystretch}{1.8}
+                    \rowcolors{2}{green!100!black!40}{green!100!black!30}
+                    \begin{tabular}{c|c}
+                        \rowcolor[HTML]{125E28} 
+                        \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Numero}}
+                        & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}\\
+                        \hline
+                        \textbf{1} & Requisito obbligatorio\\
+                        \textbf{2} & Requisito desiderabile ma non obbligatorio\\
+                        \textbf{3} & Requisito opzionale\\
+                    \end{tabular}
+                    \caption{Importanza dei requisiti}
+                \end{table}
+                
+                \item \textbf{Tipologia}: rappresenta una tipologia di requisito e può assumere uno fra i seguenti valori letterali:
+                \begin{table}[H]
+                    \centering
+                    \renewcommand{\arraystretch}{1.8}
+                \rowcolors{2}{green!100!black!40}{green!100!black!30}
+                \begin{tabular}{c|c}
+                    \rowcolor[HTML]{125E28} 
+                    \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Sigla}}
+                  & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}\\
+                  \hline
+                  \textbf{V} & Vincolo\\
+                  \textbf{P} & Prestazionale\\
+                  \textbf{Q} & Qualitativo\\
+                  \textbf{F}  & Funzionale\\
+                \end{tabular}
+                \caption{Tipologie di requisiti}
+            \end{table}
+            \item\textbf{Codice}: è un identificativo univoco del requisito espresso in forma gerarchica padre/figlio.\\\\
+        \end{itemize}
             Una volta associato a un requisito, l'identificativo è immutabile.
             Ogni requisito deve inoltre essere accompagnato da una serie di informazioni aggiuntive:
             \begin{itemize}
@@ -317,4 +336,7 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo per la r
         \textbf{Aggiungere eventuali nuove metriche per la codifica}
 
         \paragraph{Strumenti}    \label{paragraph:Strumenti}
-        \textbf{da inserire strumenti utilizzati in fase di codifica}
+        Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo durante la fase di codifica:
+        \begin{itemize}
+            \item \textbf{da inserire strumenti utilizzati in fase di codifica}
+        \end{itemize}
