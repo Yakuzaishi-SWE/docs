@@ -4,7 +4,7 @@ Considerate le scadenze indicate in \hyperref[subsection:intro_scadenze]{1.5 Sca
 \begin{itemize}
     \item \textbf{Analisi preliminare};
     \item \textbf{Progettazione Technology Baseline};
-    \item \textbf{Codifica Proof of Concept};
+    \item \textbf{Codifica Proof of Concept\glo};
     \item \textbf{Progettazione di dettaglio e codifica requisiti obbligatori};
     \item \textbf{Progettazione di dettaglio e codifica requisiti opzionali};
     \item \textbf{Validazione e collaudo}.
@@ -20,13 +20,13 @@ Le scadenze temporali di alcuni incrementi sono state scelte in base alle revisi
 Per rappresentare temporalmente le attività viene utilizzato un diagramma di Gantt\glo.
 \\Le attività possono essere dei seguenti tipi:
 \begin{itemize}
-    \item \textbf{Attività critiche:} attività particolarmente importanti per il corretto sviluppo del progetto. La loro data di fine non è slittabile e il ritardo di una di esse
+    \item \textbf{Attività critiche:} Attività particolarmente importanti per il corretto sviluppo del progetto. La loro data di fine non è slittabile e il ritardo di una di esse
     incide gravemente sulle altre, causando ritardi a cascata. Sono indicate con il colore rosso;
-    \item \textbf{Attività non critiche:} attività di minore importanza dalle quali non dipende lo sviluppo generale del progetto. La loro data di fine può essere slittata e non causerebbe ritardi a cascata.
+    \item \textbf{Attività non critiche:} Attività di minore importanza dalle quali non dipende lo sviluppo generale del progetto. La loro data di fine può essere slittata e non causerebbe ritardi a cascata.
     Sono indicate con il colore blu;
-    \item \textbf{Attività di verifica:} attività poste alla fine dei vari periodi per garantire un controllo sulle altre attività svolte.
+    \item \textbf{Attività di verifica:} Attività poste alla fine dei vari periodi per garantire un controllo sulle altre attività svolte.
     Sono indicate con il colore verde;
-    \item \textbf{Evento prefissato:} rappresenta un particolare evento di durata pari a zero giorni. Può rappresentare una milestone interna (rombo di colore verde), la consegna dei documenti
+    \item \textbf{Evento prefissato:} Rappresenta un particolare evento di durata pari a zero giorni. Può rappresentare una milestone interna (rombo di colore verde), la consegna dei documenti
     per una revisione, una revisione di avanzamento (rombo di colore rosso) oppure un incontro con il
     proponente (rombo di colore blu). Sono indicate con un rombo colorato.
   \end{itemize}
@@ -35,24 +35,24 @@ Per rappresentare temporalmente le attività viene utilizzato un diagramma di Ga
 \subsection{Analisi preliminare} \label{subsection:pianificazione_Analisi}
 \textbf{Periodo:} dal 2021/11/19 al 2022/01/06.
 \bigskip
-\\Questo periodo ha inizio con l'assegnazione del capitolato d'appalto e termina con l'inizio del periodo di Progettazione per la Technology Baseline\glo\.
+\\Questo periodo ha inizio con l'assegnazione del capitolato d'appalto e termina con l'inizio del periodo di Progettazione per la Technology Baseline\glo.
 Inizialmente vengono individuati sia gli strumenti per il lavoro collaborativo sia quelli più adatti a redigere la documentazione.
 Si procede poi con un'analisi preliminare atta ad individuare i requisiti per lo sviluppo del prodotto.
 \\Durante questo periodo, a causa dell'inesperienza del gruppo riguardo alle tematiche trattate, si è scelto di dedicare tempo all'autoformazione.
 Inoltre vengono redatti ulteriori documenti relativi alle strategie e alla qualità che il gruppo \groupName si prefigge di rispettare.
 \\Le attività durante questo periodo sono quindi le seguenti:
 \begin{itemize}
-  \item \textbf{Autoformazione:} tramite il corso sulla Blockchain\glo\ rilasciato dall'Università di Verona;
-  \item \textbf{Norme di progetto:} vengono subito individuati gli strumenti che saranno utilizzati per la stesura dei documenti e per la collaborazione
-  Le norme sono emanate dall'\roleAdministrator e il rispetto di quest'ultime dovrà essere certicato dai \roleVerifier. Vengono redatte le \docNameNdP;
-  \item \textbf{Piano di progetto:} basandosi sulle date decise di comune accordo per le revisioni di avanzamento e le scadenze che il gruppo si è prefissato, il \roleProjectManager redige il \docNamePdP.
-  Questa attività risulta essere critica poichè ne deriva l'organizzazione dell'intero gruppo;
-  \item \textbf{Analisi dei requisiti:} tramite il capitolato d'appalto e gli incontri con il proponente, l'\roleAnalyst identifica i requisiti del sistema e redige una prima versione dell'\docNameAdR.
+  \item \textbf{Autoformazione:} Tramite il corso sulla Blockchain\glo\ rilasciato dall'Università di Verona;
+  \item \textbf{Norme di progetto:} Vengono subito individuati gli strumenti che saranno utilizzati per la stesura dei documenti e per la collaborazione
+  Le norme sono emanate dall'\roleAdministratorLow{} e il rispetto di quest'ultime dovrà essere certificato dai \textit{verificatori}. Vengono redatte le \docNameNdP{};
+  \item \textbf{Piano di progetto:} Basandosi sulle date decise di comune accordo per le revisioni di avanzamento e le scadenze che il gruppo si è prefissato, il \roleProjectManager{} redige il \docNamePdP{}.
+  Questa attività risulta essere critica poiché ne deriva l'organizzazione dell'intero gruppo;
+  \item \textbf{Analisi dei requisiti:} Tramite il capitolato d'appalto e gli incontri con il proponente, l'\roleAnalystLow{} identifica i requisiti del sistema e redige una prima versione dell'\docNameAdR{}.
   I requisiti evolveranno nel periodo successivo in base ai feedback ricevuti dal proponente;
-  \item \textbf{Piano di qualifica:} l'\roleAdministrator redige i piani e le procedure di gestione per la qualità, mentre il \roleVerifier illustra l'esito e la completezza delle verifiche. Viene redatto il \docNamePdQ;
-  \item \textbf{Glossario:} viene creato il \docNameGlo. Questo documento viene aggiornato in modo continuativo dai \roleVerifier dei documenti aggiungendo termini che necessitano di spiegazione;
+  \item \textbf{Piano di qualifica:} L'\roleAdministratorLow{} redige i piani e le procedure di gestione per la qualità, mentre il \roleVerifierLow{} illustra l'esito e la completezza delle verifiche. Viene redatto il \docNamePdQ{};
+  \item \textbf{Glossario:} Viene creato il \docNameGlo. Questo documento viene aggiornato in modo continuativo dai \textit{verificatori} dei documenti aggiungendo termini che necessitano di spiegazione;
 \end{itemize}
-In questo periodo i ruoli coinvolti sono: \roleProjectManager, \roleAdministrator, \roleAnalyst e \roleVerifier.
+In questo periodo i ruoli coinvolti sono: \roleProjectManagerLow{}, \roleAdministratorLow{}, \roleAnalystLow{} e \roleVerifierLow{}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -67,18 +67,18 @@ In questo periodo i ruoli coinvolti sono: \roleProjectManager, \roleAdministrato
 \subsection{Progettazione Technology Baseline} \label{subsection:pianificazione_TB}
 \textbf{Periodo:} dal 2022/01/07 al 2022/01/24.
 \bigskip
-\\Questo periodo ha inizio dopo l'Analisi preliminare e finisce con l'inizio della Codifica del Proof of Concept.
+\\Questo periodo ha inizio dopo l'Analisi preliminare e finisce con l'inizio della Codifica del Proof of Concept\glo.
 In corrispondenza del termine di questo periodo verrà fissato un incontro con il proponente in cui verrà presentata la soluzione generale individuata e in cui verranno annotate eventuali correzioni.
 Verranno inoltre apportati incrementi ai documenti prodotti nei periodi precedenti.
-L'analisi del sistema che viene effettuata in questo periodo serve come base tecnologica e progettuale per la codifica finale del Proof of Concept, realizzato nel periodo successivo.
+L'analisi del sistema che viene effettuata in questo periodo serve come base tecnologica e progettuale per la codifica finale del Proof of Concept\glo, realizzato nel periodo successivo.
 Durante questo periodo vengono effettuati 2 incrementi e 4 modifiche incrementali sui documenti.
 \\Le attività svolte sono:
 \begin{itemize}
-  \item \textbf{Technology Baseline:} in questa attività vengono studiate, analizzate e scelte le tecnologie, i framework e le librerie per lo sviluppo del prodotto.
-  Viene verificato tramite una codifica preliminare che le tecnologie scelte si integrino tra loro e che possano essere utilizzate con successo nel Proof of Concept;
-  \item \textbf{Modifiche incrementali ai documenti:} in questo periodo vengono apportate delle modifiche incrementali sui documenti precedentemente redatti.
+  \item \textbf{Technology Baseline:} In questa attività vengono studiate, analizzate e scelte le tecnologie, i framework e le librerie per lo sviluppo del prodotto.
+  Viene verificato tramite una codifica preliminare che le tecnologie scelte si integrino tra loro e che possano essere utilizzate con successo nel Proof of Concept\glo;
+  \item \textbf{Modifiche incrementali ai documenti:} In questo periodo vengono apportate delle modifiche incrementali sui documenti precedentemente redatti.
 \end{itemize}
-In questo periodo i ruoli maggiormente coinvolti sono: \roleAdministrator, \roleAnalyst, \roleDesigner e \roleVerifier.
+In questo periodo i ruoli maggiormente coinvolti sono: \roleAdministratorLow{}, \roleAnalystLow{}, \roleDesignerLow{} e \roleVerifierLow{}.
 \bigskip
 \begin{figure}[H]
   \centering
@@ -89,26 +89,26 @@ In questo periodo i ruoli maggiormente coinvolti sono: \roleAdministrator, \role
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Codifica Proof of Concept} \label{subsection:pianificazione_PoC}
+\subsection{Codifica Proof of Concept\glo} \label{subsection:pianificazione_PoC}
 \textbf{Periodo:} dal 2022/01/25 al 2022/02/22.
 \bigskip
-\\Questo periodo ha inizio dopo il periodo di Progettazione per la Technology Baseline e termina con la scadenza di consegna dei documenti per la revisione di \RTB (RTB\glo\ ).
+\\Questo periodo ha inizio dopo il periodo di Progettazione per la Technology Baseline e termina con la scadenza di consegna dei documenti per la revisione di \RTB\ (RTB\glo).
 In corrispondenza del termine di questo periodo verrà fissato un incontro con il proponente in cui verrà presentato un prototipo del prodotto.
-L'attività principale di questo periodo è la realizzazione di un Proof of Concept.
+L'attività principale di questo periodo è la realizzazione di un Proof of Concept\glo.
 Inoltre durante questo periodo vengono effettuati 3 incrementi e 5 modifiche incrementali sui documenti.
 \\Le attività svolte sono:
 \begin{itemize}
-  \item \textbf{Proof of Concept:} viene realizzato un Proof of Concept nel quale devono essere integrate il maggior numero di tecnologie necessarie alla realizzazione del progetto e implementate alcune delle funzionalità principali.
+  \item \textbf{Proof of Concept:} Viene realizzato un Proof of Concept\glo\ nel quale devono essere integrate il maggior numero di tecnologie necessarie alla realizzazione del progetto e implementate alcune delle funzionalità principali.
   Il PoC\glo\ è un dimostratore eseguibile e verrà utilizzato come base di partenza su cui poter effettuare incrementi nei periodi successivi.
   L'esito positivo dell'integrazione delle tecnologie implementate nella Technology Baseline garantirà un'alta probabilità di portare a termine il PoC con successo;
-  \item \textbf{Modifiche incrementali ai documenti:} in questo periodo vengono apportate delle modifiche incrementali sui documenti precedentemente redatti.
+  \item \textbf{Modifiche incrementali ai documenti:} In questo periodo vengono apportate delle modifiche incrementali sui documenti precedentemente redatti.
 \end{itemize}
-In questo periodo i ruoli maggiormente coinvolti sono: \roleDesigner, \roleProgrammer e \roleVerifier.
+In questo periodo i ruoli maggiormente coinvolti sono: \roleDesignerLow{}, \roleProgrammerLow{} e \roleVerifierLow{}.
 \bigskip
 \begin{figure}[H]
   \centering
    \includegraphics[scale=0.46]{immagini/poc.png}
-   \caption{Diagramma di Gantt - Codifica Proof of Concept}
+   \caption{Diagramma di Gantt - Codifica Proof of Concept\glo}
  \end{figure}
  \pagebreak
 
@@ -117,21 +117,21 @@ In questo periodo i ruoli maggiormente coinvolti sono: \roleDesigner, \roleProgr
  \subsection{Progettazione di dettaglio e codifica requisiti obbligatori} \label{subsection:pianificazione_requisiti_obbligatori}
 \textbf{Periodo:} dal 2022/03/01 al 2022/03/20.
 \bigskip
-\\Questo periodo ha inizio dopo la revisione di \RTB (RTB) e termina con l'inizio della Progettazione di dettaglio e codifica dei requisiti opzionali.
+\\Questo periodo ha inizio dopo la revisione di \RTB\ (RTB) e termina con l'inizio della Progettazione di dettaglio e codifica dei requisiti opzionali.
 Verrà quindi utilizzato il PoC precedentemente creato come base su cui poter incrementare il prodotto.
 Una delle attività di questo periodo è la \PB, nella quale viene realizzato un allegato tecnico da poter presentare al committente.
 Durante questo periodo vengono effettuati 2 incrementi e 5 modifiche incrementali sui documenti.
 Le attività svolte sono:
 \begin{itemize}
-  \item \textbf{\PB:} questa attività presenta la baseline architetturale del prodotto tramite i diagrammi delle classi e di sequenza, mostrandone la coerenza con quanto mostrato durante l'attività di Technology Baseline.
-  \item \textbf{Test:} i programmatori scrivono i test di unità e integrazione in relazione ai componenti sviluppati in questo periodo;
-  \item \textbf{Codifica:} viene eseguito lo sviluppo del codice del prodotto da parte dei programmatori relativo ai componenti descritti dai requisiti obbligatori.
+  \item \textbf{\PB:} Questa attività presenta la baseline architetturale del prodotto tramite i diagrammi delle classi e di sequenza, mostrandone la coerenza con quanto mostrato durante l'attività di Technology Baseline.
+  \item \textbf{Test:} I \textit{programmatori} scrivono i test di unità e integrazione in relazione ai componenti sviluppati in questo periodo;
+  \item \textbf{Codifica:} Viene eseguito lo sviluppo del codice del prodotto da parte dei \textit{programmatori} relativo ai componenti descritti dai requisiti obbligatori.
   A partire dalla base creata nel periodo precedente, viene sviluppata una versione funzionante del prodotto tramite due incrementi successivi;
-  \item \textbf{Manuali:} comincia la redazione dei documenti \docNameVersionMU e \docNameVersionMS in relazione ai requisiti obbligatori.
+  \item \textbf{Manuali:} Comincia la redazione dei documenti \docNameVersionMU{} e \docNameVersionMS{} in relazione ai requisiti obbligatori.
   Questi documenti forniscono indicazioni sull'utilizzo del sistema da parte degli utenti coinvolti;
-  \item \textbf{Modifiche incrementali e correttive ai documenti:} in questo periodo vengono apportate delle modifiche correttive ed incrementali sui documenti precedentemente redatti.
+  \item \textbf{Modifiche incrementali e correttive ai documenti:} In questo periodo vengono apportate delle modifiche correttive ed incrementali sui documenti precedentemente redatti.
 \end{itemize}
-In questo periodo i ruoli maggiormente coinvolti sono: \roleDesigner, \roleProgrammer e \roleVerifier.
+In questo periodo i ruoli maggiormente coinvolti sono: \roleDesignerLow{}, \roleProgrammerLow{} e \roleVerifierLow{}.
 \bigskip
 \begin{figure}[H]
   \centering
@@ -146,16 +146,16 @@ In questo periodo i ruoli maggiormente coinvolti sono: \roleDesigner, \roleProgr
 \textbf{Periodo:} dal 2022/03/21 al 2022/04/04.
 \bigskip
 \\Questo periodo ha inizio dopo il periodo di Progettazione di dettaglio e codifica dei requisiti obbligatori e termina con l'inizio del periodo di Validazione e collaudo.
-In preparazione alla revisione di \PB (PB\glo\ ), si procede con la progettazione di dettaglio e la codifica dei requisiti opzionali.
+In preparazione alla revisione di \PB (PB\glo), si procede con la progettazione di dettaglio e la codifica dei requisiti opzionali.
 Durante questo periodo viene effettuato 1 incremento e 4 modifiche incrementali sui documenti. 
 \\Le attività svolte sono:
 \begin{itemize}
-  \item \textbf{Test:} i programmatori scrivono i test di unità e integrazione in relazione ai componenti sviluppati in questo periodo;
-  \item \textbf{Codifica:} viene eseguito lo sviluppo del codice del prodotto da parte dei programmatori relativo ai componenti descritti dai requisiti opzionali;
-  \item \textbf{Manuali:} vengono aggiornati i documenti \docNameVersionMU e \docNameVersionMS in relazione ai requisiti opzionali;
+  \item \textbf{Test:} I \roleProgrammerLow{} scrivono i test di unità e integrazione in relazione ai componenti sviluppati in questo periodo;
+  \item \textbf{Codifica:} Viene eseguito lo sviluppo del codice del prodotto da parte dei \textit{programmatori} relativo ai componenti descritti dai requisiti opzionali;
+  \item \textbf{Manuali:} Vengono aggiornati i documenti \docNameVersionMU{} e \docNameVersionMS{} in relazione ai requisiti opzionali;
   \item \textbf{Modifiche incrementali ai documenti:} in questo periodo vengono apportate delle modifiche incrementali sui documenti precedentemente redatti.
  \end{itemize}
- In questo periodo i ruoli maggiormente coinvolti sono: \roleDesigner, \roleProgrammer e \roleVerifier.
+ In questo periodo i ruoli maggiormente coinvolti sono: \roleDesignerLow{}, \roleProgrammerLow{} e \roleVerifierLow{}.
  \bigskip
  \begin{figure}[H]
   \centering
@@ -176,13 +176,13 @@ Durante questo periodo viene effettuato 1 incremento e 4 modifiche incrementali 
   Durante questo periodo viene effettuato 1 incremento e 4 modifiche incrementali sui documenti. 
   Le attività svolte sono:
   \begin{itemize}
-    \item \textbf{Test:} oltre ad ulteriori test di unità e di integrazione, vengono eseguiti test di sistema per verificare che il prodotto presenti tutte le caratteristiche attese;
-    \item \textbf{Collaudo:} il prodotto viene eseguito e testato in tutte le sue funzionalità, verificando che siano stati soddisfatti tutti i requisiti;
-    \item \textbf{Validazione:} viene controllato che il prodotto sia conforme alle specifiche e soddisfi le richieste del cliente.
+    \item \textbf{Test:} Oltre ad ulteriori test di unità e di integrazione, vengono eseguiti test di sistema per verificare che il prodotto presenti tutte le caratteristiche attese;
+    \item \textbf{Collaudo:} Il prodotto viene eseguito e testato in tutte le sue funzionalità, verificando che siano stati soddisfatti tutti i requisiti;
+    \item \textbf{Validazione:} Viene controllato che il prodotto sia conforme alle specifiche e soddisfi le richieste del cliente.
     Durante questa attività vengono eseguiti i test di validazione;
-    \item \textbf{Modifiche incrementali e correttive ai documenti:} in questo periodo vengono apportate delle modifiche correttive ed incrementali sui documenti precedentemente redatti.
+    \item \textbf{Modifiche incrementali e correttive ai documenti:} In questo periodo vengono apportate delle modifiche correttive ed incrementali sui documenti precedentemente redatti.
   \end{itemize}
-  In questo periodo i ruoli maggiormente coinvolti sono: \roleDesigner, \roleProgrammer e \roleVerifier.
+  In questo periodo i ruoli maggiormente coinvolti sono: \roleDesignerLow{}, \roleProgrammerLow{} e \roleVerifierLow{}.
   \bigskip
   \begin{figure}[H]
     \centering
