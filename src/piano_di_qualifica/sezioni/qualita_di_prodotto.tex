@@ -1,9 +1,14 @@
 \section{Qualità di prodotto}\label{section:qualita_prodotto}
+Per garantire la qualità di prodotto, è stato scelto di utilizzare come riferimento lo standard 
+ISO/IEC 9126\glo\ .
+In questa sezione vengono esposti i valori ottimali e accettabili riguardanti le metriche selezionate dal gruppo \groupName.
+Per consultare nel dettaglio le metriche sotto riportate, fare riferimento al documento \docNameVersionNdP{}.\\
+
 \begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.8}
   \rowcolors{2}{green!100!black!40}{green!100!black!30}
-  \begin{tabular}{c|p{6cm}|p{4cm}}
+  \begin{tabular}{c|p{8cm}|p{2cm}}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{Obiettivo}
     & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
@@ -12,13 +17,20 @@
     \rowcolor[HTML]{6BC26B}
     \multicolumn{3}{c}{\textbf{Monitoraggio documentazione}}\\
     \hline
-    ads & frgerg & fgsdg \\
-    ads & frgerg & fgsdg \\
+    \textbf{Leggibilità documenti} & I documenti devono essere comprensibili agli utenti.  & MPD01 \\
+    \textbf{Correttezza linguistica} & Tutti gli errori grammaticali devono essere corretti. & MPD02 \\
     \hline
     \rowcolor[HTML]{6BC26B}
     \multicolumn{3}{c}{\textbf{Monitoraggio software}}\\
     \hline
-    ads & frgerg & fgsdg \\
+    \textbf{Funzionalità} & Capacità del prodotto di offrire tutte le funzioni individuate nell'\docNameAdR, perseguendo accuratezza e adeguatezza.& MPD03\\
+    \textbf{Affidabilità} & Capacità del prodotto di riuscire a svolgere tutte le funzionalità anche in caso di errori o problemi, cercando di evitare che si manifestino.& MPD04 MPD05 MPD06\\
+    \textbf{Usabilità} & Capacità di essere comprensibile in modo da rendere piacevole l'esperienza dell'utente. Le funzionalità devono essere compatibili con le aspettative.& MPD07 MPD08 MPD09 MPD10\\
+    \textbf{Efficienza} & Capacità di raggiungere un obiettivo con il minor utilizzo di tempo e risorse, puntando alla velocità e alla leggerezza.& MPD11\\
+    \textbf{Manutenibilità} & Capacità di permettere future correzioni e modifiche senza che ciò rischi di compromettere l'intero progetto. & MPD12 MPD13 MPD14 \\
+    \textbf{Portabilità} & Capacità di poter funzionare in diversi ambienti di esecuzione. Gli obiettivi da perseguire sono adattabilità e sostituibilità. & MPD15\\
+    \textbf{Superamento test} & I test a cui il codice viene sottoposto devono essere superati almeno all’80\%. & MPD16\\
+    \textbf{Copertura test} & Il codice prodotto dovrà essere verificato nella sua interezza al fine di garantire la corretta implementazione dei requisiti individuati.& MPD17 MPD18 MPD19\\
   \end{tabular}
   \caption{Obiettivi di qualità di prodotto}
 \end{table}
@@ -40,13 +52,38 @@
     \rowcolor[HTML]{6BC26B}
     \multicolumn{4}{c}{\textbf{Documenti}}\\
     \hline
-    ads & frgerg & fgsdg &\\
-    ads & frgerg & fgsdg &\\
+    MPD01 & Indice di Gulpease & $\ge 60\%$ & $\ge 80\%$ \\
+    MPD02 & Errori ortografici & 0 & 0\\
     \hline
     \rowcolor[HTML]{6BC26B}
     \multicolumn{4}{c}{\textbf{Software}}\\
     \hline
-    ads & frgerg & fgsdg &\\
+    %Funzionalità
+    MPD03 & Copertura dei requisiti & $100\%$ requisiti obbligatori & $100\%$ di tutti i requisiti\\
+    %Affidabilità
+    MPD04 & Densità di failure & $\le30\%$ & $\le20\%$ \\
+    MPD05 & Numero di bug & $\le 10$ & $\le 3$ \\
+    MPD06 & Remediation effort & $\le 60$ & $\le 30$ \\
+    %Usabilità
+    MPD07 & Complessità cognitiva & $\le30\%$ & $\le20\%$ \\
+    MPD08 & Complessità ciclomatica & $\le20\%$ & $\le10\%$ \\
+    MPD09 & Facilità di utilizzo & $5$ click & $4$ click\\
+    MPD10 & Facilità apprendimento & 10 minuti & 5 minuti \\
+    %Efficienza
+    MPD11 & Tempo medio di risposta & 5 secondi & 3 secondi \\
+    %Manutenibilità
+    MPD12 & Numero di code smell & $\le 15$ & $\le 5$ \\
+    MPD13 & Technical debt & $\le 60$ & $\le 30$ \\
+    MPD14 & Densità di duplicazione & $\le 10\%$ & $0$ \\
+    %Portabilità
+    MPD15 & Versioni browser supportate & $\ge 80\%$ & $100\%$ \\
+    %Superamento test
+    MPD16 & Successo dei test & $\ge 80\%$ & $100\%$ \\
+    %Copertura test
+    MPD17 & Line coverage & $\ge 85\%$ & $100\%$ \\
+    MPD18 & Branch coverage & $\ge 85\%$ & $100\%$ \\
+    MPD19 & Code coverage & $\ge 80\%$ & $100\%$ \\
+
   \end{tabular}
   \caption{Metriche di qualità di prodotto}
 \end{table}
