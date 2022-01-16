@@ -1,0 +1,36 @@
+\section{Metriche di qualità} \label{section:metriche_qualita}
+
+\subsection{Metriche per la qualità di processo} \label{subsection:qualita_processo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Metriche per la qualità di prodotto} \label{subsection:qualita_prodotto}
+La presente sezione espone le metriche selezionate dal gruppo \groupName\ per misurare il raggiungimento degli obiettivi di qualità del prodotto.
+    
+    \subsubsection{MPD01: Indice di Gulpease}
+    Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana.
+    La formula adottata è la seguente: 
+    \begin{center}
+        $GULP = 89 + \displaystyle \frac{300*(totale\ frasi)-10*(totale\ lettere)}{(totale\ parole)}$
+    \end{center}
+    L’indice così calcolato può assumere valori tra 0 e 100:
+    \begin{itemize}
+        \item \textbf{GULP $<$ 80:} indica una leggibilità difficile per un utente con licenza elementare;
+        \item \textbf{GULP $<$ 60:} indica una leggibilità difficile per un utente con licenza media;
+        \item \textbf{GULP $<$ 40:} indica una leggibilità difficile per un utente con licenza superiore;
+    \end{itemize}
+
+    \subsubsection{MPD02: Errori ortografici}
+    Il controllo ortografico viene eseguito secondo quanto descritto in \ref{verifica_ortografica} del presente documento.
+
+    \subsubsection{MPD03: Copertura requisiti}
+    Indice che misura in ogni istante la percentuale di requisiti soddisfatti.
+    La formula adottata è la seguente:
+    \begin{center}
+        $R = \displaystyle \frac{RC}{R}*100$
+    \end{center}
+    dove:
+    \begin{itemize}
+        \item \textbf{RC:} indica il numero di requisiti coperti dall'implementazione;
+        \item \textbf{R:} indica il numero complessivo di requisiti.
+    \end{itemize}
