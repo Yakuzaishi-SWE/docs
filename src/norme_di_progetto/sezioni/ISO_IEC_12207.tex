@@ -1,7 +1,127 @@
 \appendix
 
 \section{Standard ISO/IEC 12207} \label{section:ISO_IEC_12207}
+\href{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}{ISO/IEC 12207} è uno standard internazionale per i processi del ciclo di vita del software.\\
+Lo standard stabilisce i processi presenti nel ciclo di vita del software, e per ciascuno di essi, le attività da svolgere e i risultati da produrre.\\
+I processi sono divisi in tre categorie:
+\begin{itemize}
+  \item \textbf{Processi primari:} comprendono le attività direttamente legate allo sviluppo del software;
+  \item \textbf{Processi di supporto:} includono la gestione dei documenti e dei processi di controllo della qualità;
+  \item \textbf{Processi organizzativi:} coprono gli aspetti manageriali e di gestione delle risorse.
+\end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Processi primari} \label{subsection:processi_primari}
-\subsection{Processi organizzativi} \label{subsection:processi_organizzativi}
+\subsubsection{Acquisizione}
+Questo processo ha lo scopo di ottenere il prodotto/servizio che soddisfa le necessità del cliente.\\
+Il processo inizia con l'identificazione dei requisiti e termina con l'accettazione della fornitura.\\
+È suddiviso nelle seguenti attività:
+\begin{itemize}
+  \item Acquisition preparation;
+  \item Supplier selection;
+  \item Supplier monitoring;
+  \item Customer acceptance.
+\end{itemize}
+
+\subsubsection{Fornitura}
+Questo processo ha lo scopo di fornire al cliente il prodotto/servizio che soddisfa i requisiti concordati.\\
+È suddiviso nelle seguenti attività:
+\begin{itemize}
+  \item Proposal preparation;
+  \item Contract;
+  \item Planning;
+  \item Execution and control;
+  \item Review and evaluation;
+  \item Release and completion.
+\end{itemize}
+
+\subsubsection{Sviluppo}
+Questo processo ha lo scopo di sviluppare un prodotto software che indirizzi le esigenze del cliente.\\
+Le attività del processo sono suddivise rispetto al ruolo dello sviluppatore e a quello del cliente e sono le seguenti:
+\begin{itemize}
+  \item Requirements elicitation;
+  \item System requirements analysis;
+  \item System architecture design;
+  \item Software requirements analysis;
+  \item Software architecture design;
+  \item Software construction (code and unit test);
+  \item Software integration;
+  \item Software testing;
+  \item System integration;
+  \item System testing;
+  \item Software installation.
+\end{itemize}
+
+\subsubsection{Esercizio}
+È svolto simultaneamente alla fase di Manutenzione.\\
+Il processo ha lo scopo di mantenere operativo il sistema e di fornire il supporto agli utenti.\\
+È suddiviso nelle seguenti attività:
+\begin{itemize}
+  \item Operational use;
+  \item Customer support.
+\end{itemize}
+
+\subsubsection{Manutenzione}
+È svolto simultaneamente alla precedente fase di Esercizio.\\
+Questo processo ha lo scopo di modificare il prodotto software dopo il suo rilasci per correggere i difetti, migliorare le sue prestazioni o altri attributi o adattarlo a cambiamenti nell'ambiente operativo.\\
+È suddiviso nelle seguenti attività:
+\begin{itemize}
+  \item Defect or request for change analysis;
+  \item Change implementation;
+  \item Review/acceptance of changes;
+  \item Migration;
+  \item Software withdraw.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Processi di supporto} \label{subsection:processi_supporto}
+\subsubsection{Gestione della documentazione}
+Questo processo garantisce lo sviluppo e la manutenzione delle informazioni prodotte e registrate relativamente al prodotto software. 
+
+\subsubsection{Gestione della configurazione}
+Questo processo ha lo scopo di definire e mantenere l'integrità di tutti i componenti della configurazione e di renderli accessibili a chi ne ha diritto.
+
+\subsubsection{Gestione della qualità}
+Questo processo ha lo scopo di assicurare che tutti i prodotti di fase siano conformi con i piani e gli standard definiti.
+
+\subsubsection{Verifica}
+Questo processo ha lo scopo di confermare che ciascun prodotto o servizio realizzato da un processo soddisfi i requisiti specificati.\\
+Il processo di Verifica deve essere integrato nei processi di Sviluppo, Fornitura e Manutenzione.
+
+\subsubsection{Validazione}
+Questo processo ha lo scopo di confermare che i requisiti siano rispettati quando uno specifico prodotto sia utilizzato nell'ambiente destinatario.
+
+\subsubsection{Revisione congiunta}
+Questo processo ha lo scopo di rivedere con le parti interessate, i processi eseguiti rispetto agli obiettivi definiti negli accordi e le cose da fare per assicurare lo sviluppo di un prodotto che soddisfi i requisiti concordati.\\
+Le revisioni sono svolte durante l'intero ciclo di vita, sia a livello di progetto che a livello tecnico.\\
+La revisione congiunta è svolta tra gli stessi componenti del team, quando si revisiona un componente del prodotto, oppure tra fornitore e committente, quando si revisiona l'intero prodotto.
+
+\subsubsection{Audit}
+Questo processo ha lo scopo di determinare in maniera indipendente la conformità di prodotti e processi selezionati ai requisiti, piani e accordi.\\
+L'attività di auditing è svolta da personale che non ha partecipato direttamente allo sviluppo dei prodotti, dei servizi o dei sistemi oggetto delle revisioni.
+
+\subsubsection{Risoluzione dei problemi}
+Questo processo ha lo scopo di assicurare che tutti i problemi individuati siano analizzati e risolti secondo trend riconosciuti.
+
+\subsubsection{Usabilità}
+Questo processo ha lo scopo di assicurare che siano prese in considerazione, ed opportunamente indirizzate, le considerazioni espresse dalle parti interessate relativamente alla facilità d'uso del prodotto finale da parte degli utenti a cui è rivolto, al supporto che ne riceverà, alla formazione, all'incremento della produttività, alla qualità del lavoro, all'accettazione del prodotto stesso. 
+
+\subsubsection{Valutazione del prodotto}
+Questo processo ha lo scopo principale di assicurare, tramite esami e misure, che il prodotto soddisfi le necessità esplicite ed implicite degli utilizzatori del prodotto stesso.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Processi organizzativi} \label{subsection:processi_organizzativi}
+\subsubsection{Gestione organizzativa}
+Questo processo ha lo scopo di organizzare, monitorare e controllare l'avvio e le prestazioni di un processo per il raggiungimento dei loro obiettivi in accordo con quelli di business dell'organizzazione.\\
+Il processo è stabilito da una organizzazione per assicurare la consistente applicazione di pratiche per l'uso dall'organizzazione e nei progetti.
+
+\subsubsection{Gestione delle infrastrutture}
+Questo processo ha lo scopo di mantenere un'infrastruttura stabile ed affidabile, necessaria a supportare le prestazioni di qualsiasi processo.\\
+L'infrastruttura può includere hardware, software, metodi, tools, tecniche, standard ed utilità per lo sviluppo, operatività o manutenzione.
+
+\subsubsection{Miglioramento}
+Questo processo ha lo scopo di stabilire, valutare, controllare e migliorare il ciclo di vita del software.
+
+\subsubsection{Risorse umane}
+Questo processo ha lo scopo di fornire all'organizzazione risorse umane adeguate e di mantenere le loro competenze consistenti con le necessità del business.
+

@@ -1,8 +1,82 @@
 \section{Metriche di qualità} \label{section:metriche_qualita}
 
 \subsection{Metriche per la qualità di processo} \label{subsection:qualita_processo}
+La presente sezione espone le metriche selezionate dal gruppo \groupName{} per misurare il raggiungimento degli obiettivi di qualità del processo.
+    \paragraph*{Parametri per comprendere le metriche scelte:}
+    \begin{itemize}
+        \item Budget At Completion (BAC): È il budget stimato in preventivo per il completamento del progetto;
+        \item Actual Calendar Days: È il numero effettivo di giorni impiegati in un determinato periodo;
+        \item Planned Calendar Days: È la durata preventivata di un determinato periodo;
+        \item Number of Requirements Added (NRA): Numero di requisiti aggiunti in un determinato periodo;
+        \item Number of Requirements Changed (NRC): Numero di requisiti modificati in un determinato periodo;
+        \item Number of Requirements Removed (NRR): Numero di requisiti rimossi in un determinato periodo;
+        \item Total Number of Initial Requirements (TNIR): Numero totale dei requisiti all'inizio di un determinato periodo;
+    \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{MPC01: Cost Variance (CV)}
+    Metrica che indica, in percentuale, se il gruppo è regolare rispetto al budget prestabilito.\\
+    La formula adottata è la seguente:
+    \begin{center}
+        $CV = (\frac{EV}{AC}-1)*100$
+    \end{center}
+    Se il valore risulta negativo si è fuori budget.
+    
+    \subsubsection{MPC02: Schedule Variance (SV)}
+    Metrica che indica, in percentuale, se il gruppo è regolare rispetto i limiti temporali imposti.\\
+    La formula adottata è la seguente:
+    \begin{center}
+        $SV = (1-\frac{Actual\ Calendar\ Days}{Planned\ Calendar\ Days})*100$
+    \end{center}
+    Se il valore risulta negativo si è indietro rispetto i tempi preventivati.
+
+    \subsubsection{MPC03: Estimated At Completion (EAC)}
+    Revisione del valore stimato per la realizzazione del progetto in un determinato periodo, ossia il BAC rivisto allo stato corrente del progetto.\\
+    La formula adottata è la seguente:
+    \begin{center}
+        $EAC = AC + ETC$
+    \end{center}
+
+    \subsubsection{MPC04: Estimate To Complete (ETC)}
+    Valore stimato del costo del lavoro rimanente in un determinato periodo.\\
+    La formula adottata è la seguente:
+    \begin{center}
+        $ETC = BAC - EV$
+    \end{center}
+
+    \subsubsection{MPC05: Earned Value (EV)}
+    È il valore del lavoro effettuato fino ad un determinato periodo.
+
+    \subsubsection{MPC06: Actual Cost (AC)}
+    È il costo effettivamente sostenuto fino ad un determinato periodo.
+
+    \subsubsection{MPC07: Planned Value (PV)}
+    È il costo stimato per il completamento di un determinato periodo.
+
+    \subsubsection{MPC08: Requirements Stability Index (RSI)}
+    Indice che misura la variazione dei requisiti nel tempo.\\
+    La formula adottata è la seguente:
+    \begin{center}
+        $RSI = (1-\frac{NRA + NRC + NRR}{TNIR})*100$
+    \end{center}
+    
+    \subsubsection{MPC09: Passed Tests}
+    Indica la percentuale dei test che sono stati superati fino ad un determinato periodo.\\
+    La formula adottata è la seguente:
+    \begin{center}
+        $Passed\ Tests = \frac{Number\ of\ Passed\ Tests}{Tot.\ Number\ of\ Tests}*100$
+    \end{center}
+    
+    \subsubsection{MPC10: Metrics Satisfied}
+    Indice che rappresenta la percentuale di metriche di qualità soddisfatte in un determinato periodo.
+    La formula adottata è la seguente:
+    \begin{center}
+        $Metrics\ Satisfied = \frac{Number\ of\ Metrics\ Satisfied}{Tot.\ Number\ of\ Metrics}*100$
+    \end{center}
+
+    \subsubsection{MPC11: Risks Found}
+    Indica il numero di rischi incontrati in un determinato periodo.
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Metriche per la qualità di prodotto} \label{subsection:qualita_prodotto}
 La presente sezione espone le metriche selezionate dal gruppo \groupName\ per misurare il raggiungimento degli obiettivi di qualità del prodotto.
