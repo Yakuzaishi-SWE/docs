@@ -99,7 +99,7 @@
   \paragraph{Comunicazioni interne}
   Le comunicazioni interne avvengono tramite le applicazioni \textit{Telegram}\glo\ e \textit{Discord}\glo. All'interno di \textit{Discord} sono stati creati dei canali per ogni attività attualmente in corso, nei quali i componenti del gruppo possono discutere di argomenti a essi rispettivamente associati.
   \paragraph{Comunicazioni esterne}
-  Il \roleProjectManagerLow\ si occupa delle comunicazioni esterne, le quali avvengono esclusivamente attraverso l'indirizzo di posta elettronica del gruppo:\\
+  Il \roleProjectManagerLow\ si occupa delle comunicazioni esterne, le quali avvengono esclusivamente attraverso l'indirizzo di posta elettronica del gruppo:
   \begin{center}
     \groupEmail
   \end{center}
@@ -114,7 +114,7 @@
         \item \textbf{Continuità:} i ruoli vengono fatti ruotare in concomitanza con l'inizio di un nuovo periodo, in modo da garantire che il lavoro svolto dai membri del gruppo abbia una continuità nel corso di ciascun periodo;
         \item \textbf{Assenza di conflitti:} poiché ogni membro può ricoprire più ruoli in un periodo, si cerca di assegnarli in modo che non ci sia conflitto di interesse tra essi. Vige in ogni caso la regola che un \roleProjectManagerLow\ non può approvare il proprio lavoro di verifica se ha assunto anche il ruolo di \roleVerifierLow, mentre un \roleVerifierLow\ non può verificare i propri testi o codice qualora abbia assunto il ruolo di \roleAnalystLow\ o \roleProgrammerLow\ nello stesso periodo.
       \end{itemize}
-
+\vspace{2cm}
 
   \subsection{Impiego delle infrastrutture interne} \label{subsection:infrastrutture_interne}
 
@@ -156,27 +156,19 @@
         \begin{itemize}
           \item Le issue\glo\ possono trovarsi in quattro stati diversi:
           \begin{itemize}
-            \item New;
-            \item To do;
-            \item In progress;
-            \item Done.
+            \item \textbf{New:} sono presenti le issue\glo\ appena create che devono ancora essere assegnate;
+            \item \textbf{To Do:} sono presenti le issue\glo\ assegnate e da portare a termine;
+            \item \textbf{In progress:} sono presenti le issue\glo\ attualmente in esecuzione;
+            \item \textbf{Done:} sono presenti le issue\glo\ portate a termine.
           \end{itemize}
           \item Ogni membro del gruppo ha la possibilità di spostare le proprie issue\glo\ nelle diverse colonne che rappresentano gli stati;
           \item Le issue\glo\ hanno una descrizione e possono ricevere commenti da parte degli altri componenti del gruppo;
           \item All'interno di una issue\glo\ possono essere presenti dei task sotto forma di checklist nella sezione commenti.
         \end{itemize}
-        Le issue\glo\ si trovano in uno dei 4 stati precedentemente indicati quando sono situate nella corrispondente colonna della board.\\
-        Ogni colonna ha il suo significato:
-        \begin{itemize}
-          \item \textbf{New:} sono presenti le issue\glo\ appena create che devono ancora essere assegnate;
-          \item \textbf{To Do:} sono presenti le issue\glo\ assegnate e da portare a termine;
-          \item \textbf{In progress:} sono presenti le issue\glo\ attualmente in esecuzione;
-          \item \textbf{Done:} sono presenti le issue\glo\ portate a termine.
-        \end{itemize}
         Ogni membro del gruppo ha il dovere di tenere aggiornate le sue attività e deve rispettare le scadenze delle varie issue\glo.
         Se si completa un task bisogna spuntarlo come completato all'interno dell'issue\glo.\\
-        Inoltre è possibile creare delle milestone\glo\ a cui assegnare le issue\glo, permettendo così di stabilire un punto di riferimento 
-        sulla linea temporale entro il quale è previsto il completamento di tali issue\glo.
+        Inoltre è possibile creare delle milestone\glo\ a cui assegnare le issue\glo, permettendo così di stabilire un punto di
+        riferimento sulla linea temporale entro il quale è previsto il completamento di tali issue\glo.
 
     \subsubsection{Gestione degli strumenti di versionamento}
       \paragraph{Repository\glo}
@@ -191,7 +183,7 @@
       Il \roleProjectManagerLow\ ha il compito di individuare i rischi e renderli noti. Tale attività verrà svolta nel \docNamePdPLow\ e contiene i seguenti punti:
       \begin{figure}[htbp]
         \centering 
-         \includegraphics[scale =0.7]{../template/images/NdP/GestioneRischi.png}
+         \includegraphics[scale =0.65]{../template/images/NdP/GestioneRischi.png}
          \caption{Attività di gestione dei rischi}
       \end {figure}
       
@@ -223,6 +215,9 @@
       \item \textbf{ID numerico}: È un id crescente che parte da 1 e viene incrementato di 1 per ciascun rischio.\\
     \end{itemize}
     La codifica di ciascun rischio è univoca. Non possono esserci due rischi dello stesso tipo con lo stesso ID numerico.
+
+    \vspace{2cm}
+
         \subsection{Formazione} \label{subsection: formazione}
         \subsubsection {Scopo}
         Lo scopo di questa sezione è quello di definire le norme riguardanti il processo di formazione dei membri del gruppo \groupName\ e quindi lo studio delle tecnologie utilizzate per produrre i documenti e costruire il prodotto richiesto.
@@ -237,12 +232,3 @@
         Il processo di formazione di ogni membro del gruppo \groupName\ è ritenuto fondamentale, e ha il fine di colmare le mancate conoscenze di uno o più componenti del gruppo nei vari ambiti che copre il capitolato di interesse, in modo da avere una formazione uniforme all' interno del gruppo.
         \subsubsection {Modalità di formazione}
         La formazione di ogni singolo componente del gruppo avviene in maniera autonoma, tramite documentazione trovata in rete e tramite materiale fornito dal proponente e dai docenti.
-        \subsubsection {Metriche}
-        Il processo di formazione non fa uso di metriche particolari.
-        \subsubsection {Strumenti}
-        Alcuni strumenti, librerie, framework\glo, necessitano di una particolare attenzione e una formazione ampia, in particolare:
-        \begin {itemize}
-          \item \textbf{Angular:} framework\glo\ open source per lo sviluppo di applicazioni web;
-          \item \textbf{NodeJs: } runtime JavaScript utilizzato per creare applicazioni di rete scalabili;
-          \item \textbf{Solidity: } linguaggio di alto livello object-oriented per l'implementazione di smart contract\glo.
-        \end {itemize}

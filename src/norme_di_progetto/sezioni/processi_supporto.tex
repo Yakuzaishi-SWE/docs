@@ -4,7 +4,7 @@
 Scopo di questa sezione è quello di normare la documentazione dei vari processi e le attività di sviluppo.
 Ci occuperemo quindi di definire le norme per la definizione della struttura che i vari documenti redatti dal gruppo \groupName\ devono avere.
 \subsubsection{Aspettative}
-Le aspettative del gruppo \groupName in questo processo sono:
+Le aspettative del gruppo \groupName{} in questo processo sono:
 \begin{itemize}
     \item Delineare una valida e chiara struttura dei documenti;
     \item Definire una convenzione che accomuni tutti i tipi di documentazione redatta.
@@ -15,15 +15,15 @@ Lo scopo della documentazione è quello di trascrivere i fatti accaduti e le dec
 Le fasi del ciclo di vita del documento sono le seguenti:
       \begin{figure}[htbp]
          \centering 
-         \includegraphics[scale = 0.55]{../template/images/NdP/CicloDiVitaDocumento.png}
+         \includegraphics[scale = 0.5]{../template/images/NdP/CicloDiVitaDocumento.png}
          \caption{Descrizione del ciclo di vita del documento}
       \end {figure}
 \subsubsection{Template}
 Il team di sviluppo ha deciso di realizzare un template mediante l'utilizzo di \LaTeX\ in modo da avere una struttura uniforme di tutte le pagine nei vari documenti.
 Un altro scopo del template è quello di velocizzare la stesura dei documenti stessi, dato che con la struttura già disponibile, i membri del gruppo che si occupano di redigere i documenti dovranno solamente occuparsi della stesura degli stessi, senza badare alla parte grafica.
-Il template in particolare definisce la prima pagina, il registro delle modifiche e l'indicizzazione del documento.
+Il template in particolare definisce la prima pagina, il registro delle modifiche e la presentazione del documento.
 \subsubsection{Struttura del documento}
-In questa sezione viene descritta la struttura dei documenti suddividendo gli stessi in \textit{verbali} e \textit{documenti}.
+In questa sezione viene descritta la struttura dei documenti. Questi ultimi sono stati suddivisi in due macrofamiglie la cui struttura differisce in alcune parti. Le due macrofamiglie vengono identificate come \textit{verbali} e \textit{documentazione}.
 \paragraph{\textit{Verbali}}
 I \textit{verbali} vengono redatti successivamente alla riunione del gruppo oppure dopo un incontro con il proponente, essi contengono il rapporto dettagliato delle tematiche discusse durante il meeting. 
 Prevedono una singola stesura, dato che contengono delle decisioni che non vengono modificate successivamente.
@@ -82,7 +82,8 @@ Prevedono una singola stesura, dato che contengono delle decisioni che non vengo
 
 
 
-\paragraph{Documenti}
+\paragraph{Documentazione}
+Fanno parte di questa famiglia tutti i documenti diversi dai \textit{verbali}
 \subparagraph{Prima pagina}
 La struttura di ogni prima pagina dei vari documenti è la seguente:
 \begin {itemize}
@@ -161,7 +162,7 @@ Nella sezione sottostante vengono riportati i vari stili di testo utilizzati nei
     \item \textbf{Grassetto}: lo stile grassetto viene utilizzato per indicare i termini negli elenchi puntati e per i titoli delle sezioni;
     \item \textbf{Corsivo}: lo stile corsivo viene utilizzato per indicare il nome del gruppo, per il nome del proponente e per le parole di particolare rilevanza all' interno dei documenti;
     \item \textbf{Link}: i link rappresentano dei collegamenti esterni al documento, essi verranno rappresentati di colore blu e sottolineati;
-    \item \textbf{Nome dei documenti:} essi vengono rappresentati in corsivo. Se si fa un riferimento specifico a un particolare documento bisogna indicarne anche la versione (sempre in corsivo).
+    \item \textbf{Nome dei documenti:} il nome dei documenti viene rappresentato in corsivo. Se si fa un riferimento specifico a un particolare documento bisogna indicarne anche la versione (sempre in corsivo).
     \item \textbf{Collegamenti interni:} le parole che si riferiscono a una parte del documento vanno sottolineate.
 \end {itemize}
 \paragraph{\docNameGlo}
@@ -201,10 +202,9 @@ In questa sezione vengono raccolte e spiegate le sigle presenti nei vari documen
         \end{tabular}
         \caption{Sigle dei ruoli}
       \end{table}
-    \item\textbf{...inserire altre sigle usate negli altri documenti...}
 \end{itemize}
-\paragraph{Data}
-Il team di sviluppo ha deciso di adottare la seguente convenzione per la rappresentazione delle date che compaiono nei vari documenti:
+\paragraph{Formato della data}
+Il team di sviluppo ha deciso di adottare la seguente convenzione per rappresentare le date che compaiono nei vari documenti:
 \begin{center}
     \large{\textbf{DD-MM-YYYY}}
 \end{center}
@@ -227,24 +227,23 @@ Ad eccezione del registro delle modifiche, le tabelle di ogni documento seguono 
 Le immagini sono collocate al centro della pagina in questione e al di sotto di ciascuna di esse è presente, in posizione centrale, una descrizione esplicativa e un numero progressivo a partire da 1, che la identifica univocamente all' interno del documento.
 \paragraph{Diagrammi}
 Sia i diagrammi UML\glo\ che i diagrammi di Gantt\glo\ vengono riportati come immagini, quindi sono soggetti alle regole sopra riportate.
-\subsubsection{Metriche}
-\textbf{... da discuterne con gli altri ...}
+\subsubsection{Verifica ortografica} \label{verifica_ortografica}
+% ESEMPIO: Per la verifica ortografica dei documenti scritti in LATEX si utilizzerà lo strumento di correzione automatica presente nell’editor TexmakerG oppure lo strumento Aspell (versione > 0.60.5). Il primo fornisce avvisi di errore istantaneamente; il secondo deve essere utilizzato da terminale lanciando il comando direttamente sul file in formato tex: aspell –mode=tex –lang=it check NomeFile.tex
+Per la verifica ortografica dei documenti scritti in \LaTeX\ si utilizzerà lo strumento di correzione automatica \textbf{LanguageTool}:
+    \begin{center}\url{https://languagetool.org}\end{center}
+
 \subsubsection{Strumenti}
-A seguire la lista degli strumenti utilizzati in questa fase:
+Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo in fase di redazione dei documenti:
 \begin{itemize}
     \item \textbf{\LaTeX}: linguaggio di markup per la preparazione di testi, basato sul programma di composizione tipografica TEX;
          \begin{center}\url{https://www.latex-project.org}\end{center}
     \item \textbf{Visual Studio Code}: IDE\glo\ versatile e gratuito, scelto per la stesura del codice \LaTeX\ necessario a produrre i documenti in quanto, grazie all'estensione \textbf{LaTeX Workshop}, comprende un compilatore integrato, l'autocompletamento dei comandi \LaTeX e la segnalazione di errori di sintassi.
         \begin{center}\url{https://code.visualstudio.com}\end{center}
-    \item \textbf{Diagrams.net}: software di disegno grafico multipiattaforma gratuito e open source. Il gruppo ha scelto questo strumento per la progettazione di diagrammi UML\glo\ in quanto il software è gratuito e presenta tutte le funzionalità necessarie allo scopo.
+    \item \textbf{Diagrams.net}: software di disegno grafico multipiattaforma gratuito e open source. Il gruppo ha scelto questo strumento per la progettazione di diagrammi UML\glo\ in quanto il software è gratuito e presenta tutte le funzionalità necessarie allo scopo;
         \begin{center}\url{https://www.diagrams.net}\end{center}
 \end{itemize}
 
-\subsubsection{Verifica ortografica} \label{verifica_ortografica}
-% ESEMPIO: Per la verifica ortografica dei documenti scritti in LATEX si utilizzerà lo strumento di correzione automatica presente nell’editor TexmakerG oppure lo strumento Aspell (versione > 0.60.5). Il primo fornisce avvisi di errore istantaneamente; il secondo deve essere utilizzato da terminale lanciando il comando direttamente sul file in formato tex: aspell –mode=tex –lang=it check NomeFile.tex
-
-
-\pagebreak
+\vspace{2cm}
 
 \subsection{Gestione della configurazione}\label{subsection:gestione_configurazione}
     \subsubsection{Scopo}
@@ -306,12 +305,16 @@ A seguire la lista degli strumenti utilizzati in questa fase:
             \item Possibilità di organizzare e suddividere il lavoro tramite la creazione di issues\glo\ assegnabili alle milestone\glo.
         \end{itemize} 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				SISTEMARE
     \subsubsection{Struttura del repository}
     Al fine di organizzare meglio il lavoro si è deciso di creare due repository\glo\ distinti, entrambi pubblici, con lo scopo di tenere separati i documenti e il software:
     \begin{itemize}
         \item \textbf{Yakuzaishi-SWE/docs}: per il versionamento dei documenti;
         \item \textbf{Yakuzaishi-SWE/shopchain}: per il versionamento del codice.
     \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
         \paragraph{Yakuzaishi-SWE/docs}
         L'organizzazione della repo è così riassunta:
@@ -345,18 +348,13 @@ A seguire la lista degli strumenti utilizzati in questa fase:
                 \item \textbf{Modifiche generali}: riguardano cambiamenti più generali come la struttura del documento o convenzioni da utilizzare e richiedono il consulto con il \roleProjectManagerLow, il quale potrà accettare o declinare la proposta di modifica.
             \end{itemize}
 
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				SISTEMARE
         \paragraph{Yakuzaishi-SWE/shopchain}
         Ancora da definire...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-    \subsubsection{Metriche}
-    Il processo di gestione della configurazione non fa uso di metriche qualitative particolari.
-    
-    \subsubsection{Strumenti}
-    Non sono stati identificati degli strumenti particolari per la gestione della configurazione.
-
-\pagebreak
+\vspace{2cm}
 
 \subsection{Gestione della qualità}\label{subsection: gestione_qualita}
 \subsubsection{Scopo}
@@ -378,14 +376,9 @@ Affinché il prodotto software e la documentazione redatta raggiungano una buona
     \item Porsi obiettivi incrementali, in modo da ridurre il margine di errore;
     \item Creare un avanzamento continuo della formazione personale, mediante conoscenze pregresse, conoscenze di altri membri del gruppo o mediante autoformazione. 
  \end {itemize}   
-\paragraph{Classificazione delle metriche}
-...Da discuterne con gli altri...
-\subsubsection{Metriche}
-Non ci sono metriche particolari.
-\subsubsection{Strumenti}
-Non ci sono strumenti particolari.
 
-\pagebreak
+
+ \vspace{2cm}
 
 \subsection{Verifica} \label{subsection: Verifica}
     \subsubsection{Scopo}
@@ -454,13 +447,6 @@ Non ci sono strumenti particolari.
                 \item \textbf{ImportanzaRequisito} e \textbf{TipologiaRequisito} sono presenti solo nei codici per i test di sistema e accettazione. Questi campi identificano il requisito che si vuole testare, possono assumere i valori riportati e precedentemente descritti al paragrafo \ref{subparagraph:Classificazione dei requisiti}\\\\
                 \item \textbf{IdNumerico} è un valore crescente che parte da 1 e serve per distinguere i diversi test riguardanti la stessa tipologia.
             \end{itemize}
-
-
-    \subsubsection{Metriche}
-    Da discutere con gli altri
-
-    \subsubsection{Strumenti}
-    Da discutere con gli altri
     
 
 \pagebreak
@@ -480,11 +466,4 @@ Sarà il \roleProjectManagerLow\ di progetto che avrà la responsabilità di con
 \begin{itemize}
     \item Accettare il prodotto;
     \item Rifiutarlo richiedendo una nuova verifica.
-\end{itemize}    
-\subsubsection{Metriche}
-Il processo di validazione non fa uso di metriche qualitative particolari.
-
-\subsubsection{Strumenti}
-Non sono stati identificati degli strumenti particolari per la validazione.
-
-
+\end{itemize}
