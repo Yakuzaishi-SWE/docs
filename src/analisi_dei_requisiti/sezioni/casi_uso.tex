@@ -9,7 +9,19 @@ Come accordato con il proponente, la webapp deve essere usata sia dal venditore 
 sono quindi presenti tre attori nella gerarchia: la piattaforma E-Commerce da cui parte l'ordine, Metamask\glo, l'utente generico.
 L'utente generico ha poi due specializzazioni possibili: l'utente propietario dell'ordine e l'utente venditore.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-Attori.png}
+    \caption{Diagramma degli Attori.}
+  \end{figure}
+
 \subsection{UC1 - Inizializzazione delle Transazione}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-UC1.png}
+    \caption{UC1.}
+  \end{figure}
 
 \begin{itemize}
     \item Attore primario: E-Commerce.
@@ -20,6 +32,12 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 \end{itemize}
 
 \subsection{UC2 - Tipo Pagamento}
+
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[scale=0.7]{immagini/UseCases-UC2.png}
+%    \caption{UC2 e i suoi sottocasi.}
+%  \end{figure}
 
 \begin{itemize}
     \item Attore primario: Utente propietario dell'ordine.
@@ -106,6 +124,12 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 
 \subsection{UC3 - Visualizzazione Riepilogo Ordine}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-UC3.png}
+    \caption{UC3.}
+  \end{figure}
+
 \begin{itemize}
     \item Attore primario: utente generico.
     \item Precondizioni: l'E-Commerce ha iniziato la transazione [UC1].
@@ -117,6 +141,12 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 \end{itemize}
 
 \subsection{UC4 - Connessione Metamask}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-UC4.png}
+    \caption{UC4.}
+  \end{figure}
 
 \begin{itemize}
     \item Attore primario: utente generico.
@@ -197,6 +227,12 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 
 \subsection{UC5 - Pagamento}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-UC5.png}
+    \caption{UC5.}
+  \end{figure}
+
 \begin{itemize}
     \item Attore primario: utente generico.
     \item Attore secondario: Metamask.
@@ -242,6 +278,12 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 
 \subsection{UC6 - Sblocco Ordine}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-UC6.png}
+    \caption{UC6.}
+  \end{figure}
+
 \begin{itemize}
     \item Attore primario: utente propietario dell'ordine.
     \item Attore secondario: utente venditore.
@@ -254,6 +296,12 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
 \end{itemize}
 
 \subsection{UC7 - Visualizzazione Transazioni}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-UC7.png}
+    \caption{UC7.}
+  \end{figure}
 
 \begin{itemize}
     \item Attore primario: utente venditore.
@@ -293,5 +341,5 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate e sbloccate.
     \item Scenario principale: l'utente visualizza la lista di transazioni pagate e sbloccate.
 \end{itemize}
-
+\clearpage
 %baseline 2 incrementi, poc 3, requisiti obbl 2, opzionali 1, +1 bonus
