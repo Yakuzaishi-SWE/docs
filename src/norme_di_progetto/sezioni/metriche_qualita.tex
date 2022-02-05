@@ -2,110 +2,237 @@
 
 \subsection{Metriche per la qualità di processo} \label{subsection:qualita_processo}
 La presente sezione espone le metriche selezionate dal gruppo \groupName{} per misurare il raggiungimento degli obiettivi di qualità del processo.
-    \paragraph*{Parametri per comprendere le metriche scelte:}
-    \begin{itemize}
-        \item Budget At Completion (BAC): È il budget stimato in preventivo per il completamento del progetto;
-        \item Actual Calendar Days (ACD): È il numero effettivo di giorni impiegati in un determinato periodo;
-        \item Planned Calendar Days (PCD): È la durata preventivata di un determinato periodo;
-        \item Number of Requirements Added (NRA): Numero di requisiti aggiunti in un determinato periodo;
-        \item Number of Requirements Changed (NRC): Numero di requisiti modificati in un determinato periodo;
-        \item Number of Requirements Removed (NRR): Numero di requisiti rimossi in un determinato periodo;
-        \item Total Number of Initial Requirements (TNIR): Numero totale dei requisiti all'inizio di un determinato periodo.
-    \end{itemize}
+\paragraph*{Parametri per comprendere le metriche scelte:}
+\begin{itemize}
+    \item Budget At Completion (BAC): È il budget stimato in preventivo per il completamento del progetto;
+    \item Actual Calendar Days (ACD): È il numero effettivo di giorni impiegati in un determinato periodo;
+    \item Planned Calendar Days (PCD): È la durata preventivata di un determinato periodo;
+    \item Number of Requirements Added (NRA): Numero di requisiti aggiunti in un determinato periodo;
+    \item Number of Requirements Changed (NRC): Numero di requisiti modificati in un determinato periodo;
+    \item Number of Requirements Removed (NRR): Numero di requisiti rimossi in un determinato periodo;
+    \item Total Number of Initial Requirements (TNIR): Numero totale dei requisiti all'inizio di un determinato periodo.
+\end{itemize}
 
-    \subsubsection{MPC01: Earned Value (EV)}
-    È il valore del lavoro effettuato fino ad un determinato periodo.
+\subsubsection{MPC01: Earned Value (EV)}
+È il valore del lavoro effettuato fino ad un determinato periodo.
 
-    \subsubsection{MPC02: Actual Cost (AC)}
-    È il costo effettivamente sostenuto fino ad un determinato periodo.
+\subsubsection{MPC02: Actual Cost (AC)}
+È il costo effettivamente sostenuto fino ad un determinato periodo.
 
-    \subsubsection{MPC03: Planned Value (PV)}
-    È il costo stimato per il completamento di un determinato periodo.
+\subsubsection{MPC03: Planned Value (PV)}
+È il costo stimato per il completamento di un determinato periodo.
 
-    \subsubsection{MPC04: Cost Variance (CV)}
-    Metrica che indica, in percentuale, se il gruppo è regolare rispetto al budget prestabilito.\\
-    La formula adottata è la seguente:
-    \begin{center}
-        $CV = (\frac{EV}{AC}-1)*100$
-    \end{center}
-    Se il valore risulta negativo si è fuori budget.
-    
-    \subsubsection{MPC05: Schedule Variance (SV)}
-    Metrica che indica, in percentuale, se il gruppo è regolare rispetto i limiti temporali imposti.\\
-    La formula adottata è la seguente:
-    \begin{center}
-        $SV = (1-\frac{ACD}{PCD})*100$
-    \end{center}
-    Se il valore risulta negativo si è indietro rispetto i tempi preventivati.
+\subsubsection{MPC04: Cost Variance (CV)}
+Metrica che indica, in percentuale, se il gruppo è regolare rispetto al budget prestabilito.\\
+La formula adottata è la seguente:
+\begin{center}
+    $CV = (\frac{EV}{AC}-1)*100$
+\end{center}
+Se il valore risulta negativo si è fuori budget.
 
-    \subsubsection{MPC06: Estimated At Completion (EAC)}
-    Revisione del valore stimato per la realizzazione del progetto in un determinato periodo, ossia il BAC rivisto allo stato corrente del progetto.\\
-    La formula adottata è la seguente:
-    \begin{center}
-        $EAC = AC + ETC$
-    \end{center}
+\subsubsection{MPC05: Schedule Variance (SV)}
+Metrica che indica, in percentuale, se il gruppo è regolare rispetto i limiti temporali imposti.\\
+La formula adottata è la seguente:
+\begin{center}
+    $SV = (1-\frac{ACD}{PCD})*100$
+\end{center}
+Se il valore risulta negativo si è indietro rispetto i tempi preventivati.
 
-    \subsubsection{MPC07: Estimate To Complete (ETC)}
-    Valore stimato del costo del lavoro rimanente in un determinato periodo.\\
-    La formula adottata è la seguente:
-    \begin{center}
-        $ETC = BAC - EV$
-    \end{center}
+\subsubsection{MPC06: Estimated At Completion (EAC)}
+Revisione del valore stimato per la realizzazione del progetto in un determinato periodo, ossia il BAC rivisto allo stato corrente del progetto.\\
+La formula adottata è la seguente:
+\begin{center}
+    $EAC = AC + ETC$
+\end{center}
 
-    \subsubsection{MPC08: Requirements Stability Index (RSI)}
-    Indice che misura la variazione dei requisiti nel tempo.\\
-    La formula adottata è la seguente:
-    \begin{center}
-        $RSI = (1-\frac{NRA + NRC + NRR}{TNIR})*100$
-    \end{center}
-    
-    \subsubsection{MPC09: Passed Tests}
-    Indica la percentuale dei test che sono stati superati fino ad un determinato periodo.\\
-    La formula adottata è la seguente:
-    \begin{center}
-        $Passed\ Tests = \frac{Number\ of\ Passed\ Tests}{Tot.\ Number\ of\ Tests}*100$
-    \end{center}
-    
-    \subsubsection{MPC10: Metrics Satisfied}
-    Indice che rappresenta la percentuale di metriche di qualità soddisfatte in un determinato periodo.
-    La formula adottata è la seguente:
-    \begin{center}
-        $Metrics\ Satisfied = \frac{Number\ of\ Metrics\ Satisfied}{Tot.\ Number\ of\ Metrics}*100$
-    \end{center}
+\subsubsection{MPC07: Estimate To Complete (ETC)}
+Valore stimato del costo del lavoro rimanente in un determinato periodo.\\
+La formula adottata è la seguente:
+\begin{center}
+    $ETC = BAC - EV$
+\end{center}
 
-    \subsubsection{MPC11: Risks Found}
-    Indica il numero di rischi incontrati in un determinato periodo.
+\subsubsection{MPC08: Requirements Stability Index (RSI)}
+Indice che misura la variazione dei requisiti nel tempo.\\
+La formula adottata è la seguente:
+\begin{center}
+    $RSI = (1-\frac{NRA + NRC + NRR}{TNIR})*100$
+\end{center}
 
-    \vspace{2cm}
+\subsubsection{MPC09: Passed Tests}
+Indica la percentuale dei test che sono stati superati fino ad un determinato periodo.\\
+La formula adottata è la seguente:
+\begin{center}
+    $Passed\ Tests = \frac{Number\ of\ Passed\ Tests}{Tot.\ Number\ of\ Tests}*100$
+\end{center}
 
+\subsubsection{MPC10: Metrics Satisfied}
+Indice che rappresenta la percentuale di metriche di qualità soddisfatte in un determinato periodo.
+La formula adottata è la seguente:
+\begin{center}
+    $Metrics\ Satisfied = \frac{Number\ of\ Metrics\ Satisfied}{Tot.\ Number\ of\ Metrics}*100$
+\end{center}
+
+\subsubsection{MPC11: Risks Found}
+Indica il numero di rischi incontrati in un determinato periodo.
+
+\vspace{2cm}
+
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Metriche per la qualità di prodotto} \label{subsection:qualita_prodotto}
 La presente sezione espone le metriche selezionate dal gruppo \groupName\ per misurare il raggiungimento degli obiettivi di qualità del prodotto.
-    
-    \subsubsection{MPD01: Indice di Gulpease}
-    Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana.
-    La formula adottata è la seguente: 
-    \begin{center}
-        $GULP = 89 + \displaystyle \frac{300*(totale\ frasi)-10*(totale\ lettere)}{(totale\ parole)}$
-    \end{center}
-    L’indice così calcolato può assumere valori tra 0 e 100:
-    \begin{itemize}
-        \item \textbf{GULP $<$ 80:} indica una leggibilità difficile per un utente con licenza elementare;
-        \item \textbf{GULP $<$ 60:} indica una leggibilità difficile per un utente con licenza media;
-        \item \textbf{GULP $<$ 40:} indica una leggibilità difficile per un utente con licenza superiore.
-    \end{itemize}
 
-    \subsubsection{MPD02: Errori ortografici}
-    Il controllo ortografico viene eseguito secondo quanto descritto in \ref{verifica_ortografica} del presente documento.
+\subsubsection{MPD01: Indice di Gulpease}
+Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana.
+La formula adottata è la seguente:
+\begin{center}
+    $GULP = 89 + \displaystyle \frac{300*(totale\ frasi)-10*(totale\ lettere)}{(totale\ parole)}$
+\end{center}
+L’indice così calcolato può assumere valori tra 0 e 100:
+\begin{itemize}
+    \item \textbf{GULP $<$ 80:} indica una leggibilità difficile per un utente con licenza elementare;
+    \item \textbf{GULP $<$ 60:} indica una leggibilità difficile per un utente con licenza media;
+    \item \textbf{GULP $<$ 40:} indica una leggibilità difficile per un utente con licenza superiore.
+\end{itemize}
 
-    \subsubsection{MPD03: Copertura requisiti}
-    Indice che misura in ogni istante la percentuale di requisiti soddisfatti.
-    La formula adottata è la seguente:
-    \begin{center}
-        $R = \displaystyle \frac{RC}{R}*100$
-    \end{center}
-    dove:
-    \begin{itemize}
-        \item \textbf{RC:} indica il numero di requisiti coperti dall'implementazione;
-        \item \textbf{R:} indica il numero complessivo di requisiti.
-    \end{itemize}
+\subsubsection{MPD02: Errori ortografici}
+Il controllo ortografico viene eseguito secondo quanto descritto in \ref{verifica_ortografica} del presente documento.
+
+\subsubsection{MPD03: Copertura requisiti obbligatori}
+Indice che misura in ogni istante la percentuale di requisiti obbligatori soddisfatti.
+La formula adottata è la seguente:
+\begin{center}
+    $CRO = \displaystyle \frac{ROC}{RO}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{ROC:} indica il numero di requisiti obbligatori coperti dall'implementazione;
+    \item \textbf{RO:} indica il numero complessivo di requisiti obbligatori.
+\end{itemize}
+
+\subsubsection{MPD04: Copertura requisiti opzionali accettati}
+Indice che misura in ogni istante la percentuale di requisiti opzionali accettati soddisfatti.
+La formula adottata è la seguente:
+\begin{center}
+    $CRA = \displaystyle \frac{RAC}{RA}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{ROC:} indica il numero di requisiti opzionali accettati coperti dall'implementazione;
+    \item \textbf{RO:} indica il numero complessivo di requisiti opzionali accettati.
+\end{itemize}
+
+\subsubsection{MPD05: Densità di failure}
+Percentuale che indica l'affidabilità del prodotto e si può ricavare dalla percentuale di test falliti sui test eseguiti.
+La formula adottata è la seguente:
+\begin{center}
+    $DF = \displaystyle \frac{Tfail}{Ttot}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{Tfail} indica il numero di test eseguiti sul programma ma falliti;
+    \item \textbf{Ttot} indica il numero complessivo di test eseguiti sul programma.
+\end{itemize}
+
+\subsubsection{MPD06: Numero di bug}
+Numero di righe di codice che potrebbero comportare un comportamento imprevisto o diverso da quello desiderato.
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD07: Remediation effort}
+Lavoro necessario a risolvere bug. Il valore viene misurato in ore di lavoro.
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD08: Complessità cognitiva}
+Misura della difficoltà di comprensione del codice.
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD09: Complessità ciclomatica}
+Indice software utilizzato per stimare la complessità di un programma attraverso l’analisi del codice sorgente.
+Viene calcolata impiegando il grafo del flusso di controllo, dove:
+\begin{itemize}
+    \item i nodi sono gruppi indivisibili di istruzioni;
+    \item un arco connette due nodi se le istruzioni di un nodo possono essere eseguite subito dopo le istruzioni dell’altro.
+\end{itemize}
+Un valore troppo elevato di tale metrica è il risultato di codice troppo complesso, difficilmente testabile e manutenibile.
+Esistono due metodologie per calcolare la complessità ciclomatica; il primo adotta la formula:
+\begin{center}
+    $V(G) = \displaystyle E - N + 2P$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{E} è il numero di archi;
+    \item \textbf{N} è il numero di nodi;
+    \item \textbf{N} è il numero di di componenti connesse.
+\end{itemize}
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD10: Facilità di utilizzo}
+Numero di click necessari con cui l'utente raggiunge la funzionalità cercata.
+
+\subsubsection{MPD11: Facilità di apprendimento}
+Numero di minuti necessari all'utente per apprendere le funzionalità del prodotto software.
+
+\subsubsection{MPD12: Tempo medio di risposta}
+Tempo medio impiegato dal software per rispondere a una richiesta utente o svolgere un'attività di sistema.
+
+\subsubsection{MPD13: Numero di code smell}
+Numero di code smell individuati, corrispondenti a righe di codice difficilmente estendibili.
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD14: Technical Debt}
+Lavoro necessario a sanare code smell. Il valore viene misurato in ore di lavoro.
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD15: Densità di duplicazione}
+Percentuale di righe di codice ripetute tra i vari file sorgente.
+Un alto valore di questo indice significa una bassa qualità del codice prodotto e una sua bassa ottimizzazione.
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD16: Versioni browser supportate}
+Percentuale di versioni di browser supportate dal prodotto.
+Calcolabile con la seguente formula:
+\begin{center}
+    $BS = \displaystyle \frac{Bsup}{Btot}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{Bsup} indica il numero di browser in cui il prodotto può essere eseguito;
+    \item \textbf{Btot} indica il numero complessivo di browser presi in considerazione.
+\end{itemize}
+
+\subsubsection{MPD17: Successo dei test}
+Percentuale di test implementati e superati correttamente.
+La formula adottata è la seguente:
+\begin{center}
+    $PST = \displaystyle \frac{Tsup}{Ttot}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{Tsup} indica il numero di test superati;
+    \item \textbf{Ttot} indica il numero complessivo di test implementati.
+\end{itemize}
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD18: Line coverage}
+Percentuale di linee di codice verificate da test automatici.
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD19: Branch coverage}
+Percentuale del rapporto tra tutte le possibili deviazioni del flusso del codice (costrutti if else, operatori ternari, lancio di eccezioni e altre istruzioni similari).
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
+
+\subsubsection{MPD20: Code coverage}
+Percentuale di copertura del codice sorgente da parte dei test. Si ricava da diversi fattori di coverage secondo la seguente formula:
+\begin{center}
+    $coverage = \displaystyle \frac{CT + CF + LC}{2 * B + EL}$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{CT} indica i branch valutati positivi almeno una volta;
+    \item \textbf{CF} indica i branch valutati negativi almeno una volta;
+    \item \textbf{LC} indica le righe di codice coperte da test;
+    \item \textbf{B} indica il numero totale di branch;
+    \item \textbf{EL} indica il numero totale di righe di codice da coprire coi test.
+\end{itemize}
+La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
