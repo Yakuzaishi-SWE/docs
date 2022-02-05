@@ -14,21 +14,29 @@ Il gruppo \groupName\ per classificare e assegnare i requisiti del capitolato ha
 		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}} & 
 		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}} \\
 		\endhead
-        R1F1 & Obbligatorio & \shortstack{L'utente deve poter fare login} & Capitolato \\
-        R1F2 & Obbligatorio & \shortstack{L'utente deve poter visualizzare\\ il totale dell'ordine} & Capitolato \\
-        R1F3 & Obbligatorio & \shortstack{L'utente deve poter scegliere \\la tipologia di pagamento \\(da solo/money box)} & Verbale Esterno 2 \\
-        R1F4 & Obbligatorio & \shortstack{L'utente deve poter scegliere \\di pagare da solo, quindi connettere\\ e pagare tramite Metamask\glo} & Capitolato \\
-        R1F5 & Obbligatorio & \shortstack{L'utente deve poter scegliere \\di pagare tramite money box, e generare \\invito per partecipare alla stessa} & Verbale Esterno 2 \\
-        R2F1 & Desiderabile & \shortstack{L'utente deve poter partecipare \\ad un invito per money box connettendo\\ e pagando tramite metamask\\ una somma a piacere} & Verbale Interno 3 \\
-        R2F2 & Desiderabile & \shortstack{L'utente deve poter visualizzare\\ lo stato di completamento della money box} & Verbale Interno 3 \\
-        R1F6 & Obbligatorio & \shortstack{L'utente deve poter controllare\\ lo stato della transazione} & Capitolato \\
-        R1F7 & Obbligatorio & \shortstack{L'utente deve poter visualizzare \\e inserire il codice \\per la avvenuta ricezione del pacco} & Capitolato \\
-        R1F8 & Obbligatorio & \shortstack{Il venditore deve poter fare login} & Capitolato \\
-        R1F9 & Obbligatorio & \shortstack{Il venditore deve poter \\visualizzare le transazioni} & Capitolato \\
-        % R1F10 & Obbligatorio & \shortstack{Deve poter visualizzare le transazioni confermate} & Capitolato \\
-        R1F11 & Obbligatorio & \shortstack{Il venditore deve poter visualizzare \\le transazioni pagate} & Capitolato \\
-        R3F1 & Opzionale & \shortstack{Il venditore deve poter visualizzare \\le transazioni non pagate, \\ossia lo stato delle varie MoneyBox} & Verbale Interno 3 \\
-        R2F3 & Desiderabile & \shortstack{Il venditore deve poter contrassegnare \\le transazioni pagate come spedite} & Verbale Interno 3 \\
+        R1F1 & Obbligatorio & \shortstack{Si deve processare una richiesta\\ di checkout da un E-Commerce} & Capitolato \\
+        R1F2 & Obbligatorio & \shortstack{L'utente deve poter scegliere \\la tipologia di pagamento} & Verbale Esterno \\
+        R1F2.1 & Obbligatorio & \shortstack{L'utente deve poter scegliere \\la tipologia di pagamento unico} & Verbale Esterno \\
+        R1F2.2 & Obbligatorio & \shortstack{L'utente deve poter scegliere \\la tipologia di pagamento Moneybox} & Verbale Esterno \\
+        R2F2.2.1 & Desiderabile &\shortstack{Si deve poter visualizzare lo stato di completamento della MoneyBox} & UC2.2.1 \\
+        R2F2.2.2 & Desiderabile &\shortstack{Si deve poter visualizzare l'invito di partecipazione alla MoneyBox} & UC2.2.2 \\
+        R3F2.2.3 & Opzionale & \shortstack{L'utente deve poter visualizzare \\una traduzione visiva \\dell'indirizzo Moneybox} & Verbale Esterno 17.01.2022 \\
+        R2F2.2.4 & Desiderabile & \shortstack{Si deve poter chiudere \\la MoneyBox restituendo i soldi} & UC2.2.4 \\
+        R2F2.2.5 & Desiderabile & \shortstack{L'utente deve poter visualizzare\\ l'elenco delle transazioni partecipanti} & Capitolato \\
+        R1F3 & Obbligatorio & \shortstack{L'utente deve poter visualizzare\\ il totale dell'ordine} & Capitolato \\
+        R1F4 & Obbligatorio & \shortstack{L'utente deve poter effettuare la connessione a Metamask} & Capitolato \\
+        R1F5 & Obbligatorio & \shortstack{L'utente deve poter pagare} & Capitolato \\
+        R1F5.1 & Obbligatorio & \shortstack{L'utente che ha scelto \\il metodo di pagamento unico \\deve pagare interamente \\la somma richiesta} & Verbale \\
+        R2F5.2 & Desiderabile & \shortstack{L'utente che partecipa \\al pagamento MoneyBox \\deve poter pagare una parte\\ della somma richiesta} & Verbale \\
+        R1F6 & Obbligatorio & \shortstack{Si deve trattenere \\una fee percentuale\\ destinata al fondo ShopChain} & Capitolato \\
+        R1F6.1 & Obbligatorio & \shortstack{Parte della fee sarà destinata\\ al pagamento delle gas fee\glo} & Capitolato \\
+        R1F7 & Obbligatorio & \shortstack{Il propietario dell'ordine \\deve poter confermare la ricezione\\ e quindi sbloccare\\ i fondi dallo Smart Contract} & Capitolato \\
+        R1F8 & Obbligatorio & \shortstack{Il venditore deve poter \\visualizzare le transazioni} & Capitolato \\
+        R2F8.1 & Desiderabile & \shortstack{Il venditore deve poter \\visualizzare le transazioni \\non completate} & Capitolato \\
+        R1F8.2 & Obbligatorio & \shortstack{Il venditore deve poter \\visualizzare le transazioni completate} & Capitolato \\
+        R2F8.2.1 & Desiderabile & \shortstack{Il venditore deve poter \\visualizzare le transazioni \\completate e non sbloccate} & Capitolato \\
+        R1F8.2.2 & Obbligatorio & \shortstack{Il venditore deve poter \\visualizzare le transazioni\\ completate e sbloccate} & Capitolato \\
+        R2F9 & Desiderabile & \shortstack{Si deve convertire l'ammontare \\depositato sullo smart contract \\in stable coin} & Capitolato \\
     \end{longtable}
 \end{center} 
 \subsection{Requisiti di qualità}
@@ -67,26 +75,12 @@ Il gruppo \groupName\ per classificare e assegnare i requisiti del capitolato ha
         R1V2 & Obbligatorio & \shortstack{L'avvenuto pagamento e le \\
                                         transazioni devono essere  
                                         gestite \\ e verificate tramite 
-                                        smart contract} & Capitolato \\
-        R1V3 & Obbligatorio & \shortstack{In caso di esito positivo, l'ordine\\
-                                        dev'essere registrato sul database \\
-                                        dell'e-commerce} & Capitolato \\
-        R1V4 & Obbligatorio & \shortstack{Conferma ricezione dell'ordine \\
-                                        tramite l'inserimento del codice \\
-                                        comunicato dall'e-commerce} & \shortstack{Capitolato \\ Verbale interno 0} \\
-        R1V5 & Obbligatorio & \shortstack{Sviluppo di una Money Box per \\
-                                        acquisti collettivi sulla piattaforma} & \shortstack{Capitolato, \\ Verbale interno 0-1} \\
-        R3V1 & Opzionale & \shortstack{Conferma di ricezione dell'ordine \\
-                                        tramite la scannerizzazione di \\
-                                        un QR code su app mobile} & \shortstack{Capitolato, \\ Verbale interno 0} \\
-        R2V1 & Desiderabile & \shortstack{Conversione dell'ammontare \\
-                                        depositato sullo smart contract \\
-                                        in stable coin} & \shortstack{Verbale interno 0} \\
-        R1V6 & Obbligatorio & \shortstack{L'applicazione per l'interazione \\
+                                        Smart Contract} & Capitolato \\
+        R1V7 & Obbligatorio & \shortstack{L'applicazione per l'interazione \\
                                         con la piattaforma dev'essere \\
                                         sviluppata attraverso l'uso di \\
                                         tecnologie web} & \shortstack{Capitolato} \\ 
-        R1V1.1 & Desiderabile & \shortstack{La blockchain di riferimento scelta \\
+        R1V.1 & Desiderabile & \shortstack{La blockchain di riferimento scelta \\
                                         sarà Fantom} & \shortstack{Verbale interno 0} \\
         R3V2 & Opzionale & \shortstack{L'applicativo deve essere utilizzabile \\
                                         anche da dispositivi mobili, come \\
@@ -96,7 +90,8 @@ Il gruppo \groupName\ per classificare e assegnare i requisiti del capitolato ha
         R1V6.1 & Obbligatorio & \shortstack{Il front-end dell'applicazione \\
                                         verrà sviluppato in React} & \shortstack{Capitolato} \\ 
         R1V7 & Obbligatorio & \shortstack{Il back-end verrà sviluppato \\
-                                        usando un server Node.js} & \shortstack{Capitolato} \\ 
+                                        usando un server Node.js} & \shortstack{Capitolato} \\
+        R1V7.1 & Obbligatorio & \shortstack{Il back-end verrà sviluppato \\usufruendo del framework\glo\ Express.js\glo} & Capitolato \\
     \end{longtable}
 \end{center}
 
