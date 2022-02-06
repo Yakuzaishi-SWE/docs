@@ -1,0 +1,199 @@
+\section{Resoconto}
+
+Poichè per il seguente capitolato è stata offerta una libera scelta riguardo le migliori tecnologie da adottare allo scopo, il gruppo ha svolto un'attenta valutazione
+riguardo le tecnologie compatibili con gli obiettivi da raggiungere.
+Qui sotto sono riassunte le principali caratteristiche e motivazioni che hanno decretato la scelta della blockchain di riferimento.
+
+\subsection{Cos'è una blockchain}
+La blockchain, che letteralmente significa "catena di blocchi", è una struttura dati condivisa e
+immutabile. Viene definita come un registro digitale le cui voci sono raggruppate a blocchi che
+vengono concatenati in ordine cronologico e la cui integrità è garantita dall'uso della crittografia.
+Si basa sul concetto in cui quando il contenuto viene scritto (tramite un processo normato), questo non
+è più modificabile nè eliminabile, pena l'invalidazione dell'intero processo.\\
+Le caratteristiche di base che caratterizzano questa tecnologia sono: digitalizzazione dei dati, decentalizzazione,
+disintermediazione (non è richiesto nessun intermediario), tracciabilità dei trasferimenti, trasparenza/verificabilità,
+immutabilità e programmabilità dei trasferimenti. Grazie a tali proprietà, la blockchain si pone come una valida
+alternativa in termini di sicurezza, affidabilità, trasparenza e costi alle banche dati e ai documenti gestiti in maniera
+centralizzata da autorità riconosciute e regolamentate (come banche, pubbliche amministrazioni, ecc...).
+
+\subsection{Ethereum}
+Ethereum è la blockchain più famosa dopo quella di Bitcoin\glo, prende la struttura di base di quest'ultima e aggiunge delle
+importanti modifiche. In particolare si basa su una blockchain programmabile, aprendo alla possibilità di effettuare altre attività
+oltre a semplici transazioni di criptovalute, parliamo in particolare di servizi finanziari, giochi o app decentralizzate, quindi
+completamente libere e non soggiogate ad un ente centrale.
+
+\subsection{Differenze tra blockchain di layer 0, 1, 2}
+Le blockchain possono essere catalogate in base al tipo di architettura su cui si basano, in particolare possono basarsi su un layer 0, 1 o 2.
+In base a questo tipo di differenziazione offrono un diverso grado di astrazione e funzionalità. Come funziona per un linguaggio di programmazione
+più si sale di livello, più ci si allontana dallo "strato fisico".
+
+	\subsubsection{Layer 0}
+    è il livello più basso, quindi permette di agire direttamente sull’architettura blockchain senza dover mettere mano a layer e protocolli sottostanti. 
+    Qui inoltre è possibile creare dApps (decentralized applications), validare schemi di dati, “coniare” criptovalute e altro ancora.
+    Tutto l’hardware, server, nodi e qualsiasi device collegato ai nodi fa parte di questo livello. 
+    A questo livello agiscono direttamente gli algoritmi di consenso, come proof-of-work\glo, proof-of-stake\glo, proof-of-activity\glo.
+
+    \subsubsection{Layer 1}
+    Si occupano principalmente di rendere il protocollo base più scalabile. Si basa su due principali soluzioni:
+    \begin{itemize}
+        \item \textbf{Consensus protocol changes}: primo grande ed evidente cambiamento c’è stato con Ethereum\glo, in cui i progetti hanno iniziato a spostarsi 
+        dal protocollo di consenso Proof-of-Work\glo (PoW) a un più veloce e leggero Proof-of-Stake\glo (PoS). Questo è avvenuto su Ethereum\glo\ con il protocollo Casper.
+        \item \textbf{Sharding}: si basa sul semplice concetto di dividere le transazioni in “frammenti” più piccoli (traduzione di “shards”) che possono essere 
+        processati parallelamente dalla rete.
+    \end{itemize}
+    \paragraph{Pro}
+    \begin{itemize}
+        \item Aggiunge semplicemente un livello superiore all’architettura, senza apportare grandi modifiche;
+        \item Permette di eseguire un maggior numero di operazioni a parità di tempo;
+    \end{itemize}
+    \paragraph{Contro}
+    \begin{itemize}
+        \item Inefficient Consensus Protocol: alcuni protocolli di consenso non sono adatti a gestire grandi traffici di transazioni e conseguentemente queste strutture non sono pronte per un'adozione di massa;
+        \item Excessive Workload: il carico di lavoro su questo livello può diventare eccessivo e provocare grandi rallentamenti (è il caso di Ethereum\glo\ e le sue conseguenti
+        elevate gas fee).        
+    \end{itemize}
+
+    \subsubsection{Layer 2}
+    Sono lo strato più alto di astrazione, e attualmente si pongono l'obiettivo di risolvere gran parte dei problemi presenti nel layer 1. Le soluzioni si dividono in due possibilità:
+    \begin{itemize}
+        \item \textbf{State Channels}: ha come componente principale un canale full-duplex tra due partecipanti che permette di svolgere compiti che tipicamente sono on-blockchain, off-blockchain. 
+        Questo permette di diminuire di molto i tempi di attesa visto che viene a mancare la componente terza, come ad esempio le azioni dei miner\glo.
+        Come funziona:
+        \begin{itemize}
+            \item Una porzione di blockchain viene ritagliata (viene usata l’espressione “sealed off", ovvero sigillata) tramite multi-firma o sotto smart-contract, previo accordo tra le due parti coinvolte;
+            \item Quest’ultime possono interagire tra loro senza preoccuparsi di firmare le transazioni eseguite
+            \item Quando la sequenza di scambi termina, solo lo stato finale viene registrato sulla blockchain.
+        \end{itemize}
+        La metafora più facile è quella del conto, è come se una persona aprisse un conto con un’altra e poi lo saldasse “a rate”. Invece di registrare ogni singola rata sulla rete, viene 
+        registrato solo il saldo finale.\\
+        Le soluzioni di questo tipo più comuni sono: la “Bitcoin’s Lightning Network” (permette di eseguire tante microtransazioni) e la “Ethereum’s Raiden Network” (permette anche di eseguire smart contracts 
+        sui canali). Entrambe utilizzano Hashed Timelock Contracts (HTLCs) per creare state channels.
+    \end{itemize}
+    \begin{itemize}
+        \item \textbf{Nested blockchains}: si basa sulla soluzione chiamata Plasma, la quale si basa sulle seguenti caratteristiche:
+        \begin{itemize}
+            \item la rete principale (la main chain) stabilisce le regole di base dell’intero sistema e non prende parte alle operazioni svolte a meno che non debba risolvere dispute;
+            \item il sistema si basa su un sistema in cui la main chain si appoggia a multipli livelli di blockchain. Questi livelli sono connessi tra loro in modo da formare una struttura del tipo padre-figlio. 
+            La chain padre delega il lavoro alla chain figlia in grado di eseguire quella particolare istruzione e che ritornerà poi il risultato indietro al padre.
+            \item questo sistema permette di ridurre il carico della root chain e se costruita e usata correttamente è in grado di aumentare la scalabilità della rete esponenzialmente     
+        \end{itemize}
+    \end{itemize}
+    \paragraph{Pro}
+    \begin{itemize}
+        \item Evita problemi di disordine per quanto riguarda i compiti di una blockchain;
+        \item Evita di pagare inutili fees su microoperazioni e microtransazioni;
+    \end{itemize}
+    \paragraph{Contro}
+    \begin{itemize}
+        \item Minore controllo sui dati a basso livello;        
+    \end{itemize}
+
+	\subsection{Blockchain alternative}
+	Visto i grandi difetti presenti nella blockchain Ethereum\glo, in particolare il costo elevato delle sue gas fee e la lenta scalabilità, abbiamo preso in esame diverse blockchain e valutato la migliore 
+	rispettivamente alle esigenze del problema. Qui sotto sono riportati i pro e contro di ogni soluzione.
+		\subsubsection{Avalanche}
+		Avalanche è un protocollo che integra diverse blockchain, che permette la creazione di asset tokenizzati, l'esecuzione di smart contract e anche la creazione di blockchain private. 
+		AVAX è il suo token di riferimento, utilizzato per governance, pagamento commissioni e gas per i contratti.
+		\paragraph{Pro}
+		\begin{itemize}
+			\item Blockchain ad alta scalabilità;
+			\item Fee molto basse;
+		\end{itemize}
+		\paragraph{Contro}
+		\begin{itemize}
+			\item Tecnologia meno diffusa e conosciuta rispetto ad Ethereum\glo
+			\item Progetto discretamente complesso.
+		\end{itemize}
+		
+		\subsubsection{Solana}
+		Solana è una blockchain open source\glo, permissionless che garantisce un alto numero di transazioni al secondo. Queste caratteristiche sono ottenute principalmente dall’architettura a basso livello
+		che utilizza ad esempio un proprio algoritmo di consenso “Proof-of-History” e una cifratura SHA-256.
+		\paragraph{Pro}
+		\begin{itemize}
+			\item Transazioni molto veloci ($>$ 710000 tps);
+			\item Fee molto basse;
+			\item Progetto recente ma dal grande potenziale;
+		\end{itemize}
+		\paragraph{Contro}
+		\begin{itemize}
+			\item Non è una blockchain Ethereum\glo compatibile, quindi gli smart contract non possono essere scritti in Solidity\glo. Il linguaggio necessario assomiglia al C\glo e a RUST\glo e risulta essere più complesso per chi si trova alla prima esperienza con queste tecnologie;
+			\item I suoi punti di forza la rendono anche una scelta azzardata per un primo approccio al mondo delle blockchain;
+		\end{itemize}
+		
+		\subsubsection{Moonriver}
+		Questo tipo di soluzione non presenta particolari caratteristiche se non quella di implementare gli smart contract su una parachain. Una parachain è una blockchain “specializzata” che si connette ad esempio a Polkadot (una blockchain layer 0, un altro esempio è Kusama), quest’ultimo è un protocollo di rete che permette di trasferire non solo tokens ma anche dati tra più blockchain. Quindi Polkadot è a tutti gli effetti un’applicazione che permette di avere registri e computazioni cross-chain.
+		Le operazioni tra queste vengono eseguite in parallelo e non sequenzialmente, tramite l'uso di relay chain (blockchain minori a cui viene delegata parte della computazione richiesta) che fungono in certi casi da main chain.
+		\paragraph{Pro}
+		\begin{itemize}
+			\item Sviluppo su una parachain, tecnologia molto interessante e valida per impieghi futuri;
+			\item Fee più basse rispetto ad Ethereum\glo;
+			\item Ambiente Ethereum\glo compatibile, quindi possibilità di usare Solidity\glo per lo sviluppo di Smart Contract
+			\item Progetto recente ma dal grande potenziale;
+		\end{itemize}
+		\paragraph{Contro}
+		\begin{itemize}
+			\item Blockchain molto meno conosciuta, quindi probabilmente si avrà una community di supporto più piccola
+		\end{itemize}
+		
+		\subsubsection{Polygon}
+		è un protocollo e un framework per costruire e connettere blockchain Ethereum\glo compatibili. Nasce per risolvere i principali problemi legati alla rete Ethereum\glo, ovvero basso throughput, gas fee elevate, mancanza di sovranità.
+		Nonostante siano nate delle blockchain ethereum compatibili che sfruttano le qualità migliori dell’ecosistema ethereum\glo, non c’è ancora un protocollo o framework che si occupi di metterle in comunicazione ad alto livello. Proprio a questo scopo nasce Polygon.
+	
+		\paragraph{Pro}
+		\begin{itemize}
+			\item Possibilità di sviluppare su una tecnologia ad alto livello;
+			\item Ambiente Ethereum\glo compatibile, quindi possibilità di usare Solidity\glo per lo sviluppo di Smart Contract
+		\end{itemize}
+		\paragraph{Contro}
+		\begin{itemize}
+			\item Blockchain molto meno conosciuta, quindi probabilmente si avrà una community di supporto più piccola
+			\item Polygon si appoggia comunque a Ethereum\glo, questo significa che ottimizza le transazioni solo tra le chain connesse, in caso contrario si hanno comunque fee alte.
+		\end{itemize}
+	
+		\subsubsection{Scelta: Fantom}
+		è una piattaforma che ha i suoi punti di forza su high-performance, scalabilità e sicurezza negli smart contract. Nasce per risolvere le limitazioni delle precedenti piattaforme blockchain (come molte altre sue coetanee).
+		Fantom è permissionless\glo, decentralized e open-source\glo.\\
+		Usa un suo algoritmo di consenso BFT(Bizantine Fault-tolerant) "Lachesis" che permette di avere delle eccellenti prestazioni per quanto riguarda velocità, costo e sicurezza.
+		E’ un tipo di algoritmo di consenso che permette di creare delle applicazioni peer-to-peer senza che lo sviluppatore debba creare il proprio network layer. Lachesis è:
+		\begin{itemize}
+			\item \textbf{asincrono}: i partecipanti hanno la libertà di processare comandi in momenti diversi;
+			\item \textbf{leaderless}: nessun partecipante nella rete ha un ruolo speciale;
+			\item \textbf{byzantine fault-tolerant}: supporta fino a un terzo dei nodi difettosi inclusi comportamenti dannosi; 
+			\item \textbf{finale}: l’output dell’algoritmo di consenso può essere usato immediatamente, non c’è bisogno di aspettare per la conferma di blocchi (tempo medio di 1-2 secondi)
+		\end{itemize}
+		
+		\paragraph{Pro}
+		\begin{itemize}
+			\item Transazioni molto veloci;
+			\item Fee molto basse;
+			\item Blockchain ethereum\glo compatibile, quindi possibilità di usare Solidity\glo come linguaggio per gli smart contract;
+			\item Modulare, ovvero permette di convertire dApps sviluppate sulla rete Ethereum\glo, di essere adattate in poco tempo.
+		\end{itemize}
+		\paragraph{Contro}
+		\begin{itemize}
+			\item Meno conosciuta rispetto ad Ethereum\glo;
+		\end{itemize}
+	
+	\subsection{Conclusioni}
+	Concludendo quanto riportato da quest'analisi, le blockchain che hanno suscitato maggior interesse nel gruppo, relativamente agli aspetti positivi e negativi contestualizzati per lo scopo di questo progetto,
+	sono Avalanche e Fantom. Entrambe sono due blockchain giovani, la prima è nata nel 2020, mentre la seconda nel 2018. La prima risulta essere più decentralizzata per via della presenza di un numero molto maggiore di nodi validatori, mentre la seconda
+	offre costi per transazione molto minori.\\
+	Ambedue si presentano quindi come valide soluzioni, poichè differiscono di piccoli aspetti legati alle scelte e agli obiettivi ai quali li sviluppatori delle due reti vogliono aspirare. Alla fine dopo diversi incontri con il proponente, si è giunti
+	alla scelta di sviluppare l'applicazione su Fantom.
+
+\pagebreak
+
+\subsection{Tracciamento delle decisioni}
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.8}
+	\rowcolors{2}{green!100!black!40}{green!100!black!30}
+	\begin{tabular}{c | p{10cm}}
+		\rowcolor[HTML]{125E28}
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{ID}} &
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Decisione}} \\
+		\hline
+		VI-2021-11-15-1 & è stata scelta come blockchain di riferimento Fantom, la quale verrà presentata al proponente per essere approvata\\ \hline
+	\end{tabular}
+\end{table}
