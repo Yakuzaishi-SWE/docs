@@ -104,7 +104,7 @@ La struttura di ogni prima pagina dei vari documenti è la seguente:
 \end {itemize}
 \subparagraph{Registro delle modifiche}
 Il file \textit{changelog.tex} contiene il registro delle modifiche, presente in ogni singolo documento, eccezion fatta per i \textit{verbali}.
-Esso corrisponde ad una tabella nella quale si tiene traccia di ogni attività svolta (stesura, modifica, verifica, approvazione) e viene aggiornato ogni volta che avviene una delle attività precedentemente citate.
+Esso corrisponde a una tabella nella quale si tiene traccia di ogni attività svolta (stesura, modifica, verifica, approvazione) e viene aggiornato ogni volta che avviene una delle attività precedentemente citate.
 La tabella del registro delle modifiche contiene le seguenti voci:
 \begin{itemize}
     \item \textbf{Versione}: versione attuale del documento;
@@ -247,7 +247,7 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo in fase 
 
 \subsection{Gestione della configurazione}\label{subsection:gestione_configurazione}
     \subsubsection{Scopo}
-    Scopo di questa sezione è definire come il team \groupName\ ha deciso di affrontare la tematica della gestione della configurazione, ovvero come il team di sviluppo ha deciso di mantenere tracciata la documentazione redatta.
+    Scopo di questa sezione è definire come il team \groupName\ ha deciso di affrontare la tematica della gestione della configurazione, ovvero come il team di sviluppo ha deciso di mantenere tracciata la documentazione redatta ed il codice sviluppato.
 
     \subsubsection{Aspettative}
     Le aspettative del gruppo \groupName\ nell'utilizzo di questo processo sono:
@@ -305,19 +305,18 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo in fase 
             \item Possibilità di organizzare e suddividere il lavoro tramite la creazione di issues\glo\ assegnabili alle milestone\glo.
         \end{itemize} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%				SISTEMARE
+
     \subsubsection{Struttura del repository}
     Al fine di organizzare meglio il lavoro si è deciso di creare due repository\glo\ distinti, entrambi pubblici, con lo scopo di tenere separati i documenti e il software:
     \begin{itemize}
         \item \textbf{Yakuzaishi-SWE/docs}: per il versionamento dei documenti;
-        \item \textbf{Yakuzaishi-SWE/shopchain}: per il versionamento del codice.
-    \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \item \textbf{Yakuzaishi-SWE/shopchain}: per il versionamento del codice backend\glo.
+        \item \textbf{Yakuzaishi-SWE/shopchain-frontend\glo}: per il versionamento del codice frontend\glo.
 
+    \end{itemize}
 
         \paragraph{Yakuzaishi-SWE/docs}
-        L'organizzazione della repo è così riassunta:
+        L'organizzazione del repo è così riassunta:
         \begin{itemize}
             \item \textbf{Branch\glo\ master}: è il branch\glo\ principale in cui è presente la sola documentazione, in formato tex, pronta alla revisione;
             \item \textbf{Branch\glo\ dev}: è un branch\glo\ intermedio tra il master e i branch dei singoli documenti. Utile per mantenere pulito il master ed evitare confusione;
@@ -328,30 +327,25 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo in fase 
             \end{center}
         \end{itemize}
 
-        Nel master sono attualmente presenti:
-        \begin{enumerate}
-            \item una cartella \textsf{src} all'interno della quale si trovano:
-            \begin{itemize}
-                \item Una cartella per ciascun documento tra quelli da consegnare;
-                \item Una cartella contenente i \textit{verbali} interni ed esterni;
-                \item una cartella per il \docNameGloLow;
-                \item una cartella per il template \LaTeX\ dei documenti.
-            \end{itemize}
-            \item un file \textsf{.gitignore} che dichiara esplicitamente l’estensione dei file da non tracciare poiché poco utili allo scopo del repository\glo;
-            \item un \textsf{makefile}, ovvero un utility che racchiude tutte le regole per preparare la release di ciascun documento sottoforma di file .pdf tramite l'invocazione del comando \texttt{make all}.
-            \item un \textsf{README.md}, file classico della gran parte dei repository\glo\ git\glo\ contenente una breve descrizione di quello che lo stesso repository\glo\ contiene.
-        \end{enumerate}
-            \subparagraph{Gestione dei cambiamenti in Yakuzaishi-SWE/docs}
+            \subparagraph{Gestione dei cambiamenti}
             La separazione del flusso di lavoro tra i vari documenti da redarre permette una notevole diminuzione dei conflitti. Il punto focale è che il branch\glo\ master rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo finché ciascun \roleProjectManagerLow\ non abbia dato l’approvazione al corrispettivo documento. Solo in quel momento è permesso il merge\glo\ di uno dei branch\glo\ minori nel master. I cambiamenti da gestire sui documenti possono essere:
             \begin{itemize}
                 \item \textbf{Modifiche minori}: riguardano errori grammaticali, lessicali o di sintassi, che possono essere corretti dai \textit{redattori} o dai \textit{verificatori} senza l’approvazione del \roleProjectManagerLow;
                 \item \textbf{Modifiche generali}: riguardano cambiamenti più generali come la struttura del documento o convenzioni da utilizzare e richiedono il consulto con il \roleProjectManagerLow, il quale potrà accettare o declinare la proposta di modifica.
             \end{itemize}
 
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %				SISTEMARE
-        \paragraph{Yakuzaishi-SWE/shopchain}
-        Ancora da definire...
+        \paragraph{Yakuzaishi-SWE/shopchain \& Yakuzaishi-SWE/shopchain-frontend\glo}
+        Yakuzaishi-SWE/shopchain e Yakuzaishi-SWE/shopchain-frontend\glo\ sono organizzate allo stesso modo. In particolare:
+        \begin{itemize}
+            \item \textbf{Branch\glo\ master}: è il branch\glo\ principale in cui sono presenti i soli file pronti per le release di consegna;
+            \item \textbf{Branch\glo\ dev}: è un branch\glo\ intermedio tra il master e i branch delle singole features. Utile per mantenere pulito il master ed evitare confusione;
+            \item \textbf{Branch\glo\ derivanti dal dev}: sono diversi in numero e ciascuno di questi ha un nome parlante riferito alla singola feature. Ognuno è dedicato allo sviluppo della feature da cui prende il nome e, quando il lavoro su uno di questi branch\glo\ sarà finito e sottoposto a revisione, verrà eseguito un merge\glo\ del branch\glo\ in questione con il dev;
+        \end{itemize}
+
+        \subparagraph{Gestione dei cambiamenti}
+        La separazione del flusso di lavoro tra le varie features da sviluppare permette una notevole diminuzione dei conflitti. Il punto focale è che il branch\glo\ master rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo finché ciascun \roleProjectManagerLow\ non abbia dato l’approvazione per il rilascio. Solo in quel momento è permesso il merge\glo\ di uno dei branch\glo\ minori nel master.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \vspace{2cm}
