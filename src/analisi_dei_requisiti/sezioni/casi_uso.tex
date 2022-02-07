@@ -259,25 +259,13 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
     \item Estensioni: \begin{enumerate}
         \item Nel caso l'utente rifiuti il pagamento: \begin{itemize}
             \item la transazione viene annullata.
-            \item l'utente visualizza errore transazione annullata [UC5.1].
+            \item l'utente visualizza errore transazione annullata [UC5.2].
         \end{itemize}
-        \item Nel caso venisse raggiunta la somma totale dovuta, viene generato e mostrato il codice di sblocco [UC5.2].
+        \item Nel caso venisse raggiunta la somma totale dovuta, viene generato e mostrato il codice di sblocco [UC5.1].
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC5.1 - Visualizzazione errore transazione annullata}
-
-\begin{itemize}
-    \item Attore primario: utente generico.
-    \item Precondizioni: l'utente ha rifiutato la transazione.
-    \item Postcondizioni: l'utente ha visualizzato l'errore e la transazione fallisce.
-    \item Scenario principale: \begin{enumerate}
-        \item l'utente visualizza un messaggio di errore per rifiuto della transazione.
-        \item l’utente clicca ”OK” per continuare.
-    \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC5.2 - Generazione Codice di Sblocco}
+\subsubsection{UC5.1 - Generazione Codice di Sblocco}
 
 \begin{itemize}
     \item Attore primario: utente generico.
@@ -286,6 +274,18 @@ L'utente generico ha poi due specializzazioni possibili: l'utente propietario de
     \item Scenario principale: \begin{enumerate}
         \item viene generato il codice di sblocco.
         \item l'utente visualizza il codice di sblocco.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC5.2 - Visualizzazione errore transazione annullata}
+
+\begin{itemize}
+    \item Attore primario: utente generico.
+    \item Precondizioni: l'utente ha rifiutato la transazione.
+    \item Postcondizioni: l'utente ha visualizzato l'errore e la transazione fallisce.
+    \item Scenario principale: \begin{enumerate}
+        \item l'utente visualizza un messaggio di errore per rifiuto della transazione.
+        \item l’utente clicca ”OK” per continuare.
     \end{enumerate}
 \end{itemize}
 
