@@ -293,6 +293,78 @@ Il carico di ore a persona è leggermente diminuito e il preventivo a finire sce
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection{Codifica Proof of Concept} \label{subsection:consuntivo_PoC}
+\subsubsection{Variazione della pianificazione} \label{subsubsection:variazione_pianificazione_PoC}
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|c|c|c|c|c|c|c}
+    \rowcolor[HTML]{125E28}
+    \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Nominativo }}
+                         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Re }}
+                         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Am}}
+                         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ An }}
+                         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pt }}
+                         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Pr }}
+                         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ve }}
+                         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{ Ore totali }}                                                                                     \\
+    \hline
+    Bugno Francesco      & -                                                             & -          & - (+2)      & 8 (-2)      & 6           & 6           & 20           \\
+    Busacca Luca         & -                                                             & -          & 3 (+1)      & 7 (-1)      & 7 (-1)      & 4 (+1)      & 21           \\
+    Carturan Luca        & -                                                             & -          & -           & 7           & 10 (-3)     & 3 (+3)      & 20           \\
+    Filosofo Michele     & -                                                             & -          & 4           & 6           & 7 (-2)      & 3 (+2)      & 20           \\
+    Furlan Dario         & -                                                             & 2          & -           & 9 (-1)      & 9 (+1)      & -           & 21           \\
+    Mattarello Francesco & -                                                             & 2          & -           & 7           & 4           & 7           & 20           \\
+    Midena Matteo        & 6                                                             & -          & -           & 5           & 9 (+1)      & -           & 20 (+1)      \\
+    \textbf{Ore totali}  & \textbf{6}                                                    & \textbf{4} & \textbf{10} & \textbf{45} & \textbf{48} & \textbf{29} & \textbf{142}
+  \end{tabular}
+  \caption{Variazione delle ore nel periodo di Codifica Proof of Concept}
+\end{table}
+
+\subsubsection{Variazione dei costi} \label{subsubsection:variazione_costi_Poc}
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|c|c}
+    \rowcolor[HTML]{125E28}
+    \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ruolo}} &
+    \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Ore}}   &
+    \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Costo (€)}}                                \\
+    \hline
+    Responsabile                                           & 6            & 180,00            \\
+    Amministratore                                         & 4            & 80,00             \\
+    Analista                                               & 7 (+3)       & 175,00 (+75,00)   \\
+    Progettista                                            & 49 (-4)      & 1225,00 (-100,00) \\
+    Programmatore                                          & 52 (-4)      & 780,00 (-60,00)   \\
+    Verificatore                                           & 23 (+6)      & 345,00 (+90,00)   \\
+    \textbf{Totale Consuntivo}                             & \textbf{142} & \textbf{2790,00}  \\
+    \textbf{Totale Preventivo}                             & \textbf{141} & \textbf{2785,00}  \\
+    \textbf{Bilancio}                                      & \textbf{+1}  & \textbf{+5,00}    \\
+  \end{tabular}
+  \caption{Codifica Proof of Concept - Consuntivo di periodo}
+\end{table}
+
+\pagebreak
+\subsubsection{Ragione degli scostamenti} \label{subsubsection:ragione_scostamenti_PoC}
+Inizialmente il gruppo si è concentrato nel suddividere in modo più opportuno gli incrementi precedentemente individuati.
+Queste accortezze hanno portato inevitabilmente un aumento delle ore al ruolo di \roleAnalystLow{}.
+Infine, grazie alla conoscenza pregressa dei linguaggi di programmazione utilizzati da parte di alcuni membri del gruppo, la codifica del PoC ha richiesto meno tempo del previsto, permettendo di ripartire le ore degli altri componenti alla verifica della documentazione.
+Per questi motivi c'è stata la rispettiva diminuzione di ore al ruolo di \roleDesignerLow{} e \roleProgrammerLow{}, con conseguente incremento al ruolo di \roleVerifierLow{}.
+
+\subsubsection{Considerazioni rispetto al preventivo} \label{subsubsection:considerazioni_finali_PoC}
+Il bilancio risulta essere negativo di 5,00€ rispetto al preventivo per questo periodo.
+Non si ritiene comunque necessaria alcuna ripianificazione in quanto la somma sforata viene ampiamente ricoperta dal risparmio di 40,00€ del precedente periodo.
+Inoltre, avendo raggiunto tutti gli obiettivi pianificati, l'avanzamento delle attività non ha subito alcun rallentamento.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 \subsection{Preventivo a finire} \label{subsection:preventivo_a_finire}
 Di seguito viene riportato il preventivo a finire mediante una tabella.
 Per ogni periodo che è stato ultimato viene riportato il preventivo ed il consuntivo di periodo.
@@ -309,8 +381,8 @@ Se il valore del consuntivo di un periodo non risulta essere ancora presente, pe
     \hline
     Analisi preliminare               & 4645,00                                                     & 4605,00           \\
     Progettazione Technology Baseline & 1750,00                                                     & 1435,00           \\
-    Codifica Proof of Concept         & 2470,00                                                     & -                 \\
-    \textbf{Totale}                   & \textbf{14225,00}                                           & \textbf{13870,00} \\
+    Codifica Proof of Concept         & 2470,00                                                     & 2790,00           \\
+    \textbf{Totale}                   & \textbf{14225,00}                                           & \textbf{14190,00} \\
   \end{tabular}
   \caption{Preventivo a finire}
 \end{table}
