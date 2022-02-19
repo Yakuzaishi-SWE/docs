@@ -15,7 +15,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \caption{Diagramma degli Attori.}
   \end{figure}
 
-\subsection{UC1 - Inizializzazione delle Transazioni}
+\subsection{UC1 - Inizializzazione della Transazione}
 
 \begin{figure}[H]
     \centering
@@ -25,7 +25,6 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: E-Commerce;
-    \item Attore secondario: utente proprietario dell'ordine;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: la transazione viene caricata nel sistema, l'utente viene reindirizzato alla pagina di checkout;
     \item Scenario principale: L'E-Commerce delega il pagamento comunicando la somma richiesta e l'indirizzo del destinatario.
@@ -86,10 +85,11 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale:
     \begin{enumerate}
         \item l'utente seleziona pagamento MoneyBox come metodo di pagamento;
+        \item l'utente conferma la creazione della MoneyBox [UC2.2.4];
         \item l'utente visualizza lo stato di completamento [UC2.2.1];
         \item l'utente visualizza l'invito alla partecipazione della MoneyBox [UC2.2.2];
         \item l'utente, opzionalmente, partecipa alla MoneyBox [UC2.2.3];
-        \item l'utente proprietario dell'ordine, opzionalmente, può chiudere una MoneyBox [UC2.2.4].
+        \item l'utente proprietario dell'ordine, opzionalmente, può chiudere una MoneyBox [UC2.2.5].
         \end{enumerate}
     \end{itemize}
 
@@ -128,16 +128,33 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \end{enumerate}
     \end{itemize}
 
-    \subsubsection{UC2.2.4 - Chiusura MoneyBox}
+    \subsubsection{UC2.2.4 - Creazione MoneyBox}
+
+    \begin{itemize}
+        \item Attore primario: utente proprietario dell'ordine;
+        \item Attore secondario: Metamask;
+        \item Precondizioni: l'utente ha connesso il proprio Metamask [UC4] e ha selezionato il pagamento MoneyBox;
+        \item Postcondizioni: l'utente ha creato una MoneyBox;
+        \item Scenario principale:
+        \begin{enumerate}
+            \item l'utente visualizza il pop-up di Metamask;
+            \item l'utente conferma l'operazione all'interno del pop-up;
+            \item l'utente viene reindirizzato alla pagina con i dettagli della MoneyBox.
+        \end{enumerate}
+        \end{itemize}
+
+    \subsubsection{UC2.2.5 - Chiusura MoneyBox}
 
     \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
+    \item Attore secondario: Metamask;
     \item Precondizioni: l'utente ha connesso il proprio Metamask [UC4];
     \item Postcondizioni: l'utente ha chiuso la MoneyBox e i fondi vengono restituiti;
     \item Scenario principale:
     \begin{enumerate}
-        \item l'utente chiude la MoneyBox;
-        \item viene annullata ogni transazione e quindi effettuati i rimborsi.
+        \item l'utente visualizza il pop-up di Metamask;
+        \item l'utente conferma l'operazione all'interno del pop-up;
+        \item viene annullato ogni versamento, effettuati i rimborsi e la MoneyBox viene chiusa.
     \end{enumerate}
     \end{itemize}
 
@@ -156,7 +173,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale:
     \begin{enumerate}
         \item l'utente visualizza il totale dell'ordine;
-        \item l'utente visualizza un elenco degli item ordinati.
+        \item l'utente visualizza l'indirizzo del venditore.
     \end{enumerate}
 \end{itemize}
 
@@ -301,7 +318,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'utente ha rifiutato la transazione;
+    \item Precondizioni: la transazione non è andata a buon fine;
     \item Postcondizioni: l'utente ha visualizzato l'errore e la transazione fallisce;
     \item Scenario principale:
     \begin{enumerate}
@@ -320,12 +337,13 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Attore secondario: utente venditore;
+    \item Attore secondario: utente venditore, Metamask;
     \item Precondizioni: il sistema ha generato il codice di sblocco [UC5.2];
     \item Postcondizioni: l'utente proprietario ha sbloccato l'ordine e il denaro è stato trasferito all'utente venditore;
     \item Scenario principale:
     \begin{enumerate}
         \item l'utente inserisce il codice di sblocco;
+        \item l'utente conferma la transazione sul pop-up Metamask;
         \item il sistema trasferisce il denaro sul wallet dell'utente venditore.
     \end{enumerate}
 \end{itemize}
