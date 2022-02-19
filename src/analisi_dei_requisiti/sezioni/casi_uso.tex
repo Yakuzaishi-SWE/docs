@@ -353,7 +353,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC7.1 - Visualizza Transazioni In Entrata}
+\subsubsection{UC7.1 - Visualizza Transazioni In Entrata Pagate}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -442,9 +442,9 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 %serve diagramma?
 
 \begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
+    \item Attore primario: utente proprietario dell'ordine, utente venditore;
     \item Attore secondario: Metamask;
-    \item Precondizioni: l'utente ha connesso il proprio Metamask [UC4];
+    \item Precondizioni: l'utente ha connesso il proprio Metamask [UC4] ed esiste almeno un pagamento associato all'indirizzo dell'utente;
     \item Postcondizioni: l'utente ha annullato l'ordine e i fondi vengono restituiti;
     \item Scenario principale:
     \begin{enumerate}
