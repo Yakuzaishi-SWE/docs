@@ -398,7 +398,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \subsubsection{UC7.2 - Visualizza Transazioni In Uscita}
 
 \begin{itemize}
-    \item Attore primario: utente generico;
+    \item Attore primario: utente proprietario dell'ordine;
     \item Precondizioni: l'utente ha selezionato le transazioni in uscita;
     \item Postcondizioni: l'utente ha visualizzato le transazioni in uscita;
     \item Scenario principale: l'utente sceglie le transazioni in uscita per essere visualizzate;
@@ -413,7 +413,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \subsubsection{UC7.2.1 - Visualizza Transazioni Non Pagate}
 
 \begin{itemize}
-    \item Attore primario: utente generico;
+    \item Attore primario: utente proprietario dell'ordine;
     \item Precondizioni: l'utente ha selezionato visualizza transazioni non pagate;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non pagate;
     \item Scenario principale: l'utente visualizza la lista di transazioni non pagate.
@@ -422,7 +422,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \subsubsection{UC7.2.2 - Visualizza Transazioni Pagate Ma Non Sbloccate}
 
 \begin{itemize}
-    \item Attore primario: utente generico;
+    \item Attore primario: utente proprietario dell'ordine;
     \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate ma non sbloccate;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate pagate ma non sbloccate;
     \item Scenario principale: l'utente visualizza la lista di transazioni pagate pagate ma non sbloccate.
@@ -431,15 +431,22 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \subsubsection{UC7.2.3 - Visualizza Transazioni Pagate e Sbloccate}
 
 \begin{itemize}
-    \item Attore primario: utente generico;
+    \item Attore primario: utente proprietario dell'ordine;
     \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate e sbloccate;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate e sbloccate;
     \item Scenario principale: l'utente visualizza la lista di transazioni pagate e sbloccate.
 \end{itemize}
 
-\subsection{UC8 - Rimborso}
+\subsubsection{UC7.2.4 - Visualizza Transazioni Cancellate}
 
-%serve diagramma?
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni cancellate;
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni cancellate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni cancellate.
+\end{itemize}
+
+\subsection{UC8 - Rimborso}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine, utente venditore;
