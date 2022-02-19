@@ -143,21 +143,6 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
         \end{enumerate}
         \end{itemize}
 
-    \subsubsection{UC2.2.5 - Chiusura MoneyBox}
-
-    \begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
-    \item Attore secondario: Metamask;
-    \item Precondizioni: l'utente ha connesso il proprio Metamask [UC4];
-    \item Postcondizioni: l'utente ha chiuso la MoneyBox e i fondi vengono restituiti;
-    \item Scenario principale:
-    \begin{enumerate}
-        \item l'utente visualizza il pop-up di Metamask;
-        \item l'utente conferma l'operazione all'interno del pop-up;
-        \item viene annullato ogni versamento, effettuati i rimborsi e la MoneyBox viene chiusa.
-    \end{enumerate}
-    \end{itemize}
-
 \subsection{UC3 - Visualizzazione Riepilogo Ordine}
 
 \begin{figure}[H]
@@ -332,7 +317,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-UC6.png}
-    \caption{UC6.}
+    \caption{Pagina transazione pagata.}
   \end{figure}
 
 \begin{itemize}
@@ -353,46 +338,121 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-UC7.png}
-    \caption{UC7.}
+    \caption{UC7 e i suoi sottocasi.}
   \end{figure}
 
 \begin{itemize}
     \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente ha selezionato lo stato delle transazioni che vuole visualizzare;
-    \item Scenario principale: l'utente sceglie lo stato delle transazioni da visualizzare tra quelli disponibili;
+    \item Postcondizioni: l'utente ha selezionato il tipo delle transazioni che vuole visualizzare;
+    \item Scenario principale: l'utente sceglie il tipo delle transazioni da visualizzare tra quelli disponibili;
     \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni:
     \begin{itemize}
-        \item visualizza transazioni non completate [UC7.1];
-        \item visualizza transazioni pagate [UC7.2];
-        \item visualizza transazioni pagate e sbloccate [UC7.3].
+        \item visualizza transazioni in entrata [UC7.1];
+        \item visualizza transazioni in uscita [UC7.2];
     \end{itemize}
 \end{itemize}
 
-\subsubsection{UC7.1 - Visualizza Transazioni Non Completate}
+\subsubsection{UC7.1 - Visualizza Transazioni In Entrata}
 
 \begin{itemize}
-    \item Attore primario: utente venditore;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni non completate;
-    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non completate;
-    \item Scenario principale: l'utente visualizza la lista di transazioni non completate.
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'utente ha selezionato le transazioni in entrata;
+    \item Postcondizioni: l'utente ha visualizzato le transazioni in entrata;
+    \item Scenario principale: l'utente sceglie le transazioni in entrata per essere visualizzate;
+    \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni:
+    \begin{itemize}
+        \item visualizza transazioni non sbloccate [UC7.1.1];
+        \item visualizza transazioni sbloccate [UC7.1.2];
+        \item visualizza transazioni cancellate [UC7.1.3].
+    \end{itemize}
 \end{itemize}
 
-\subsubsection{UC7.2 - Visualizza Transazioni Pagate}
+\subsubsection{UC7.1.1 - Visualizza Transazioni Non Sbloccate}
 
 \begin{itemize}
-    \item Attore primario: utente venditore;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate;
-    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate;
-    \item Scenario principale: l'utente visualizza la lista di transazioni pagate.
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni non sbloccate;
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non sbloccate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni non sbloccate.
 \end{itemize}
 
-\subsubsection{UC7.3 - Visualizza Transazioni Pagate e Sbloccate}
+\subsubsection{UC7.1.2 - Visualizza Transazioni Sbloccate}
 
 \begin{itemize}
-    \item Attore primario: utente venditore;
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni sbloccate;
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni sbloccate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni sbloccate.
+\end{itemize}
+
+\subsubsection{UC7.1.3 - Visualizza Transazioni Cancellate}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni cancellate;
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni cancellate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni cancellate.
+\end{itemize}
+
+\subsubsection{UC7.2 - Visualizza Transazioni In Uscita}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'utente ha selezionato le transazioni in uscita;
+    \item Postcondizioni: l'utente ha visualizzato le transazioni in uscita;
+    \item Scenario principale: l'utente sceglie le transazioni in uscita per essere visualizzate;
+    \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni:
+    \begin{itemize}
+        \item visualizza transazioni non pagate [UC7.2.1];
+        \item visualizza transazioni pagate ma non sbloccate [UC7.2.2];
+        \item visualizza transazioni pagate e sbloccate [UC7.2.3].
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{UC7.2.1 - Visualizza Transazioni Non Pagate}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni non pagate;
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non pagate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni non pagate.
+\end{itemize}
+
+\subsubsection{UC7.2.2 - Visualizza Transazioni Pagate Ma Non Sbloccate}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate ma non sbloccate;
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate pagate ma non sbloccate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni pagate pagate ma non sbloccate.
+\end{itemize}
+
+\subsubsection{UC7.2.3 - Visualizza Transazioni Pagate e Sbloccate}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
     \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate e sbloccate;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate e sbloccate;
     \item Scenario principale: l'utente visualizza la lista di transazioni pagate e sbloccate.
 \end{itemize}
+
+\subsection{UC8 - Rimborso}
+
+%serve diagramma?
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Attore secondario: Metamask;
+    \item Precondizioni: l'utente ha connesso il proprio Metamask [UC4];
+    \item Postcondizioni: l'utente ha annullato l'ordine e i fondi vengono restituiti;
+    \item Scenario principale:
+    \begin{enumerate}
+        \item l'utente visualizza il pop-up di Metamask;
+        \item l'utente conferma l'operazione all'interno del pop-up;
+        \item viene annullato ogni versamento ed effettuati i rimborsi.
+    \end{enumerate}
+    \end{itemize}
+
+
 \clearpage
