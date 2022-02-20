@@ -49,17 +49,22 @@ gruppo che dall'azienda proponente sotto supervisione del gruppo stesso.
     TS1F5 &	Verificare che l'utente possa pagare correttamente. &	R1F5 &	NI \\
     TS1F5.1 &	Verificare che il versamento per il pagamento unico copra l'intera somma richiesta. &	R1F5.1 &	NI \\
     TS2F5.2 &	Verificare che il versamento per il pagamento tramite MoneyBox possa coprire solo una parte della somma richiesta. &	R2F5.2 &	NI \\
-    TS1F6 &	Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente. &	R1F6 &	NI \\
-    TS1F6.1 &	Verificare che, dopo la transazione, una fee percentuale venga destinata al pagamento delle gas fee\glo{} correttamente. &	R1F6.1 &	NI \\
+    TS1F6 &	Verificare che la richiesta di rimborso funzioni correttamente. &	R1F6 &	NI \\
     TS1F7 &	Verificare che l'acquirente possa sbloccare, correttamente, i fondi dallo Smart Contract dopo avvenuta ricezione. &	R1F7 &	NI \\
-    TS1F8 &	Verificare che il venditore possa visualizzare le transazioni. &	R1F8 &	NI \\
-    TS2F8.1 &	Verificare che il venditore possa visualizzare le transazioni non completate. &	R2F8.1 &	NI \\
-    TS1F8.2 &	Verificare che il venditore possa visualizzare le transazioni completate. &	R1F8.2 &	NI \\
-    TS2F8.2.1 &	Verificare che il venditore possa visualizzare le transazioni completate ma non ancora sbloccate. &	R2F8.2.1 &	NI \\
-    TS1F8.2.2 &	Verificare che il venditore possa visualizzare le transazioni completate e sbloccate. &	R1F8.2.2 &	NI \\
+    TS1F8 &	Verificare che l'utente possa visualizzare le transazioni. &	R1F8 &	NI \\
+    TS2F8.1 &	Verificare che il venditore possa visualizzare le transazioni in entrata pagate. & R2F8.1 &	NI \\
+    TS2F8.1.1 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate ma non sbloccate. & R2F8.1.1 &	NI \\
+    TS2F8.1.2 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate e sbloccate. & R2F8.1.2 &	NI \\
+    TS2F8.1.3 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate cancellate. & R2F8.1.3 &	NI \\
+    TS1F8.2 &	Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita. &	R1F8.2 & NI \\
+    TS2F8.2.1 &	Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita non pagate. & R2F8.2.1 &	NI \\
+    TS2F8.2.2 &	Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate ma non sbloccate. &	R2F8.2.2 &	NI \\
+    TS2F8.2.3 &	Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate e sbloccate. & R2F8.2.3 &	NI \\
+    TS2F8.2.4 &	Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita cancellate. &	R2F8.2.4 &	NI \\
     TS2F9 &	Verificare che si possa convertire correttamente l'ammontare depositato in stable coin. &	R2F9 &	NI \\
-    TS1F10 &	Verificare che la richiesta di un ordine venga caricata correttamente su una blockchain pubblica. &	R1V1 &	NI \\
-    TS1F11 &	Verificare che il pagamento e le transazioni siano gestite correttamente dallo smart contract. &	R1V2 &	NI \\
+    TS3F10 &	Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente. & R3F10 &	NI \\
+    TS1F11 &	Verificare che la richiesta di un ordine venga caricata correttamente su una blockchain pubblica. &	R1V1 &	NI \\
+    TS1F12 &	Verificare che il pagamento e le transazioni siano gestite correttamente dallo smart contract. &	R1V2 &	NI \\
   \end{tabular}
   \caption{Test di sistema}
 \end{table}
@@ -76,12 +81,8 @@ gruppo che dall'azienda proponente sotto supervisione del gruppo stesso.
     & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
     & \color[HTML]{FFFFFF}\textbf{Stato}\\
     \hline
-    TI1 & Verificare che il collegamento con il database\glo{} avvenga correttamente. & NI \\
-    TI2 & Verificare che la chiusura del collegamento con il database\glo{} avvenga correttamente. & NI \\
-    TI3 & Verificare che tutti i dati presenti nel database\glo{} siano raggiungibili. & NI \\
-    TI4 & Verificare che le query\glo{} per il recupero dei dati avvengano con successo. & NI \\
-    TI5 & Verificare che il collegamento con Metamask avvenga correttamente. & NI \\
-    TI6 & Verificare che il collegamento tra Front-End\glo{} e Smart Contract tramite libreria Web3.js avvenga correttamente. & NI \\
+    TI1 & Verificare che il collegamento con Metamask avvenga correttamente. & NI \\
+    TI2 & Verificare che il collegamento tra Front-End\glo{} e Smart Contract tramite libreria Web3.js avvenga correttamente. & NI \\
   \end{tabular}
   \caption{Test d'integrazione}
 \end{table}
