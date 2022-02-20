@@ -3,17 +3,17 @@
 \subsection{Scopo del Documento}
 Il presente documento ha lo scopo di raccogliere i casi d'uso ed i requisiti individuati dal gruppo
 durante la fase di analisi, riguardo il capitolato d'appalto proposto dall'azienda Sync Lab (C2).
-La formulazione segue le regole esposte nel documento \docNameNdP{}.
+La formulazione segue le regole esposte nel documento \docNameVersionNdP{}.
 
 \subsection{Scopo del Prodotto}
-L'obiettivo richiesto dall'azienda proponente è la realizzazione di una webApp\glo{} che permetta la gestione dei pagamenti per una piattaforma E-Commerce, tramite l'uso di Smart Contracts\glo{} basati sulla Blockchain\glo{} Fantom\glo{}.
-La decisione di sviluppare l'applicazione per la blockchain Fantom è stata presa dopo una attenta analisi delle possibili blockchain adatte alla costruzione di Smart Contract.
+L'obiettivo richiesto dall'azienda proponente è la realizzazione di una web app\glo{} che permetta la gestione dei pagamenti per una piattaforma e-commerce\glo{}, tramite l'uso di smart contracts\glo{} basati sulla blockchain\glo{} Fantom\glo{}.
+La decisione di sviluppare l'applicazione per la blockchain\glo{} Fantom\glo{} è stata presa dopo una attenta analisi delle possibili blockchain\glo{} adatte alla costruzione di smart contract\glo{}.
 L'applicazione sarà inoltre dotata di una funzione MoneyBox\glo{} per gestire pagamenti da più utenti per uno stesso prodotto.
 
 \subsection{Glossario}
-Nel documento possono essere presenti termini non ampiamente conosciuti o dal significato ambiguo. E' perciò stato creato
-un Glossario contente tali termini con il loro significato specifico. Un termine è presente
-all'interno del Glossario se seguito da una G corsiva in pedice.
+Nel documento possono essere presenti termini non ampiamente conosciuti o dal significato ambiguo.
+E' perciò stato creato un glossario contente tali termini con il loro significato specifico.
+Un termine è presente all'interno del glossario se seguito da una G corsiva in pedice.
 
 \subsection{Riferimenti}
 
@@ -21,34 +21,34 @@ all'interno del Glossario se seguito da una G corsiva in pedice.
 \begin{itemize}
     \item \textbf{\docNameVersionNdP{}};
     \item \textbf{Regolamento del progetto didattico}:
-    \begin{center}
-        \href{https://www.math.unipd.it/~tullio/IS-1/2021/Dispense/PD2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2021/Dispense/PD2.pdf}
-    \end{center}
+          \begin{center}
+              \href{https://www.math.unipd.it/~tullio/IS-1/2021/Dispense/PD2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2021/Dispense/PD2.pdf}
+          \end{center}
     \item \textbf{Documentazione Capitolato C2 - ShopChain}:
-    \begin{center}
-        \href{https://www.math.unipd.it/~tullio/IS-1/2021/Progetto/C2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2021/Progetto/C2.pdf}
-    \end{center}
+          \begin{center}
+              \href{https://www.math.unipd.it/~tullio/IS-1/2021/Progetto/C2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2021/Progetto/C2.pdf}
+          \end{center}
 \end{itemize}
 
 \paragraph{Informativi}
 \begin{itemize}
     \item \textbf{\docNameVersionPdP{}};
     \item \textbf{Analisi dei requisiti - slide T7 del corso di Ingegneria del Software}:
-    \begin{center}
-        \href{https://www.math.unipd.it/~tullio/IS-1/2021/Dispense/T07.pdf}{https://www.math.unipd.it/~tullio/IS-1/2021/Dispense/T07.pdf}
-    \end{center}
+          \begin{center}
+              \href{https://www.math.unipd.it/~tullio/IS-1/2021/Dispense/T07.pdf}{https://www.math.unipd.it/~tullio/IS-1/2021/Dispense/T07.pdf}
+          \end{center}
     \item \textbf{Analisi e descrizione delle funzionalità: diagrammi dei casi d'uso - slide P4 del corso di Ingegneria del Software}:
-    \begin{center}
-        \href{https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf}{https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi\%20Use\%20Case.pdf}
-    \end{center}
+          \begin{center}
+              \href{https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf}{https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi\%20Use\%20Case.pdf}
+          \end{center}
     \item \textbf{Corso su Blockchain di UNIVR fornito dall'azienda}:
-    \begin{center}
-        \href{https://univr.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1c8bb888-fca4-48bd-85af-acc700e40484}{https://univr.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1c8bb888-fca4-48bd-85af-acc700e40484}
-    \end{center}
+          \begin{center}
+              \href{https://univr.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1c8bb888-fca4-48bd-85af-acc700e40484}{https://univr.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1c8bb888-fca4-48bd-85af-acc700e40484}
+          \end{center}
     \item \textbf{Documentazione del linguaggio Solidity\glo{}}:
-    \begin{center}
-        \href{https://docs.soliditylang.org/en/v0.7.4/introduction-to-smart-contracts.html}{https://docs.soliditylang.org/en/v0.7.4/introduction-to-smart-contracts.html}
-    \end{center}
+          \begin{center}
+              \href{https://docs.soliditylang.org/en/v0.7.4/introduction-to-smart-contracts.html}{https://docs.soliditylang.org/en/v0.7.4/introduction-to-smart-contracts.html}
+          \end{center}
 \end{itemize}
 
 \clearpage
