@@ -3,41 +3,41 @@
 \input{../template/source/styles}
 
 \begin{document}
-	%RIDEFINIZIONE COMANDI
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\renewcommand{\documentName}{Norme di Progetto}
-	\renewcommand{\documentVersion}{1.0.0}
-	
-	\renewcommand{\documentApprovers}{Dario Furlan}
-	\renewcommand{\documentEditors}{Luca Busacca\\&Francesco Mattarello}
-	\renewcommand{\documentVerifiers}{Francesco Bugno\\& Luca Carturan}
-	
-	\renewcommand{\documentUsage}{Interno}
-	\renewcommand{\documentAddressee}{\commitNameM\\&\commitNameS\\&\proposerName}
-	\renewcommand{\documentSummary}{Questo documento raccoglie le regole, gli strumenti e le convenzioni adottate dal gruppo Yakuzaishi definendone il \textit{way of working}.}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	%PRIMA PAGINA
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\pagenumbering{gobble}
-	\pagestyle{empty}
-	\input{../template/source/firstpage}
-	\pagebreak
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	%CHANGELOG E INDICI
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\input{contenuto/changelog} \pagebreak
-	
-	\renewcommand{\contentsname}{Contenuti}
-	\tableofcontents \pagebreak
-	\listoftables \pagebreak
-	\listoffigures \pagebreak
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	%CONTENUTO
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\pagestyle{styleDocPages}
-	\input{contenuto/contenuto}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%RIDEFINIZIONE COMANDI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\documentName}{Norme di Progetto}
+\renewcommand{\documentVersion}{1.0.0}
+
+\renewcommand{\documentApprovers}{Dario Furlan}
+\renewcommand{\documentEditors}{Luca Busacca\\&Francesco Mattarello}
+\renewcommand{\documentVerifiers}{Francesco Bugno\\& Luca Carturan}
+
+\renewcommand{\documentUsage}{Interno}
+\renewcommand{\documentAddressee}{\commitNameM\\&\commitNameS\\&\proposerName}
+\renewcommand{\documentSummary}{Questo documento raccoglie le regole, gli strumenti e le convenzioni adottate dal gruppo \groupName\ definendone il \textit{way of working}.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%PRIMA PAGINA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{gobble}
+\pagestyle{empty}
+\input{../template/source/firstpage}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%CHANGELOG E INDICI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{contenuto/changelog} \pagebreak
+
+\renewcommand{\contentsname}{Contenuti}
+\tableofcontents \pagebreak
+\listoftables \pagebreak
+\listoffigures \pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%CONTENUTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{styleDocPages}
+\input{contenuto/contenuto}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
