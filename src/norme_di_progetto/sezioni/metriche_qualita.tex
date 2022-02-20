@@ -89,7 +89,7 @@ La formula adottata è la seguente:
 \begin{center}
     $GULP = 89 + \displaystyle \frac{300*(totale\ frasi)-10*(totale\ lettere)}{(totale\ parole)}$
 \end{center}
-L’indice così calcolato può assumere valori tra 0 e 100:
+L'indice così calcolato può assumere valori tra 0 e 100:
 \begin{itemize}
     \item \textbf{GULP $<$ 80:} indica una leggibilità difficile per un utente con licenza elementare;
     \item \textbf{GULP $<$ 60:} indica una leggibilità difficile per un utente con licenza media;
@@ -106,93 +106,42 @@ Il controllo ortografico viene eseguito secondo quanto descritto in \ref{verific
 Indice che misura in ogni istante la percentuale di requisiti obbligatori soddisfatti.
 La formula adottata è la seguente:
 \begin{center}
-    $CRO = \displaystyle \frac{ROC}{RO}*100$
+    $CROB = \displaystyle \frac{ROBC}{ROB}*100$
 \end{center}
 dove:
 \begin{itemize}
-    \item \textbf{ROC:} indica il numero di requisiti obbligatori coperti dall'implementazione;
-    \item \textbf{RO:} indica il numero complessivo di requisiti obbligatori.
+    \item \textbf{ROBC:} indica il numero di requisiti obbligatori coperti dall'implementazione;
+    \item \textbf{ROB:} indica il numero complessivo di requisiti obbligatori.
 \end{itemize}
 
-\subsubsection{MPD04: Copertura requisiti opzionali accettati}
-Indice che misura in ogni istante la percentuale di requisiti opzionali accettati soddisfatti.
+\subsubsection{MPD04: Copertura requisiti desiderabili}
+Indice che misura in ogni istante la percentuale di requisiti desiderabili soddisfatti.
 La formula adottata è la seguente:
 \begin{center}
-    $CRA = \displaystyle \frac{RAC}{RA}*100$
+    $CRD = \displaystyle \frac{RDC}{RD}*100$
 \end{center}
 dove:
 \begin{itemize}
-    \item \textbf{ROC:} indica il numero di requisiti opzionali accettati coperti dall'implementazione;
-    \item \textbf{RO:} indica il numero complessivo di requisiti opzionali accettati.
+    \item \textbf{RDC:} indica il numero di requisiti desiderabili coperti dall'implementazione;
+    \item \textbf{RD:} indica il numero complessivo di requisiti opzionali.
 \end{itemize}
 
-\subsubsection{MPD05: Densità di failure}
-Percentuale che indica l'affidabilità del prodotto e si può ricavare dalla percentuale di test falliti sui test eseguiti.
+\subsubsection{MPD05: Copertura requisiti opzionali}
+Indice che misura in ogni istante la percentuale di requisiti opzionali soddisfatti.
 La formula adottata è la seguente:
 \begin{center}
-    $DF = \displaystyle \frac{Tfail}{Ttot}*100$
+    $CROP = \displaystyle \frac{ROPC}{ROP}*100$
 \end{center}
 dove:
 \begin{itemize}
-    \item \textbf{Tfail} indica il numero di test eseguiti sul programma ma falliti;
-    \item \textbf{Ttot} indica il numero complessivo di test eseguiti sul programma.
+    \item \textbf{ROPC:} indica il numero di requisiti opzionali accettati coperti dall'implementazione;
+    \item \textbf{ROP:} indica il numero complessivo di requisiti opzionali accettati.
 \end{itemize}
 
-\subsubsection{MPD06: Numero di bug}
-Numero di righe di codice che potrebbero comportare un comportamento imprevisto o diverso da quello desiderato.
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD07: Remediation effort}
-Lavoro necessario a risolvere bug. Il valore viene misurato in ore di lavoro.
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD08: Complessità cognitiva}
-Misura della difficoltà di comprensione del codice.
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD09: Complessità ciclomatica}
-Indice software utilizzato per stimare la complessità di un programma attraverso l’analisi del codice sorgente.
-Viene calcolata impiegando il grafo del flusso di controllo, dove:
-\begin{itemize}
-    \item i nodi sono gruppi indivisibili di istruzioni;
-    \item un arco connette due nodi se le istruzioni di un nodo possono essere eseguite subito dopo le istruzioni dell’altro.
-\end{itemize}
-Un valore troppo elevato di tale metrica è il risultato di codice troppo complesso, difficilmente testabile e manutenibile.
-Esistono due metodologie per calcolare la complessità ciclomatica; il primo adotta la formula:
-\begin{center}
-    $V(G) = \displaystyle E - N + 2P$
-\end{center}
-dove:
-\begin{itemize}
-    \item \textbf{E} è il numero di archi;
-    \item \textbf{N} è il numero di nodi;
-    \item \textbf{N} è il numero di di componenti connesse.
-\end{itemize}
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD10: Facilità di utilizzo}
+\subsubsection{MPD06: Facilità di utilizzo}
 Numero di click necessari con cui l'utente raggiunge la funzionalità cercata.
 
-\subsubsection{MPD11: Facilità di apprendimento}
-Numero di minuti necessari all'utente per apprendere le funzionalità del prodotto software.
-
-\subsubsection{MPD12: Tempo medio di risposta}
-Tempo medio impiegato dal software per rispondere a una richiesta utente o svolgere un'attività di sistema.
-
-\subsubsection{MPD13: Numero di code smell}
-Numero di code smell individuati, corrispondenti a righe di codice difficilmente estendibili.
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD14: Technical Debt}
-Lavoro necessario a sanare code smell. Il valore viene misurato in ore di lavoro.
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD15: Densità di duplicazione}
-Percentuale di righe di codice ripetute tra i vari file sorgente.
-Un alto valore di questo indice significa una bassa qualità del codice prodotto e una sua bassa ottimizzazione.
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD16: Versioni browser supportate}
+\subsubsection{MPD07: Versioni browser supportate}
 Percentuale di versioni di browser supportate dal prodotto.
 Calcolabile con la seguente formula:
 \begin{center}
@@ -203,39 +152,3 @@ dove:
     \item \textbf{Bsup} indica il numero di browser in cui il prodotto può essere eseguito;
     \item \textbf{Btot} indica il numero complessivo di browser presi in considerazione.
 \end{itemize}
-
-\subsubsection{MPD17: Successo dei test}
-Percentuale di test implementati e superati correttamente.
-La formula adottata è la seguente:
-\begin{center}
-    $PST = \displaystyle \frac{Tsup}{Ttot}*100$
-\end{center}
-dove:
-\begin{itemize}
-    \item \textbf{Tsup} indica il numero di test superati;
-    \item \textbf{Ttot} indica il numero complessivo di test implementati.
-\end{itemize}
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD18: Line coverage}
-Percentuale di linee di codice verificate da test automatici.
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD19: Branch coverage}
-Percentuale del rapporto tra tutte le possibili deviazioni del flusso del codice (costrutti if else, operatori ternari, lancio di eccezioni e altre istruzioni similari).
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
-
-\subsubsection{MPD20: Code coverage}
-Percentuale di copertura del codice sorgente da parte dei test. Si ricava da diversi fattori di coverage secondo la seguente formula:
-\begin{center}
-    $coverage = \displaystyle \frac{CT + CF + LC}{2 * B + EL}$
-\end{center}
-dove:
-\begin{itemize}
-    \item \textbf{CT} indica i branch valutati positivi almeno una volta;
-    \item \textbf{CF} indica i branch valutati negativi almeno una volta;
-    \item \textbf{LC} indica le righe di codice coperte da test;
-    \item \textbf{B} indica il numero totale di branch;
-    \item \textbf{EL} indica il numero totale di righe di codice da coprire coi test.
-\end{itemize}
-La metrica viene rilevata automaticamente mediante l’utilizzo di {SonarCloud}\glo.
