@@ -76,8 +76,6 @@ La formula adottata è la seguente:
 \subsubsection{MPC11: Risks Found}
 Indica il numero di rischi incontrati in un determinato periodo.
 
-\vspace{2cm}
-
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Metriche per la qualità di prodotto} \label{subsection:qualita_prodotto}
@@ -152,3 +150,22 @@ dove:
     \item \textbf{Bsup} indica il numero di browser in cui il prodotto può essere eseguito;
     \item \textbf{Btot} indica il numero complessivo di browser presi in considerazione.
 \end{itemize}
+
+\subsubsection{MPD08: Solidity Statement Coverage}
+Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.\\
+Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.\\
+Il valore è stato calcolato per mezzo di solidity-coverage.
+
+\subsubsection{MPD09: Solidity Branch Coverage}
+Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.\\
+Il valore è stato calcolato per mezzo di solidity-coverage.
+
+\subsubsection{MPD10: Solidity Function Coverage}
+Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.\\
+Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.\\
+Il valore è stato calcolato per mezzo di solidity-coverage.
+
+\subsubsection{MPD11: Solidity Line Coverage}
+Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.\\
+Vengono considerate solo le righe che contengono istruzioni eseguibili.
+Il valore è stato calcolato per mezzo di solidity-coverage.
