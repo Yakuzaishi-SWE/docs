@@ -1,0 +1,230 @@
+\section{Specifica dei test}\label{section:specifica_test}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Test di accettazione}\label{subsection:test_accettazione}
+I test di accettazione sono necessari per dimostrare che il prodotto soddisfi i requisiti minimi concordati con il proponente. \\
+Essi si compongono dei test di sistema e vengono eseguiti durante il collaudo finale sia dai membri del
+gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Test di sistema}\label{subsection:test_sistema}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+              & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+              & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
+              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                  \\
+    \hline
+    TS1F1     & Verificare che la richiesta di checkout da un E-Commerce avvenga correttamente.                                     & R1F1     & NI \\
+    TS1F2     & Verificare che l'utente visualizzi correttamente le diverse tipologie di pagamento.                                 & R1F2     & NI \\
+    TS1F2.1   & Verificare che l'utente possa scegliere la tipologia di pagamento unico correttamente.                              & R1F2.1   & NI \\
+    TS1F2.2   & Verificare che l'utente possa scegliere la tipologia di pagamento MoneyBox correttamente.                           & R1F2.2   & NI \\
+    TS2F2.2.1 & Verificare che l'utente possa visualizzare lo stato di completamento della MoneyBox correttamente.                  & R2F2.2.1 & NI \\
+    TS2F2.2.2 & Verificare che l'utente possa visualizzare l'invito di partecipazione alla MoneyBox correttamente.                  & R2F2.2.2 & NI \\
+    TS3F2.2.3 & Verificare che l'utente possa visualizzare una traduzione visiva della MoneyBox correttamente.                      & R3F2.2.3 & NI \\
+    TS2F2.2.4 & Verificare che in caso di chiusura della MoneyBox i soldi vengano restituiti correttamente.                         & R2F2.2.4 & NI \\
+    TS2F2.2.5 & Verificare che l'utente possa visualizzare l'elenco delle transazione dei partecipanti alla MoneyBox correttamente. & R2F2.2.5 & NI \\
+    TS1F3     & Verificare che l'utente possa visualizzare il totale dell'ordine correttamente.                                     & R1F3     & NI \\
+    TS1F4     & Verificare che l'utente possa effettuare la connessione a Metamask correttamente.                                   & R1F4     & NI \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+              & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+              & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
+              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                 \\
+    \hline
+    TS1F5     & Verificare che l'utente possa pagare correttamente.                                                                & R1F5     & NI \\
+    TS1F5.1   & Verificare che il versamento per il pagamento unico copra l'intera somma richiesta.                                & R1F5.1   & NI \\
+    TS2F5.2   & Verificare che il versamento per il pagamento tramite MoneyBox possa coprire solo una parte della somma richiesta. & R2F5.2   & NI \\
+    TS1F6     & Verificare che la richiesta di rimborso funzioni correttamente.                                                    & R1F6     & NI \\
+    TS1F7     & Verificare che l'acquirente possa sbloccare, correttamente, i fondi dallo Smart Contract dopo avvenuta ricezione.  & R1F7     & NI \\
+    TS1F8     & Verificare che l'utente possa visualizzare le transazioni.                                                         & R1F8     & NI \\
+    TS2F8.1   & Verificare che il venditore possa visualizzare le transazioni in entrata pagate.                                   & R2F8.1   & NI \\
+    TS2F8.1.1 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate ma non sbloccate.                  & R2F8.1.1 & NI \\
+    TS2F8.1.2 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate e sbloccate.                       & R2F8.1.2 & NI \\
+    TS2F8.1.3 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate cancellate.                        & R2F8.1.3 & NI \\
+    TS1F8.2   & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita.                            & R1F8.2   & NI \\
+    TS2F8.2.1 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita non pagate.                 & R2F8.2.1 & NI \\
+    TS2F8.2.2 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate ma non sbloccate.    & R2F8.2.2 & NI \\
+    TS2F8.2.3 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate e sbloccate.         & R2F8.2.3 & NI \\
+    TS2F8.2.4 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita cancellate.                 & R2F8.2.4 & NI \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+           & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+           & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
+           & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                      \\
+    \hline
+    TS2F9  & Verificare che si possa convertire correttamente l'ammontare depositato in stable coin.                    & R2F9  & NI \\
+    TS3F10 & Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente. & R3F10 & NI \\
+    TS1F11 & Verificare che la richiesta di un ordine venga caricata correttamente su una blockchain pubblica.          & R1V1  & NI \\
+    TS1F12 & Verificare che il pagamento e le transazioni siano gestite correttamente dallo smart contract.             & R1V2  & NI \\
+  \end{tabular}
+  \caption{Test di sistema}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Test d'integrazione}\label{subsection:test_integrazione}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+        & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+        & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                       \\
+    \hline
+    TI1 & Verificare che il collegamento con Metamask avvenga correttamente.                                                  & NI \\
+    TI2 & Verificare che il collegamento tra Front-End\glo{} e Smart Contract tramite libreria Web3.js avvenga correttamente. & NI \\
+  \end{tabular}
+  \caption{Test d'integrazione}
+\end{table}
+
+\vspace{1cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Test di unità}\label{subsection:test_unita}
+Per garantire il corretto funzionamento di ogni minimo componente autonomo del sistema vengono eseguiti i test di unità. \\
+Fino a questo momento sono stati presi in considerazione esclusivamente i test eseguiti su linguaggio Solidity\glo{}.
+I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Progettazione di dettaglio e codifica requisiti obbligatori}.
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{10cm}|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+         & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                    \\
+    \hline
+    TU01 & Si verifica che il contatore degli ordini sia inizializzato a zero.                                                               & S \\
+    TU02 & Si verifica che l'ordine creato sia corretto.                                                                                     & S \\
+    TU03 & Si verifica che il contratto abbia ricevuto l'ammontare stabilito.                                                                & S \\
+    TU04 & Si verifica che l'ordine sia stato registrato correttamente in blockchain.                                                        & S \\
+    TU05 & Si verifica il caso fallimentare in cui l'utente tenta di inviare un importo inferiore a quello richiesto.                        & S \\
+    TU06 & Si verifica il caso fallimentare in cui l'utente prova a registrare un ordine che ha come venditore se stesso.                    & S \\
+    TU07 & Si verifica il caso fallimentare in cui l'utente prova a inviare un ammontare pari a zero.                                        & S \\
+    TU08 & Si verifica il caso fallimentare in cui l'utente prova a inviare un ammontare negativo.                                           & S \\
+    TU09 & Si verifica il caso fallimentare in cui l'utente non ha abbastanza fondi.                                                         & S \\
+    TU10 & Si verifica il caso fallimentare in cui il frontend richiede la creazione di un ordine con un id precedentemente usato.           & S \\
+    TU11 & Si verifica che lo stato dell'ordine sia modificato e settato su "CLOSED" una volta confermata la ricezione dall'acquirente.      & S \\
+    TU12 & Si verifica che il venditore abbia ricevuto i fondi correttamente una volta confermata la ricezione dall'acquirente.              & S \\
+    TU13 & Si verifica il caso fallimentare in cui l'utente tenta di confermare la ricezione di un ordine con id inesistente.                & S \\
+    TU14 & Si verifica il caso fallimentare in cui il codice di sblocco non coincide con quello registrato in blockchain.                    & S \\
+    TU15 & Si verifica il caso fallimentare in cui l'ordine viene confermato da un utente con indirizzo differente da quello del compratore. & S \\
+    TU16 & Si verifica che il rimborso sia richiesto dal compratore una volta settato su "CANCELLED" lo stato dell'ordine.                   & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{10cm}|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+         & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                               \\
+    \hline
+    TU17 & Si verifica che il rimborso sia richiesto dal venditore una volta settato su "CANCELLED" lo stato dell'ordine.                              & S  \\
+    TU18 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal compratore.                        & S  \\
+    TU19 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal venditore.                           & S  \\
+    TU20 & Si verifica il caso fallimentare in cui non è possibile restituire l'ammontare di un ordine che non si trova nello stato "FILLED" (PAGATO). & NI \\
+    TU21 & Si verifica il caso fallimentare in cui non è possibile chiedere il rimborso di un ordine chiuso.                                           & NI \\
+    TU22 & Si verifica il caso fallimentare in cui un utente con indirizzo diverso da quello del compratore o venditore richiede il rimborso.          & NI \\
+    TU23 & Si verifica che venga restituito correttamente il saldo del contratto.                                                                      & S  \\
+    TU24 & Si verifica che venga restituito correttamente l'address dell'acquirente.                                                                   & S  \\
+    TU25 & Si verifica che venga restituito correttamente l'address del venditore.                                                                     & S  \\
+    TU26 & Si verifica che venga restituito correttamente l'ammontare da pagare.                                                                       & S  \\
+    TU27 & Si verifica che venga restituito correttamente l'ammontare pagato.                                                                          & S  \\
+    TU28 & Si verifica che venga restituito correttamente lo stato dell'ordine effettuato.                                                             & S  \\
+    TU29 & Si verifica che venga restituito correttamente l'id dell'ordine effettuato.                                                                 & S  \\
+    TU30 & Si verifica che venga restituito correttamente l'ordine dell'acquirente.                                                                    & S  \\
+    TU31 & Si verifica che venga restituito correttamente l'ordine del venditore.                                                                      & S  \\
+  \end{tabular}
+  \caption{Test di unità - Solidity}
+\end{table}
+
+
+
+\subsubsection{Tracciamento test di unità - Solidity}\label{subsubsection:tracciamento_test_unita}
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                       \\
+    \hline
+    TU01 & smart-contract/test/ShopChain.test.js:getOrderCount()                                                                                         \\
+    TU02 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id1,{from:buyer,\newline value:ether\_1})                                      \\
+    TU03 & smart-contract/test/ShopChain.test.js:equal(expectedBalance.toString(),\newline newContractBalance.toString(),"contract is correctly filled") \\
+    TU04 & smart-contract/test/ShopChain.test.js:getOrderById(id1)                                                                                       \\
+    TU05 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id2,{from:buyer,\newline value:ether\_half})                                   \\
+    TU06 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id2,{from:seller,\newline value:ether\_1})                                     \\
+    TU07 & smart-contract/test/ShopChain.test.js:newOrder(seller,0,id2,{from:seller,\newline value:ether\_1})                                            \\
+    TU08 & smart-contract/test/ShopChain.test.js:newOrder(seller,-1,id2,{from:buyer,\newline value:ether\_1})                                            \\
+    TU09 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_big,id2,{from:buyer,\newline value:ether\_big})                                  \\
+    TU10 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id1,{from:buyer,\newline value:ether\_1})                                      \\
+    TU11 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:buyer})                                                            \\
+    TU12 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:buyer})                                                            \\
+    TU13 & smart-contract/test/ShopChain.test.js:confirmReceived(id2,unlockCode,{from:buyer})                                                            \\
+    TU14 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,12345,{from:buyer})                                                                 \\
+    TU15 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:seller})                                                           \\
+    TU16 & smart-contract/test/ShopChain.test.js:refund(id1,{from:buyer})                                                                                \\
+    TU17 & smart-contract/test/ShopChain.test.js:refund(id1,{from:seller})                                                                               \\
+    TU18 & smart-contract/test/ShopChain.test.js:refund(id1,{from:buyer})                                                                                \\
+    TU19 & smart-contract/test/ShopChain.test.js:refund(id1,{from:seller})                                                                               \\
+    TU23 & smart-contract/test/ShopChain.test.js:contractBalance()                                                                                       \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                       \\
+    \hline
+    TU24 & smart-contract/test/ShopChain.test.js:getOwnerAddress(id1)                                                                                    \\
+    TU25 & smart-contract/test/ShopChain.test.js:getSellerAddress(id1)                                                                                   \\
+    TU26 & smart-contract/test/ShopChain.test.js:getAmountToPay(id1)                                                                                     \\
+    TU27 & smart-contract/test/ShopChain.test.js:getAmountPaid(id1)                                                                                      \\
+    TU28 & smart-contract/test/ShopChain.test.js:getOrderState(id1)                                                                                      \\
+    TU29 & smart-contract/test/ShopChain.test.js:getOrderById(id1)                                                                                       \\
+    TU30 & smart-contract/test/ShopChain.test.js:getOrdersByBuyer(buyer)                                                                                 \\
+    TU31 & smart-contract/test/ShopChain.test.js:getOrdersBySeller(seller)                                                                               \\
+  \end{tabular}
+  \caption{Tracciamento test di unità - metodi Solidity}
+\end{table}

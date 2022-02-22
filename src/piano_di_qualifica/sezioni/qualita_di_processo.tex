@@ -1,0 +1,116 @@
+\section{Qualità di processo}\label{section:qualita_processo}
+Per garantire la qualità dei processi, è stato scelto di utilizzare come riferimento lo standard 
+\href{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}{ISO/IEC 12207:1997}, 
+dal quale sono stati semplificati e adattati alle necessità alcuni dei processi in esso elencati.\\
+In questa sezione vengono esposti i valori ottimali e accettabili riguardanti le metriche scelte,
+per consultare nel dettaglio le metriche sotto riportate, fare riferimento al documento \docNameVersionNdP{}.
+
+\subsection{Obiettivi di qualità di processo}\label{subsection:obiettivi_processo}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|p{2cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Obiettivo}
+    & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+    & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metriche}}\\
+    \hline
+    \rowcolor[HTML]{6BC26B}
+    \multicolumn{3}{c}{\textbf{Processi primari}}\\
+    \hline
+    \textbf{Fornitura} & Processo che consiste nel decidere procedure e risorse adatte a soddisfare le necessità del cliente.  & MPC01 MPC02 MPC03 MPC04 MPC05 MPC06 MPC07\\
+    \textbf{Sviluppo} & Processo che ha lo scopo di sviluppare un prodotto software che indirizzi le esigenze del cliente. & MPC08 \\
+    \hline
+    \rowcolor[HTML]{6BC26B}
+    \multicolumn{3}{c}{\textbf{Processi di supporto}}\\
+    \hline
+    \textbf{Verifica} & Processo che ha lo scopo di confermare che ciascun servizio realizzato soddisfi i requisiti specificati. & MPC09\\
+    \textbf{Gestione della qualità} & Processo che ha lo scopo di assicurare che il prodotto e i servizi offerti siano conformi agli standard definiti. & MPC10\\
+    \hline
+    \rowcolor[HTML]{6BC26B}
+    \multicolumn{3}{c}{\textbf{Processi organizzativi}}\\
+    \textbf{Gestione organizzativa} & Processo che si occupa di esporre le modalità di coordinamento del gruppo. & MPC11\\
+  \end{tabular}
+  \caption{Obiettivi di qualità di processo}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Metriche utilizzate}\label{subsection:metriche_processo}
+
+\subsubsection{Processi primari}\label{subsubsection:metriche_processi_primari}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{6cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+    & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Nome metrica}}
+    & \color[HTML]{FFFFFF}\textbf{Valore accettabile}
+    & \color[HTML]{FFFFFF}\textbf{Valore ottimale}\\
+    \hline
+    \rowcolor[HTML]{6BC26B}
+    \multicolumn{4}{c}{\textbf{Fornitura}}\\
+    \hline
+    MPC01 & Earned Value (EV) & $> 0$ & $\le EAC$ \\
+    MPC02 & Actual Cost (AC) & $\ge 0$ & $\le EAC$ \\
+    MPC03 & Planned Value (PV) & $\ge 0$ & $\le BAC$ \\
+    MPC04 & Cost Variance (CV) & $\ge -10\%$ & $\ge 0\%$ \\
+    MPC05 & Schedule Variance (SV) & $\ge -10\%$ & $\ge 0\%$ \\
+    MPC06 & Estimated At Completion (EAC) & $\ge BAC - 3\%; \le BAC + 3\%$ & $= BAC$ \\
+    MPC07 & Estimate To Complete (ETC) & $\ge 0$ & $\le EAC$ \\
+    \hline
+    \rowcolor[HTML]{6BC26B}
+    \multicolumn{4}{c}{\textbf{Sviluppo}}\\
+    \hline
+    MPC08 & Requirements Stability Index (RSI) & $\ge 80\%$ & $100\%$ \\ 
+  \end{tabular}
+  \caption{Metriche di qualità dei processi primari}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Processi di supporto}\label{sssec:metriche_processi_supporto}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{6cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+    & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Nome metrica}}
+    & \color[HTML]{FFFFFF}\textbf{Valore accettabile}
+    & \color[HTML]{FFFFFF}\textbf{Valore ottimale}\\
+    \hline
+    \rowcolor[HTML]{6BC26B}
+    \multicolumn{4}{c}{\textbf{Verifica}}\\
+    \hline
+    MPC09 & Passed Tests & $\ge 80\%$ & $100\%$ \\
+    \hline
+    \rowcolor[HTML]{6BC26B}
+    \multicolumn{4}{c}{\textbf{Gestione della qualità}}\\
+    \hline
+    MPC10 & Metrics Satisfied & $\ge 85\%$ & $100\%$\\
+  \end{tabular}
+  \caption{Metriche di qualità dei processi di supporto}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Processi organizzativi}\label{sssec:metriche_processi_organizzativi}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{6cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+    & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Nome metrica}}
+    & \color[HTML]{FFFFFF}\textbf{Valore accettabile}
+    & \color[HTML]{FFFFFF}\textbf{Valore ottimale}\\
+    \hline
+    \rowcolor[HTML]{6BC26B}
+    \multicolumn{4}{c}{\textbf{Gestione organizzativa}}\\
+    \hline
+    MPC11 & Risks Found & $\le 5$ & $0$ \\
+  \end{tabular}
+  \caption{Metriche di qualità dei processi organizzativi}
+\end{table}
