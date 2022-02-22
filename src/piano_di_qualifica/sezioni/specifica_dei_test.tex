@@ -178,34 +178,31 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \centering
   \renewcommand{\arraystretch}{1.8}
   \rowcolors{2}{green!100!black!40}{green!100!black!30}
-  \begin{tabular}{c|p{16cm}}
+  \begin{tabular}{c|p{15cm}}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                             \\
+         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                       \\
     \hline
-    TU01 & smart-contract/test/ShopChain.test.js:getOrderCount()                                               \\
-    TU02 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id1,{from:buyer,value:ether\_1})     \\
-    TU03 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id1,{from:buyer,value:ether\_1})     \\
-    TU04 & smart-contract/test/ShopChain.test.js:getOrderById(id1)                                             \\
-    TU05 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id2,{from:buyer,value:ether\_half})  \\
-    TU06 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id2,{from:seller,value:ether\_1})    \\
-    TU07 & smart-contract/test/ShopChain.test.js:newOrder(seller,0,id2,{from:seller,value:ether\_1})           \\
-    TU08 & smart-contract/test/ShopChain.test.js:newOrder(seller,-1,id2,{from:buyer,value:ether\_1})           \\
-    TU09 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_big,id2,{from:buyer,value:ether\_big}) \\
-    TU10 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id1,{from:buyer,value:ether\_1})     \\
-    TU11 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:buyer})                  \\
-    TU12 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:buyer})                  \\
-    TU13 & smart-contract/test/ShopChain.test.js:confirmReceived(id2,unlockCode,{from:buyer})                  \\
-    TU14 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,12345,{from:buyer})                       \\
-    TU15 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:seller})                 \\
-    TU16 & smart-contract/test/ShopChain.test.js:refund(id1,{from:buyer})                                      \\
-    TU17 & smart-contract/test/ShopChain.test.js:refund(id1,{from:seller})                                     \\
-    TU18 & smart-contract/test/ShopChain.test.js:refund(id1,{from:buyer})                                      \\
-    TU19 & smart-contract/test/ShopChain.test.js:refund(id1,{from:seller})                                     \\
-    TU20 & smart-contract/test/ShopChain.test.js:                                                              \\
-    TU21 & smart-contract/test/ShopChain.test.js:                                                              \\
-    TU22 & smart-contract/test/ShopChain.test.js:                                                              \\
-    TU23 & smart-contract/test/ShopChain.test.js:contractBalance()                                             \\
+    TU01 & smart-contract/test/ShopChain.test.js:getOrderCount()                                                                                         \\
+    TU02 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id1,{from:buyer,\newline value:ether\_1})                                      \\
+    TU03 & smart-contract/test/ShopChain.test.js:equal(expectedBalance.toString(),\newline newContractBalance.toString(),"contract is correctly filled") \\
+    TU04 & smart-contract/test/ShopChain.test.js:getOrderById(id1)                                                                                       \\
+    TU05 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id2,{from:buyer,\newline value:ether\_half})                                   \\
+    TU06 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id2,{from:seller,\newline value:ether\_1})                                     \\
+    TU07 & smart-contract/test/ShopChain.test.js:newOrder(seller,0,id2,{from:seller,\newline value:ether\_1})                                            \\
+    TU08 & smart-contract/test/ShopChain.test.js:newOrder(seller,-1,id2,{from:buyer,\newline value:ether\_1})                                            \\
+    TU09 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_big,id2,{from:buyer,\newline value:ether\_big})                                  \\
+    TU10 & smart-contract/test/ShopChain.test.js:newOrder(seller,ether\_1,id1,{from:buyer,\newline value:ether\_1})                                      \\
+    TU11 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:buyer})                                                            \\
+    TU12 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:buyer})                                                            \\
+    TU13 & smart-contract/test/ShopChain.test.js:confirmReceived(id2,unlockCode,{from:buyer})                                                            \\
+    TU14 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,12345,{from:buyer})                                                                 \\
+    TU15 & smart-contract/test/ShopChain.test.js:confirmReceived(id1,unlockCode,{from:seller})                                                           \\
+    TU16 & smart-contract/test/ShopChain.test.js:refund(id1,{from:buyer})                                                                                \\
+    TU17 & smart-contract/test/ShopChain.test.js:refund(id1,{from:seller})                                                                               \\
+    TU18 & smart-contract/test/ShopChain.test.js:refund(id1,{from:buyer})                                                                                \\
+    TU19 & smart-contract/test/ShopChain.test.js:refund(id1,{from:seller})                                                                               \\
+    TU20 & smart-contract/test/ShopChain.test.js:                                                                                                        \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -215,11 +212,14 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \centering
   \renewcommand{\arraystretch}{1.8}
   \rowcolors{2}{green!100!black!40}{green!100!black!30}
-  \begin{tabular}{c|p{14cm}}
+  \begin{tabular}{c|p{15cm}}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}         \\
     \hline
+    TU21 & smart-contract/test/ShopChain.test.js:                          \\
+    TU22 & smart-contract/test/ShopChain.test.js:                          \\
+    TU23 & smart-contract/test/ShopChain.test.js:contractBalance()         \\
     TU24 & smart-contract/test/ShopChain.test.js:getOwnerAddress(id1)      \\
     TU25 & smart-contract/test/ShopChain.test.js:getSellerAddress(id1)     \\
     TU26 & smart-contract/test/ShopChain.test.js:getAmountToPay(id1)       \\
