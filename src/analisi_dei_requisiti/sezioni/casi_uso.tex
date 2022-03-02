@@ -12,7 +12,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-Attori.png}
-    \caption{Diagramma degli Attori.}
+    \caption{Diagramma degli attori}
 \end{figure}
 
 \subsection{UC1 - Inizializzazione della Transazione}\label{subsection: UC1}
@@ -20,7 +20,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-UC1.png}
-    \caption{UC1.}
+    \caption{UC1}
 \end{figure}
 
 \begin{itemize}
@@ -30,126 +30,28 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: L'e-commerce\glo{} delega il pagamento comunicando la somma richiesta e l'indirizzo del destinatario.
 \end{itemize}
 
-\subsection{UC2 - Tipo Pagamento}\label{subsection: UC2}
+\subsection{UC2 - Checkout}\label{subsection: UC2}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-UC2-1.png}
-    \caption{Pagina di checkout.}
+    \caption{Pagina di checkout}
 \end{figure}
 
 \begin{itemize}
-    \item Attore primario: Utente proprietario dell'ordine;
+    \item Attore primario: Utente proprietario dell'ordine, utente generico;
     \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
-    \item Postcondizioni: viene visualizzato il riepilogo dell'ordine e scelta la modalità di pagamento;
-    \item Scenario principale: l'utente seleziona la tipologia del pagamento tra quelle disponibili;
-    \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni:
-          \begin{itemize}
-              \item Pagamento unico [UC2.1].
-              \item Pagamento MoneyBox\glo{} [UC2.2].
-          \end{itemize}
+    \item Postcondizioni: viene visualizzato l'esito dell'operazione;
+    \item Scenario principale:
+    \begin{enumerate}
+        \item L'utente visualizza il riepilogo dell'ordine [UC2.1];
+        \item L'utente seleziona la tipologia di pagamento tra quelle disponibili [UC2.2];
+        \item L'utente effettua il pagamento [UC2.3].
+    \end{enumerate}
 \end{itemize}
 \clearpage
 
-\subsubsection{UC2.1 - Selezionato Pagamento Unico}\label{sssec: UC2.1}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC2-2.png}
-    \caption{UC2.1.}
-\end{figure}
-
-\begin{itemize}
-    \item Attore primario: proprietario dell'ordine;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
-    \item Postcondizioni: l'utente ha selezionato pagamento unico come metodo di pagamento e ha pagato con lo stesso;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente seleziona pagamento unico come metodo di pagamento.
-              \item L'utente effettua il pagamento [UC5].
-          \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC2.2 -  Selezionato Pagamento MoneyBox}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC2-3.png}
-    \caption{UC2.2 e i suoi sottocasi.}
-\end{figure}
-
-\begin{itemize}
-    \item Attore primario: utente generico, utente proprietario dell'ordine;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
-    \item Postcondizioni: l'utente ha selezionato pagamento MoneyBox\glo{} come metodo di pagamento e ha pagato con lo stesso;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente seleziona pagamento MoneyBox\glo{} come metodo di pagamento;
-              \item L'utente conferma la creazione della MoneyBox\glo{} [UC2.2.4];
-              \item L'utente visualizza lo stato di completamento [UC2.2.1];
-              \item L'utente visualizza l'invito alla partecipazione della MoneyBox\glo{} [UC2.2.2];
-              \item L'utente, opzionalmente, partecipa alla MoneyBox\glo{} [UC2.2.3];
-              \item L'utente proprietario dell'ordine, opzionalmente, può chiudere una MoneyBox\glo{} [UC2.2.5].
-          \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC2.2.1 - Visualizzazione Stato Completamento}
-
-\begin{itemize}
-    \item Attore primario: utente generico;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
-    \item Postcondizioni: l'utente ha visualizzato lo stato del completamento;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente visualizza lo stato del completamento in formato percentuale e il saldo mancante;
-              \item L'utente visualizza una lista delle transazioni avvenute [UC2.2.1.1].
-          \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC2.2.2 - Visualizzazione Invito Partecipazione MoneyBox}
-
-\begin{itemize}
-    \item Attore primario: utente generico;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
-    \item Postcondizioni: l'utente ha visualizzato l'invito alla MoneyBox\glo{};
-    \item Scenario principale: l'utente visualizza l'invito alla MoneyBox\glo{}.
-\end{itemize}
-
-\subsubsection{UC2.2.3 - Scelta Quota Partecipazione}
-
-\begin{itemize}
-    \item Attore primario: utente generico;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
-    \item Postcondizioni: l'utente ha selezionato la quota da versare e ha effettuato il pagamento;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente seleziona la quota da versare, compresa tra zero escluso e il minimo tra il saldo disponibile nel wallet e il rimanente della MoneyBox\glo{};
-              \item L'utente effettua il pagamento [UC5].
-          \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC2.2.4 - Creazione MoneyBox}
-
-\begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
-    \item Attore secondario: Metamask\glo{};
-    \item Precondizioni: l'utente ha connesso il proprio Metamask\glo{} [UC4] e ha selezionato il pagamento MoneyBox\glo{};
-    \item Postcondizioni: l'utente ha creato una MoneyBox\glo{};
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente visualizza il pop-up di Metamask\glo{};
-              \item L'utente conferma l'operazione all'interno del pop-up;
-              \item L'utente viene reindirizzato alla pagina con i dettagli della MoneyBox\glo{}.
-          \end{enumerate}
-\end{itemize}
-
-\subsection{UC3 - Visualizzazione Riepilogo Ordine}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC3.png}
-    \caption{UC3.}
-\end{figure}
+\subsection{UC2.1 - Visualizzazione Riepilogo Ordine}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -162,12 +64,214 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{enumerate}
 \end{itemize}
 
+\subsubsection{UC2.2 - Selezione Tipo Pagamento}\label{sssec: UC2.2}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
+    \item Postcondizioni: l'utente ha selezionato un metodo di pagamento;
+    \item Scenario principale: Se la transazione non risulta registrata in blockchain, l'utente seleziona la tipologia di pagamento.
+    \item Estensioni:
+          \begin{enumerate}
+            \item Nel caso in cui la transazione interessata sia presente in blockchain:
+                \begin{itemize}
+                    \item La selezione della tipologia di pagamento viene omessa;
+                    \item Viene visualizzato Avviso Transazione Esistente [UC2.2.3].
+                \end{itemize}
+          \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC2.2.1 - Selezionato Pagamento Unico}\label{sssec: UC2.2.1}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
+    \item Postcondizioni: l'utente ha selezionato pagamento unico come metodo di pagamento;
+    \item Scenario principale: L'utente seleziona pagamento unico come metodo di pagamento.
+\end{itemize}
+
+\subsubsection{UC2.2.2 -  Selezionato Pagamento MoneyBox}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
+    \item Postcondizioni: l'utente ha selezionato pagamento MoneyBox\glo{} come metodo di pagamento;
+    \item Scenario principale: L'utente seleziona pagamento MoneyBox\glo{} come metodo di pagamento.
+\end{itemize}
+
+\subsection{UC2.3 - Pagamento}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-UC5.png}
+    \caption{UC2.3}
+\end{figure}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Attore secondario: Metamask\glo{};
+    \item Precondizioni: è stata selezionata una tipologia di pagamento per la transazione interessata [UC2.2], l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Postcondizioni: l'utente ha effettuato il pagamento;
+    \item Scenario principale:
+          \begin{enumerate}
+              \item L'utente visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
+              \item L'utente visualizza un overlay di caricamento sulla pagina di ShopChain;
+              \item L'utente autorizza la transazione per l'importo impostato;
+              \item L'utente visualizza un messaggio di conferma di avvenuto pagamento.
+          \end{enumerate}
+    \item Estensioni:
+          \begin{enumerate}
+              \item Nel caso venisse raggiunta la somma totale dovuta, viene generato e mostrato il codice di sblocco [UC2.3.3];
+              \item Nel caso l'utente rifiuti il pagamento:
+              \begin{itemize}
+                  \item La transazione viene annullata;
+                  \item L'utente visualizza errore transazione annullata [UC2.3.4].
+              \end{itemize}
+          \end{enumerate}
+    \item Generalizzazioni:
+          \begin{enumerate}
+              \item Pagamento Unico [UC2.3.1];
+              \item Pagamento MoneyBox [UC2.3.2].
+          \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC2.3.1 - Pagamento Unico}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Precondizioni: è stata selezionato Pagamento Unico come tipologia di pagamento per la transazione interessata [UC2.2.1], l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Postcondizioni: l'utente ha pagato l'importo totale in un pagamento unico;
+    \item Scenario principale:
+    \begin{enumerate}
+        \item L'utente visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
+        \item L'utente visualizza un overlay di caricamento sulla pagina di ShopChain;
+        \item L'utente autorizza la transazione per un pagamento unico corrispondente all'importo totale;
+        \item L'utente visualizza un messaggio di conferma di avvenuto pagamento.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC2.3.2 - Pagamento MoneyBox}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: è stata selezionato Pagamento MoneyBox\glo{} come tipologia di pagamento per la transazione interessata [UC2.2.2], l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Postcondizioni: l'utente ha pagato l'importo scelto;
+    \item Scenario principale:
+    \begin{enumerate}
+        \item L'utente visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
+        \item L'utente visualizza un overlay di caricamento sulla pagina di ShopChain;
+        \item L'utente autorizza la transazione per l'importo scelto;
+        \item L'utente visualizza un messaggio di conferma di avvenuto pagamento.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC2.3.3 - Generazione Codice di Sblocco}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: il versamento raggiunge la somma totale dovuta;
+    \item Postcondizioni: l'utente ha visualizzato il codice di sblocco;
+    \item Scenario principale:
+          \begin{enumerate}
+              \item Viene generato il codice di sblocco;
+              \item L'utente visualizza il codice di sblocco.
+          \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC2.3.4 - Visualizzazione errore transazione annullata}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: la transazione non è andata a buon fine;
+    \item Postcondizioni: l'utente ha visualizzato l'errore e la transazione fallisce;
+    \item Scenario principale:
+          \begin{enumerate}
+              \item L'utente visualizza un messaggio di errore per rifiuto della transazione;
+              \item L'utente clicca ”OK” per continuare.
+          \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC3 - Gestione MoneyBox}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UseCases-UC3.png}
+    \caption{UC3}
+\end{figure}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
+    \item Postcondizioni: l'utente ha visualizzato i dati relativi la MoneyBox;
+    \item Scenario principale:
+          \begin{enumerate}
+                \item L'utente può visualizzare lo stato del completamento in formato percentuale e il saldo mancante [UC3.1];
+                \item L'utente può visualizzare un elenco delle transazioni partecipanti [UC3.2];
+                \item L'utente può visualizzare l'invito per partecipare alla MoneyBox [UC3.3];
+                \item L'utente può partecipare alla MoneyBox [UC3.4];
+                \item L'utente può visualizzare una grafica identificativa della MoneyBox [UC3.5].
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC3.1 - Visualizzazione Stato Completamento}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
+    \item Postcondizioni: l'utente ha visualizzato lo stato del completamento;
+    \item Scenario principale:
+          \begin{enumerate}
+              \item L'utente visualizza lo stato del completamento in formato percentuale e il saldo mancante;
+              \item L'utente visualizza un elenco delle transazioni partecipanti [UC3.2].
+          \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC3.2 - Visualizzazione Elenco Transazioni Partecipanti}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
+    \item Postcondizioni: l'utente ha visualizzato l'invito alla MoneyBox\glo{};
+    \item Scenario principale: l'utente visualizza l'invito alla MoneyBox\glo{}.
+\end{itemize}
+
+\subsubsection{UC3.3 - Visualizzazione Invito Partecipazione MoneyBox}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
+    \item Postcondizioni: l'utente ha visualizzato l'invito alla MoneyBox\glo{};
+    \item Scenario principale: l'utente visualizza l'invito alla MoneyBox\glo{}.
+\end{itemize}
+
+\subsubsection{UC3.4 - Partecipazione MoneyBox}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
+    \item Postcondizioni: l'utente ha selezionato la quota da versare e ha effettuato il pagamento;
+    \item Scenario principale:
+          \begin{enumerate}
+              \item L'utente seleziona la quota da versare, compresa tra zero escluso e il minimo tra il saldo disponibile nel wallet e il rimanente della MoneyBox\glo{};
+              \item L'utente effettua il pagamento [UC5].
+          \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC3.5 - Visualizzazione Grafica Identificativa}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: 
+    \item Postcondizioni: 
+    \item Scenario principale:
+\end{itemize}
+
 \subsection{UC4 - Connessione Metamask}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-UC4.png}
-    \caption{UC4.}
+    \caption{UC4}
 \end{figure}
 
 \begin{itemize}
@@ -256,60 +360,55 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{enumerate}
 \end{itemize}
 
-\subsection{UC5 - Pagamento}
+\subsection{UC5 - Visualizzazione Indirizzo Wallet}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-UC5.png}
-    \caption{UC5.}
+    \caption{UC5}
 \end{figure}
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Attore secondario: Metamask\glo{};
-    \item Precondizioni: l'utente ha scelto il Tipo di Pagamento [UC2], l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
-    \item Postcondizioni: l'utente ha effettuato il pagamento;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente visualizza il pop-up di Metamask\glo{} con i dettagli della transazione, solo in caso di saldo sufficiente;
-              \item L'utente autorizza la transazione;
-              \item L'utente visualizza un messaggio di conferma di avvenuto pagamento.
-          \end{enumerate}
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
+    \item Postcondizioni: l'utente ha visualizzato l'indirizzo del wallet;
+    \item Scenario principale: l'utente visualizza l'indirizzo del wallet.
     \item Estensioni:
-          \begin{enumerate}
-              \item Nel caso l'utente rifiuti il pagamento:
-                    \begin{itemize}
-                        \item La transazione viene annullata;
-                        \item L'utente visualizza errore transazione annullata [UC5.2].
-                    \end{itemize}
-              \item Nel caso venisse raggiunta la somma totale dovuta, viene generato e mostrato il codice di sblocco [UC5.1].
-          \end{enumerate}
+    \begin{enumerate}
+        \item Visualizzazione Avviso Connessione Metamask [UC5.3].
+    \end{enumerate}
+    \item Generalizzazioni:
+    \begin{enumerate}
+        \item Visualizzazione Indirizzo Wallet Testuale [UC5.1];
+        \item Visualizzazione Indirizzo Wallet Emoji [UC5.2].
+    \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC5.1 - Generazione Codice di Sblocco}
+\subsection{UC5.1 - Visualizzazione Indirizzo Wallet Testuale}
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: il versamento raggiunge la somma totale dovuta;
-    \item Postcondizioni: l'utente ha visualizzato il codice di sblocco;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item Viene generato il codice di sblocco;
-              \item L'utente visualizza il codice di sblocco.
-          \end{enumerate}
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
+    \item Postcondizioni: l'utente ha visualizzato l'indirizzo del wallet in forma testuale;
+    \item Scenario principale: l'utente visualizza l'indirizzo del wallet in forma testuale.
 \end{itemize}
 
-\subsubsection{UC5.2 - Visualizzazione errore transazione annullata}
+\subsection{UC5.2 - Visualizzazione Indirizzo Wallet Emoji}
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: la transazione non è andata a buon fine;
-    \item Postcondizioni: l'utente ha visualizzato l'errore e la transazione fallisce;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente visualizza un messaggio di errore per rifiuto della transazione;
-              \item L'utente clicca ”OK” per continuare.
-          \end{enumerate}
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
+    \item Postcondizioni: l'utente ha visualizzato l'indirizzo del wallet sotto forma di sequenza di emoji;
+    \item Scenario principale: l'utente visualizza l'indirizzo del wallet sotto forma di sequenza di emoji.
+\end{itemize}
+
+\subsection{UC5.3 - Visualizzazione Avviso Connessione Metamask}
+
+\begin{itemize}
+    \item Attore primario: utente generico;
+    \item Precondizioni: l'utente non ha effettuato la connessione a Metamask;
+    \item Postcondizioni: l'utente ha visualizzato un avviso relativo la mancata connessione a Metamask;
+    \item Scenario principale: l'utente visualizza un avviso relativo la mancata connessione a Metamask.
 \end{itemize}
 
 \subsection{UC6 - Sblocco Ordine}
@@ -317,7 +416,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-UC6.png}
-    \caption{Pagina transazione pagata.}
+    \caption{Pagina transazione pagata}
 \end{figure}
 
 \begin{itemize}
@@ -338,7 +437,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{immagini/UseCases-UC7.png}
-    \caption{UC7 e i suoi sottocasi.}
+    \caption{UC7 e i suoi sottocasi}
 \end{figure}
 
 \begin{itemize}
