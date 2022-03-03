@@ -79,7 +79,7 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \hline
     TS2F9  & Verificare che si possa convertire correttamente l'ammontare depositato in stable coin.                    & R2F9  & NI \\
     TS3F10 & Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente. & R3F10 & NI \\
-    TS1F11 & Verificare che la richiesta di un ordine venga caricata correttamente su una blockchain pubblica.          & R1V1  & NI \\
+    TS1F11 & Verificare che la richiesta di un ordine venga caricata correttamente su una blockchain\glo{} pubblica.          & R1V1  & NI \\
     TS1F12 & Verificare che il pagamento e le transazioni siano gestite correttamente dallo smart contract.             & R1V2  & NI \\
   \end{tabular}
   \caption{Test di sistema}
@@ -98,7 +98,7 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
         & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                       \\
     \hline
     TI1 & Verificare che il collegamento con Metamask avvenga correttamente.                                                  & NI \\
-    TI2 & Verificare che il collegamento tra Front-End\glo{} e Smart Contract tramite libreria Web3.js avvenga correttamente. & NI \\
+    TI2 & Verificare che il collegamento tra Front-End\glo{} e Smart Contract tramite libreria Web3.js\glo{} avvenga correttamente. & NI \\
   \end{tabular}
   \caption{Test d'integrazione}
 \end{table}
@@ -123,7 +123,7 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
     TU01 & Si verifica che il contatore degli ordini sia inizializzato a zero.                                                               & S \\
     TU02 & Si verifica che l'ordine creato sia corretto.                                                                                     & S \\
     TU03 & Si verifica che il contratto abbia ricevuto l'ammontare stabilito.                                                                & S \\
-    TU04 & Si verifica che l'ordine sia stato registrato correttamente in blockchain.                                                        & S \\
+    TU04 & Si verifica che l'ordine sia stato registrato correttamente in blockchain\glo{}.                                                        & S \\
     TU05 & Si verifica il caso fallimentare in cui l'utente tenta di inviare un importo inferiore a quello richiesto.                        & S \\
     TU06 & Si verifica il caso fallimentare in cui l'utente prova a registrare un ordine che ha come venditore se stesso.                    & S \\
     TU07 & Si verifica il caso fallimentare in cui l'utente prova a inviare un ammontare pari a zero.                                        & S \\
@@ -133,7 +133,7 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
     TU11 & Si verifica che lo stato dell'ordine sia modificato e settato su "CLOSED" una volta confermata la ricezione dall'acquirente.      & S \\
     TU12 & Si verifica che il venditore abbia ricevuto i fondi correttamente una volta confermata la ricezione dall'acquirente.              & S \\
     TU13 & Si verifica il caso fallimentare in cui l'utente tenta di confermare la ricezione di un ordine con id inesistente.                & S \\
-    TU14 & Si verifica il caso fallimentare in cui il codice di sblocco non coincide con quello registrato in blockchain.                    & S \\
+    TU14 & Si verifica il caso fallimentare in cui il codice di sblocco non coincide con quello registrato in blockchain\glo{}.                    & S \\
     TU15 & Si verifica il caso fallimentare in cui l'ordine viene confermato da un utente con indirizzo differente da quello del compratore. & S \\
     TU16 & Si verifica che il rimborso sia richiesto dal compratore una volta settato su "CANCELLED" lo stato dell'ordine.                   & S \\
   \end{tabular}
