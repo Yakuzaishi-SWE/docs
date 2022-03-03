@@ -11,12 +11,12 @@ Le aspettative del gruppo \groupName{} in questo processo sono:
 \end {itemize}
 \subsubsection{Descrizione}
 Lo scopo della documentazione è quello di trascrivere i fatti accaduti e le decisioni prese dal gruppo durante l'intera durata del progetto.
-\subsubsection{Ciclo di vita del documento}
-Le fasi del ciclo di vita del documento sono le seguenti:
+\subsubsection{Ciclo di vita\glo{} del documento}
+Le fasi del ciclo di vita\glo{} del documento sono le seguenti:
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale = 0.5]{../template/images/NdP/CicloDiVitaDocumento.png}
-\caption{Descrizione del ciclo di vita del documento}
+\caption{Descrizione del ciclo di vita\glo{} del documento}
 \end {figure}
 \subsubsection{Template}
 Il team di sviluppo ha deciso di realizzare un template mediante l'utilizzo di \LaTeX{} in modo da avere una struttura uniforme di tutte le pagine nei vari documenti.
@@ -320,7 +320,7 @@ Al fine di organizzare meglio il lavoro si è deciso di creare quattro repositor
 L'organizzazione del repo è così riassunta:
 \begin{itemize}
     \item \textbf{Branch\glo{} master}: è il branch\glo{} principale in cui è presente la sola documentazione, in formato tex, pronta alla revisione;
-    \item \textbf{Branch\glo{} dev}: è un branch\glo{} intermedio tra il master e i branch dei singoli documenti. Utile per mantenere pulito il master ed evitare confusione;
+    \item \textbf{Branch\glo{} dev}: è un branch\glo{} intermedio tra il master e i branch\glo{} dei singoli documenti. Utile per mantenere pulito il master ed evitare confusione;
     \item \textbf{Branch\glo{} derivanti dal dev}: sono diversi in numero e ciascuno di questi ha un nome parlante riferito al singolo documento. Ognuno è dedicato alla stesura del documento da cui prende il nome e, quando il lavoro su uno di questi branch\glo{} sarà finito e sottoposto a revisione, verrà eseguito un merge\glo{} del branch\glo{} in questione con il dev;
     \item \textbf{Branch\glo{} gh-pages} è un branch\glo{} nel quale vengono caricati i file compilati in formato pdf della documentazione presente nel master. I file presenti in questo branch\glo{} vengono automaticamente aggiunti e resi consultabili in formato pdf alla seguente pagina web:
           \begin{center}
@@ -342,7 +342,7 @@ La separazione del flusso di lavoro tra i vari documenti da redarre permette una
 Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend{} e Yakuzaishi-SWE/smart-contract{} sono organizzate allo stesso modo. In particolare:
 \begin{itemize}
     \item \textbf{Branch\glo{} master}: è il branch\glo{} principale in cui sono presenti i soli file pronti per le release di consegna;
-    \item \textbf{Branch\glo{} dev}: è un branch\glo{} intermedio tra il master e i branch delle singole features. Utile per mantenere pulito il master ed evitare confusione;
+    \item \textbf{Branch\glo{} dev}: è un branch\glo{} intermedio tra il master e i branch\glo{} delle singole features. Utile per mantenere pulito il master ed evitare confusione;
     \item \textbf{Branch\glo{} derivanti dal dev}: sono diversi in numero e ciascuno di questi ha un nome parlante riferito alla singola feature. Ognuno è dedicato allo sviluppo della feature da cui prende il nome e, quando il lavoro su uno di questi branch\glo{} sarà finito e sottoposto a revisione, verrà eseguito un merge\glo{} del branch\glo{} in questione con il dev.
 \end{itemize}
 
