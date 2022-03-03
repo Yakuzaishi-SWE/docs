@@ -11,7 +11,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-Attori.png}
+    \includegraphics[scale=0.7]{immagini/Attori.png}
     \caption{Diagramma degli attori}
 \end{figure}
 
@@ -19,7 +19,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC1.png}
+    \includegraphics[scale=0.7]{immagini/UC1.png}
     \caption{UC1}
 \end{figure}
 
@@ -34,8 +34,8 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC2-1.png}
-    \caption{Pagina di checkout}
+    \includegraphics[scale=0.7]{immagini/UC2.png}
+    \caption{UC2}
 \end{figure}
 
 \begin{itemize}
@@ -69,15 +69,20 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Attore primario: utente proprietario dell'ordine;
     \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
     \item Postcondizioni: l'utente ha selezionato un metodo di pagamento;
-    \item Scenario principale: Se la transazione non risulta registrata in blockchain, l'utente seleziona la tipologia di pagamento.
+    \item Scenario principale: l'utente seleziona la tipologia di pagamento;
     \item Estensioni:
-          \begin{enumerate}
-            \item Nel caso in cui la transazione interessata sia presente in blockchain:
-                \begin{itemize}
-                    \item La selezione della tipologia di pagamento viene omessa;
-                    \item Viene visualizzato Avviso Transazione Esistente [UC2.2.3].
-                \end{itemize}
-          \end{enumerate}
+    \begin{enumerate}
+    \item Nel caso in cui la transazione interessata sia presente in blockchain:
+        \begin{itemize}
+            \item La selezione della tipologia di pagamento viene omessa;
+            \item Viene visualizzato Avviso Transazione Esistente [UC2.2.3].
+        \end{itemize}
+    \end{enumerate}
+    \item Generalizzazioni:
+    \begin{itemize}
+        \item Selezionato Pagamento Unico [UC2.2.1];
+        \item Selezionato Pagamento MoneyBox [UC2.2.2].
+    \end{itemize}
 \end{itemize}
 
 \paragraph{UC2.2.1 - Selezionato Pagamento Unico}\label{sssec: UC2.2.1}
@@ -89,7 +94,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: L'utente seleziona pagamento unico come metodo di pagamento.
 \end{itemize}
 
-\paragraph{UC2.2.2 -  Selezionato Pagamento MoneyBox}
+\paragraph{UC2.2.2 - Selezionato Pagamento MoneyBox}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -103,22 +108,23 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
     \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
-    \item Postcondizioni: l'utente visualizza il messaggio di avviso transazione esistente;
-    \item Scenario principale: l'utente visualizza il messaggio di avviso, poichè la transazione è già presente in blockchain.
+    \item Postcondizioni: l'utente ha visualizzato il messaggio di avviso transazione esistente;
+    \item Scenario principale: l'utente visualizza il messaggio di avviso, poiché la transazione è già presente in blockchain.
 \end{itemize}
 
 \subsubsection{UC2.3 - Pagamento}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC5.png}
+    \includegraphics[scale=0.7]{immagini/UC2.3.png}
     \caption{UC2.3}
 \end{figure}
 
 \begin{itemize}
     \item Attore primario: utente generico;
     \item Attore secondario: Metamask\glo{};
-    \item Precondizioni: è stata selezionata una tipologia di pagamento per la transazione interessata [UC2.2], l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Precondizioni: è stata selezionata una tipologia di pagamento per la transazione interessata [UC2.2], 
+            l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
     \item Postcondizioni: l'utente ha effettuato il pagamento;
     \item Scenario principale:
           \begin{enumerate}
@@ -147,7 +153,8 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: è stata selezionato Pagamento Unico come tipologia di pagamento per la transazione interessata [UC2.2.1], l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Precondizioni: è stata selezionato Pagamento Unico come tipologia di pagamento per la transazione interessata [UC2.2.1], 
+            l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
     \item Postcondizioni: l'utente ha pagato l'importo totale in un pagamento unico;
     \item Scenario principale:
     \begin{enumerate}
@@ -162,7 +169,8 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: è stata selezionato Pagamento MoneyBox\glo{} come tipologia di pagamento per la transazione interessata [UC2.2.2], l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Precondizioni: è stata selezionato Pagamento MoneyBox\glo{} come tipologia di pagamento per la transazione interessata [UC2.2.2], 
+            l'utente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
     \item Postcondizioni: l'utente ha pagato l'importo scelto;
     \item Scenario principale:
     \begin{enumerate}
@@ -186,7 +194,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{enumerate}
 \end{itemize}
 
-\paragraph{UC2.3.4 - Visualizzazione errore transazione annullata}
+\paragraph{UC2.3.4 - Visualizzazione Errore Transazione Annullata}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -203,21 +211,21 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC3.png}
+    \includegraphics[scale=0.7]{immagini/UC3.png}
     \caption{UC3}
 \end{figure}
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
-    \item Postcondizioni: l'utente ha visualizzato i dati relativi la MoneyBox;
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2];
+    \item Postcondizioni: l'utente ha visualizzato i dati relativi la MoneyBox\glo{};
     \item Scenario principale:
           \begin{enumerate}
                 \item L'utente può visualizzare lo stato del completamento in formato percentuale e il saldo mancante [UC3.1];
                 \item L'utente può visualizzare un elenco delle transazioni partecipanti [UC3.2];
-                \item L'utente può visualizzare l'invito per partecipare alla MoneyBox [UC3.3];
-                \item L'utente può partecipare alla MoneyBox [UC3.4];
-                \item L'utente può visualizzare una grafica identificativa della MoneyBox [UC3.5].
+                \item L'utente può visualizzare l'invito per partecipare alla MoneyBox\glo{} [UC3.3];
+                \item L'utente può partecipare alla MoneyBox\glo{} [UC3.4];
+                \item L'utente può visualizzare una grafica identificativa della MoneyBox\glo{} [UC3.5].
     \end{enumerate}
 \end{itemize}
 
@@ -225,29 +233,27 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], 
+            l'utente dispone dell'invito valido ad una MoneyBox\glo{} [UC3.3];
     \item Postcondizioni: l'utente ha visualizzato lo stato del completamento;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente visualizza lo stato del completamento in formato percentuale e il saldo mancante;
-              \item L'utente visualizza un elenco delle transazioni partecipanti [UC3.2].
-          \end{enumerate}
+    \item Scenario principale: 'utente visualizza lo stato del completamento in formato percentuale e il saldo mancante.
 \end{itemize}
 
 \subsubsection{UC3.2 - Visualizzazione Elenco Transazioni Partecipanti}
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
-    \item Postcondizioni: l'utente ha visualizzato l'invito alla MoneyBox\glo{};
-    \item Scenario principale: l'utente visualizza l'invito alla MoneyBox\glo{}.
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], 
+            l'utente dispone dell'invito valido ad una MoneyBox\glo{} [UC3.3];
+    \item Postcondizioni: l'utente ha visualizzato l'elenco delle transazioni partecipanti;
+    \item Scenario principale: l'utente visualizza l'elenco delle transazioni partecipanti.
 \end{itemize}
 
 \subsubsection{UC3.3 - Visualizzazione Invito Partecipazione MoneyBox}
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2];
     \item Postcondizioni: l'utente ha visualizzato l'invito alla MoneyBox\glo{};
     \item Scenario principale: l'utente visualizza l'invito alla MoneyBox\glo{}.
 \end{itemize}
@@ -256,12 +262,14 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], l'utente dispone dell'invito valido ad una MoneyBox\glo{};
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], 
+            l'utente dispone dell'invito valido ad una MoneyBox\glo{} [UC3.3];
     \item Postcondizioni: l'utente ha selezionato la quota da versare e ha effettuato il pagamento;
     \item Scenario principale:
           \begin{enumerate}
-              \item L'utente seleziona la quota da versare, compresa tra zero escluso e il minimo tra il saldo disponibile nel wallet e il rimanente della MoneyBox\glo{};
-              \item L'utente effettua il pagamento [UC5].
+              \item L'utente seleziona la quota da versare, compresa tra zero escluso e il minimo tra il saldo disponibile nel wallet 
+                    e il rimanente della MoneyBox\glo{};
+              \item L'utente viene reindirizzato alla pagina di checkout con la quota scelta [UC2].
           \end{enumerate}
 \end{itemize}
 
@@ -269,16 +277,17 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: 
-    \item Postcondizioni: 
-    \item Scenario principale:
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], 
+            l'utente dispone dell'invito valido ad una MoneyBox\glo{} [UC3.3];
+    \item Postcondizioni: l'utente ha visualizzato l'indirizzo della MoneyBox\glo{} come grafica identificativa;
+    \item Scenario principale: l'utente visualizza l'indirizzo della MoneyBox\glo{} come grafica identificativa.
 \end{itemize}
 
 \subsection{UC4 - Connessione Metamask}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC4.png}
+    \includegraphics[scale=0.7]{immagini/UC4.png}
     \caption{UC4}
 \end{figure}
 
@@ -303,12 +312,11 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
                     \item La connessione non viene completata;
                     \item Viene visualizzato errore blockchain\glo{} non registrata [UC4.2].
                 \end{itemize}
-            \item Nel caso in cui l'utente abbia configurato la stessa blockchain\glo{} di ShopChain ma non selezionato un account compatibile:
+            \item Nel caso in cui l'utente non abbia connesso un account a ShopChain:
                 \begin{itemize}
                     \item La connessione non viene completata;
-                    \item Viene visualizzato errore account non compatibile [UC4.3].
+                    \item Viene visualizzato errore account non connesso a ShopChain [UC4.3].
                 \end{itemize}
-            \item Nel caso l'utente rifiuti la connessione, visualizza errore connessione non completata [UC4.4].
         \end{enumerate}
 \end{itemize}
 
@@ -340,30 +348,16 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC4.3 - Visualizzazione Errore account non compatibile}
+\subsubsection{UC4.3 - Visualizzazione Errore Account non Connesso a ShopChain}
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'utente ha configurato la stessa blockchain\glo{} di ShopChain ma non ha selezionato un account compatibile;
+    \item Precondizioni: l'utente ha configurato la stessa blockchain\glo{} di ShopChain ma non ha connesso un account;
     \item Postcondizioni: l'utente ha visualizzato l'errore e la connessione fallisce;
     \item Scenario principale:
           \begin{enumerate}
               \item L'utente visualizza un messaggio di errore per mancata connessione;
-              \item L'utente viene invitato a cambiare account o a registrare un account compatibile;
-              \item L'utente clicca ”OK” per continuare.
-          \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC4.4 - Visualizzazione Errore connessione non completata}
-
-\begin{itemize}
-    \item Attore primario: utente generico;
-    \item Precondizioni: l'utente rifiuta la connessione;
-    \item Postcondizioni: l'utente ha visualizzato l'errore e la connessione fallisce;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente visualizza un messaggio di errore per mancata connessione;
-              \item L'utente viene invitato a ritentare;
+              \item L'utente viene invitato a connettere un account;
               \item L'utente clicca ”OK” per continuare.
           \end{enumerate}
 \end{itemize}
@@ -372,7 +366,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC5.png}
+    \includegraphics[scale=0.7]{immagini/UC5.png}
     \caption{UC5}
 \end{figure}
 
@@ -423,8 +417,8 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC6.png}
-    \caption{Pagina transazione pagata}
+    \includegraphics[scale=0.7]{immagini/UC6.png}
+    \caption{UC6}
 \end{figure}
 
 \begin{itemize}
@@ -444,18 +438,18 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UseCases-UC7.png}
-    \caption{UC7 e i suoi sottocasi}
+    \includegraphics[scale=0.7]{immagini/UC7.png}
+    \caption{UC7}
 \end{figure}
 
 \begin{itemize}
     \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente ha selezionato il tipo delle transazioni che vuole visualizzare;
-    \item Scenario principale: l'utente sceglie il tipo delle transazioni da visualizzare tra quelli disponibili;
-    \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni:
+    \item Postcondizioni: l'utente ha visualizzato le transazioni;
+    \item Scenario principale: l'utente visualizza le transazioni;
+    \item Generalizzazioni:
           \begin{itemize}
-              \item Visualizza transazioni in entrata [UC7.1];
+              \item Visualizza transazioni in entrata pagate [UC7.1];
               \item Visualizza transazioni in uscita [UC7.2];
           \end{itemize}
 \end{itemize}
@@ -464,10 +458,10 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'utente ha selezionato le transazioni in entrata;
-    \item Postcondizioni: l'utente ha visualizzato le transazioni in entrata;
-    \item Scenario principale: l'utente sceglie le transazioni in entrata per essere visualizzate;
-    \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni:
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
+    \item Postcondizioni: l'utente ha visualizzato le transazioni in entrata pagate;
+    \item Scenario principale: l'utente visualizza le transazioni in entrata pagate;
+    \item Generalizzazioni:
           \begin{itemize}
               \item Visualizza transazioni non sbloccate [UC7.1.1];
               \item Visualizza transazioni sbloccate [UC7.1.2];
@@ -479,7 +473,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni non sbloccate;
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non sbloccate;
     \item Scenario principale: l'utente visualizza la lista di transazioni non sbloccate.
 \end{itemize}
@@ -488,7 +482,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni sbloccate;
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni sbloccate;
     \item Scenario principale: l'utente visualizza la lista di transazioni sbloccate.
 \end{itemize}
@@ -497,7 +491,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente generico;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni cancellate;
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni cancellate;
     \item Scenario principale: l'utente visualizza la lista di transazioni cancellate.
 \end{itemize}
@@ -506,10 +500,10 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'utente ha selezionato le transazioni in uscita;
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato le transazioni in uscita;
-    \item Scenario principale: l'utente sceglie le transazioni in uscita per essere visualizzate;
-    \item Generalizzazioni: l'utente sceglie una delle seguenti opzioni:
+    \item Scenario principale: l'utente visualizza le transazioni in uscita;
+    \item Generalizzazioni:
           \begin{itemize}
               \item Visualizza transazioni non pagate [UC7.2.1];
               \item Visualizza transazioni pagate ma non sbloccate [UC7.2.2];
@@ -521,7 +515,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni non pagate;
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non pagate;
     \item Scenario principale: l'utente visualizza la lista di transazioni non pagate.
 \end{itemize}
@@ -530,7 +524,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate ma non sbloccate;
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate pagate ma non sbloccate;
     \item Scenario principale: l'utente visualizza la lista di transazioni pagate pagate ma non sbloccate.
 \end{itemize}
@@ -539,7 +533,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni pagate e sbloccate;
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate e sbloccate;
     \item Scenario principale: l'utente visualizza la lista di transazioni pagate e sbloccate.
 \end{itemize}
@@ -548,18 +542,24 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'utente ha selezionato visualizza transazioni cancellate;
+    \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato la lista di transazioni cancellate;
     \item Scenario principale: l'utente visualizza la lista di transazioni cancellate.
 \end{itemize}
 
 \subsection{UC8 - Rimborso}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UC8.png}
+    \caption{UC8}
+\end{figure}
+
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine, utente venditore;
     \item Attore secondario: Metamask\glo{};
     \item Precondizioni: l'utente ha connesso il proprio Metamask\glo{} [UC4] ed esiste almeno un pagamento associato all'indirizzo dell'utente;
-    \item Postcondizioni: l'utente ha annullato l'ordine e i fondi vengono restituiti;
+    \item Postcondizioni: l'utente ha annullato l'ordine e i fondi sono stati restituiti;
     \item Scenario principale:
           \begin{enumerate}
               \item L'utente visualizza il pop-up di Metamask\glo{};
