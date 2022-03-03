@@ -49,9 +49,8 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
         \item L'utente effettua il pagamento [UC2.3].
     \end{enumerate}
 \end{itemize}
-\clearpage
 
-\subsection{UC2.1 - Visualizzazione Riepilogo Ordine}\label{sssec: UC2.1}
+\subsubsection{UC2.1 - Visualizzazione Riepilogo Ordine}\label{sssec: UC2.1}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -81,7 +80,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC2.2.1 - Selezionato Pagamento Unico}\label{sssec: UC2.2.1}
+\paragraph{UC2.2.1 - Selezionato Pagamento Unico}\label{sssec: UC2.2.1}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -90,7 +89,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: L'utente seleziona pagamento unico come metodo di pagamento.
 \end{itemize}
 
-\subsubsection{UC2.2.2 -  Selezionato Pagamento MoneyBox}
+\paragraph{UC2.2.2 -  Selezionato Pagamento MoneyBox}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -99,7 +98,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: L'utente seleziona pagamento MoneyBox\glo{} come metodo di pagamento.
 \end{itemize}
 
-\subsection{UC2.3 - Pagamento}
+\subsubsection{UC2.3 - Pagamento}
 
 \begin{figure}[H]
     \centering
@@ -135,7 +134,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC2.3.1 - Pagamento Unico}
+\paragraph{UC2.3.1 - Pagamento Unico}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -150,7 +149,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC2.3.2 - Pagamento MoneyBox}
+\paragraph{UC2.3.2 - Pagamento MoneyBox}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -165,7 +164,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC2.3.3 - Generazione Codice di Sblocco}
+\paragraph{UC2.3.3 - Generazione Codice di Sblocco}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -178,7 +177,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC2.3.4 - Visualizzazione errore transazione annullata}
+\paragraph{UC2.3.4 - Visualizzazione errore transazione annullata}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -191,7 +190,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC3 - Gestione MoneyBox}
+\subsection{UC3 - Gestione MoneyBox}
 
 \begin{figure}[H]
     \centering
@@ -279,29 +278,29 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha connesso Metamask\glo{} a ShopChain;
     \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente visualizza il pop-up di Metamask\glo{} per la connessione a ShopChain;
-              \item L'utente autorizza la connessione a ShopChain.
-          \end{enumerate}
+        \begin{enumerate}
+            \item L'utente visualizza il pop-up di Metamask\glo{} per la connessione a ShopChain;
+            \item L'utente autorizza la connessione a ShopChain.
+        \end{enumerate}
     \item Estensioni:
-          \begin{enumerate}
-              \item Nel caso in cui l'estensione Metamask\glo{} risultasse assente nel browser:
-                    \begin{itemize}
-                        \item La connessione non ha successo;
-                        \item Viene visualizzato errore estensione mancante [UC4.1].
-                    \end{itemize}
-              \item Nel caso in cui l'utente abbia connesso il proprio wallet\glo{} ma non abbia configurato la stessa blockchain\glo{} di ShopChain:
-                    \begin{itemize}
-                        \item La connessione non viene completata;
-                        \item Viene visualizzato errore blockchain\glo{} non registrata [UC4.2].
-                    \end{itemize}
-              \item Nel caso in cui l'utente abbia configurato la stessa blockchain\glo{} di ShopChain ma non selezionato un account compatibile:
-                    \begin{itemize}
-                        \item La connessione non viene completata;
-                        \item Viene visualizzato errore account non compatibile [UC4.3].
-                    \end{itemize}
-              \item Nel caso l'utente rifiuti la connessione, visualizza errore connessione non completata [UC4.4].
-          \end{enumerate}
+        \begin{enumerate}
+            \item Nel caso in cui l'estensione Metamask\glo{} risultasse assente nel browser:
+                \begin{itemize}
+                    \item La connessione non ha successo;
+                    \item Viene visualizzato errore estensione mancante [UC4.1].
+                \end{itemize}
+            \item Nel caso in cui l'utente abbia connesso il proprio wallet\glo{} ma non abbia configurato la stessa blockchain\glo{} di ShopChain:
+                \begin{itemize}
+                    \item La connessione non viene completata;
+                    \item Viene visualizzato errore blockchain\glo{} non registrata [UC4.2].
+                \end{itemize}
+            \item Nel caso in cui l'utente abbia configurato la stessa blockchain\glo{} di ShopChain ma non selezionato un account compatibile:
+                \begin{itemize}
+                    \item La connessione non viene completata;
+                    \item Viene visualizzato errore account non compatibile [UC4.3].
+                \end{itemize}
+            \item Nel caso l'utente rifiuti la connessione, visualizza errore connessione non completata [UC4.4].
+        \end{enumerate}
 \end{itemize}
 
 \subsubsection{UC4.1 - Visualizzazione Errore Estensione Mancante}
@@ -311,11 +310,11 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Precondizioni: l'utente utilizza un browser sprovvisto di estensione Metamask\glo{};
     \item Postcondizioni: l'utente ha visualizzato l'errore e la connessione fallisce;
     \item Scenario principale:
-          \begin{enumerate}
-              \item L'utente visualizza un messaggio di errore per mancata connessione;
-              \item L'utente viene invitato a scaricare l'estensione Metamask\glo{};
-              \item L'utente clicca ”OK” per continuare.
-          \end{enumerate}
+        \begin{enumerate}
+            \item L'utente visualizza un messaggio di errore per mancata connessione;
+            \item L'utente viene invitato a scaricare l'estensione Metamask\glo{};
+            \item L'utente clicca ”OK” per continuare.
+        \end{enumerate}
 \end{itemize}
 
 \subsubsection{UC4.2 - Visualizzazione Errore Blockchain non registrata}
@@ -384,7 +383,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \end{enumerate}
 \end{itemize}
 
-\subsection{UC5.1 - Visualizzazione Indirizzo Wallet Testuale}
+\subsubsection{UC5.1 - Visualizzazione Indirizzo Wallet Testuale}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -393,7 +392,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: l'utente visualizza l'indirizzo del wallet in forma testuale.
 \end{itemize}
 
-\subsection{UC5.2 - Visualizzazione Indirizzo Wallet Emoji}
+\subsubsection{UC5.2 - Visualizzazione Indirizzo Wallet Emoji}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -402,7 +401,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: l'utente visualizza l'indirizzo del wallet sotto forma di sequenza di emoji.
 \end{itemize}
 
-\subsection{UC5.3 - Visualizzazione Avviso Connessione Metamask}
+\subsubsection{UC5.3 - Visualizzazione Avviso Connessione Metamask}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -411,7 +410,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: l'utente visualizza un avviso relativo la mancata connessione a Metamask.
 \end{itemize}
 
-\subsection{UC6 - Sblocco Ordine}
+\subsubsection{UC6 - Sblocco Ordine}
 
 \begin{figure}[H]
     \centering
@@ -467,7 +466,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{itemize}
 \end{itemize}
 
-\subsubsection{UC7.1.1 - Visualizza Transazioni Non Sbloccate}
+\paragraph{UC7.1.1 - Visualizza Transazioni Non Sbloccate}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -476,7 +475,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: l'utente visualizza la lista di transazioni non sbloccate.
 \end{itemize}
 
-\subsubsection{UC7.1.2 - Visualizza Transazioni Sbloccate}
+\paragraph{UC7.1.2 - Visualizza Transazioni Sbloccate}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -485,7 +484,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: l'utente visualizza la lista di transazioni sbloccate.
 \end{itemize}
 
-\subsubsection{UC7.1.3 - Visualizza Transazioni Cancellate}
+\paragraph{UC7.1.3 - Visualizza Transazioni Cancellate}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -509,7 +508,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
           \end{itemize}
 \end{itemize}
 
-\subsubsection{UC7.2.1 - Visualizza Transazioni Non Pagate}
+\paragraph{UC7.2.1 - Visualizza Transazioni Non Pagate}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -518,7 +517,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: l'utente visualizza la lista di transazioni non pagate.
 \end{itemize}
 
-\subsubsection{UC7.2.2 - Visualizza Transazioni Pagate Ma Non Sbloccate}
+\paragraph{UC7.2.2 - Visualizza Transazioni Pagate Ma Non Sbloccate}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -527,7 +526,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: l'utente visualizza la lista di transazioni pagate pagate ma non sbloccate.
 \end{itemize}
 
-\subsubsection{UC7.2.3 - Visualizza Transazioni Pagate e Sbloccate}
+\paragraph{UC7.2.3 - Visualizza Transazioni Pagate e Sbloccate}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -536,7 +535,7 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
     \item Scenario principale: l'utente visualizza la lista di transazioni pagate e sbloccate.
 \end{itemize}
 
-\subsubsection{UC7.2.4 - Visualizza Transazioni Cancellate}
+\paragraph{UC7.2.4 - Visualizza Transazioni Cancellate}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -559,6 +558,5 @@ L'utente generico ha poi due specializzazioni possibili: l'utente proprietario d
               \item Viene annullato ogni versamento ed effettuati i rimborsi.
           \end{enumerate}
 \end{itemize}
-
 
 \clearpage
