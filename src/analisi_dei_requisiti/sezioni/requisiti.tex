@@ -8,20 +8,20 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors{2}{green!100!black!40}{green!100!black!30}
-    \begin{tabular}{c | c | p{6cm} | p{4.1cm}}
+    \begin{tabular}{c | c | p{6cm} | c }
         \rowcolor[HTML]{125E28}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Classificazione}} &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                  \\
         \hline
-        R1F1                                                              & Obbligatorio & Si deve processare una richiesta di checkout da un e-commerce\glo{}.                          & Capitolato UC1                        \\
-        R1F2                                                              & Obbligatorio & L'utente deve poter scegliere la tipologia di pagamento.                                      & Verbale Esterno 15.11.21 UC2.2        \\
-        R1F2.1                                                            & Obbligatorio & L'utente deve poter scegliere la tipologia di pagamento unico.                                & Verbale Esterno 15.11.21 UC2.2.1      \\
-        R2F2.2                                                            & Desiderabile & L'utente deve poter scegliere la tipologia di pagamento MoneyBox\glo{}.                       & Verbale Esterno 15.11.21 UC2.2.2      \\
+        R1F1                                                              & Obbligatorio & Si deve processare una richiesta di checkout da un e-commerce\glo{}.                          & \Shortunderstack{Capitolato\\UC1\\}                        \\
+        R1F2                                                              & Obbligatorio & L'utente deve poter scegliere la tipologia di pagamento.                                      & \Shortunderstack{Verbale Esterno 15.11.21\\UC2.2\\}        \\
+        R1F2.1                                                            & Obbligatorio & L'utente deve poter scegliere la tipologia di pagamento unico.                                & \Shortunderstack{Verbale Esterno 15.11.21\\UC2.2.1\\}      \\
+        R2F2.2                                                            & Desiderabile & L'utente deve poter scegliere la tipologia di pagamento MoneyBox\glo{}.                       & \Shortunderstack{Verbale Esterno 15.11.21\\UC2.2.2\\}      \\
         R2F2.2.1                                                          & Desiderabile & Si deve poter visualizzare lo stato di completamento della MoneyBox\glo{}.                    & UC3.1                                 \\
         R2F2.2.2                                                          & Desiderabile & Si deve poter visualizzare l'invito di partecipazione alla MoneyBox\glo{}.                    & UC3.3                                 \\
-        R3F2.2.3                                                          & Opzionale    & L'utente deve poter visualizzare una traduzione visiva dell'indirizzo MoneyBox\glo{}.         & Verbale Esterno 17.01.22 UC3.5        \\
+        R3F2.2.3                                                          & Opzionale    & L'utente deve poter visualizzare una traduzione visiva dell'indirizzo MoneyBox\glo{}.         & \Shortunderstack{Verbale Esterno 17.01.22\\UC3.5\\}        \\
         R2F2.2.4                                                          & Desiderabile & Si deve poter chiudere la MoneyBox\glo{} restituendo i soldi.                                 & UC8                                   \\
         R2F2.2.5                                                          & Desiderabile & L'utente deve poter visualizzare l'elenco delle transazioni partecipanti alla MoneyBox\glo{}. & \Shortunderstack{Capitolato\\UC3.2\\} \\
         R1F3                                                              & Obbligatorio & L'utente deve poter visualizzare il totale dell'ordine.                                       & \Shortunderstack{Capitolato\\UC2.1\\} \\
@@ -36,15 +36,15 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors{2}{green!100!black!40}{green!100!black!30}
-    \begin{tabular}{c | c | p{6cm} | p{4.1cm}}
+    \begin{tabular}{c | c | p{6cm} | c}
         \rowcolor[HTML]{125E28}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Classificazione}} &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                                          \\
         \hline
-        R1F5.1                                                            & Obbligatorio & L'utente che ha scelto il metodo di pagamento unico deve pagare interamente la somma richiesta.                       & Verbale Esterno 15.11.21 UC2.3.1      \\
-        R2F5.2                                                            & Desiderabile & L'utente che partecipa al pagamento MoneyBox\glo{} deve poter pagare una parte della somma richiesta.                 & Verbale Esterno 15.11.21 UC2.3.2      \\
+        R1F5.1                                                            & Obbligatorio & L'utente che ha scelto il metodo di pagamento unico deve pagare interamente la somma richiesta.                       & \Shortunderstack{Verbale Esterno 15.11.21\\UC2.3.1\\}      \\
+        R2F5.2                                                            & Desiderabile & L'utente che partecipa al pagamento MoneyBox\glo{} deve poter pagare una parte della somma richiesta.                 & \Shortunderstack{Verbale Esterno 15.11.21\\UC2.3.2\\}      \\
         R1F5.3                                                            & Obbligatorio & L'utente deve poter visualizzare il codice di sblocco generato dal sistema.                                           & UC2.3.3                               \\
         R1F5.4                                                            & Obbligatorio & L'utente deve poter visualizzare un messaggio d'errore nel caso in cui la transazione fallisca.                       & UC2.3.4                               \\
         R1F6                                                              & Obbligatorio & Il proprietario dell'ordine o il venditore devono poter richiedere il rimborso della transazione.                     & \Shortunderstack{Capitolato\\UC8\\}   \\
@@ -64,7 +64,7 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors{2}{green!100!black!40}{green!100!black!30}
-    \begin{tabular}{c | c | p{6cm} | p{4.1cm}}
+    \begin{tabular}{c | c | p{6cm} | c}
         \rowcolor[HTML]{125E28}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Classificazione}} &
@@ -75,11 +75,11 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
         R2F8.2.2                                                          & Desiderabile & Il proprietario dell'ordine deve poter visualizzare le transazioni in uscita pagate ma non sbloccate.      & UC7.2.2                  \\
         R2F8.2.3                                                          & Desiderabile & Il proprietario dell'ordine deve poter visualizzare le transazioni in uscita pagate e sbloccate.           & UC7.2.3                  \\
         R2F8.2.4                                                          & Desiderabile & Il proprietario dell'ordine deve poter visualizzare le transazioni in uscita cancellate.                   & UC7.2.4                  \\
-        R2F9                                                              & Desiderabile & Si deve convertire l'ammontare depositato sullo smart contract\glo{} in stable coin\glo{}.                             & Capitolato               \\
+        R2F9                                                              & Desiderabile & Si deve convertire l'ammontare depositato sullo smart contract\glo{} in stable coin\glo{}.                 & Capitolato               \\
         R3F10                                                             & Opzionale    & La piattaforma deve trattenere una piccola somma in percentuale di un ordine destinata al fondo ShopChain. & Verbale Esterno 15.11.21 \\
         R1F11                                                             & Obbligatorio & L'utente deve poter visualizzare il suo indirizzo wallet.                                                  & UC5                      \\
         R1F11.1                                                           & Obbligatorio & L'utente deve poter visualizzare il suo indirizzo wallet in forma testuale.                                & UC5.1                    \\
-        R1F11.2                                                           & Obbligatorio & L'utente deve poter visualizzare un avviso della mancata connessione a Metamask\glo{}.                           & UC5.3                    \\
+        R1F11.2                                                           & Obbligatorio & L'utente deve poter visualizzare un avviso della mancata connessione a Metamask\glo{}.                     & UC5.3                    \\
         R3F11.3                                                           & Opzionale    & L'utente deve poter visualizzare il suo indirizzo wallet sotto forma di stringa di emoji.                  & UC5.2                    \\
         R3F12                                                             & Opzionale    & Gli utenti partecipanti devono ricevere una notifica al completamento della MoneyBox\glo{}.                & Verbale Interno 02.03.22 \\
         R1F13                                                             & Obbligatorio & L'utente deve poter visualizzare il dettaglio dell'errore della transazione.                               & UC2.3.4                  \\
@@ -92,7 +92,7 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors{2}{green!100!black!40}{green!100!black!30}
-    \begin{tabular}{c | c | p{6cm} | p{4.1cm}}
+    \begin{tabular}{c | c | p{6cm} | c}
         \rowcolor[HTML]{125E28}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Classificazione}} &
@@ -114,7 +114,7 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors{2}{green!100!black!40}{green!100!black!30}
-    \begin{tabular}{c | c | p{6cm} | p{4.1cm}}
+    \begin{tabular}{c | c | p{6cm} | c}
         \rowcolor[HTML]{125E28}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Classificazione}} &
@@ -134,7 +134,7 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors{2}{green!100!black!40}{green!100!black!30}
-    \begin{tabular}{c | c | p{6cm} | p{4.1cm}}
+    \begin{tabular}{c | c | p{6cm} | c}
         \rowcolor[HTML]{125E28}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Classificazione}} &
@@ -153,7 +153,7 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors{2}{green!100!black!40}{green!100!black!30}
-    \begin{tabular}{c | c | p{6cm} | p{4.1cm}}
+    \begin{tabular}{c | c | p{6cm} | c}
         \rowcolor[HTML]{125E28}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Classificazione}} &
@@ -177,7 +177,7 @@ Il gruppo \groupName{} per classificare e assegnare i requisiti del capitolato h
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors{2}{green!100!black!40}{green!100!black!30}
-    \begin{tabular}{c | c | p{6cm} | p{4.1cm}}
+    \begin{tabular}{c | c | p{6cm} | c}
         \rowcolor[HTML]{125E28}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Classificazione}} &
