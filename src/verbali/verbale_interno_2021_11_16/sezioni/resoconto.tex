@@ -54,7 +54,7 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
     \end{itemize}
 
     \subsubsection{Layer 2}
-    Sono lo strato più alto di astrazione, e attualmente si pongono l'obiettivo di risolvere gran parte dei problemi presenti nel layer 1. Le soluzioni si dividono in due possibilità:
+    Sono lo strato più alto di astrazione, e attualmente si pongono l'obiettivo di risolvere gran parte dei problemi presenti nel layer 1\glo{}. Le soluzioni si dividono in due possibilità:
     \begin{itemize}
         \item \textbf{State Channels}: ha come componente principale un canale full-duplex tra due partecipanti che permette di svolgere compiti che tipicamente sono on-blockchain\glo{}, off-blockchain. 
         Questo permette di diminuire di molto i tempi di attesa visto che viene a mancare la componente terza, come ad esempio le azioni dei miner\glo{}.
@@ -66,7 +66,7 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
         \end{itemize}
         La metafora più facile è quella del conto, è come se una persona aprisse un conto con un'altra e poi lo saldasse “a rate”. Invece di registrare ogni singola rata sulla rete, viene 
         registrato solo il saldo finale.\\
-        Le soluzioni di questo tipo più comuni sono: la “Bitcoin's Lightning Network” (permette di eseguire tante microtransazioni) e la “Ethereum's Raiden Network” (permette anche di eseguire smart contracts 
+        Le soluzioni di questo tipo più comuni sono: la “Bitcoin's Lightning Network” (permette di eseguire tante microtransazioni) e la “Ethereum's Raiden Network” (permette anche di eseguire smart contracts\glo{} 
         sui canali). Entrambe utilizzano Hashed Timelock Contracts (HTLCs) per creare state channels.
     \end{itemize}
     \begin{itemize}
@@ -92,8 +92,8 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
 	Visto i grandi difetti presenti nella blockchain\glo{} Ethereum\glo{}, in particolare il costo elevato delle sue gas fee e la lenta scalabilità, abbiamo preso in esame diverse blockchain\glo{} e valutato la migliore 
 	rispettivamente alle esigenze del problema. Qui sotto sono riportati i pro e contro di ogni soluzione.
 		\subsubsection{Avalanche}
-		Avalanche\glo{} è un protocollo che integra diverse blockchain\glo{}, che permette la creazione di asset tokenizzati, l'esecuzione di smart contract e anche la creazione di blockchain\glo{} private. 
-		AVAX è il suo token di riferimento, utilizzato per governance, pagamento commissioni e gas per i contratti.
+		Avalanche\glo{} è un protocollo che integra diverse blockchain\glo{}, che permette la creazione di asset tokenizzati, l'esecuzione di smart contract\glo{} e anche la creazione di blockchain\glo{} private. 
+		AVAX è il suo token\glo{} di riferimento, utilizzato per governance, pagamento commissioni e gas per i contratti.
 		\paragraph{Pro}
 		\begin{itemize}
 			\item Blockchain\glo{} ad alta scalabilità;
@@ -106,7 +106,7 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
 		\end{itemize}
 		
 		\subsubsection{Solana}
-		Solana è una blockchain\glo{} open source\glo{}, permissionless che garantisce un alto numero di transazioni al secondo. Queste caratteristiche sono ottenute principalmente dall'architettura a basso livello
+		Solana è una blockchain\glo{} open source\glo{}, permissionless\glo{} che garantisce un alto numero di transazioni al secondo. Queste caratteristiche sono ottenute principalmente dall'architettura a basso livello
 		che utilizza ad esempio un proprio algoritmo di consenso “Proof-of-History” e una cifratura SHA-256.
 		\paragraph{Pro}
 		\begin{itemize}
@@ -116,18 +116,18 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
 		\end{itemize}
 		\paragraph{Contro}
 		\begin{itemize}
-			\item Non è una blockchain\glo{} Ethereum\glo{} compatibile, quindi gli smart contract non possono essere scritti in Solidity\glo{}. Il linguaggio necessario assomiglia al C\glo{} e a RUST\glo{} e risulta essere più complesso per chi si trova alla prima esperienza con queste tecnologie;
+			\item Non è una blockchain\glo{} Ethereum\glo{} compatibile, quindi gli smart contract\glo{} non possono essere scritti in Solidity\glo{}. Il linguaggio necessario assomiglia al C\glo{} e a RUST\glo{} e risulta essere più complesso per chi si trova alla prima esperienza con queste tecnologie;
 			\item I suoi punti di forza la rendono anche una scelta azzardata per un primo approccio al mondo delle blockchain\glo{}.
 		\end{itemize}
 		
 		\subsubsection{Moonriver}
-		Questo tipo di soluzione non presenta particolari caratteristiche se non quella di implementare gli smart contract su una parachain. Una parachain è una blockchain\glo{} “specializzata” che si connette ad esempio a Polkadot (una blockchain\glo{} layer 0\glo{}, un altro esempio è Kusama), quest'ultimo è un protocollo di rete che permette di trasferire non solo tokens ma anche dati tra più blockchain\glo{}. Quindi Polkadot è a tutti gli effetti un'applicazione che permette di avere registri e computazioni cross-chain.
+		Questo tipo di soluzione non presenta particolari caratteristiche se non quella di implementare gli smart contract\glo{} su una parachain. Una parachain è una blockchain\glo{} “specializzata” che si connette ad esempio a Polkadot (una blockchain\glo{} layer 0\glo{}, un altro esempio è Kusama), quest'ultimo è un protocollo di rete che permette di trasferire non solo tokens\glo{} ma anche dati tra più blockchain\glo{}. Quindi Polkadot è a tutti gli effetti un'applicazione che permette di avere registri e computazioni cross-chain.
 		Le operazioni tra queste vengono eseguite in parallelo e non sequenzialmente, tramite l'uso di relay chain (blockchain\glo{} minori a cui viene delegata parte della computazione richiesta) che fungono in certi casi da main chain.
 		\paragraph{Pro}
 		\begin{itemize}
 			\item Sviluppo su una parachain, tecnologia molto interessante e valida per impieghi futuri;
 			\item Fee più basse rispetto ad Ethereum\glo{};
-			\item Ambiente Ethereum\glo{} compatibile, quindi possibilità di usare Solidity\glo{} per lo sviluppo di Smart Contract;
+			\item Ambiente Ethereum\glo{} compatibile, quindi possibilità di usare Solidity\glo{} per lo sviluppo di Smart Contract\glo{};
 			\item Progetto recente ma dal grande potenziale.
 		\end{itemize}
 		\paragraph{Contro}
@@ -137,12 +137,12 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
 		
 		\subsubsection{Polygon}
 		È un protocollo e un framework per costruire e connettere blockchain\glo{} Ethereum\glo{} compatibili. Nasce per risolvere i principali problemi legati alla rete Ethereum\glo{}, ovvero basso throughput, gas fee elevate, mancanza di sovranità.
-		Nonostante siano nate delle blockchain\glo{} Ethereum\glo{} compatibili che sfruttano le qualità migliori dell'ecosistema Ethereum\glo{}, non c'è ancora un protocollo o framework che si occupi di metterle in comunicazione ad alto livello. Proprio a questo scopo nasce Polygon.
+		Nonostante siano nate delle blockchain\glo{} Ethereum\glo{} compatibili che sfruttano le qualità migliori dell'ecosistema Ethereum\glo{}, non c'è ancora un protocollo o framework che si occupi di metterle in comunicazione ad alto livello. Proprio a questo scopo nasce Polygon\glo{}.
 	
 		\paragraph{Pro}
 		\begin{itemize}
 			\item Possibilità di sviluppare su una tecnologia ad alto livello;
-			\item Ambiente Ethereum\glo{} compatibile, quindi possibilità di usare Solidity\glo{} per lo sviluppo di Smart Contract.
+			\item Ambiente Ethereum\glo{} compatibile, quindi possibilità di usare Solidity\glo{} per lo sviluppo di Smart Contract\glo{}.
 		\end{itemize}
 		\paragraph{Contro}
 		\begin{itemize}
@@ -151,7 +151,7 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
 		\end{itemize}
 	
 		\subsubsection{Scelta: Fantom}
-		è una piattaforma che ha i suoi punti di forza su high-performance, scalabilità e sicurezza negli smart contract. Nasce per risolvere le limitazioni delle precedenti piattaforme blockchain\glo{} (come molte altre sue coetanee).
+		è una piattaforma che ha i suoi punti di forza su high-performance, scalabilità e sicurezza negli smart contract\glo{}. Nasce per risolvere le limitazioni delle precedenti piattaforme blockchain\glo{} (come molte altre sue coetanee).
 		Fantom\glo{} è permissionless\glo{}, decentralized e open-source\glo{}.\\
 		Usa un suo algoritmo di consenso BFT\glo{}(Byzantine Fault-tolerant) "Lachesis" che permette di avere delle eccellenti prestazioni per quanto riguarda velocità, costo e sicurezza.
 		E' un tipo di algoritmo di consenso che permette di creare delle applicazioni peer-to-peer senza che lo sviluppatore debba creare il proprio network layer. Lachesis è:
@@ -166,7 +166,7 @@ più si sale di livello, più ci si allontana dallo "strato fisico".
 		\begin{itemize}
 			\item Transazioni molto veloci;
 			\item Fee molto basse;
-			\item Blockchain\glo{} Ethereum\glo{} compatibile, quindi possibilità di usare Solidity\glo{} come linguaggio per gli smart contract;
+			\item Blockchain\glo{} Ethereum\glo{} compatibile, quindi possibilità di usare Solidity\glo{} come linguaggio per gli smart contract\glo{};
 			\item Modulare, ovvero permette di convertire dApps sviluppate sulla rete Ethereum\glo{}, di essere adattate in poco tempo.
 		\end{itemize}
 		\paragraph{Contro}
