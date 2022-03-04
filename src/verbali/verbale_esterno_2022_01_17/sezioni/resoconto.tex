@@ -5,32 +5,32 @@
 	\item \textbf{Codice di Sblocco};
 	\begin{itemize}
 		\item Non importa come viene generato;
-		\item Una possibilità è prendere il numero del blocco nella blockchain come codice;
+		\item Una possibilità è prendere il numero del blocco nella blockchain\glo{} come codice;
 		\item Deve effettuare lo sblocco solo chi deve pagare;
 		\item Il codice deve essere usato solo come conferma di sblocco;
 	\end{itemize}
 	\item \textbf{Creazione degli Smartcontract};
 	\begin{itemize}
-		\item Ci sono due strade: lo smart contract unico fabbrica smartcontracts personalizzati, o uno smartcontract contiene tutte le transazioni;
+		\item Ci sono due strade: lo smart contract\glo{} unico fabbrica smartcontracts personalizzati, o uno smartcontract contiene tutte le transazioni;
 		\item Per complessità e per scalabilità conviene la strada di uno smartcontract dedicato per ogni MoneyBox;
 	\end{itemize}
 	\item \textbf{Metriche per la sicurezza};
 	\begin{itemize}
 		\item Sono state individuate vari possibili controlli di sicurezza, che saranno analizzati ed esplorati;
-		\item Riguardo alla sicurezza della blockchain, la sua piattaforma stessa la garantisce;
+		\item Riguardo alla sicurezza della blockchain\glo{}, la sua piattaforma stessa la garantisce;
 	\end{itemize}
 	\item \textbf{Pagamento delle gas fee};
 	\begin{itemize}
 		\item Mettere qualche fondo all'interno dello smartcontract cosi ha lui stesso liquidità per pagare le gas fee,
-		 ci sarà una percentuale inviata al wallet nostro (ovvero ai proprietari di ShopChain), più una piccola percentuale per le gas fee;
+		 ci sarà una percentuale inviata al wallet\glo{} nostro (ovvero ai proprietari di ShopChain), più una piccola percentuale per le gas fee;
 	\end{itemize}
 	\item \textbf{Codici di Sicurezza per la MoneyBox};
 	\begin{itemize}
-		\item E' una "traduzione" dell'indirizzo alla MoneyBox in qualcosa di identificabile visivamente;
+		\item E' una "traduzione" dell'indirizzo alla MoneyBox\glo{} in qualcosa di identificabile visivamente;
 		\item Sarebbe piu' sicura una chiave per accedere ma e' stata ritenuta troppo invasiva a lato utente;
 		\item Buona idea, da esplorare;
 	\end{itemize}
-	\item \textbf{E-Commerce};
+	\item \textbf{E-Commerce}\glo{};
 	\begin{itemize}
 		\item Conviene lanciare una chiamata "finta" con i dati richiesti per l'inizio dell'operazione;
 		\item Come requisito opzionale si possono mettere i dettagli dell'ordine;
@@ -50,9 +50,9 @@
 		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{ID}} &
 		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Decisione}} \\
 		\hline
-		VE-2022-01-17-1 & Devono essere analizzati i vari metodi degli smartcontract per capire quanto sono legati tra loro gli smartcontract delle moneybox e delle transazioni singole; \\ \hline
+		VE-2022-01-17-1 & Devono essere analizzati i vari metodi degli smartcontract per capire quanto sono legati tra loro gli smartcontract delle moneybox\glo{} e delle transazioni singole; \\ \hline
 		VE-2022-01-17-2 & Verranno analizzati vari possibili controlli di sicurezza per l'applicazione\\ 
 		VE-2022-01-17-3 & Le gas fee saranno pagate dallo smartcontract stesso \\ 
-		VE-2022-01-17-4 & Verrà esplorata la funzione di traduzione visiva degli indirizzi alle MoneyBox \\
+		VE-2022-01-17-4 & Verrà esplorata la funzione di traduzione visiva degli indirizzi alle MoneyBox\glo{} \\
 	\end{tabular}
 \end{table}
