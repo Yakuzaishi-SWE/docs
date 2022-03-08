@@ -8,17 +8,18 @@ riferimento alle funzionalità dell'applicazione.
 Come accordato con il proponente, la web app\glo{} deve essere usata sia dal venditore che dall'acquirente,
 sono quindi presenti differenti attori nella gerarchia: 
 \begin{itemize}
-    \item La piattaforma e-commerce\glo{} da cui parte l'ordine,
-    \item Metamask\glo{}
+    \item La piattaforma e-commerce\glo{} da cui parte l'ordine;
+    \item Metamask\glo{};
     \item L'utente generico che si divide in:
         \begin{itemize}
-            \item Acquirente,
-            \item Venditore;
+            \item Acquirente;
+            \item Venditore.
         \end{itemize}
-    \item L'acquirente che inizializza un ordine di qualsiasi tipo è il Proprietario Ordine;
-    \item L'acquirente che inizializza un ordine scegliendo la tipologia di pagamento MoneyBox è il Proprietario MoneyBox;
-    \item Infine ogni acquirente che dispone di un invito di partecipazione ad una MoneyBox è un Partecipante MoneyBox.
-\end{itemize}}
+    \item L'acquirente che inizializza un ordine di qualsiasi tipo è il proprietario ordine;
+    \item L'acquirente che inizializza un ordine scegliendo la tipologia di pagamento MoneyBox è il proprietario MoneyBox;
+    \item Ogni acquirente che dispone di un invito di partecipazione ad una MoneyBox è un partecipante MoneyBox;
+    \item Infine ogni proprietario MoneyBox è anche un partecipante MoneyBox.
+\end{itemize}
 
 \begin{figure}[H]
     \centering
@@ -50,7 +51,7 @@ sono quindi presenti differenti attori nella gerarchia:
 \end{figure}
 
 \begin{itemize}
-    \item Attore primario: Utente proprietario dell'ordine, acquirente;
+    \item Attore primario: utente proprietario dell'ordine, acquirente;
     \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
     \item Postcondizioni: viene visualizzato l'esito dell'operazione;
     \item Scenario principale:
@@ -107,7 +108,7 @@ sono quindi presenti differenti attori nella gerarchia:
         \begin{itemize}
             \item Il proprietario dell'ordine seleziona pagamento unico come metodo di pagamento;
             \item Viene vincolato il successivo pagamento per questa transazione ad un pagamento unico della somma totale dovuta (UC2.3.1), il quale potrà essere effettuato dal proprietario dell'ordine.
-        \end{itemize}}
+        \end{itemize}
 \end{itemize}
 
 \paragraph{UC2.2.2 - Selezionato Pagamento MoneyBox}
@@ -121,7 +122,7 @@ sono quindi presenti differenti attori nella gerarchia:
             \item Il proprietario dell'ordine seleziona pagamento MoneyBox\glo{} come metodo di pagamento;
             \item Viene creata la MoneyBox;
             \item Vengono vincolati i successivi pagamenti per questa transazione ad un pagamento parziale della somma totale rimanente (UC2.3.2), i quali potranno essere effettuati da un qualsiasi partecipante MoneyBox\glo{}.
-        \end{itemize}} 
+        \end{itemize}
 \end{itemize}
 
 \paragraph{UC2.2.3 - Visualizzazione avviso transazione esistente}
@@ -201,7 +202,7 @@ sono quindi presenti differenti attori nella gerarchia:
     \end{enumerate}
 \end{itemize}
 
-\paragraph{UC2.3.4 - Visualizzazione Errore Transazione Annullata}
+\paragraph{UC2.3.3 - Visualizzazione Errore Transazione Annullata}
 
 \begin{itemize}
     \item Attore primario: utente generico;
@@ -628,7 +629,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UC9.png}
+    \includegraphics[scale=0.7]{immagini/UC8.png}
     \caption{UC9}
 \end{figure}
 
