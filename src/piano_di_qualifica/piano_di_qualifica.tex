@@ -3,40 +3,40 @@
 \input{../template/source/styles}
 
 \begin{document}
-	%RIDEFINIZIONE COMANDI
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\renewcommand{\documentName}{Piano di Qualifica}
-	\renewcommand{\documentVersion}{1.0.0}
-	
-	\renewcommand{\documentEditors}{Francesco Bugno\\&Luca Carturan}
-	\renewcommand{\documentVerifiers}{Michele Filosofo}
-	\renewcommand{\documentApprovers}{Matteo Midena}
-	
-	\renewcommand{\documentUsage}{Esterno}
-	\renewcommand{\documentAddressee}{\commitNameM{}\\&\commitNameS{}\\&\proposerName{}}
-	\renewcommand{\documentSummary}{Questo documento raccoglie le strategie di qualifica e gli obiettivi di qualità perseguiti dal gruppo \groupName{} nello svolgimento del progetto \projectName{}}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	%PRIMA PAGINA
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\pagenumbering{gobble}
-	\pagestyle{empty}
-	\input{../template/source/firstpage}
-	\pagebreak
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	%CHANGELOG E INDICI
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\input{contenuto/changelog} \pagebreak
-	\renewcommand{\contentsname}{Contenuti}
-	\tableofcontents \pagebreak
-	\listoftables \pagebreak
-	\listoffigures \pagebreak
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	%CONTENUTO
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\pagestyle{styleDocPages}
-	\input{contenuto/contenuto}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%RIDEFINIZIONE COMANDI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\documentName}{Piano di Qualifica}
+\renewcommand{\documentVersion}{1.0.0}
+
+\renewcommand{\documentEditors}{Francesco Bugno\\&Luca Carturan}
+\renewcommand{\documentVerifiers}{Michele Filosofo}
+\renewcommand{\documentApprovers}{Matteo Midena}
+
+\renewcommand{\documentUsage}{Esterno}
+\renewcommand{\documentAddressee}{\commitNameM{}\\&\commitNameS{}\\&\proposerName{}}
+\renewcommand{\documentSummary}{Questo documento raccoglie le strategie di qualifica e gli obiettivi di qualità perseguiti dal gruppo \groupName{} nello svolgimento del progetto \projectName{}.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%PRIMA PAGINA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{gobble}
+\pagestyle{empty}
+\input{../template/source/firstpage}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%CHANGELOG E INDICI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{contenuto/changelog} \pagebreak
+\renewcommand{\contentsname}{Contenuti}
+\tableofcontents \pagebreak
+\listoftables \pagebreak
+\listoffigures \pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%CONTENUTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{styleDocPages}
+\input{contenuto/contenuto}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
