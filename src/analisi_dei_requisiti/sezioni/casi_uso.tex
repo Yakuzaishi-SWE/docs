@@ -31,7 +31,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UC1.png}
+    \includegraphics[scale=0.9]{immagini/UC1.png}
     \caption{UC1}
 \end{figure}
 
@@ -46,7 +46,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UC2.png}
+    \includegraphics[scale=0.8]{immagini/UC2.png}
     \caption{UC2}
 \end{figure}
 
@@ -207,11 +207,11 @@ sono quindi presenti differenti attori nella gerarchia:
 \begin{itemize}
     \item Attore primario: acquirente;
     \item Precondizioni: la transazione non è andata a buon fine;
-    \item Postcondizioni: l'utente ha visualizzato l'errore e la transazione fallisce;
+    \item Postcondizioni: l'acquirente ha visualizzato l'errore e la transazione fallisce;
     \item Scenario principale:
           \begin{enumerate}
-              \item L'utente visualizza un messaggio di errore per rifiuto della transazione;
-              \item L'utente clicca ”OK” per continuare.
+              \item L'acquirente visualizza un messaggio di errore per rifiuto della transazione;
+              \item L'acquirente clicca ”OK” per continuare.
           \end{enumerate}
 \end{itemize}
 
@@ -445,7 +445,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Attore secondario: utente venditore, Metamask\glo{};
+    \item Attore secondario: Metamask\glo{};
     \item Precondizioni: il sistema ha generato il codice di sblocco [UC2.3.3];
     \item Postcondizioni: l'utente proprietario ha sbloccato l'ordine e il denaro è stato trasferito all'utente venditore;
     \item Scenario principale:
@@ -500,10 +500,10 @@ sono quindi presenti differenti attori nella gerarchia:
 \subsubsection{UC7.1 - Visualizza Transazioni In Entrata Pagate}
 
 \begin{itemize}
-    \item Attore primario: utente venditore;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente venditore ha visualizzato le transazioni in entrata pagate;
-    \item Scenario principale: l'utente venditore visualizza le transazioni in entrata pagate con i seguenti dettagli:
+    \item Postcondizioni: l'utente ha visualizzato le transazioni in entrata pagate;
+    \item Scenario principale: l'utente visualizza le transazioni in entrata pagate con i seguenti dettagli:
         \begin{itemize}
             \item Codice Identificativo della transazione;
             \item Indirizzo acquirente;
@@ -522,34 +522,34 @@ sono quindi presenti differenti attori nella gerarchia:
 \paragraph{UC7.1.1 - Visualizza Transazioni Non Sbloccate}
 
 \begin{itemize}
-    \item Attore primario: utente venditore;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente venditore ha visualizzato la lista di transazioni non sbloccate;
-    \item Scenario principale: l'utente venditore visualizza la lista di transazioni non sbloccate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non sbloccate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni non sbloccate.
 \end{itemize}
 
 \paragraph{UC7.1.2 - Visualizza Transazioni Sbloccate}
 
 \begin{itemize}
-    \item Attore primario: utente venditore;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente venditore ha visualizzato la lista di transazioni sbloccate;
-    \item Scenario principale: l'utente venditore visualizza la lista di transazioni sbloccate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni sbloccate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni sbloccate.
 \end{itemize}
 
 \paragraph{UC7.1.3 - Visualizza Transazioni Cancellate}
 
 \begin{itemize}
-    \item Attore primario: utente venditore;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente venditore ha visualizzato la lista di transazioni cancellate;
-    \item Scenario principale: l'utente venditore visualizza la lista di transazioni cancellate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni cancellate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni cancellate.
 \end{itemize}
 
 \subsubsection{UC7.2 - Visualizza Transazioni In Uscita}
 
 \begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
     \item Postcondizioni: l'utente ha visualizzato le transazioni in uscita;
     \item Scenario principale: l'utente visualizza le transazioni in uscita con i seguenti dettagli:
@@ -571,44 +571,44 @@ sono quindi presenti differenti attori nella gerarchia:
 \paragraph{UC7.2.1 - Visualizza Transazioni Non Pagate}
 
 \begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente proprietario dell'ordine ha visualizzato la lista di transazioni non pagate;
-    \item Scenario principale: l'utente proprietario dell'ordine visualizza la lista di transazioni non pagate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni non pagate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni non pagate.
 \end{itemize}
 
 \paragraph{UC7.2.2 - Visualizza Transazioni Pagate Ma Non Sbloccate}
 
 \begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente proprietario dell'ordine ha visualizzato la lista di transazioni pagate pagate ma non sbloccate;
-    \item Scenario principale: l'utente proprietario dell'ordine visualizza la lista di transazioni pagate pagate ma non sbloccate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate pagate ma non sbloccate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni pagate pagate ma non sbloccate.
 \end{itemize}
 
 \paragraph{UC7.2.3 - Visualizza Transazioni Pagate e Sbloccate}
 
 \begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente proprietario dell'ordine ha visualizzato la lista di transazioni pagate e sbloccate;
-    \item Scenario principale: l'utente proprietario dell'ordine visualizza la lista di transazioni pagate e sbloccate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni pagate e sbloccate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni pagate e sbloccate.
 \end{itemize}
 
 \paragraph{UC7.2.4 - Visualizza Transazioni Cancellate}
 
 \begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
+    \item Attore primario: utente generico;
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: l'utente proprietario dell'ordine ha visualizzato la lista di transazioni cancellate;
-    \item Scenario principale: l'utente proprietario dell'ordine visualizza la lista di transazioni cancellate.
+    \item Postcondizioni: l'utente ha visualizzato la lista di transazioni cancellate;
+    \item Scenario principale: l'utente visualizza la lista di transazioni cancellate.
 \end{itemize}
 
 \subsection{UC8 - Annullamento Ordine}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UC8.png}
+    \includegraphics[scale=0.8]{immagini/UC8.png}
     \caption{UC8}
 \end{figure}
 
@@ -629,7 +629,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{immagini/UC8.png}
+    \includegraphics[scale=0.8]{immagini/UC9.png}
     \caption{UC9}
 \end{figure}
 
