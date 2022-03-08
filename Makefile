@@ -5,14 +5,15 @@ BASE_DIR = $(shell pwd)
 OUT_DIR = "$(shell pwd)/out"
 OUT_VERBALI = "${OUT_DIR}/verbali"
 
+ADR_F = "${BASE_DIR}/src/analisi_dei_requisiti/analisi_dei_requisiti.tex"
 STUDIO_F = "${BASE_DIR}/src/studio_capitolati/studio_capitolati.tex"
 SCELTA_F = "${BASE_DIR}/src/scelta_capitolato/scelta_capitolato.tex"
-NORME_P_F = "${BASE_DIR}/src/norme_progetto/norme_progetto.tex"
+NORME_P_F = "${BASE_DIR}/src/norme_di_progetto/norme_di_progetto.tex"
 IMPEGNI_F = "${BASE_DIR}/src/impegni/impegni.tex"
 GLOASSARIO_F = "${BASE_DIR}/src/glossario/glossario.tex"
 VERBALI_FILES = $(shell find $(BASE_DIR)/src/verbali/verbale_* -name 'verbale_*.tex')
 
-all: dirs studio_capitolati scelta impegni norme_progetto glossario verbali
+all: dirs studio_capitolati scelta adr impegni norme_progetto glossario verbali
 
 dirs:
 	mkdir -p $(OUT_DIR)
@@ -23,6 +24,12 @@ impegni:
 	@cd "$(shell dirname $(IMPEGNI_F))" ; \
 	$(LMK) $(shell basename $(IMPEGNI_F)) > /dev/null;
 	mv "$(shell dirname $(IMPEGNI_F))/$(shell basename $(IMPEGNI_F) .tex).pdf" $(OUT_DIR)
+
+adr:
+	@echo "Analisi Dei Requisiti: $(ADR_F)";
+	cd "$(shell dirname $(ADR_F))" ; \
+	$(LMK) $(shell basename $(ADR_F)) ;
+	mv "$(shell dirname $(ADR_F))/$(shell basename $(ADR_F) .tex).pdf" $(OUT_DIR)
 
 norme_progetto:
 	@echo "Norme Progetto: $(NORME_P_F)";
