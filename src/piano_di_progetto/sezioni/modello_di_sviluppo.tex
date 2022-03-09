@@ -36,19 +36,21 @@ Ogni requisito e caso d'uso è definito tramite il suo codice identificativo, pe
   \centering
   \renewcommand{\arraystretch}{1.8}
   \rowcolors{2}{green!100!black!40}{green!100!black!30}
-  \begin{tabular}{c|p{6cm}|p{2cm}|p{2cm}}
+  \begin{tabular}{c|p{6cm}|c|c}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{Incr.}
     & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Obiettivo}}
     & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Requisiti}}
     & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Casi d'uso}}\\
     \hline
-    I	& Studio di Fantom come blockchain di riferimento e relative differenze con Ethereum.	& R1V1\ \ \ \  R1V2 R2V4 R1V6 & \ \ \ \ \ \ \ - \\
-    II & Studio librerie e pattern per lo sviluppo Frontend di React. & R1V3\ \ \ \  R3V5 R1V7 & \ \ \ \ \ \ \ - \\
-    III	& Stesura smart contract per pagamento singolo e relativo modulo frontend per l'interazione tramite Metamask. & R1F1\ \ \  R1F2 R1F2.1 R1F3\ \ \ \ R1F4\ \ \ \  R1F5 R1F5.1\ \ \ \  R1F7\ \ \ \  R1F8 & UC1\ \ \ \ \ \ \ UC2\ \ \ \ UC2.1\ \ \ \   UC3\ \ \ \ \ \ \ UC4\ \ \ \ \ \ UC4.1 UC4.2 UC4.3 UC4.4\ \ \ \ \ \ UC5\ \ \ \ UC5.1 UC5.2\ \ \ \ UC6\ \ \ \ \ \ \  UC7 \\
-    IV & Studio e realizzazione del design con esaltazione dei diversi cambiamenti di stato. & \ \ \ \ \ \ \ - & \ \ \ \ \ \ \ - \\
-    V	& Aggiunta di funzionalità Rimborso nello smart contract e relativo modulo frontend per l'interazione tramite Metamask. & R1F6 & UC8 \\
-    VI & Aggiunta di funzionalità MoneyBox nello smart contract e relativo modulo frontend per l'interazione tramite Metamask.  & R1F2.2 R2F2.2.1 R2F2.2.2 R2F2.2.4 R2F2.2.5 R2F5.2 & UC2.2 UC2.2.1 UC2.2.2 UC2.2.3 UC2.2.4 \\
+    I	& Studio di Fantom\glo{} come blockchain\glo{} di riferimento e relative differenze con Ethereum\glo{}, studio del linguaggio Solidity\glo{} e relativi ambienti di sviluppo.	& \Shortunderstack{R1V1, R1V2,\\R2V4, R1V6,\\R1V10, R1V11\\} & - \\
+    II & Studio di tecnologie, librerie e pattern per lo sviluppo Frontend\glo{} di React. & \Shortunderstack{R1V3, R3V5,\\R1V7, R1V8,\\R1V9, R1V12,\\R1V13\\} & - \\
+    %%%%%%%
+    III	& Stesura smart contract\glo{} per pagamento singolo e relativo modulo frontend\glo{} per l'interazione tramite Metamask\glo{}. & \Shortunderstack{R1F1, R1F2,\\R1F2.1, R1F3,\\R1F4, R1F5,\\R1F5.1, R1F5.3,\\R1F5.4, R1F7,\\R1F8\\} & \Shortunderstack{UC1, UC2.1,\\UC2.2, UC2.2.1,\\UC2.3, UC2.3.1,\\UC2.3.3, UC2.4,\\UC4, UC6,\\UC7\\}\\
+    IV & Studio e realizzazione del design con esaltazione dei diversi cambiamenti di stato. & \Shortunderstack{R1F11, R1F11.1,\\R1F11.2, R1F13,\\R1F14, R1F14.1,\\R1F14.2, R1F14.3,\\R1F14.4\\} & \Shortunderstack{UC2.3.4, UC4,\\UC4.1, UC4.2,\\UC4.3, UC5,\\UC5.1, UC5.3\\}\\
+    V	& Aggiunta di funzionalità Rimborso nello smart contract\glo{} e relativo modulo frontend\glo{} per l'interazione tramite Metamask\glo{}. & R1F6 & UC8, UC9 \\
+    %%%%%%%
+    VI & Aggiunta di funzionalità MoneyBox\glo{} nello smart contract\glo{} e relativo modulo frontend\glo{} per l'interazione tramite Metamask\glo{}. & \Shortunderstack{R2F2.2, R2F2.2.1,\\R2F2.2.2, R2F2.2.4,\\R2F2.2.5, R2F5.2,\\R1F15\\} & \Shortunderstack{UC2.2.2, UC2.2.3,\\UC2.3.2, UC3.1,\\UC3.2, UC3.3,\\UC8, UC9\\}\\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -58,16 +60,16 @@ Ogni requisito e caso d'uso è definito tramite il suo codice identificativo, pe
   \centering
   \renewcommand{\arraystretch}{1.8}
   \rowcolors{2}{green!100!black!40}{green!100!black!30}
-  \begin{tabular}{c|p{6cm}|p{2cm}|p{2cm}}
+  \begin{tabular}{c|p{6cm}|c|c}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{Incr.}
     & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Obiettivo}}
     & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Requisiti}}
     & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Casi d'uso}}\\
     \hline
-    VII	& Aggiunta di Ricerca, Paginazione e Filtrazione dell'elenco delle transazioni per maggiore fruibilità. & R2F8.1 R2F8.1.1 R2F8.1.2 R2F8.1.3 R1F8.2 R2F8.2.1 R2F8.2.2 R2F8.2.3 R2F8.2.4 & UC7.1 UC7.1.1 UC7.1.2 UC7.1.3 UC7.2 UC7.2.1 UC7.2.2 UC7.2.3 UC7.2.4 \\
-    VIII & Aggiunta funzione dello smart contract per la conversione del denaro in stable coin. & R2F9 & \ \ \ \ \ \ \ - \\
-    IX & Integrazione funzionalità d'identificazione grafica per i dati presenti in blockchain e sviluppo punti opzionali restanti. & R3F2.2.3 R3F10  & \ \ \ \ \ \ \ - \\
+    VII	& Aggiunta di Ricerca, Paginazione e Filtrazione dell'elenco delle transazioni per maggiore fruibilità. & \Shortunderstack{R2F8.1, R2F8.1.1,\\R2F8.1.2, R2F8.1.3,\\R1F8.2, R2F8.2.1,\\R2F8.2.2, R2F8.2.3,\\R2F8.2.4\\} & \Shortunderstack{UC7.1, UC7.1.1,\\UC7.1.2, UC7.1.3,\\UC7.2, UC7.2.1,\\UC7.2.2, UC7.2.3,\\UC7.2.4\\} \\
+    VIII & Aggiunta funzione dello smart contract\glo{} per la conversione del denaro in stable coin\glo{}. & R2F9 & - \\
+    IX & Integrazione funzionalità d'identificazione grafica per i dati presenti in blockchain\glo{} e sviluppo punti opzionali restanti. & \Shortunderstack{R3F2.2.3, R3F10,\\R3F12\\} & UC3.5 \\
   \end{tabular}
   \caption{Incrementi individuati}
 \end{table}
