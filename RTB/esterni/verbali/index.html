@@ -3,7 +3,7 @@
 
 <head>
     <title>Yakuzaishi - Documenti</title>
-    <link rel="stylesheet" href="/docs/res/index.css" />
+    <link rel="stylesheet" href="../../../res/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -11,14 +11,20 @@
     <div class="container">
         <header>
             <a class='logo' href="/docs/">
-                <img src="/docs/res/logo.png"></img>
+                <img src="../../../res/logo.png"></img>
                 Yakuzaishi
             </a>
             <nav>
-                <a class="path" href="/docs/">
+                <a class="path" href="../../../">
                     / docs
                 </a>
-                <a class="path" href="/docs/verbali/">
+                <a class="path" href="../../">
+                    / RTB
+                </a>
+				<a class="path" href="../">
+                    / esterni
+                </a>
+				<a class="path" href="./">
                     / verbali
                 </a>
             </nav>
@@ -48,7 +54,7 @@
                     let li = document.createElement('h2');
                     let a = document.createElement('a');
                     let img = document.createElement('img');
-                    img.setAttribute('src', '/docs/res/pdf.svg');
+                    img.setAttribute('src', '../../../res/pdf.svg');
                     a.setAttribute('href', row);
                     a.setAttribute('target', '_blank');
                     a.append(img, row);

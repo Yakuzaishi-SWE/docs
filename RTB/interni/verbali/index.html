@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yakuzaishi - Documenti</title>
+    <link rel="stylesheet" href="../../../res/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a class='logo' href="/docs/">
+                <img src="../../../res/logo.png"></img>
+                Yakuzaishi
+            </a>
+            <nav>
+                <a class="path" href="../../../">
+                    / docs
+                </a>
+                <a class="path" href="../../">
+                    / RTB
+                </a>
+				<a class="path" href="../">
+                    / interni
+                </a>
+				<a class="path" href="./">
+                    / verbali
+                </a>
+            </nav>
+        </header>
+        <h1>Verbali</h1>
+        <section class="files" id="verbali"></section>
+        <footer>
+            <a href="mailto:yakuzaishi.swe@gmail.com">yakuzaishi.swe@gmail.com</a>
+            <ul class="membri">
+                <li>Bugno Francesco </li>
+                <li>Busacca Luca</li>
+                <li>Carturan Luca</li>
+                <li>Filosofo Michele</li>
+                <li>Furlan Dario</li>
+                <li>Mattarello Francesco</li>
+                <li>Midena Matteo</li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        fetch('list')
+            .then(res => res.text())
+            .then(data => {
+                let nodes = [];
+                for (let row of data.split('\n')) {
+                    if (row === '') continue;
+                    let li = document.createElement('h2');
+                    let a = document.createElement('a');
+                    let img = document.createElement('img');
+                    img.setAttribute('src', '/docs/res/pdf.svg');
+                    a.setAttribute('href', row);
+                    a.setAttribute('target', '_blank');
+                    a.append(img, row);
+                    li.appendChild(a);
+                    nodes.push(li);
+                }
+                document.getElementById('verbali').append(...nodes);
+            })
+            .catch(err => console.error(err));
+    </script>
+</body>
+
+</html>
