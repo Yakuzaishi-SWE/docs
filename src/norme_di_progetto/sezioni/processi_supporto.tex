@@ -11,20 +11,22 @@ Le aspettative del gruppo \groupName{} in questo processo sono:
 \end {itemize}
 \subsubsection{Descrizione}
 Lo scopo della documentazione è quello di trascrivere i fatti accaduti e le decisioni prese dal gruppo durante l'intera durata del progetto.
-\subsubsection{Ciclo di vita del documento}
+\subsubsection{Istanziazione del processo}
+\paragraph{Ciclo di vita del documento}
 Le fasi del ciclo di vita\glo{} del documento sono le seguenti:
 \begin{figure}[htbp]
 \centering
 \includegraphics[scale = 0.5]{../template/images/NdP/CicloDiVitaDocumento.png}
 \caption{Descrizione del ciclo di vita del documento}
 \end {figure}
-\subsubsection{Template}
+\paragraph{Sviluppo e design}\label{paragraph:sviluppo_design}
+\subparagraph{Template}
 Il team di sviluppo ha deciso di realizzare un template mediante l'utilizzo di \LaTeX{} in modo da avere una struttura uniforme di tutte le pagine nei vari documenti.
 Un altro scopo del template è quello di velocizzare la stesura dei documenti stessi, dato che con la struttura già disponibile, i membri del gruppo che si occupano di redigere i documenti dovranno solamente occuparsi della stesura degli stessi, senza badare alla parte grafica.
 Il template in particolare definisce la prima pagina, il registro delle modifiche e la presentazione del documento.
-\subsubsection{Struttura del documento}
+\subparagraph{Struttura del documento}
 In questa sezione viene descritta la struttura dei documenti. Questi ultimi sono stati suddivisi in due macrofamiglie la cui struttura differisce in alcune parti. Le due macrofamiglie vengono identificate come \textit{verbali} e \textit{documentazione}.
-\paragraph{\textit{Verbali}}
+\subparagraph{\textit{Verbali}}
 I \textit{verbali} vengono redatti successivamente alla riunione del gruppo oppure dopo un incontro con il proponente, essi contengono il rapporto dettagliato delle tematiche discusse durante il meeting.
 Prevedono una singola stesura, dato che contengono delle decisioni che non vengono modificate successivamente.
 
@@ -46,17 +48,17 @@ La struttura di ogni prima pagine di un \docNameVLow{} è la seguente:
     \item \textbf{Sommario}: contenente una breve descrizione del documento.
           \end {itemize}
 
-          \subparagraph{Contenuti}
+          \subparagraph*{Contenuti}
           Collocati nella seconda pagina del \docNameVLow{}. Si tratta di un indice che raccoglie i vari punti trattati nel \docNameVLow{}.
 
-          \subparagraph{Generale}
+          \subparagraph*{Generale}
           A seguire i contenuti, la sezione sopracitata contiene:
           \begin {itemize}
     \item \textbf{Informazioni sulla riunione}: contenenti data, ora di inizio, ora di fine, luogo e partecipanti dell'incontro;
     \item \textbf{Ordine del giorno}: contenente i temi trattati durante la riunione.
           \end {itemize}
 
-          \subparagraph{Resoconto}
+          \subparagraph*{Resoconto}
           Ultima sezione dei \textit{verbali}, contiene:
           \begin{itemize}
               \item \textbf{Verbale e azioni da intraprendere}: riporta in maniera dettagliata i punti discussi durante la riunione;
@@ -102,7 +104,7 @@ La struttura di ogni prima pagina dei vari documenti è la seguente:
 \end{itemize}
 \item \textbf{Sommario}: spiega brevemente le finalità del documento.
 \end {itemize}
-\subparagraph{Registro delle modifiche}
+\subparagraph{Registro delle modifiche}\label{subparagraph:registro_modifiche}
 Il file \textit{changelog.tex} contiene il registro delle modifiche, presente in ogni singolo documento, eccezion fatta per i \textit{verbali}.
 Esso corrisponde a una tabella nella quale si tiene traccia di ogni attività svolta (stesura, modifica, verifica, approvazione) e viene aggiornato ogni volta che avviene una delle attività precedentemente citate.
 La tabella del registro delle modifiche contiene le seguenti voci:
@@ -233,6 +235,13 @@ Sia i diagrammi UML\glo{} che i diagrammi di Gantt\glo{} vengono riportati come 
 Per la verifica ortografica dei documenti scritti in \LaTeX{} si utilizzerà lo strumento di correzione automatica \textbf{LanguageTool}:
 \begin{center}\url{https://languagetool.org}\end{center}
 
+
+\subsubsection{Metriche}
+Di seguito vengono riportati i riferimenti alle metriche utilizzate durante questa fase:
+\begin{itemize}
+    \item Indice di Gulpease: §\ref{sssec:indice_gulpease};
+    \item Errori ortografici: §\ref{sssec:errori_ortografici}.
+\end{itemize}    
 \subsubsection{Strumenti}
 Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo in fase di redazione dei documenti:
 \begin{itemize}
@@ -243,9 +252,6 @@ Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo in fase 
     \item \textbf{Diagrams.net}: software di disegno grafico multipiattaforma gratuito e open source\glo{}. Il gruppo ha scelto questo strumento per la progettazione di diagrammi UML\glo{} in quanto il software è gratuito e presenta tutte le funzionalità necessarie allo scopo.
           \begin{center}\url{https://www.diagrams.net}\end{center}
 \end{itemize}
-\subsubsection{Istanziazione del processo}
-\subsubsection{Metriche}
-\subsubsection{Strumenti}
 \vspace{2cm}
 
 \subsection{Gestione della configurazione}\label{subsection:gestione_configurazione}
@@ -264,9 +270,9 @@ Le aspettative del gruppo \groupName{} nell'utilizzo di questo processo sono:
 \subsubsection{Descrizione}
 Il processo di gestione della configurazione ha lo scopo di mantenere organizzata e tracciabile la documentazione redatta e il codice sviluppato, creando una storia per ciascun file prodotto.
 In particolare si vuole gestire la struttura e la disposizione delle varie parti di ogni file all'interno di repository\glo{} facilmente accessibili e navigabili.
-
-\subsubsection{Versionamento} \label{sssec:versionamento}
-\paragraph{Codice di versione}
+\subsubsection{Istanziazione del processo}
+\paragraph{Versionamento} \label{paragraph:versionamento}
+\paragraph*{Codice di versione}
 Ogni versione di documento è identificata tramite un codice numerico di tre cifre:
 \begin{center}
     \Large \textbf{[X].[Y].[Z]}
@@ -338,8 +344,7 @@ La separazione del flusso di lavoro tra i vari documenti da redarre permette una
     \item \textbf{Modifiche generali}: riguardano cambiamenti più generali come la struttura del documento o convenzioni da utilizzare e richiedono il consulto con il \roleProjectManagerLow, il quale potrà accettare o declinare la proposta di modifica.
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%				SISTEMARE
+
 \paragraph{Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend e
     \\ Yakuzaishi-SWE/smart-contract}
 Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend{} e Yakuzaishi-SWE/smart-contract{} sono organizzate allo stesso modo. In particolare:
@@ -352,9 +357,11 @@ Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend{} e Yakuzaishi-SWE/s
 \subparagraph{Gestione dei cambiamenti}
 La separazione del flusso di lavoro tra le varie features da sviluppare permette una notevole diminuzione dei conflitti. Il punto focale è che il branch\glo{} master rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo finché ciascun \roleProjectManagerLow{} non abbia dato l'approvazione per il rilascio. Solo in quel momento è permesso il merge\glo{} di uno dei branch\glo{} minori nel master.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Istanziazione del processo}
+
 \subsubsection{Metriche}
+Questo processo non fa uso di metriche particolari.
 \subsubsection{Strumenti}
+Questo processo non fa uso di strumenti particolari.
 \vspace{2cm}
 
 \subsection{Gestione della qualità}\label{subsection: gestione_qualita}
@@ -370,16 +377,29 @@ Le aspettative del team di sviluppo durante questo processo sono le seguenti:
 \subsubsection{Descrizione}
 La gestione di qualità è un processo che viene descritto nel \docNamePdQLow{}, esso infatti ha il compito di determinare le metriche e le modalità usate per valutare la qualità di prodotti e processi.
 Il team di sviluppo ritiene fondamentale raggiungere una buona qualità del prodotto, e ha ritenuto che il modo migliore per raggiungere questo obiettivo è mediante un approccio di tipo sistematico, ovvero assegnando a ciascun componente del gruppo un compito e un ruolo, svolgendo così diversi processi simultaneamente e ottenendo così un ottimizzazione delle risorse, effettuando infine dei test sul prodotto finito.
-\subsubsection{Attività}
+\subsubsection{Istanziazione del processo}
+\paragraph{Attività}
 Affinché il prodotto software e la documentazione redatta raggiungano una buona qualità, ogni componente del gruppo \groupName{} deve:
 \begin{itemize}
 \item Attenersi al \docNamePdQLow{};
 \item Porsi obiettivi incrementali, in modo da ridurre il margine di errore;
 \item Creare un avanzamento continuo della formazione personale, mediante conoscenze pregresse, conoscenze di altri membri del gruppo o mediante autoformazione.
 \end {itemize}
-\subsubsection{Istanziazione del processo}
+\paragraph{Classificazione delle metriche}
+Le metriche identificate mantengono la seguente struttura:
+\begin {center}
+    \large{\textbf{M[Utilizzo][ID Numerico]}}
+\end{center}
+Dove utilizzo può essere:
+\begin{itemize}
+    \item \textbf{PC:} processo;
+    \item \textbf{PD:} prodotto.
+\end{itemize}
+Invece l' ID Numerico è un numero intero a partire da 1 che distingue le metriche dello stesso sottoinsieme (processo o prodotto).   
 \subsubsection{Metriche}
+Questo processo non fa uso di metriche particolari.
 \subsubsection{Strumenti}
+Questo processo non fa uso di strumenti particolari.
 
 \vspace{2cm}
 
@@ -402,7 +422,7 @@ Durante questo processo, il compito dei verificatori è quello di effettuare l'a
     \item \textbf{Analisi statica}: processo di valutazione di un sistema o di un suo componente basato sulla sua forma, struttura, contenuto, documentazione. Questo tipo di analisi viene generalmente svolto tramite ispezioni e revisioni e può essere svolta sui documenti così come sul software o su parti di esso;
     \item \textbf{Analisi dinamica}: processo di valutazione di un sistema software o di un suo componente basato sull'osservazione del suo comportamento in esecuzione. Questo tipo di analisi viene generalmente chiamato testing e per motivi logici non può essere svolta sui documenti.
 \end{itemize}
-
+\subsubsection{Istanziazione del processo}
 \subsubsection{Verifica della documentazione}
 Il processo di verifica della documentazione può essere svolto mediante l'uso di strumenti automatici, oppure può essere condotta a mano. In questo secondo caso si possono utilizzare due diverse tecniche di analisi descritte nel seguito:
 \begin{itemize}
@@ -446,13 +466,48 @@ dove:
               \end{tabular}
               \caption{Tipologie test}
           \end{table}
+    \vspace {1cm}      
+   \item A loro volta i test di unità si identificano nella seguente maniera:
+\begin{itemize}
+\item    
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c|l}
+        \rowcolor[HTML]{125E28}
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Sigla}}
+        & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Significato}}\\
+      \hline
+        \textbf{UF}& Test di unità frontend\glo{}                                                                                                                 \\
+        \textbf{UO}& Test di unità Solidity OrderManager                                                                                                           \\
+        \textbf{UM}& Test di unità Solidity MoneyBoxManager                                                                                                         \\
+    \end{tabular}                                               
+    \caption{Classificazione test di unità}
+\end{table}
+\end {itemize}
     \item \textbf{ImportanzaRequisito} e \textbf{TipologiaRequisito} sono presenti solo nei codici per i test di sistema e accettazione. Questi campi identificano il requisito che si vuole testare, possono assumere i valori riportati e precedentemente descritti al paragrafo \ref{subparagraph:Classificazione dei requisiti}.\\\\
     \item \textbf{IdNumerico} è un valore crescente che parte da 1 e serve per distinguere i diversi test riguardanti la stessa tipologia.
 \end{itemize}
-\subsubsection{Istanziazione del processo}
-\subsubsection{Metriche}
-\subsubsection{Strumenti}
 
+
+\subsubsection{Metriche}
+Segue un riferimento alle varie metriche utilizzate durante questo processo:
+\begin{itemize}
+    \item Earned Value (EV): §\ref{sssec:earned_value};
+    \item Actual Cost (AC): §\ref{sssec:actual_cost};
+    \item Planned Value (PV): §\ref{sssec:planned_value};
+    \item Cost Variance (CV): §\ref{sssec:cost_variance};
+    \item Schedule Variance (SV): §\ref{sssec:schedule_variance};
+    \item Estimated At Completion (EAC): §\ref{sssec:estimate_at_completition};
+    \item Estimate To Complete (ETC): §\ref{sssec:estimate_to_complete};
+    \item Requirements Stability Index (RSI): §\ref{sssec:requirement_stability_index};
+    \item Passed Tests: §\ref{sssec:passed_tests};
+    \item Metrics Satisfied: §\ref{sssec:metrics_satisfied};
+    \item Risks Found: §\ref{sssec:risks_found}.
+\end{itemize}   
+\subsubsection{Strumenti}
+Questo processo non fa uso di strumenti particolari.
 \pagebreak
 
 \subsection{Validazione}\label{subsection: validazione}
@@ -471,7 +526,19 @@ Sarà il \roleProjectManagerLow{} di progetto che avrà la responsabilità di co
     \item Accettare il prodotto;
     \item Rifiutarlo richiedendo una nuova verifica.
 \end{itemize}
-
 \subsubsection{Istanziazione del processo}
+\paragraph{Validazione della documentazione}
+Al termine della stesura di un documento il \roleProjectManagerLow{} rilegge il documento, ne calcola l' \textit{indice di Gulpease} e si assicura che gli obiettivi stabiliti siano stati raggiunti.
+Se il documento soddisfa le attese allora viene approvato per il rilascio, invece se non le soddisfa il \roleProjectManagerLow{} assegna il compito di sistemare le parti carenti e la procedura si ripete.
+\paragraph{Validazione del codice}
+Il \roleVerifierLow{} esegue i test di unità, integrazione e sistema di una issue\glo{} assegnatagli, oltre ai test di accettazione preventivamente concordati.
 \subsubsection{Metriche}
+Seguono le metriche utilizzate in questo processo:
+\begin{itemize}
+    \item Solidity Statement Coverage: §\ref{sssec:solidity_statement_coverage};
+    \item Solidity Branch Coverage: §\ref{sssec:solidity_branch_coverage};
+    \item Solidity Function Coverage: §\ref{sssec:solidity_function_coverage};
+    \item Solidity Line Coverage: §\ref{sssec:solidity_line_coverage}.
+\end{itemize}    
 \subsubsection{Strumenti}
+Questo processo non fa uso di strumenti particolari.

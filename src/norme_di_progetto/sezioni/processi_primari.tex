@@ -22,7 +22,30 @@ Il processo di fornitura consiste nelle seguenti fasi:
 \item Revisione e valutazione;
 \item Consegna e completamento.
 \end {itemize}
-\subsubsection{Proponente}\label{subsubsection: proponente_fornitura}
+\subsubsection{Istanziazione del processo}
+\paragraph{Inizializzazione}
+Gli analisti devono svolgere uno studio sui vari capitolati proposti, indicando per ognuno di essi gli aspetti positivi e negativi, infine tramite un' apposita motivazione devono comunicare il capitolato scelto.
+\paragraph{Preparazione alla risposta}
+Il gruppo \groupName{} deve redigere una lettera di presentazione dove dichiara l'impegno nella realizzazione del prodotto proposto dal capitolato di interesse.
+\paragraph{Rilascio del prodotto}
+Durante questa fase il gruppo \groupName{} deve rilasciare un prodotto che soddisfi le aspettative del proponente e dei committenti, presentando a questi ultimi:
+\begin{itemize}
+    \vspace{1 cm}
+    \item Codice soregente del prodotto;
+    \item Documentazione, alla quale in questa fase si aggiungono:
+    \begin{itemize}
+        \item Manuale utente;
+        \item Manuale sviluppatore.       
+    \end{itemize}   
+\end{itemize}
+\paragraph{Pianificazione}
+Il gruppo \groupName{} deve redigere un piano per la gestione del progetto e della qualità. 
+In §\ref{paragraph:sviluppo_design} vengono descritti i documenti di interesse.
+\paragraph{Esecuzione e controllo}
+Il gruppo deve seguire ed implementare il \docNamePdPLow{} e controllare l'avanzamento, i costi e la qualità dei prodotti durante tutte le fasi del loro ciclo di vita.
+\paragraph{Revisione e valutazione} 
+Il gruppo \groupName{} deve organizzare le attività di revisione, verifica e validazione del prodotto svolto, garantendo che quest'ultimo soddisfi le aspettative del proponente.   
+\paragraph{Proponente}\label{subsubsection: proponente_fornitura}
 Il team di sviluppo si è accordato con il proponente per avere un continuo contatto sul buon proseguo del progetto, organizzando periodicamente incontri e mantenendo un costante contatto asincrono mediante un apposito canale sulla piattaforma Discord\glo{}.
 Il team di sviluppo vuole avere un costante contatto con il proponente riguardo alle seguenti tematiche:
 \begin {itemize}
@@ -34,9 +57,9 @@ Il team di sviluppo vuole avere un costante contatto con il proponente riguardo 
 \item Stima dei costi;
 \item Vincoli e requisiti obbligatori.
 \end{itemize}
-\subsubsection {Documenti}\label{subsubsection: documenti_fornitura}
+\paragraph {Documenti}\label{subsubsection: documenti_fornitura}
 Di seguito sono descritti i documenti redatti in questa fase.
-\paragraph{\docNamePdQ{}}\label{paragraph: PdQ_fornitura}
+\paragraph*{\docNamePdQ{}}\label{paragraph: PdQ_fornitura}
 Il \docNamePdQLow{} viene redatto dal \roleVerifierLow{} e contiene le misure necessarie a garantire la qualità del prodotto e dei processi.
 Esso è formato dalle seguenti parti:
 \begin{itemize}
@@ -45,7 +68,7 @@ Esso è formato dalle seguenti parti:
     \item Specifica dei test;
     \item Resoconto attività di verifica.
 \end{itemize}
-\paragraph{\docNamePdP{}}\label{paragraph: PdP_fornitura}
+\paragraph*{\docNamePdP{}}\label{paragraph: PdP_fornitura}
 Il \docNamePdPLow{} viene redatto dagli amministratori e dal \roleProjectManagerLow{} di progetto, esso verrà seguito per tutta la durata del progetto, ed è diviso nelle seguenti parti:
 \begin{itemize}
     \item Analisi dei rischi;
@@ -56,7 +79,10 @@ Il \docNamePdPLow{} viene redatto dagli amministratori e dal \roleProjectManager
     \item Attualizzazione dei rischi.
 \end{itemize}
 
-\subsubsection{Istanziazione del processo}
+
+
+
+
 \subsubsection{Metriche}
 Il processo di fornitura non fa uso di metriche particolari.
 \subsubsection{Strumenti}\label{sssec:strumenti_fornitura}
@@ -97,8 +123,8 @@ Le aspettative nell'applicazione del processo di sviluppo sono:
 \subsubsection{Descrizione} \label{subsubsection:Sviluppo_Descrizione}
 Il processo di sviluppo contiene le attività e i compiti dello sviluppatore, tra cui le attività per l'analisi dei requisiti, la progettazione,
 la codifica, l'integrazione, il test, l'installazione e l'accettazione relative ai prodotti software.
-
-\subsubsection{Attività} \label{subsubsection:Attivita'}
+\subsubsection{Istanziazione del processo}
+\paragraph{Attività} \label{subsubsection:Attivita'}
 Di seguito sono elencate e successivamente trattate le attività caratterizzanti tale processo:
 \begin{itemize}
     \item Analisi dei requisiti;
@@ -106,18 +132,18 @@ Di seguito sono elencate e successivamente trattate le attività caratterizzanti
     \item Codifica.
 \end{itemize}
 
-\paragraph{\docNameAdR} \label{paragraph:Analisi dei requisiti}
-\subparagraph{Scopo}
+\subparagraph{\docNameAdR} \label{paragraph:Analisi dei requisiti}
+\subparagraph*{Scopo}
 Lo scopo dell'\docNameAdRLow{} è quello di individuare, a partire da un approfondito studio del capitolato, i requisiti diretti e indiretti,
 impliciti ed espliciti che il proponente richiede per la realizzazione del prodotto e i vari casi d'uso del prodotto stesso. In questa attività è importante
 suddividere il problema iniziale in requisiti quanto più elementari possibile, così da diminuire la complessità del problema originale
 facilitando il lavoro durante la fase di sviluppo.
 
-\subparagraph{Aspettative} \label{subparagraph:ADR_Aspettative}
+\subparagraph*{Aspettative} \label{subparagraph:ADR_Aspettative}
 L'obiettivo dell'attività di \docNameAdRLow{} consiste nella creazione della documentazione formale contenente tutti i requisiti
 richiesti dal proponente, che siano essi stati definiti all'inizio o che siano stati concordati in fase di sviluppo.
 
-\subparagraph{Requisiti} \label{subparagraph:Requisiti}
+\subparagraph*{Requisiti} \label{subparagraph:Requisiti}
 I requisiti vengono raccolti da diverse fonti quali:
 \begin{itemize}
     \item Lettura investigativa del capitolato;
@@ -126,7 +152,7 @@ I requisiti vengono raccolti da diverse fonti quali:
     \item Analisi dei casi d'uso.
 \end{itemize}
 
-\subparagraph{Classificazione dei requisiti} \label{subparagraph:Classificazione dei requisiti}
+\subparagraph*{Classificazione dei requisiti} \label{subparagraph:Classificazione dei requisiti}
 Ciascun requisito viene classificato mediante l'uso di un codice identificativo. Per tale codice è stato definito uno standard dal gruppo che viene spiegato nel seguito.\\\\
 \textbf{Codice Identificativo:}\\
 \begin{center}
@@ -195,7 +221,7 @@ Ogni requisito deve inoltre essere accompagnato da una serie di informazioni agg
     \caption{Classificazione di un requisito}
 \end{table}
 
-\subparagraph{Casi d'uso} \label{subparagraph:Casi d'uso}
+\subparagraph*{Casi d'uso} \label{subparagraph:Casi d'uso}
 I casi d'uso esprimono un comportamento o un modo di utilizzare il prodotto.\\
 Vengono descritti graficamente mediante l'ausilio di diagrammi UML\glo{}.\\
 Ciascun caso d'uso è costituito da:
@@ -209,7 +235,7 @@ Ciascun caso d'uso è costituito da:
     \item Estensioni.
 \end{itemize}
 
-\subparagraph{Classificazione dei casi d'uso} \label{subparagraph:Classificazione dei casi d'uso}
+\subparagraph*{Classificazione dei casi d'uso} \label{subparagraph:Classificazione dei casi d'uso}
 Ciascun caso d'uso viene classificato mediante l'uso di un codice identificativo. Per tale codice è stato definito uno standard dal gruppo che viene spiegato nel seguito.\\\\
 \textbf{Codice Identificativo:}\\
 \begin{center}
@@ -296,14 +322,24 @@ rispettare alcune norme per poter essere leggibile e per poter facilmente interv
 
 
 
-\subsubsection{Istanziazione del processo}
+
 \subsubsection{Metriche}
 Di seguito viene riportato un riferimento alle metriche utilizzate durante questo processo:
 \paragraph {Metriche per la qualità del prodotto}
 \begin{itemize}
         \item Versioni browser supportate: §\ref{sssec:versioni_browser_supportate}.     
 \end{itemize}
-    
+\paragraph{Metriche per la funzionalità}
+\begin{itemize}
+    \item Copertura requisiti obbligatori §\ref{sssec:requisiti_obbligatori};
+    \item Copertura requisiti desiderabili §\ref{sssec:requisiti_desiderabili};
+    \item Copertura requisiti opzionali §\ref{sssec:requisiti_opzionali}
+\end{itemize}
+\paragraph{Metriche per l' usabilità}
+\begin{itemize}
+    \item Facilità di utilizzo §\ref{sssec:facilita_utilizzo}
+\end{itemize}
+
 \subsubsection{Strumenti}\label{sssec:Strumenti}
 Di seguito sono riportati gli strumenti utilizzati dal team di sviluppo durante la fase di codifica e quelli utilizzati a supporto di tale processo.
 \subparagraph{Strumenti per la codifica}

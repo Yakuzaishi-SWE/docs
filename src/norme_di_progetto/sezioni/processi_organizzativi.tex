@@ -31,9 +31,9 @@ Le attività di gestione sono:
 \item Esecuzione e controllo;
 \item Revisione e valutazione periodica delle attività.
 \end {itemize}
-
-\subsubsection{Ruoli di progetto}
-\paragraph{\roleProjectManager{} di progetto}
+\subsubsection{Istanziazione del processo}
+\paragraph{Ruoli di progetto}
+\paragraph*{\roleProjectManager{} \textit{di progetto}}
 Il suo compito consiste nel garantire lo svolgimento delle attività pianificate entro i tempi e le modalità previste dal gruppo.\\
 Rappresenta il gruppo nelle comunicazioni esterne con committenti e proponenti.\\
 Le sue responsabilità sono:
@@ -43,7 +43,7 @@ Le sue responsabilità sono:
   \item Approvare la documentazione nella fase finale del processo di verifica.
 \end{itemize}
 
-\paragraph{\roleAdministrator{}}
+\paragraph*{\roleAdministrator{}}
 È responsabile degli strumenti necessari all'ambiente di lavoro.\\
 Le sue responsabilità sono:
 \begin{itemize}
@@ -54,7 +54,7 @@ Le sue responsabilità sono:
   \item È responsabile della redazione e attuazione di piani e procedure di gestione per la qualità.
 \end{itemize}
 
-\paragraph{\roleAnalyst}
+\paragraph*{\roleAnalyst}
 Il suo compito consiste nell'individuare, analizzare e documentare i servizi che il sistema deve fornire.\\
 Le sue responsabilità sono:
 \begin{itemize}
@@ -64,7 +64,7 @@ Le sue responsabilità sono:
   \item Redigere la \docNameVersionAdR{}.
 \end{itemize}
 
-\paragraph{\roleDesigner}
+\paragraph*{\roleDesigner}
 Il suo compito consiste nel definire la struttura architetturale del sistema.\\
 È responsabile delle attività di progettazione, le quali devono portare alla realizzazione di un prodotto in grado di soddisfare i requisiti individuati dagli analisti.\\
 Le sue responsabilità sono:
@@ -74,7 +74,7 @@ Le sue responsabilità sono:
   \item Identificare l'architettura ad alto livello del sistema e l'architettura a livello di componenti del sistema.
 \end{itemize}
 
-\paragraph{\roleProgrammer}
+\paragraph*{\roleProgrammer}
 Il suo compito consiste nella scrittura del codice richiesto dallo svolgimento del progetto.\\
 Le sue responsabilità sono:
 \begin{itemize}
@@ -82,7 +82,7 @@ Le sue responsabilità sono:
   \item Rendere l'attività di verifica semplice svolgendo il proprio compito con gli strumenti e le modalità previsti da questo documento.
 \end{itemize}
 
-\paragraph{\roleVerifier}
+\paragraph*{\roleVerifier}
 Il suo compito consiste nella verifica del progetto.\\
 Le sue responsabilità sono:
 \begin{itemize}
@@ -90,24 +90,15 @@ Le sue responsabilità sono:
   \item Assicurarsi della conformità di ogni stadio del ciclo di vita\glo{} del prodotto;
   \item Segnalare eventuali anomalie riscontrate nella verifica in modo che vengano corrette tempestivamente.
 \end{itemize}
-\subsubsection {Procedure}
+\paragraph {Procedure}
 Per il coordinamento e le comunicazioni durante l'intera durata del progetto il gruppo \groupName{} adotterà le seguenti procedure:
 \begin{itemize}
   \item \textbf{Comunicazione interna:} coinvolge tutti i membri del gruppo;
   \item  \textbf{Comunicazione esterna:} coinvolge proponente e committenti.
 \end{itemize}
-\paragraph{Comunicazioni interne}
-Le comunicazioni interne avvengono tramite le applicazioni \textit{Telegram}\glo{} e \textit{Discord}\glo{}. All'interno di \textit{Discord}\glo{} sono stati creati dei canali per ogni attività in corso, nei quali i componenti del gruppo possono discutere di argomenti ad essi associati.
-\paragraph{Comunicazioni esterne}
-Il \roleProjectManagerLow{} si occupa delle comunicazioni esterne, le quali avvengono tramite l'indirizzo di posta elettronica del gruppo:
-\begin{center}
-  \groupEmail{}
-\end{center}
-Egli dovrà avvisare il team, tramite i canali di comunicazione interna, delle discussioni avvenute con entità esterne e darne un resoconto dettagliato.\\
-Altra forma di comunicazione esterna che risulta essere più immediata ed inclusiva è il canale aziendale dedicato su Discord\glo{} in cui il gruppo \groupName{} comunica con il proponente.
 
 
-\subsubsection{Rotazione dei ruoli}
+\paragraph{Rotazione dei ruoli}
 È prevista una rotazione dei ruoli a cadenza periodica da parte del gruppo \groupName{}.\\
 L'attribuzione dei ruoli viene svolta secondo i seguenti criteri:
 \begin{itemize}
@@ -115,20 +106,17 @@ L'attribuzione dei ruoli viene svolta secondo i seguenti criteri:
   \item \textbf{Continuità:} i ruoli vengono fatti ruotare in concomitanza con l'inizio di un nuovo periodo, in modo da garantire che il lavoro svolto dai membri del gruppo abbia una continuità nel corso di ciascun periodo;
   \item \textbf{Assenza di conflitti:} poiché ogni membro può ricoprire più ruoli in un periodo, si cerca di assegnarli in modo che non ci sia conflitto di interesse tra essi. Vige in ogni caso la regola che un \roleProjectManagerLow{} non può approvare il proprio lavoro di verifica se ha assunto anche il ruolo di \roleVerifierLow{}, mentre un \roleVerifierLow{} non può verificare i propri testi o codice qualora abbia assunto il ruolo di \roleAnalystLow{} o \roleProgrammerLow{} nello stesso periodo.
 \end{itemize}
-\subsubsection{Istanziazione del processo}
-\subsubsection{Metriche}
-\subsubsection{Strumenti}
-\vspace{2cm}
 
-\subsection{Impiego delle infrastrutture interne} \label{subsection:infrastrutture_interne}
 
-\subsubsection{Gestione delle comunicazioni}
-\paragraph{Comunicazioni interne}
+\subsubsection{Impiego delle infrastrutture interne} \label{subsection:infrastrutture_interne}
+
+\paragraph{Gestione delle comunicazioni}
+\subparagraph{Comunicazioni interne}
 Le comunicazioni interne del gruppo \groupName{} avvengono tramite i canali Discord\glo{} e Telegram\glo{}.\\
 Il canale Discord\glo{} viene utilizzato principalmente per gli incontri settimanali tra i membri del gruppo, essendo uno strumento utilizzato anche in ambito aziendale, ciò favorisce uno spazio di lavoro condiviso tra i membri del gruppo.
 Per comunicazioni rapide invece viene preferito il canale Telegram\glo{}.
 
-\paragraph{Comunicazioni esterne}
+\subparagraph{Comunicazioni esterne}
 Le comunicazioni con utenti esterni al gruppo sono gestite dal \roleProjectManagerLow{} del progetto. Le modalità utilizzate sono le seguenti:
 \begin {itemize}
 \item Tramite e-mail (All'indirizzo \groupEmail{});
@@ -136,14 +124,14 @@ Le comunicazioni con utenti esterni al gruppo sono gestite dal \roleProjectManag
 \item Tramite Discord\glo{} (Tramite il server dell'azienda SyncLab).
 \end {itemize}
 
-\subsubsection{Gestione degli incontri}
-\paragraph{Incontri interni}
+\paragraph{Gestione degli incontri}
+\subparagraph{Incontri interni}
 Il \roleProjectManagerLow{} ha il compito di organizzare gli incontri interni utilizzando l'apposito canale di comunicazione.\\
 Per ogni incontro viene redatto un \docNameVLow{} che raccoglie tutti gli argomenti trattati durante la riunione.
 \paragraph {\textit{Verbali} di incontri interni}
 In occasione di ogni incontro interno viene redatto un \docNameVLow{} dal segretario scelto dal \roleProjectManagerLow{}. Il contenuto della riunione deve essere riportato nel \docNameVLow{} corrispondente e approvato dal \roleProjectManagerLow{}.
 
-\paragraph{Incontri esterni}
+\subparagraph{Incontri esterni}
 Il \roleProjectManagerLow{} ha il compito di organizzare gli incontri esterni con il proponente o con il committente.\\
 Un incontro esterno viene richiesto se vi è la necessità impellente di chiarimento di una problematica riscontrata da parte del gruppo.\\
 In questo caso il \roleProjectManagerLow{} provvede a formalizzare una richiesta all'entità esterna (proponente o committente) tramite le mail di contatto fornite.\\
@@ -152,8 +140,8 @@ Come per gli incontri interni, deve essere redatto un \docNameVLow{} che descriv
 \paragraph {\textit{Verbali} di incontri esterni}
 In occasione di ogni incontro esterno viene redatto un \docNameVLow{} da un redattore scelto dal \roleProjectManagerLow. Il contenuto della riunione deve essere riportato nel \docNameVLow{} esterno corrispondente e approvato dal \roleProjectManagerLow.
 
-\subsubsection{Gestione degli strumenti di coordinamento}
-\paragraph{Ticketing}
+\paragraph{Gestione degli strumenti di coordinamento}
+\subparagraph{Ticketing}
 Per la suddivisione delle issue\glo{} viene utilizzato \textit{GitHub Projects Board}\glo{}.\\
 Il \roleProjectManagerLow{} avrà il compito di creare e assegnare le varie issue\glo{} ai membri del gruppo.\\
 \textit{GitHub Projects Board}\glo{} permette una buona gestione delle issue\glo{}, infatti:
@@ -174,16 +162,16 @@ Se si completa un task bisogna spuntarlo come completato all'interno dell'issue\
 Inoltre è possibile creare delle milestone\glo{} a cui assegnare le issue\glo{}, permettendo così di stabilire un punto di
 riferimento sulla linea temporale entro il quale è previsto il completamento di tali issue\glo{}.
 
-\subsubsection{Gestione degli strumenti di versionamento}
-\paragraph{Repository}
+\paragraph{Gestione degli strumenti di versionamento}
+\subparagraph{Repository}
 Per il versionamento dei file è stata scelta la piattaforma GitHub\glo{}. L'\roleAdministratorLow{} ha creato il repository\glo{} e ha aggiunto
 come collaboratori tutti i membri del gruppo \groupName{}.
 
-\paragraph{Tipi di file e \textit{.gitignore}}
+\subparagraph{Tipi di file e \textit{.gitignore}}
 Nelle cartelle che contengono i documenti, sono presenti solo i file \textit{.tex} e \textit{.png}.\\
 Nel file \textit{.gitignore} sono state aggiunte tutte le estensione che devono essere ignorate da un commit, al fine di evitare la presenza di file indesiderati
 o non rilevanti che devono quindi non essere versionati.
-\paragraph {Gestione dei rischi}
+\subparagraph {Gestione dei rischi}
 Il \roleProjectManagerLow{} ha il compito di individuare i rischi e renderli noti. Tale attività verrà svolta nel \docNamePdPLow{} e contiene i seguenti punti:
 \begin{figure}[htbp]
 \centering
@@ -219,10 +207,34 @@ dove:
   \item \textbf{ID numerico}: È un id crescente che parte da 1 e viene incrementato di 1 per ciascun rischio.\\
 \end{itemize}
 La codifica di ciascun rischio è univoca. Non possono esserci due rischi dello stesso tipo con lo stesso ID numerico.
-\subsubsection{Istanziazione del processo}
+
 \subsubsection{Metriche}
+Questo processo non fa uso di metriche particolari.
 \subsubsection{Strumenti}
+Gli strumenti utilizzati in questa fase sono i seguenti:
+\begin{itemize}
+  \item \textbf{Discord:} utilizzato per le comunicazioni interne tra i membri del gruppo e per le riunioni con il proponente;
+  \begin{center}
+    \url{https://discord.com/}
+  \end{center}  
+  \item \textbf{Google Meet:} utilizzato per gli incontri con il proponente;
+  \begin{center}
+    \url{https://meet.google.com/}
+  \end{center} 
+  \item \textbf{Gmail:} utilizzato per le comunicazioni con i committenti ed il proponente;
+  \begin{center}
+    \url{https://www.google.com/intl/it/gmail/about/}
+  \end{center} 
+  \item \textbf{Telegram:} utilizzato per la comunicazione tra i membri del gruppo.
+  \begin{center}
+    \url{https://telegram.org/}
+  \end{center} 
+\end{itemize} 
 \vspace{2cm}
+\subsubsection{Metriche}
+Questo processo non fa uso di metriche particolari.
+\subsubsection{Strumenti}
+Questo processo non fa uso di strumenti particolari.
 
 \subsection{Formazione} \label{subsection: formazione}
 \subsubsection {Scopo}
@@ -236,8 +248,19 @@ Le aspettative per il processo di formazione sono:
 \end {itemize}
 \subsubsection {Descrizione}
 Il processo di formazione di ogni membro del gruppo \groupName{} è ritenuto fondamentale, e ha il fine di colmare le mancate conoscenze di uno o più componenti del gruppo nei vari ambiti che copre il capitolato di interesse, in modo da avere una formazione uniforme all'interno del gruppo.
-\subsubsection {Modalità di formazione}
-La formazione di ogni singolo componente del gruppo avviene in maniera autonoma, tramite documentazione trovata in rete e tramite materiale fornito dal proponente e dai docenti.
 \subsubsection{Istanziazione del processo}
+La formazione di ogni singolo componente del gruppo avviene in maniera autonoma, tramite documentazione trovata in rete e tramite materiale fornito dal proponente e dai docenti.
+
 \subsubsection{Metriche}
+Il processo di formazione non fa uso di metriche particolari.
 \subsubsection{Strumenti}
+Alcuni strumenti, librerie e framework necessitano di una ampia formazione, questi sono: 
+
+\begin{itemize}
+  \item \textbf{React:} libreria JavaScript\glo{} per la creazione di interfacce utente;
+  \item \textbf{\LaTeX:} linguaggio di markup per la creazione di testi;
+  \item \textbf{GitHub:} Servizio di controllo di versione e hosting per progetti software;
+  \item \textbf{Solidity:} Linguaggio di programmazione ad alto livello orientato agli oggetti per scrivere smart contract\glo{}.
+  Viene utilizzato su varie piattaforme blockchain\glo{}, in particolare Ethereum\glo{}.
+
+\end{itemize} 
