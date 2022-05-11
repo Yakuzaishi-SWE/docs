@@ -27,7 +27,7 @@ sono quindi presenti differenti attori nella gerarchia:
     \caption{Diagramma degli attori}
 \end{figure}
 
-\subsection{UC1 - Inizializzazione della Transazione}\label{subsection: UC1}
+\subsection{UC1 - Inizializzazione dell'Ordine}\label{subsection: UC1}
 
 \begin{figure}[H]
     \centering
@@ -38,7 +38,7 @@ sono quindi presenti differenti attori nella gerarchia:
 \begin{itemize}
     \item Attore primario: e-commerce\glo{};
     \item Precondizioni: il sistema è raggiungibile e funzionante;
-    \item Postcondizioni: la transazione viene caricata nel sistema, l'utente viene reindirizzato alla pagina di checkout;
+    \item Postcondizioni: l'ordine viene caricato nel sistema, l'utente viene reindirizzato alla pagina di checkout;
     \item Scenario principale: L'e-commerce\glo{} delega il pagamento comunicando la somma richiesta e l'indirizzo del destinatario.
 \end{itemize}
 
@@ -52,7 +52,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine, acquirente;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato l'ordine [UC1];
     \item Postcondizioni: viene visualizzato l'esito dell'operazione;
     \item Scenario principale:
     \begin{enumerate}
@@ -67,7 +67,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: acquirente;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato l'ordine [UC1];
     \item Postcondizioni: l'acquirente ha visualizzato il riepilogo dell'ordine;
     \item Scenario principale:
           \begin{enumerate}
@@ -80,7 +80,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato l'ordine [UC1];
     \item Postcondizioni: il proprietario dell'ordine ha selezionato un metodo di pagamento;
     \item Scenario principale: il proprietario dell'ordine seleziona la tipologia di pagamento obbligando i successivi pagamenti per questa transazione alla tipologia scelta;
     \item Estensioni:
@@ -102,7 +102,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato l'ordine [UC1];
     \item Postcondizioni: il proprietario dell'ordine ha selezionato pagamento unico come metodo di pagamento;
     \item Scenario principale: 
         \begin{itemize}
@@ -115,13 +115,13 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1];
-    \item Postcondizioni: il proprietario dell'ordine ha selezionato pagamento MoneyBox\glo{} come metodo di pagamento;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato l'ordine [UC1];
+    \item Postcondizioni: il proprietario dell'ordine ha selezionato pagamento MoneyBox\glo{} come metodo di pagamento e può procedere alla sua creazione;
     \item Scenario principale: 
         \begin{itemize}
             \item Il proprietario dell'ordine seleziona pagamento MoneyBox\glo{} come metodo di pagamento;
-            \item Viene creata la MoneyBox\glo{};
-            \item Vengono vincolati i successivi pagamenti per questa transazione ad un pagamento parziale della somma totale rimanente (UC2.3.2), i quali potranno essere effettuati da un qualsiasi partecipante MoneyBox\glo{}.
+            \item Il proprietario dell'ordine può selezionare un ammontare iniziale da versare nella MoneyBox\glo{};
+            \item Il proprietario dell'ordine può procedere alla creazione della MoneyBox\glo{}.
         \end{itemize}
 \end{itemize}
 
@@ -129,8 +129,8 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: l'e-commerce\glo{} ha iniziato la transazione [UC1], transazione già presente in blockchain;
-    \item Postcondizioni: il proprietario dell'ordine ha visualizzato il messaggio di avviso transazione esistente;
+    \item Precondizioni: l'e-commerce\glo{} ha iniziato l'ordine [UC1], transazione già presente in blockchain;
+    \item Postcondizioni: il proprietario dell'ordine ha visualizzato un messaggio di errore;
     \item Scenario principale: il proprietario dell'ordine visualizza il messaggio di avviso, poiché la transazione è già presente in blockchain\glo{}.
 \end{itemize}
 
@@ -145,15 +145,15 @@ sono quindi presenti differenti attori nella gerarchia:
 \begin{itemize}
     \item Attore primario: acquirente;
     \item Attore secondario: Metamask\glo{};
-    \item Precondizioni: è stata selezionata una tipologia di pagamento per la transazione interessata dal proprietario dell'ordine [UC2.2], 
+    \item Precondizioni: è stata selezionata una tipologia di pagamento per l'ordine interessato, dal proprietario dell'ordine [UC2.2], 
             l'acquirente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
     \item Postcondizioni: l'acquirente ha effettuato il pagamento;
     \item Scenario principale:
           \begin{enumerate}
               \item L'acquirente visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
               \item L'acquirente visualizza un overlay di caricamento sulla pagina di ShopChain;
-              \item L'acquirente autorizza la transazione per l'importo impostato a seconda della tipologia precedentemente scelta dal proprietario dell'ordine (in UC2.2);
-              \item L'acquirente visualizza un messaggio di conferma di avvenuto pagamento.
+              \item L'acquirente autorizza la transazione per l'importo impostato (che nel caso MoneyBox\glo{} può essere nullo o a scelta) a seconda della tipologia precedentemente selezionata dal proprietario dell'ordine (in UC2.2);
+              \item L'acquirente visualizza un messaggio di conferma di avvenuto pagamento o un riscontro dell'avvenuta creazione della MoneyBox\glo{}.
           \end{enumerate}
     \item Estensioni:
           \begin{enumerate}
@@ -190,14 +190,14 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: partecipante MoneyBox\glo{};
-    \item Precondizioni: è stata selezionato Pagamento MoneyBox\glo{} come tipologia di pagamento per la transazione interessata [UC2.2.2], 
-            Il partecipante MoneyBox\glo{} ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
-    \item Postcondizioni: Il partecipante MoneyBox\glo{} ha pagato l'importo scelto;
+    \item Precondizioni: è stato selezionato Pagamento MoneyBox\glo{} come tipologia di pagamento per la transazione interessata [UC2.2.2], 
+            il partecipante MoneyBox\glo{} ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Postcondizioni: la MoneyBox\glo{} è registrata in blockchain e il partecipante MoneyBox\glo{} ha pagato l'importo scelto se non nullo;
     \item Scenario principale:
     \begin{enumerate}
         \item Il partecipante MoneyBox\glo{} visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
         \item Il partecipante MoneyBox\glo{} visualizza un overlay di caricamento sulla pagina di ShopChain;
-        \item Il partecipante MoneyBox\glo{} autorizza la transazione per l'importo scelto;
+        \item Il partecipante MoneyBox\glo{} autorizza la transazione relativa alla creazione della MoneyBox\glo{} e ad un eventuale suo versamento a scelta;
         \item Il partecipante MoneyBox\glo{} visualizza un messaggio di conferma di avvenuto pagamento.
     \end{enumerate}
 \end{itemize}
@@ -215,7 +215,7 @@ sono quindi presenti differenti attori nella gerarchia:
           \end{enumerate}
 \end{itemize}
 
-\paragraph{UC2.4 - Visualizzazione Codice di Sblocco}
+\subsection{UC2.4 - Visualizzazione Codice di Sblocco}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
@@ -238,13 +238,13 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: partecipante MoneyBox\glo{};
-    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo{} [UC2.2.2];
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2];
     \item Postcondizioni: il partecipante MoneyBox\glo{} ha visualizzato i dati relativi la MoneyBox\glo{};
     \item Scenario principale:
           \begin{enumerate}
                 \item Il partecipante MoneyBox\glo{} può visualizzare lo stato del completamento in formato percentuale e il saldo mancante [UC3.1];
                 \item Il partecipante MoneyBox\glo{} può visualizzare un elenco delle transazioni partecipanti [UC3.2];
-                \item Il partecipante MoneyBox\glo{} può visualizzare l'invito per partecipare alla MoneyBox\glo{} [UC3.3];
+                \item Il partecipante MoneyBox\glo{} può copiare l'invito di partecipazione alla MoneyBox\glo{} [UC3.3];
                 \item Il partecipante MoneyBox\glo{} può partecipare alla MoneyBox\glo{} [UC3.4];
                 \item Il partecipante MoneyBox\glo{} può visualizzare una grafica identificativa della MoneyBox\glo{} [UC3.5].
     \end{enumerate}
@@ -254,7 +254,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: partecipante MoneyBox\glo{};
-    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo{} [UC2.2.2], 
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], 
             l'utente dispone dell'invito valido ad una MoneyBox\glo{} [UC3.3];
     \item Postcondizioni: il partecipante MoneyBox\glo{} ha visualizzato lo stato del completamento;
     \item Scenario principale: il partecipante MoneyBox\glo{} visualizza lo stato del completamento in formato percentuale e il saldo mancante.
@@ -264,7 +264,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: partecipante MoneyBox\glo{};
-    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo{} [UC2.2.2], 
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], 
             l'utente dispone dell'invito valido ad una MoneyBox\glo{} [UC3.3];
     \item Postcondizioni: il partecipante MoneyBox\glo{} ha visualizzato l'elenco delle transazioni partecipanti;
     \item Scenario principale: il partecipante MoneyBox\glo{} visualizza l'elenco delle transazioni partecipanti con i seguenti dettagli:
@@ -275,27 +275,26 @@ sono quindi presenti differenti attori nella gerarchia:
         \end{itemize}
 \end{itemize}
 
-\subsubsection{UC3.3 - Visualizzazione Invito Partecipazione MoneyBox}
+\subsubsection{UC3.3 - Copia Invito Partecipazione MoneyBox}
 
 \begin{itemize}
     \item Attore primario: partecipante MoneyBox\glo{};
-    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo{} [UC2.2.2];
-    \item Postcondizioni: il partecipante MoneyBox\glo{} ha visualizzato l'invito alla MoneyBox\glo{};
-    \item Scenario principale: il partecipante MoneyBox\glo{} visualizza l'invito alla MoneyBox\glo{}.
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], la MoneyBox\glo{} è stata creata [UC2.3.2] e l'utente visualizza correttamente lo stato della MoneyBox\glo{} [UC3.1];
+    \item Postcondizioni: il partecipante MoneyBox\glo{} ha copiato negli appunti il link di condivisione della MoneyBox\glo{}.
+    \item Scenario principale: il partecipante MoneyBox\glo{} clicca un pulsante che copia negli appunti il link di condivisione della MoneyBox\glo{}.
 \end{itemize}
 
 \subsubsection{UC3.4 - Partecipazione MoneyBox}
 
 \begin{itemize}
     \item Attore primario: partecipante MoneyBox\glo{};
-    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo{} [UC2.2.2], 
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], 
             l'utente dispone dell'invito valido ad una MoneyBox\glo{} [UC3.3];
-    \item Postcondizioni: il partecipante MoneyBox\glo{} ha selezionato la quota da versare e ha visualizzato la pagina di checkout;
+    \item Postcondizioni: il partecipante MoneyBox\glo{} ha selezionato la quota da versare e ha autorizzato la transazione;
     \item Scenario principale:
           \begin{enumerate}
-              \item Il partecipante MoneyBox\glo{} seleziona la quota da versare, compresa tra zero escluso e il minimo tra il saldo disponibile nel wallet\glo{} 
-                    e il rimanente della MoneyBox\glo{};
-              \item Il partecipante MoneyBox\glo{} viene reindirizzato alla pagina di checkout con la quota scelta [UC2].
+              \item Il partecipante MoneyBox\glo{} seleziona la quota da versare, compresa tra zero escluso e il restante saldo da pagare nella MoneyBox\glo{}
+              \item Il partecipante MoneyBox\glo{} autorizza la transazione dal popup Metamask\glo{}.
           \end{enumerate}
 \end{itemize}
 
@@ -303,7 +302,7 @@ sono quindi presenti differenti attori nella gerarchia:
 
 \begin{itemize}
     \item Attore primario: partecipante MoneyBox\glo{};
-    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo{} [UC2.2.2], 
+    \item Precondizioni: il proprietario dell'ordine ha selezionato il pagamento MoneyBox\glo [UC2.2.2], 
             l'utente dispone dell'invito valido ad una MoneyBox\glo{} [UC3.3];
     \item Postcondizioni: il partecipante MoneyBox\glo{} ha visualizzato l'indirizzo della MoneyBox\glo{} come grafica identificativa;
     \item Scenario principale: il partecipante MoneyBox\glo{} visualizza l'indirizzo della MoneyBox\glo{} come grafica identificativa.
@@ -457,17 +456,17 @@ sono quindi presenti differenti attori nella gerarchia:
     \item Estensione: Nel caso in cui la transazione sia già stata sbloccata:
           \begin{enumerate}
               \item Viene impedito lo sblocco;
-              \item Viene mostrato un errore di Transazione Già Sbloccata [UC6.1].
+              \item Viene mostrato un errore di Ordine Già Sbloccato [UC6.1].
           \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC6.1 - Visualizza Errore Transazione Già Sbloccata}
+\subsubsection{UC6.1 - Visualizza Errore Ordine Già Sbloccato}
 
 \begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: il sistema è raggiungibile e funzionante, la transazione è già stata sbloccata;
-    \item Postcondizioni: il proprietario dell'ordine ha visualizzato l'errore di transazione già sbloccata;
-    \item Scenario principale: il proprietario dell'ordine visualizza l'errore di transazione già sbloccata.
+    \item Precondizioni: il sistema è raggiungibile e funzionante, l'ordine è già stato sbloccato;
+    \item Postcondizioni: il proprietario dell'ordine ha visualizzato l'errore di ordine già sbloccato;
+    \item Scenario principale: il proprietario dell'ordine visualizza l'errore di ordine già sbloccato.
 \end{itemize}
 
 \subsection{UC7 - Visualizzazione Transazioni}
