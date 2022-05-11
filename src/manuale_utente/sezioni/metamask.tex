@@ -1,43 +1,86 @@
-\section{Metamask}\label{section:metamask}
-\subsection{Cos'è Metamask}
-Metamask è un estensione per browser che ti permette di gestire il tuo wallet digitale di Ethereum e ti permette di inviare e ricevere Ether (Fantom in \projectName{}).
-Metamask deve essere installato nel tuo browser per tutto il tempo che userai \projectName{}, senza di esso non potrai usare la nostra piattaforma.
+\section{MetaMask}\label{section:MetaMask}
+Come precedentemente esposto, per utilizzare \textit{ShopChain} sarà necessario interagire con l'estensione MetaMask. Nel seguito vedremo dunque cos'è e come interagirci ai fini dell'applicativo in questione.
+
+\subsection{Cos'è MetaMask}
+MetaMask è un estensione per browser che permette di gestire wallet digitali di diverse criptovalute\glo{} che permette di effettuare transazioni sulla rete della criptovaluta in questione.
+MetaMask deve essere installato nel tuo browser per tutto il tempo che userai \projectName{}, senza di esso è di fatti impossibile l'utilizzo della piattaforma.
 \subsection{Installazione}
-Dopo essere entrato in \projectName{}, controlla che Metamask sia installato, puoi farlo guardando se tra le estensioni in alto a destra è presente la sua icona.
+Dopo essere entrato in \projectName{}, controlla che MetaMask sia installato, puoi farlo guardando se tra le estensioni in alto a destra è presente la sua icona.
 
-    \begin{figure}[htbp]
+    \begin{figure}
         \centering
-        \includegraphics{immagini/metamask_installed.png}
-        \caption{Metamask installato correttamente}
+        \includegraphics{immagini/MetaMask_installed.png}
+        \caption{MetaMask installato correttamente}
     \end{figure}   
- Se Metamask è installato correttamente, puoi procedere con l'utilizzo di \projectName, altrimenti consulta il video nella sezione sottostante (link video installazione metamask) e procedi con l'installazione.
+ Se MetaMask è installato correttamente, puoi procedere con l'utilizzo di \projectName, altrimenti procedi con l'istallazione come mostrato di seguito:\\\\
 
-\subsubsection{Configurazione}
-Clicca l'icona di Metamask in alto a destra nel tuo browser e imposta il tuo wallet digitale Fantom seguendo le istruzioni.
-Puoi creare un account nuovo, oppure importare uno già esistente tramite la frase iniziale di 12 parole che ti è stata precedentemente fornita.
+ Al seguente link è possibile trovare la pagina ufficiale di download di MetaMask:
+ \begin{center}
+     \url{https://MetaMask.io/download/}
+ \end{center}
 
-\subsection{Operazioni}
-Ogni volta che si effettua una operazione che cambia lo stato del network\glo{} Fantom\glo{}, Metamask andrà ad aprire una finestra pop-up con il costo totale dell'operazione.
-Da questa finestra l'utente potrà confermare o rifiutare l'operazione corrente.
-
-%immagine pop up metamask
-
-Ogni cambiamento effettuato sul network Fantom ha un costi, chiamati Gas Fees\glo{}, misurati in WEI\glo{} (10\textsuperscript{-18} FTM).
-Questi costi sono fortemente variabili nel tempo e pertanto non prevedibili.
-
-\section{Metamask e ShopChain}
-
-Per utilizzare l'applicazione ShopChain è necessario disporre di un account Metamask impostato sulla testnet Fantom.
-Per aggiungere una nuova rete al proprio account Metamask, cliccare su aggiungi rete dal menu in alto a destra del pop-up Metamask;
- si verrà reindirizzati alla pagina apposita per inserire i dati della rete da aggiungere.
+ Alla pagina sarà presente un bottone con scritto \texttt{"Install MetaMask for Chrome"}
 
  \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{immagini/settmeta1.png}
-    \caption{Menu di scelta di rete}
+    \includegraphics[scale=0.3]{immagini/install-MetaMask.png}
+    \caption{Pagina download MetaMask}
+\end{figure}
+
+Cliccando il bottone si verrà reindirizzati alla seguente pagina web nella quale basterà cliccare il bottone \textit{"Aggiungi"}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/MetaMaskExtensionPage.png}
+    \caption{Aggiungere l'estensione MetaMask al browser (1)}
+\end{figure}
+
+Si aprirà dunque il popup mostrato in seguito nel quale sarà sufficiente cliccare \texttt{"Aggiungi estensione"}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/AddExtenction.png}
+    \caption{Aggiungere l'estensione MetaMask al browser (2)}
+\end{figure}
+
+Una volta che l'estensione sarà stata aggiunta si verrà automaticamente reindirizzati alla pagina mostrata nella figura seguente nella quale sarà sufficiente cliccare \textit{Inizia}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/startMetamask.png}
+    \caption{Pagina iniziale MetaMask}
+\end{figure}
+
+A questo punto non resta che scegliere se iniziare creando un nuovo portafoglio o se caricarne uno già esistente 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/chooseMetamask.png}
+    \caption{Scelta iniziale MetaMask: crea/importa portafogli}
+\end{figure}
+
+dopo aver scelto basterà seguire le semplici istruzioni riportate da MetaMask per completare il collegamento.
+
+\subsection{Configurazione}
+
+Per utilizzare l'applicazione ShopChain è necessario disporre di un account MetaMask impostato sulla testnet Fantom.
+Per aggiungere una nuova rete al proprio account MetaMask, cliccare sull'estensione MetaMask, quindi su \texttt{"Rete Ethereum Principale"}  ed infine \texttt{"Aggiungi Rete"} come mostrato di seguito:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{immagini/Configuration.png}
+    \caption{Inizio configurazione Fantom Testnet}
+\end{figure}
+
+Si verrà reindirizzati ad una pagina contenente un form da riempire come mostrato di seguito:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/ConfData.png}
+    \caption{Form per l'aggiunta della rete Fantom Testnet}
 \end{figure} 
 
-I dati da inserire per aggiungere la Fantom Testnet sono i seguenti:
+Per comodità vengono riportati i dati:
 
 \begin{itemize}
     \item Network Name: Fantom testnet;
@@ -46,13 +89,6 @@ I dati da inserire per aggiungere la Fantom Testnet sono i seguenti:
     \item Symbol: FTM
 \end{itemize}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.6]{immagini/setmeta2.png}
-    \caption{Form per l'aggiunta della rete Fantom Testnet}
-\end{figure} 
+Una volta riempito il form cliccare il tasto \texttt{Salva}.\\
 
-Appena arrivati alla homepage di ShopChain, è presente una icona in alto a destra che controlla che tutto sia impostato nel modo corretto e, a fianco ad essa, l'indirizzo del wallet del proprio account.
-Nel caso la configurazione di metamask non sia stata completata o non eseguita correttamente, l'icona cambierà colore e, posizionando il cursore sulla stessa, verrà mostrato l'errore associato al caso.
-
-%qui figure con gli errori di metamask 
+A questo punto, una volta caricato denaro nel portafogli, sarà possibile utilizzare la piattaforma.
