@@ -1,4 +1,9 @@
 \section{Specifica dei test}\label{section:specifica_test}
+Il codice utilizzato per l'identificazione dei test è specificato dettagliatamente nelle \docNameVersionNdP{}, mentre delle sigle utili per la comprensione delle tabelle seguenti sono:
+\begin{itemize}
+  \item \textbf{S} = test superato;
+  \item \textbf{NI} = test non implementato.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Test di accettazione}\label{subsection:test_accettazione}
@@ -17,7 +22,7 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \color[HTML]{FFFFFF}\textbf{ID Test}
               & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
               & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
-              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                  \\
+              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                        \\
     \hline
     TS1F1     & Verificare che la richiesta di checkout da un E-Commerce\glo{} avvenga correttamente.                                     & R1F1     & NI \\
     TS1F2     & Verificare che l'utente visualizzi correttamente le diverse tipologie di pagamento.                                       & R1F2     & NI \\
@@ -44,53 +49,23 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \color[HTML]{FFFFFF}\textbf{ID Test}
               & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
               & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
-              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                 \\
+              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                       \\
     \hline
-    TS1F5     & Verificare che l'utente possa pagare correttamente.                                                                       & R1F5     & NI \\
-    TS1F5.1   & Verificare che il versamento per il pagamento unico copra l'intera somma richiesta.                                       & R1F5.1   & NI \\
-    TS2F5.2   & Verificare che il versamento per il pagamento tramite MoneyBox\glo{} possa coprire solo una parte della somma richiesta.  & R2F5.2   & NI \\
-    TS1F5.3   & Verificare che l'utente possa visualizzare correttamente il codice di sblocco generato dal sistema.                       & R1F5.3   & NI \\
-    TS1F5.4   & Verificare che l'utente possa visualizzare correttamente un messaggio d'errore nel caso in cui la transazione fallisca.   & R1F5.4   & NI \\
-    TS1F6     & Verificare che la richiesta di rimborso funzioni correttamente.                                                           & R1F6     & NI \\
-    TS1F7     & Verificare che l'acquirente possa sbloccare, correttamente, i fondi dallo Smart Contract\glo{} dopo avvenuta ricezione.   & R1F7     & NI \\
-    TS1F8     & Verificare che l'utente possa visualizzare le transazioni.                                                                & R1F8     & NI \\
-    TS2F8.1   & Verificare che il venditore possa visualizzare le transazioni in entrata pagate.                                          & R2F8.1   & NI \\
-    TS2F8.1.1 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate ma non sbloccate.                         & R2F8.1.1 & NI \\
-    TS2F8.1.2 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate e sbloccate.                              & R2F8.1.2 & NI \\
-    TS2F8.1.3 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate cancellate.                               & R2F8.1.3 & NI \\
-    TS1F8.2   & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita.                                   & R1F8.2   & NI \\
-    TS2F8.2.1 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita non pagate.                        & R2F8.2.1 & NI \\
-    TS2F8.2.2 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate ma non sbloccate.           & R2F8.2.2 & NI \\
-    \end{tabular}
-\end{table}
-\begin{center}
-  \textit{\small Continua nella pagina successiva}
-\end{center}
-\begin{table}[H]
-  \centering
-  \renewcommand{\arraystretch}{1.8}
-  \rowcolors{2}{green!100!black!40}{green!100!black!30}
-  \begin{tabular}{c|p{8cm}|c|c}
-    \rowcolor[HTML]{125E28}
-    \color[HTML]{FFFFFF}\textbf{ID Test}
-           & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-           & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
-           & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                      \\
-    \hline
-    TS2F8.2.3 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate e sbloccate.                & R2F8.2.3 & NI \\
-    TS2F8.2.4 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita cancellate.                        & R2F8.2.4 & NI \\
-    TS2F9  & Verificare che si possa convertire correttamente l'ammontare depositato in stable coin\glo{}.                    & R2F9  & NI \\
-    TS3F10 & Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente.       & R3F10 & NI \\
-    TS1F11 & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{}.                             & R1F11 & NI \\
-    TS1F11.1 & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} in forma testuale.         & R1F11.1 & NI \\
-    TS1F11.2 & Verificare che l'utente possa visualizzare correttamente un avviso della mancata connessione a Metamask\glo{}.         & R1F11.2 & NI \\
-    TS3F11.3 & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} sotto forma di sequenza di emoji.  & R3F11.3 & NI \\
-    TS3F12 & Verificare che gli utenti partecipanti ad una MoneyBox\glo{} possano ricevere una notifica al suo completamento.  & R3F12 & NI \\
-    TS1F13 & Verificare che l'utente possa visualizzare correttamente il dettaglio dell'errore della transazione.  & R1F13 & NI \\
-    TS1F14 & Verificare che l'utente possa visualizzare correttamente lo stato di connessione a Metamask\glo{}.  & R1F14 & NI \\
-    TS1F14.1 & Verificare che l'utente possa visualizzare un suggerimento se connesso correttamente.  & R1F14.1 & NI \\
-    TS1F14.2 & Verificare che l'utente possa visualizzare nel caso in cui non sia installato Metamask\glo{}.  & R1F14.2 & NI \\
-    TS1F14.3 & Verificare che l'utente possa visualizzare un errore nel caso in cui la blockchain\glo{} selezionata non sia corretta. & R1F14.3 & NI \\
+    TS1F5     & Verificare che l'utente possa pagare correttamente.                                                                      & R1F5     & NI \\
+    TS1F5.1   & Verificare che il versamento per il pagamento unico copra l'intera somma richiesta.                                      & R1F5.1   & NI \\
+    TS2F5.2   & Verificare che il versamento per il pagamento tramite MoneyBox\glo{} possa coprire solo una parte della somma richiesta. & R2F5.2   & NI \\
+    TS1F5.3   & Verificare che l'utente possa visualizzare correttamente il codice di sblocco generato dal sistema.                      & R1F5.3   & NI \\
+    TS1F5.4   & Verificare che l'utente possa visualizzare correttamente un messaggio d'errore nel caso in cui la transazione fallisca.  & R1F5.4   & NI \\
+    TS1F6     & Verificare che la richiesta di rimborso funzioni correttamente.                                                          & R1F6     & NI \\
+    TS1F7     & Verificare che l'acquirente possa sbloccare, correttamente, i fondi dallo Smart Contract\glo{} dopo avvenuta ricezione.  & R1F7     & NI \\
+    TS1F8     & Verificare che l'utente possa visualizzare le transazioni.                                                               & R1F8     & NI \\
+    TS2F8.1   & Verificare che il venditore possa visualizzare le transazioni in entrata pagate.                                         & R2F8.1   & NI \\
+    TS2F8.1.1 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate ma non sbloccate.                        & R2F8.1.1 & NI \\
+    TS2F8.1.2 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate e sbloccate.                             & R2F8.1.2 & NI \\
+    TS2F8.1.3 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate cancellate.                              & R2F8.1.3 & NI \\
+    TS1F8.2   & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita.                                  & R1F8.2   & NI \\
+    TS2F8.2.1 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita non pagate.                       & R2F8.2.1 & NI \\
+    TS2F8.2.2 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate ma non sbloccate.          & R2F8.2.2 & NI \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -103,14 +78,44 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
   \begin{tabular}{c|p{8cm}|c|c}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-           & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-           & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
-           & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                      \\
+              & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+              & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
+              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                          \\
     \hline
-    TS1F14.4 & Verificare che l'utente possa visualizzare un errore nel caso in cui non abbia connesso un account a ShopChain.  & R1F14.4 & NI \\
-    TS1F15 & Verificare che l'utente possa visualizzare un messaggio di avviso nel caso in cui la transazione sia già presente in blockchain\glo{}.  & R1F15 & NI \\
-    TS1F16 & Verificare che la richiesta di un ordine venga caricata correttamente su una blockchain\glo{} pubblica.                  & R1V1  & NI \\
-    TS1F17 & Verificare che il pagamento e le transazioni siano gestite correttamente dallo Smart Contract\glo{}.                     & R1V2  & NI \\
+    TS2F8.2.3 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate e sbloccate.                  & R2F8.2.3 & NI \\
+    TS2F8.2.4 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita cancellate.                          & R2F8.2.4 & NI \\
+    TS2F9     & Verificare che si possa convertire correttamente l'ammontare depositato in stable coin\glo{}.                               & R2F9     & NI \\
+    TS3F10    & Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente.                  & R3F10    & NI \\
+    TS1F11    & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{}.                                  & R1F11    & NI \\
+    TS1F11.1  & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} in forma testuale.                & R1F11.1  & NI \\
+    TS1F11.2  & Verificare che l'utente possa visualizzare correttamente un avviso della mancata connessione a Metamask\glo{}.              & R1F11.2  & NI \\
+    TS3F11.3  & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} sotto forma di sequenza di emoji. & R3F11.3  & NI \\
+    TS3F12    & Verificare che gli utenti partecipanti ad una MoneyBox\glo{} possano ricevere una notifica al suo completamento.            & R3F12    & NI \\
+    TS1F13    & Verificare che l'utente possa visualizzare correttamente il dettaglio dell'errore della transazione.                        & R1F13    & NI \\
+    TS1F14    & Verificare che l'utente possa visualizzare correttamente lo stato di connessione a Metamask\glo{}.                          & R1F14    & NI \\
+    TS1F14.1  & Verificare che l'utente possa visualizzare un suggerimento se connesso correttamente.                                       & R1F14.1  & NI \\
+    TS1F14.2  & Verificare che l'utente possa visualizzare nel caso in cui non sia installato Metamask\glo{}.                               & R1F14.2  & NI \\
+    TS1F14.3  & Verificare che l'utente possa visualizzare un errore nel caso in cui la blockchain\glo{} selezionata non sia corretta.      & R1F14.3  & NI \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+             & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+             & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
+             & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                                    \\
+    \hline
+    TS1F14.4 & Verificare che l'utente possa visualizzare un errore nel caso in cui non abbia connesso un account a ShopChain.                        & R1F14.4 & NI \\
+    TS1F15   & Verificare che l'utente possa visualizzare un messaggio di avviso nel caso in cui la transazione sia già presente in blockchain\glo{}. & R1F15   & NI \\
+    TS1F16   & Verificare che la richiesta di un ordine venga caricata correttamente su una blockchain\glo{} pubblica.                                & R1V1    & NI \\
+    TS1F17   & Verificare che il pagamento e le transazioni siano gestite correttamente dallo Smart Contract\glo{}.                                   & R1V2    & NI \\
   \end{tabular}
   \caption{Test di sistema}
 \end{table}
@@ -125,9 +130,9 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{Codice}
         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-        & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                       \\
+        & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                   \\
     \hline
-    TI1 & Verificare che il collegamento con Metamask\glo{} avvenga correttamente.                                                  & NI \\
+    TI1 & Verificare che il collegamento con Metamask\glo{} avvenga correttamente.                                                        & NI \\
     TI2 & Verificare che il collegamento tra Front-End\glo{} e Smart Contract\glo{} tramite libreria Web3.js\glo{} avvenga correttamente. & NI \\
   \end{tabular}
   \caption{Test d'integrazione}
@@ -136,9 +141,301 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
 \vspace{1cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Test di unità}\label{subsection:test_unita}
-Per garantire il corretto funzionamento di ogni minimo componente autonomo del sistema vengono eseguiti i test di unità. \\
-Fino a questo momento sono stati presi in considerazione esclusivamente i test eseguiti su linguaggio Solidity\glo{}.
-I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Progettazione di dettaglio e codifica requisiti obbligatori}.
+
+\subsubsection{Test di unità - Frontend}\label{subsubsection:TUF}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                      \\
+    \hline
+    TUF01 & Si verifica che un'istanza di OrderManager venga creata correttamente (costruttore parametrizzato).                 & S \\
+    TUF02 & Si verifica che un'istanza di OrderManager venga creata correttamente (costruttore di default).                     & S \\
+    TUF03 & Si verifica che ritorni correttamente il contatore degli ordini (OrderManager - istanza definita).                  & S \\
+    TUF04 & Si verifica che ritorni correttamente il contatore degli ordini (OrderManager - istanza non definita).              & S \\
+    TUF05 & Si verifica che ritorni correttamente il bilancio presente nel contratto (OrderManager - istanza definita).         & S \\
+    TUF06 & Si verifica che ritorni correttamente il bilancio presente nel contratto (OrderManager - istanza non definita).     & S \\
+    TUF07 & Si verifica che un'istanza di MoneyBoxManager venga creata correttamente (costruttore parametrizzato).              & S \\
+    TUF08 & Si verifica che un'istanza di MoneyBoxManager venga creata correttamente (costruttore di default).                  & S \\
+    TUF09 & Si verifica che un'istanza di OrderManagerRepo venga creata correttamente.                                          & S \\
+    TUF10 & Si verifica che ritorni correttamente il bilancio presente nel contratto (OrderManagerRepo - istanza definita).     & S \\
+    TUF11 & Si verifica che ritorni correttamente il bilancio presente nel contratto (OrderManagerRepo - istanza non definita). & S \\
+    TUF12 & Si verifica che ritorni correttamente il contatore degli ordini (OrderManagerRepo - istanza definita).              & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                             \\
+    \hline
+    TUF13 & Si verifica che ritorni correttamente il contatore degli ordini (OrderManagerRepo - istanza non definita). & S \\
+    TUF14 & Si verifica che un'istanza di MoneyBoxManagerRepo venga creata correttamente.                              & S \\
+    TUF15 & Si verifica che un'istanza di ContractStore venga creata correttamente.                                    & S \\
+    TUF16 & Si verifica che un'istanza di Amount venga creata correttamente.                                           & S \\
+    TUF17 & Si verifica che l'ammontare venga aggiornato correttamente.                                                & S \\
+    TUF18 & Si verifica che il valore in FTM\glo{} ritornato sia corretto.                                             & S \\
+    TUF19 & Si verifica che l'ammontare venga assegnato correttamente.                                                 & S \\
+    TUF20 & Si verifica che un'istanza di MoneyBox venga creata correttamente.                                         & S \\
+    TUF21 & Si verifica che l'ammontare deciso venga inserito correttamente all'interno della MoneyBox\glo{}.          & S \\
+    TUF22 & Si verifica che ritorni correttamente la lista dei pagamenti relativi la MoneyBox\glo{}.                   & S \\
+    TUF23 & Si verifica che un'istanza di Order venga creata correttamente.                                            & S \\
+    TUF24 & Si verifica che un ordine venga costruito correttamente.                                                   & S \\
+    TUF25 & Si verifica che ritorni correttamente l'ammontare relativo all'ordine.                                     & S \\
+    TUF26 & Si verifica che l'ammontare relativo all'ordine venga sbloccato correttamente.                             & S \\
+    TUF27 & Si verifica che l'ammontare relativo all'ordine venga rimborsato correttamente.                            & S \\
+    TUF28 & Si verifica che lo stato dell'ordine venga aggiornato correttamente.                                       & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                         \\
+    \hline
+    TUF29 & Si verifica che l'ordine venga aggiornato correttamente.                                               & S \\
+    TUF30 & Si verifica che la collezione di ordini aggiunga gli ordini correttamente.                             & S \\
+    TUF31 & Si verifica che la collezione di ordini ritorni l'ordine corretto dato l'ID.                           & S \\
+    TUF32 & Si verifica che la collezione di ordini ritorni gli ordini corretti dato il venditore.                 & S \\
+    TUF33 & Si verifica che la collezione di ordini ritorni gli ordini corretti dato il proprietario degli ordini. & S \\
+    TUF34 & Si verifica che la collezione di ordini venga aggiornata correttamente.                                & S \\
+    TUF35 & Si verifica che un'istanza di OrderState venga creata correttamente.                                   & S \\
+    TUF36 & Si verifica che lo stato dell'ordine sia "Not Created".                                                & S \\
+    TUF37 & Si verifica che lo stato dell'ordine sia "Created".                                                    & S \\
+    TUF38 & Si verifica che lo stato dell'ordine sia "Paid".                                                       & S \\
+    TUF39 & Si verifica che lo stato dell'ordine sia "Closed".                                                     & S \\
+    TUF40 & Si verifica che lo stato dell'ordine sia "Cancelled".                                                  & S \\
+    TUF41 & Si verifica che lo stato dell'ordine venga modificato correttamente.                                   & S \\
+    TUF42 & Si verifica che l'indirizzo del pagamento sia corretto.                                                & S \\
+    TUF43 & Si verifica che l'ammontare del pagamento sia corretto.                                                & S \\
+    TUF44 & Si verifica che la data del pagamento sia corretta.                                                    & S \\
+    TUF45 & Si verifica che il pagamento venga creato correttamente.                                               & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                \\
+    \hline
+    TUF46 & Si verifica che un'istanza di OrderRepo venga creata correttamente.                                           & S \\
+    TUF47 & Si verifica che l'ordine venga creato correttamente (OrderRepo - istanza definita).                           & S \\
+    TUF48 & Si verifica che l'ordine venga creato correttamente (OrderRepo - istanza non definita).                       & S \\
+    TUF49 & Si verifica che l'ordine venga sbloccato correttamente (OrderRepo - istanza definita).                        & S \\
+    TUF50 & Si verifica che l'ordine venga sbloccato correttamente (OrderRepo - istanza non definita).                    & S \\
+    TUF51 & Si verifica che l'ordine venga rimborsato correttamente (OrderRepo - istanza definita).                       & S \\
+    TUF52 & Si verifica che l'ordine venga rimborsato correttamente (OrderRepo - istanza non definita).                   & S \\
+    TUF53 & Si verifica che ritorni l'ordine corretto dato l'ID (OrderRepo - istanza definita).                           & S \\
+    TUF54 & Si verifica che ritorni l'ordine corretto dato l'ID (OrderRepo - istanza non definita).                       & S \\
+    TUF55 & Si verifica che ritorni gli ordini corretti dato il venditore (OrderRepo - istanza definita).                 & S \\
+    TUF56 & Si verifica che ritorni gli ordini corretti dato il venditore (OrderRepo - istanza non definita).             & S \\
+    TUF57 & Si verifica che ritorni gli ordini corretti dato l'acquirente (OrderRepo - istanza definita).                 & S \\
+    TUF58 & Si verifica che ritorni gli ordini corretti dato l'acquirente (OrderRepo - istanza non definita).             & S \\
+    TUF59 & Si verifica che un'istanza di MoneyBoxOrderRepo venga creata correttamente.                                   & S \\
+    TUF60 & Si verifica che un nuovo pagamento venga effettuato correttamente (MoneyBoxOrderRepo - istanza definita).     & S \\
+    TUF61 & Si verifica che un nuovo pagamento venga effettuato correttamente (MoneyBoxOrderRepo - istanza non definita). & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                          \\
+    \hline
+    TUF62 & Si verifica che ritorni la lista dei pagamenti relativi ad una MoneyBox\glo{} correttamente (MoneyBoxOrderRepo - istanza definita).     & S \\
+    TUF63 & Si verifica che ritorni la lista dei pagamenti relativi ad una MoneyBox\glo{} correttamente (MoneyBoxOrderRepo - istanza non definita). & S \\
+    TUF63 & Si verifica che ritorni l'ammontare mancante al completamento di una MoneyBox\glo{} (MoneyBoxOrderRepo - istanza definita).             & S \\
+    TUF64 & Si verifica che ritorni l'ammontare mancante al completamento di una MoneyBox\glo{} (MoneyBoxOrderRepo - istanza non definita).         & S \\
+    TUF65 & Si verifica che un'istanza di OrderStore venga creata correttamente.                                                                    & S \\
+    TUF66 & Si verifica che un ordine venga creato correttamente tramite OrderStore.                                                                & S \\
+  \end{tabular}
+  \caption{Test di unità - Frontend}
+\end{table}
+
+\paragraph{Tracciamento test di unità - Frontend}\label{paragraph:tracciamento_TUF}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                                    \\
+    \hline
+    TUF01 & shopchain-frontend/src/core/modules/contract/domain/\_\_test\_\_/OrderManager.test.ts:\newline describe("should create an instance of OrderManager",()=$>$\{\newline it("constructor with parameter", ...) \\
+    TUF02 & shopchain-frontend/src/core/modules/contract/domain/\_\_test\_\_/OrderManager.test.ts:\newline describe("should create an instance of OrderManager",()=$>$\{ it("default constructor", ...)                \\
+    TUF03 & shopchain-frontend/src/core/modules/contract/domain/\_\_test\_\_/OrderManager.test.ts:\newline describe("should get order count",()=$>$\{it("defined instance", ...)                                       \\
+    TUF04 & shopchain-frontend/src/core/modules/contract/domain/\_\_test\_\_/OrderManager.test.ts:\newline describe("should get order count",()=$>$\{it("undefined instance", ...)                                     \\
+    TUF05 & shopchain-frontend/src/core/modules/contract/domain/\_\_test\_\_/OrderManager.test.ts:\newline describe("should get contract balance",()=$>$\{it("defined instance", ...)                                  \\
+    TUF06 & shopchain-frontend/src/core/modules/contract/domain/\_\_test\_\_/OrderManager.test.ts:\newline describe("should get contract balance",()=$>$\{it("undefined instance", ...)                                \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                                         \\
+    \hline
+    TUF07 & shopchain-frontend/src/core/modules/contract/domain/\_\_test\_\_/\newline MoneyBoxManager.test.ts:describe("should create an instance of MoneyBoxManager",\newline()=$>$\{it("constructor with parameter", ...) \\
+    TUF08 & shopchain-frontend/src/core/modules/contract/domain/\_\_test\_\_/\newline MoneyBoxManager.test.ts:describe("should create an instance of MoneyBoxManager",\newline()=$>$\{it("default constructor", ...)        \\
+    TUF09 & shopchain-frontend/src/core/modules/contract/repo/implementations/\_\_test\_\_/\newline OrderManagerRepo.test.ts:it("should create an instance of OrderManagerRepo", ...)                                       \\
+    TUF10 & shopchain-frontend/src/core/modules/contract/repo/implementations/\_\_test\_\_/\newline OrderManagerRepo.test.ts:describe("should get contract balance",()=$>$\{\newline it("defined instance", ...)            \\
+    TUF11 & shopchain-frontend/src/core/modules/contract/repo/implementations/\_\_test\_\_/\newline OrderManagerRepo.test.ts:describe("should get contract balance",()=$>$\{\newline it("undefined instance", ...)          \\
+    TUF12 & shopchain-frontend/src/core/modules/contract/repo/implementations/\_\_test\_\_/\newline OrderManagerRepo.test.ts:describe("should get order count",()=$>$\{\newline it("defined instance", ...)                 \\
+    TUF13 & shopchain-frontend/src/core/modules/contract/repo/implementations/\_\_test\_\_/\newline OrderManagerRepo.test.ts:describe("should get order count",()=$>$\{\newline it("undefined instance", ...)               \\
+    TUF14 & shopchain-frontend/src/core/modules/contract/repo/implementations/\_\_test\_\_/\newline MoneyBoxManagerRepo.test.ts:it("should create an instance of MoneyBoxManagerRepo", ...)                                 \\
+    TUF15 & shopchain-frontend/src/core/modules/contract/store/\_\_test\_\_/\newline ContractStore.test.ts:it("should create an instance of ContractStore", ...)                                                            \\
+    TUF16 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Amount.test.ts:\newline it("should create an instance of Amount", ...)                                                                            \\
+    TUF17 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Amount.test.ts:\newline it("should update the amount", ...)                                                                                       \\
+    TUF18 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Amount.test.ts:\newline it("should get the FTM value correctly", ...)                                                                             \\
+    TUF19 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Amount.test.ts:\newline it("should get the amount properly", ...)                                                                                 \\
+    TUF20 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/MoneyBox.test.ts:\newline it("test constructor", ...)                                                                                             \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                        \\
+    \hline
+    TUF21 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/MoneyBox.test.ts:\newline it("amount to fill is correct", ...)                   \\
+    TUF22 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/MoneyBox.test.ts:\newline it("payments", ...)                                    \\
+    TUF23 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Order.test.ts:\newline it("test order constructor", ...)                         \\
+    TUF24 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Order.test.ts:\newline it("create", ...)                                         \\
+    TUF25 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Order.test.ts:\newline it("amount", ...)                                         \\
+    TUF26 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Order.test.ts:\newline it("unlock", ...)                                         \\
+    TUF27 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Order.test.ts:\newline it("refund", ...)                                         \\
+    TUF28 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Order.test.ts:\newline it("should update the order state using the setter", ...) \\
+    TUF29 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Order.test.ts:\newline it("should update the order", ...)                        \\
+    TUF30 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderCollection.test.ts:\newline it("test addOrder", ...)                        \\
+    TUF31 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderCollection.test.ts:\newline it("test getById", ...)                         \\
+    TUF32 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderCollection.test.ts:\newline it("test getBySeller", ...)                     \\
+    TUF33 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderCollection.test.ts:\newline it("test getByOwner", ...)                      \\
+    TUF34 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderCollection.test.ts:\newline it("test update", ...)                          \\
+    TUF35 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderState.test.ts:\newline it("test OrderState constructor", ...)               \\
+    TUF36 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderState.test.ts:\newline it("isNotCreated", ...)                              \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                      \\
+    \hline
+    TUF37 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderState.test.ts:\newline it("isCreated", ...)                                                               \\
+    TUF38 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderState.test.ts:\newline it("isPaid", ...)                                                                  \\
+    TUF39 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderState.test.ts:\newline it("isClosed", ...)                                                                \\
+    TUF40 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderState.test.ts:\newline it("isCancelled", ...)                                                             \\
+    TUF41 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/OrderState.test.ts:\newline it("setState", ...)                                                                \\
+    TUF42 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Payment.test.ts:\newline it("from address is correct", ...)                                                    \\
+    TUF43 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Payment.test.ts:\newline it("amount is correct", ...)                                                          \\
+    TUF44 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Payment.test.ts:\newline it("timestamp is correct", ...)                                                       \\
+    TUF45 & shopchain-frontend/src/core/modules/order/domain/\_\_test\_\_/Payment.test.ts:\newline it("created payment is correct", ...)                                                 \\
+    TUF46 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:it("should create an instance of OrderRepo", ...)                     \\
+    TUF47 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("createOrder",()=$>$\{it("defined contract instance", ...)   \\
+    TUF48 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("createOrder",()=$>$\{it("undefined contract instance", ...) \\
+    TUF49 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("unlock",()=$>$\{it("defined contract instance", ...)        \\
+    TUF50 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("unlock",()=$>$\{it("undefined contract instance", ...)      \\
+    TUF51 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("refund",()=$>$\{it("defined contract instance", ...)        \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                              \\
+    \hline
+    TUF52 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("refund",()=$>$\{it("undefined contract instance", ...)                              \\
+    TUF53 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrderById",()=$>$\{it("defined contract instance", ...)                          \\
+    TUF54 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrderById",()=$>$\{it("undefined contract instance", ...)                        \\
+    TUF55 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersBySeller",()=$>$\{it("defined contract instance", ...)                     \\
+    TUF56 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersBySeller",()=$>$\{it("undefined contract instance", ...)                   \\
+    TUF57 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersByBuyer",()=$>$\{it("defined contract instance", ...)                      \\
+    TUF58 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersByBuyer",()=$>$\{it("undefined contract instance", ...)                    \\
+    TUF59 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:it("should create an instance of MoneyBoxOrderRepo", ...)                             \\
+    TUF60 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should do a newPayment",()=$>$\{it("defined contract instance", ...)        \\
+    TUF61 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should do a newPayment",()=$>$\{it("undefined contract instance", ...)      \\
+    TUF62 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get payments",()=$>$\{it("defined contract instance", ...)           \\
+    TUF63 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get payments",()=$>$\{it("undefined contract instance", ...)         \\
+    TUF64 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get the amount to fill",()=$>$\{it("defined contract instance", ...) \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                                \\
+    \hline
+    TUF65 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get the amount to fill",()=$>$\{it("undefined contract instance", ...) \\
+    TUF66 & shopchain-frontend/src/core/modules/order/store/implementations/\_\_test\_\_/\newline OrderStore.test.ts:it("should create an order store", ...)                                                       \\
+    TUF67 & shopchain-frontend/src/core/modules/order/store/implementations/\_\_test\_\_/\newline OrderStore.test.ts:it("createOrder", ...)                                                                        \\
+  \end{tabular}
+  \caption{Tracciamento test di unità - Frontend}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Test di unità - Solidity - OrderManager}\label{subsubsection:TUO}
 \begin{table}[H]
@@ -148,25 +445,24 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \begin{tabular}{c|p{10cm}|c}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-         & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                    \\
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                    \\
     \hline
     TUO01 & Si verifica che il contatore degli ordini sia inizializzato a zero.                                                               & S \\
     TUO02 & Si verifica che l'ordine creato sia correttamente.                                                                                & S \\
     TUO03 & Si verifica che il contratto abbia ricevuto l'ammontare corretto.                                                                 & S \\
     TUO04 & Si verifica il caso fallimentare in cui l'utente tenta di inviare un importo inferiore a quello richiesto.                        & S \\
     TUO05 & Si verifica il caso fallimentare in cui l'utente prova a registrare un ordine che ha come venditore se stesso.                    & S \\
-    TUO06 & Si verifica il caso fallimentare in cui l'utente prova a inviare un ammontare pari a zero.                                        & S \\
-    TUO07 & Si verifica il caso fallimentare in cui l'utente prova a inviare un ammontare negativo.                                           & S \\
-    TUO08 & Si verifica il caso fallimentare in cui l'utente non ha abbastanza fondi.                                                         & S \\
+    TUO06 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine con un importo pari a zero.                             & S \\
+    TUO07 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine con un importo negativo.                                & S \\
+    TUO08 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine non avendo i fondi necessari.                           & S \\
     TUO09 & Si verifica il caso fallimentare in cui il frontend\glo{} richiede la creazione di un ordine con un ID precedentemente usato.     & S \\
-    TUO10 & Si verifica che le informazioni dell'ordine siano corrette.                                                                       & S \\
+    TUO10 & Si verifica che le informazioni di ritorno dell'ordine siano corrette.                                                            & S \\
     TUO11 & Si verifica che lo stato dell'ordine sia modificato e settato su "CLOSED" una volta confermata la ricezione dall'acquirente.      & S \\
     TUO12 & Si verifica che il venditore abbia ricevuto i fondi correttamente una volta confermata la ricezione dall'acquirente.              & S \\
-    TUO13 & Si verifica il caso fallimentare in cui l'ID dell'ordine da sbloccare è errato.                                                   & S \\
+    TUO13 & Si verifica il caso fallimentare in cui l'ID dell'ordine da sbloccare sia errato.                                                 & S \\
     TUO14 & Si verifica il caso fallimentare in cui il codice di sblocco non coincide con quello registrato in blockchain\glo{}.              & S \\
     TUO15 & Si verifica il caso fallimentare in cui l'ordine viene confermato da un utente con indirizzo differente da quello del compratore. & S \\
-    TUO16 & Si verifica che il rimborso sia richiesto dal compratore una volta settato su "CANCELLED" lo stato dell'ordine.                   & S \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -179,27 +475,26 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \begin{tabular}{c|p{10cm}|c}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-         & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                               \\
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                         \\
     \hline
-    TUO17 & Si verifica che il rimborso sia richiesto dal venditore una volta settato su "CANCELLED" lo stato dell'ordine.                              & S \\
-    TUO18 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal compratore.                         & S \\
-    TUO19 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal venditore.                          & S \\
-    TUO20 & Si verifica il caso fallimentare in cui non è possibile chiedere il rimborso di un ordine chiuso.                                           & S \\
-    TUO21 & Si verifica il caso fallimentare in cui un utente con indirizzo diverso da quello del compratore o venditore richiede il rimborso.          & S \\
-    TUO22 & Si verifica che venga restituito correttamente il saldo del contratto.                                                                      & S \\
-    TUO23 & Si verifica che venga restituito correttamente l'address dell'acquirente.                                                                   & S \\
-    TUO24 & Si verifica che venga restituito correttamente l'address del venditore.                                                                     & S \\
-    TUO25 & Si verifica che venga restituito correttamente l'ammontare da pagare.                                                                       & S \\
-    TUO26 & Si verifica che venga restituito correttamente lo stato dell'ordine.                                                                        & S \\
-    TUO27 & Si verifica che venga restituito correttamente l'ordine partendo dal suo ID.                                                                & S \\
-    TUO28 & Si verifica che vengano restituiti correttamente tutti gli ordini di un acquirente.                                                         & S \\
-    TUO29 & Si verifica che vengano restituiti correttamente tutti gli ordini di un venditore.                                                          & S \\
+    TUO16 & Si verifica che lo stato dell'ordine venga settato su "CANCELLED" alla richiesta di rimborso da parte del compratore.  & S \\
+    TUO17 & Si verifica che lo stato dell'ordine venga settato su "CANCELLED" alla richiesta di rimborso da parte del venditore.   & S \\
+    TUO18 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal compratore.    & S \\
+    TUO19 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal venditore.     & S \\
+    TUO20 & Si verifica che non sia possibile chiedere il rimborso di un ordine chiuso.                                            & S \\
+    TUO21 & Si verifica che un utente con indirizzo diverso da quello del compratore o venditore non possa richiedere il rimborso. & S \\
+    TUO22 & Si verifica che venga restituito correttamente il saldo del contratto.                                                 & S \\
+    TUO23 & Si verifica che venga restituito correttamente l'indirizzo del wallet\glo{} dell'acquirente.                           & S \\
+    TUO24 & Si verifica che venga restituito correttamente l'indirizzo del wallet\glo{} del venditore.                             & S \\
+    TUO25 & Si verifica che venga restituito correttamente l'ammontare da pagare.                                                  & S \\
+    TUO26 & Si verifica che venga restituito correttamente lo stato dell'ordine.                                                   & S \\
+    TUO27 & Si verifica che vengano restituiti correttamente tutti i dati dell'ordine, partendo dal suo ID.                        & S \\
+    TUO28 & Si verifica che vengano restituiti correttamente tutti gli ordini di un acquirente.                                    & S \\
+    TUO29 & Si verifica che vengano restituiti correttamente tutti gli ordini di un venditore.                                     & S \\
   \end{tabular}
   \caption{Test di unità - Solidity - OrderManager}
 \end{table}
-
-
 
 \paragraph{Tracciamento test di unità - Solidity - OrderManager}\label{paragraph:tracciamento_TUO}
 
@@ -210,21 +505,21 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \begin{tabular}{c|p{15cm}}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                       \\
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                                   \\
     \hline
-    TUO01 & smart-contract/test/1\_OrderManager.test.js:it("should have the initial order number to 0", ...)                                                                                        \\
-    TUO02 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{it('order created correctly', ...)                                      \\
-    TUO03 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{it("the contract is filled with the correct amount", ...) \\
-    TUO04 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user tries to insert an amount less than the required amount", ...)                                                                                       \\
-    TUO05 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user tries to order his item, or send funds to itself", ...)                                \\
-    TUO06 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user tries to pass value equal to zero", ...)                                  \\
-    TUO07 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user tries to send negative coin value", ...)                                          \\
+    TUO01 & smart-contract/test/1\_OrderManager.test.js:it("should have the initial order number to 0", ...)                                                                                                          \\
+    TUO02 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{it('order created correctly', ...)                                                                            \\
+    TUO03 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{it("the contract is filled with the correct amount", ...)                                                     \\
+    TUO04 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user tries to insert an amount less than the required amount", ...)      \\
+    TUO05 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user tries to order his item, or send funds to itself", ...)             \\
+    TUO06 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user tries to pass value equal to zero", ...)                            \\
+    TUO07 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user tries to send negative coin value", ...)                            \\
     TUO08 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("user hasn't enough founds", ...)                                         \\
-    TUO09 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("front end require the creation of an order with the same order id", ...)                                \\
-    TUO10 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{it('get the correct order infos', ...)                                   \\
-    TUO11 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{it("should update state", ...)                                                          \\
-    TUO12 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{it("should release payment to seller", ...)                                       \\                                                      
-    TUO13 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order id isn't correct", ...)                                                          \\
+    TUO09 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{describe("failure cases",()=$>$\{it("front end require the creation of an order with the same order id", ...) \\
+    TUO10 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{it('get the correct order infos', ...)                                                                        \\
+    TUO11 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{it("should update state", ...)                                                                                  \\
+    TUO12 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{it("should release payment to seller", ...)                                                                     \\
+    TUO13 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order id isn't correct", ...)                                        \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -237,22 +532,22 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \begin{tabular}{c|p{15cm}}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                       \\
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                                  \\
     \hline
-    TUO14 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order unlock code doesn't match with unlock code saved", ...)                                                               \\
-    TUO15 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order is unlock from an address different from buyer address", ...)                                                         \\
-    TUO16 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should set the cancelled state",()=$>$\{it("from buyer", ...)                                                                               \\
-    TUO17 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should set the cancelled state",()=$>$\{it("from seller", ...)                                                                             \\
-    TUO18 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should move funds back to the buyer",async ()=$>$\{it("from buyer [@skip-on-coverage]", ...)                                                                              \\
-    TUO19 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should move funds back to the buyer",async ()=$>$\{it("from seller", ...)                                                                            \\
-    TUO20 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("failure cases",()=$>$\{it("should not refund an order already closed", ...)                                                 \\
-    TUO21 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("failure cases",()=$>$\{it("should be the owner or the seller", ...)                                                 \\
-    TUO22 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check contractBalance()", ...)                                                                                       \\
-    TUO23 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOwnerAddress(string)", ...)                                                                                    \\
-    TUO24 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getSellerAddress(string)", ...)                                                                                   \\
-    TUO25 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getAmountToPay(string)", ...)                                                                                     \\
-    TUO26 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOrderState(string)", ...)                                                                                      \\
-    TUO27 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOrderById(string)", ...)                                                                                      \\
+    TUO14 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order unlock code doesn't match with unlock code saved", ...)       \\
+    TUO15 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order is unlock from an address different from buyer address", ...) \\
+    TUO16 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should set the cancelled state",()=$>$\{it("from buyer", ...)                                       \\
+    TUO17 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should set the cancelled state",()=$>$\{it("from seller", ...)                                      \\
+    TUO18 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should move funds back to the buyer",async ()=$>$\{it("from buyer [@skip-on-coverage]", ...)        \\
+    TUO19 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should move funds back to the buyer",async ()=$>$\{it("from seller", ...)                           \\
+    TUO20 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("failure cases",()=$>$\{it("should not refund an order already closed", ...)                         \\
+    TUO21 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("failure cases",()=$>$\{it("should be the owner or the seller", ...)                                 \\
+    TUO22 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check contractBalance()", ...)                                                                  \\
+    TUO23 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOwnerAddress(string)", ...)                                                            \\
+    TUO24 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getSellerAddress(string)", ...)                                                           \\
+    TUO25 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getAmountToPay(string)", ...)                                                             \\
+    TUO26 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOrderState(string)", ...)                                                              \\
+    TUO27 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOrderById(string)", ...)                                                               \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -265,10 +560,10 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \begin{tabular}{c|p{15cm}}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                       \\
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                          \\
     \hline
-    TUO28 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOrdersByBuyer(address)", ...)                                                                                       \\
-    TUO29 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOrdersBySeller(address)", ...)                                                         \\                                                   
+    TUO28 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOrdersByBuyer(address)", ...)  \\
+    TUO29 & smart-contract/test/1\_OrderManager.test.js:describe('check getter functions',\newline async ()=$>$\{it("check getOrdersBySeller(address)", ...) \\
   \end{tabular}
   \caption{Tracciamento test di unità - Solidity - OrderManager}
 \end{table}
@@ -281,21 +576,23 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \begin{tabular}{c|p{10cm}|c}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-         & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                    \\
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                 \\
     \hline
-    TUM01 & Si verifica che il contatore degli ordini sia inizializzato a zero.                                                               & S \\
-    TUM02 & Si verifica che l'ordine creato sia corretto.                                                                                     & S \\
-    TUM03 & Si verifica che il trasferimento di un nuovo importo nella MoneyBox\glo{} avvenga correttamente.                                                                & S \\
-    TUM04 & Si verifica che il rimborso a partire dalla richiesta del proprietario dell'ordine avvenga correttamente.                                                  & S \\
-    TUM05 & Si verifica che il rimborso a partire dalla richiesta del venditore dell'ordine avvenga correttamente.                        & S \\
-    TUM06 & Si verifica il caso fallimentare in cui l'utente non ha abbastanza fondi.                    & S \\
-    TUM07 & Si verifica il caso fallimentare in cui l'acquirente richiede un rimborso da una "CLOSED" MoneyBox\glo{}.                                        & S \\
-    TUM08 & Si verifica il caso fallimentare in cui l'utente prova a inviare un ammontare negativo.                                           & S \\
-    TUM09 & Si verifica che vengano ritornate correttamente tutte le transazioni partecipanti alla MoneyBox\glo{}.                                                         & S \\
-    TUM10 & Si verifica che venga ritornato il corretto ammontare mancante per il completamento della MoneyBox\glo{}.     & S \\
-    TUM11 & Si verifica che vengano ritornati correttamente tutti gli ordini relativi all'acquirente.      & S \\
-    TUM12 & Si verifica che vengano ritornati correttamente tutti gli ordini relativi al venditore.              & S \\
+    TUM01 & Si verifica che il contatore degli ordini sia inizializzato a zero.                                                            & S \\
+    TUM02 & Si verifica che la MoneyBox\glo{} venga creata correttamente.                                                                  & S \\
+    TUM03 & Si verifica che il proprietario dell'ordine possa pagare una parte dell'importo totale alla creazione della MoneyBox\glo{}.    & S \\
+    TUM04 & Si verifica che il trasferimento di un nuovo importo nella MoneyBox\glo{} avvenga correttamente.                               & S \\
+    TUM05 & Si verifica che il rimborso a partire dalla richiesta del proprietario della MoneyBox\glo{} avvenga correttamente.             & S \\
+    TUM06 & Si verifica che il rimborso a partire dalla richiesta del venditore dell'ordine avvenga correttamente.                         & S \\
+    TUM07 & Si verifica il caso fallimentare in cui l'utente non invia l'importo stabilito.                                                & S \\
+    TUM08 & Si verifica il caso fallimentare in cui l'acquirente richieda il rimborso di una MoneyBox\glo{} chiusa.                        & S \\
+    TUM09 & Si verifica il caso fallimentare in cui l'utente cerca di creare un nuovo pagamento con un ammontare negativo.                 & S \\
+    TUM10 & Si verifica che vengano ritornate correttamente tutte le transazioni partecipanti alla MoneyBox\glo{}.                         & S \\
+    TUM11 & Si verifica che venga ritornato il corretto ammontare mancante per il completamento della MoneyBox\glo{}.                      & S \\
+    TUM12 & Si verifica che vengano ritornati correttamente tutti gli ordini relativi all'acquirente (registrati in entrambi i contratti). & S \\
+    TUM13 & Si verifica che vengano ritornati correttamente tutti gli ordini relativi al venditore (registrati in entrambi i contratti).   & S \\
+    TUM14 & Si verifica che vengano ritornati correttamente tutti gli ordini MoneyBox\glo{} relativi all'indirizzo di un partecipante.     & S \\
   \end{tabular}
   \caption{Test di unità - Solidity - MoneyBox}
 \end{table}
@@ -311,20 +608,22 @@ I test di unità rimanenti verranno stabiliti durante il periodo di \textit{Prog
   \begin{tabular}{c|p{15cm}}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                       \\
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                              \\
     \hline
-    TUM01 & smart-contract/test/2\_MoneyBox.test.js:it("should have the initial order number to 0", ...)                                                                                      \\
+    TUM01 & smart-contract/test/2\_MoneyBox.test.js:it("should have the initial order number to 0", ...)                                                                                         \\
     TUM02 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{it('moneybox created correctly', ...)                                                         \\
-    TUM03 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{it("new fee transfer into moneybox", ...)              \\
-    TUM04 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{it("refund all fee transfers from moneybox owner", ...)                                   \\
-    TUM05 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{it("refund all fee transfers from moneybox seller", ...)                                 \\
-    TUM06 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{describe("failure cases",()=$>$\{it("should not have insufficient value", ...)                                   \\
-    TUM07 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{describe("failure cases",()=$>$\{it("buyer tries to call refund from a closed moneybox", ...)                                         \\
-    TUM08 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{describe("failure cases",()=$>$\{it("negative fee payment", ...)                                          \\
-    TUM09 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getMoneyBoxPayments(string)", ...)                                \\
-    TUM10 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAmountToFill(string)", ...)                                    \\
-    TUM11 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAllBuyerOrders(supercontract, \_buyerAddress)", ...)                                                          \\
-    TUM12 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAllSellerOrders(OrderManager, address)", ...)                                                      \\
+    TUM03 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{it("user sends import at moneybox creation", ...)                                             \\
+    TUM04 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{it("new fee transfer into moneybox", ...)                                                     \\
+    TUM05 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{it("refund all fee transfers from moneybox owner", ...)                                       \\
+    TUM06 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{it("refund all fee transfers from moneybox seller", ...)                                      \\
+    TUM07 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{describe("failure cases",()=$>$\{it("should not have insufficient value", ...)                \\
+    TUM08 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{describe("failure cases",()=$>$\{it("buyer tries to call refund from a closed moneybox", ...) \\
+    TUM09 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{describe("failure cases",()=$>$\{it("negative fee payment", ...)                              \\
+    TUM10 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getMoneyBoxPayments(string)", ...)                                               \\
+    TUM11 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAmountToFill(string)", ...)                                                   \\
+    TUM12 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAllBuyerOrders(supercontract, \_buyerAddress)", ...)                          \\
+    TUM13 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAllSellerOrders(OrderManager, address)", ...)                                 \\
+    TUM14 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getMoneyBoxesByParticipantAddress(address)", ...)                                \\
   \end{tabular}
   \caption{Tracciamento test di unità - Solidity - MoneyBox}
 \end{table}
