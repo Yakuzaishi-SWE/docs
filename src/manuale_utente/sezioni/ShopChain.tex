@@ -20,9 +20,8 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         \includegraphics[scale=0.5]{immagini/navbar.png}
         \caption{navbar}
     \end{figure}
-
+    \textbf{}\\
     La prima cosa da fare una volta all'interno del sito è effettuare quindi la connessione a MetaMask. Per farlo e sufficiente cliccare il bottone "Connect MetaMask". A questo punto si aprirà un popup dell'estensione che chiederà di inserire la password scelta al momento dell'iscrizione. Una volta inserita la Password la connessione sarà stabilita.\\
-
     L'icona alla sinistra dell'indirizzo del portafoglio segnala appunto lo stato della connessione alla rete Fantom\glo{}.\\
     Posizionandosi sopra l'icona sarà possibile reperire eventuali messaggi di errore:
     \begin{figure}[H]
@@ -50,15 +49,15 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             \includegraphics[scale=0.2]{immagini/Home.png}
             \caption{HomePage di ShopChain}
         \end{figure}
+        \textbf{}\\
         Potrebbe risultare interessante dare uno sguardo alle statistiche riguardanti il contratto:
         \begin{figure}[H]
             \centering
             \includegraphics[scale=0.4]{immagini/ContractDetails.png}
             \caption{Statistiche contratto}
         \end{figure}
-
+        \textbf{}\\
         Esse rappresentano gli ordini effettuati su shopchain da quando è in funzione e quanto denaro è attualmente bloccato all'interno del contratto rispettivamente per ordine singolo per le icone di sinistra e per MoneyBox le icone di destra.
-
         \subsubsection{Checkout Page}
         Cliccando il link alla Checkout Page nel menù verremo reindirizzati alla seguente pagina:
         \begin{figure}[H]
@@ -66,6 +65,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             \includegraphics[scale=0.2]{immagini/Checkout/Checkout.png}
             \caption{Checkout Page}
         \end{figure}
+        \textbf{}\\
         La pagina di Checkout presenta un form con i campi ID e AMOUNT.\\
         Questa pagina risulta essere esclusivamente dimostrativa in quanto tali dati saranno successivamente reperiti direttamente dall'e-commerce\glo{} e saranno impossibili da cambiare.\\
         Al momento, allo scopo di mostrare il funzionamento dell'applicativo, in quanto il sito non risulta effettivamente collegato a nessun e-commerce\glo{}, è possibile scegliere un ammontare da pagare. \\
@@ -76,6 +76,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             \includegraphics[scale=0.2]{immagini/Checkout/PaymentMode.png}
             \caption{Pagina di scelta modalità di pagamento}
         \end{figure}
+        \textbf{}\\
         Nel particolare in questa pagina è possibile trovare il riassunto della transazione con i rispettivi indirizzi di uscita e di entrata e l'importo dell'ammontare totale della somma di pagamento.\\\\
         Nel seguito analizzeremo le differenze e i dettagli delle due modalità di pagamento.
             \paragraph{Pagamento Singolo}
@@ -90,33 +91,104 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
                 \includegraphics[scale=0.2]{immagini/Checkout/SinglePaymentLayer.png}
                 \caption{Fase di pagamento singolo}
             \end{figure}
+            \textbf{}\\
             Una volta che la transazione sarà stata registrata (in genere pochi secondi dopo averla confermata), si verrà reindirizzati ad una pagina che conferma che la transazione è avvenuta correttamente:
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale=0.3]{immagini/Checkout/PayAloneTransactionSuccess.png}
                 \caption{Transazione avvenuta con successo}
             \end{figure}
+            \textbf{}\\
             Da qui sarà possibile visualizzare il dettaglio della transazione semplicemente cliccando il link \texttt{"See your transaction here"} attraverso il quale si verrà reindirizzati alla pagina mostrata di seguito:
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale=0.2]{immagini/Checkout/SinglePaymentDetails.png}
                 \caption{Dettaglio transazione singola}
             \end{figure}
-            Da qui sarà quindi possibile sbloccare il denaro una volta ricevuto il pacco o chiedere il rimborso qualora il pacco non sia mai stato recapitato mediante gli appositi bottoni.
-
-
-
+            \textbf{}\\
+            Da qui sarà quindi possibile sbloccare il denaro attraverso un codice di sblocco (una volta ricevuto l'ordine) o chiedere il rimborso (qualora l'ordine non venga mai recapitato) mediante gli appositi bottoni.
             \paragraph{Pagamento MoneyBox}
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale=0.3]{immagini/Checkout/CreateMoneyBox.png}
                 \caption{Tasto scelta modalità pagamento MoneyBox}
             \end{figure}
-            Cliccando il tasto \texttt{"Create Moneybox"}
-
-
-
-
+            Cliccando il tasto \texttt{"Create Moneybox"} verrà scelta la modalità di pagamento MoneyBox e la pagina mostrata sarà la seguente:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.2]{immagini/Checkout/MoneyBoxCheckout.png}
+                \caption{Pagina Checkout MoneyBox}
+            \end{figure}
+            \textbf{}\\
+            Analizzando la pagina è possibile vedere il dettaglio della transazione, un box per inserire l'eventuale proprio contributo fin dalla creazione e i tasti \texttt{"Go Back"} e \texttt{"Create MoneyBox"}.\\\\
+            Per inserire un contributo sarà necessario inserire l'importo all'interno del box come mostrato di seguito:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.4]{immagini/Checkout/InitialContribute.png}
+                \caption{Contributo MoneyBox in fase di creazione}
+            \end{figure}
+            \textbf{}\\
+            ed in seguito cliccare il bottone \texttt{"Create MoneyBox"}.\\
+            A questo punto verrà aperto un popup dall'estensione MetaMask con i dettagli del pagamento e la possibilità di confermare o annullare il pagamento. Un layer di caricamento apparirà nella pagina ShopChain fintantoché la transazione non sarà conclusa come mostrato nella figura seguente:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.2]{immagini/Checkout/MoneyBoxLayer.png}
+                \caption{Fase di pagamento MoneyBox}
+            \end{figure}
+            \textbf{}\\
+            Una volta che la transazione sarà stata registrata (in genere pochi secondi dopo averla confermata), si verrà reindirizzati ad una pagina che conferma che la transazione è avvenuta correttamente:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{immagini/Checkout/MoneyBoxTransactionSuccess.png}
+                \caption{creazione Moneybox avvenuta con successo}
+            \end{figure}
+            \textbf{}\\
+            Da qui sarà possibile visualizzare il dettaglio della transazione semplicemente cliccando il link \texttt{"See your transaction here"} attraverso il quale si verrà reindirizzati alla pagina mostrata di seguito:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.2]{immagini/Checkout/MoneyBoxDetails.png}
+                \caption{Dettaglio transazione MoneyBox}
+            \end{figure}
+            \textbf{}\\
+            Da qui sarà quindi possibile copiare il link di invito cliccando il bottone \texttt{"Copy invite link"}, da condividere con i contribuenti alla moneybox, o chiedere il rimborso qualora la moneybox debba essere annullata o l'ordine non venga mai recapitato.\\
+            All'interno della pagina è inoltre possibile notare altre informazioni quali la percentuale di rempimento della moneybox, un box per contribuire alla moneybox e una tabella con il dettaglio delle transazioni dei contribuenti.\\
+            Per condividere la moneybox con gli altri contribuenti sarà sufficiente condividere il link di invito precedentemente descritto e che l'utente contribuente disponga di tutti i requisiti citati fino a questo punto.\\
+            Quando la MoneyBox sarà completamente riempita il suo stato passerà da \texttt{"Created"} a \texttt{"Paid"} e comparirà l'apposito bottone che permetterà di effettuare lo sblocco del denaro al wallet del venditore.\\\\ 
+            \textbf{N.B.} \textit{Solo l'utente che ha creato la moneybox potrà effettuare lo sblocco.}\\\\
+            Le immagini a seguire mostrano in dettaglio il box per inserire il proprio contributo, la tabella dei contribuenti e un'esempio di come la pagina si trasforma quando la moneybox passa allo stato \texttt{"Paid"}:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{immagini/Checkout/Contribute.png} 
+                \caption{Box per inserire il proprio contributo alla MoneyBox}
+            \end{figure}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.25]{immagini/Checkout/ContributionsTable.png} 
+                \caption{Tabella dettaglio contribuenti}
+            \end{figure}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.2]{immagini/Checkout/FilledMoneyBox.png} 
+                \caption{Dettaglio MoneyBox in stato \texttt{"Paid"}}
+            \end{figure}
+            \textbf{}\\
+            Da quest'ultima figura in particolare è possibile notare la comparsa del bottone di sblocco e la scomparsa del box per contribuire alla MoneyBox poiché, in quanto già piena, non è più possibile inserire denaro al suo interno.\\\\
+            Da qui sarà quindi possibile sbloccare il denaro attraverso un codice di sblocco (una volta ricevuto l'ordine) o chiedere il rimborso (qualora l'ordine non venga mai recapitato) mediante gli appositi bottoni.
+            \subsubsection{Sblocco e Rimborso}
+       Sia nel caso di \texttt{sblocco} che nel caso di \texttt{rimborso}, al click dell'apposito bottone si aprirà un popup in quanto quella che si compie in questa fase è un'operazione irreversibile e dunque considerata sensibile.\\\\
+        Nel caso di \textbf{sblocco} verrà mostrato un popup che mostrerà il codice di sblocco e un'input box nella quale replicare tale codice con l'aggiunta di due tasti per la conferrma dell'inserimento del codice o la chiusura del popup stesso:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.3]{immagini/Checkout/UnlockPopUp.png} 
+            \caption{Popup di sblocco}
+        \end{figure}
+        \textbf{}\\
+        Nel caso di \textbf{rimborso} verrà mostrato un semplice popup di conferma così da evitare pagamenti erronei.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.3]{immagini/Checkout/RefundPopUp.png} 
+            \caption{Popup di rimborso}
+        \end{figure}
 
         \subsubsection{Transazioni}
 
