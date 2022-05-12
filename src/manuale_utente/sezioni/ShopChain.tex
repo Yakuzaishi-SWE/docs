@@ -54,12 +54,69 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         \begin{figure}[H]
             \centering
             \includegraphics[scale=0.4]{immagini/ContractDetails.png}
-            \caption{statistiche contratto}
+            \caption{Statistiche contratto}
         \end{figure}
 
         Esse rappresentano gli ordini effettuati su shopchain da quando è in funzione e quanto denaro è attualmente bloccato all'interno del contratto rispettivamente per ordine singolo per le icone di sinistra e per MoneyBox le icone di destra.
 
         \subsubsection{Checkout Page}
+        Cliccando il link alla Checkout Page nel menù verremo reindirizzati alla seguente pagina:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.2]{immagini/Checkout/Checkout.png}
+            \caption{Checkout Page}
+        \end{figure}
+        La pagina di Checkout presenta un form con i campi ID e AMOUNT.\\
+        Questa pagina risulta essere esclusivamente dimostrativa in quanto tali dati saranno successivamente reperiti direttamente dall'e-commerce\glo{} e saranno impossibili da cambiare.\\
+        Al momento, allo scopo di mostrare il funzionamento dell'applicativo, in quanto il sito non risulta effettivamente collegato a nessun e-commerce\glo{}, è possibile scegliere un ammontare da pagare. \\
+        Una volta scelto l'importo sarà sufficiente cliccare il tasto \texttt{"Send"} per proseguire.\\\\
+        A questo punto ci troveremo davanti alla pagina di scelta della modalità del pagamento:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.2]{immagini/Checkout/PaymentMode.png}
+            \caption{Pagina di scelta modalità di pagamento}
+        \end{figure}
+        Nel particolare in questa pagina è possibile trovare il riassunto della transazione con i rispettivi indirizzi di uscita e di entrata e l'importo dell'ammontare totale della somma di pagamento.\\\\
+        Nel seguito analizzeremo le differenze e i dettagli delle due modalità di pagamento.
+            \paragraph{Pagamento Singolo}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{immagini/Checkout/PayAlone.png}
+                \caption{Tasto scelta modalità pagamento singolo}
+            \end{figure}
+            Cliccando il tasto \texttt{"Pay Alone"} verrà aperto un popup dall'estensione MetaMask con i dettagli del pagamento e la possibilità di confermare o annullare il pagamento. Un layer di caricamento apparirà nella pagina ShopChain fintantoché la transazione non sarà conclusa come mostrato nella figura seguente:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.2]{immagini/Checkout/SinglePaymentLayer.png}
+                \caption{Fase di pagamento singolo}
+            \end{figure}
+            Una volta che la transazione sarà stata registrata (in genere pochi secondi dopo averla confermata), si verrà reindirizzati ad una pagina che conferma che la transazione è avvenuta correttamente:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{immagini/Checkout/PayAloneTransactionSuccess.png}
+                \caption{Transazione avvenuta con successo}
+            \end{figure}
+            Da qui sarà possibile visualizzare il dettaglio della transazione semplicemente cliccando il link \texttt{"See your transaction here"} attraverso il quale si verrà reindirizzati alla pagina mostrata di seguito:
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.2]{immagini/Checkout/SinglePaymentDetails.png}
+                \caption{Dettaglio transazione singola}
+            \end{figure}
+            Da qui sarà quindi possibile sbloccare il denaro una volta ricevuto il pacco o chiedere il rimborso qualora il pacco non sia mai stato recapitato mediante gli appositi bottoni.
+
+
+
+            \paragraph{Pagamento MoneyBox}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.3]{immagini/Checkout/CreateMoneyBox.png}
+                \caption{Tasto scelta modalità pagamento MoneyBox}
+            \end{figure}
+            Cliccando il tasto \texttt{"Create Moneybox"}
+
+
+
+
 
         \subsubsection{Transazioni}
 
@@ -81,7 +138,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[scale=0.4]{immagini/transactionview.jpg}
+                    \includegraphics[scale=0.4]{immagini/Transaction/transactionview.jpg}
                     \caption{La vista delle transazioni in uscita}
                 \end{figure}
 
@@ -95,7 +152,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[scale=0.4]{immagini/inboundtransactions.jpg}
+                    \includegraphics[scale=0.4]{immagini/Transaction/inboundtransactions.jpg}
                     \caption{La vista delle transazioni in entrata}
                 \end{figure}
 
@@ -109,7 +166,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[scale=0.4]{immagini/ordertype.jpg}
+                    \includegraphics[scale=0.4]{immagini/Transaction/ordertype.jpg}
                 \caption{Menu per la scelta del tipo di ordine}
                 \end{figure}
 
@@ -122,7 +179,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[scale=0.4]{immagini/orderstate.jpg}
+                    \includegraphics[scale=0.4]{immagini/Transaction/orderstate.jpg}
                     \caption{Menu per la scelta dello stato dell'ordine}
                 \end{figure}
 
@@ -141,7 +198,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
 
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[scale=0.4]{immagini/transactionsmall.jpg}
+                    \includegraphics[scale=0.4]{immagini/Transaction/transactionsmall.jpg}
                     \caption{Due esempi di transazione nella lista "Your Transactions"}
                 \end{figure}
 
