@@ -18,16 +18,25 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.5]{immagini/navbar.png}
-        \caption{navbar}
+        \caption{Navbar}
     \end{figure}
     \textbf{}\\
-    La prima cosa da fare una volta all'interno del sito è effettuare quindi la connessione a MetaMask. Per farlo e sufficiente cliccare il bottone "Connect MetaMask". A questo punto si aprirà un popup dell'estensione che chiederà di inserire la password scelta al momento dell'iscrizione. Una volta inserita la Password la connessione sarà stabilita.\\
+    La prima cosa da fare una volta all'interno del sito è effettuare quindi la connessione a MetaMask. Per farlo e sufficiente cliccare il bottone "Connect MetaMask".\\
+    A questo punto si aprirà un popup dell'estensione che chiederà di inserire la password scelta al momento dell'iscrizione.\\
+    Una volta inserita la Password la connessione sarà stabilita.\\
+    Qualora non si fosse connessi a MetaMask, ShopChain risulterà inutilizzabile nella gran parte delle pagine (praticamente tutte quelle in cui è necessaria l'interazione con lo stesso e, di coseguenza, le pagine figlie.), le quali saranno infatti oscurate da un layer piuttosto invasivo che richiede di effettuare la connessione:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{immagini/MetaMaskLayer.png}
+        \caption{Overlay "METAMASK NON CONNESSO"}
+    \end{figure}
+    \textbf{}\\
     L'icona alla sinistra dell'indirizzo del portafoglio segnala appunto lo stato della connessione alla rete Fantom\glo{}.\\
     Posizionandosi sopra l'icona sarà possibile reperire eventuali messaggi di errore:
     \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.4]{immagini/stateSignal.png}
-        \caption{messaggi di stato}
+        \includegraphics[scale=0.3]{immagini/stateSignal.png}
+        \caption{Messaggi di stato della connessione}
     \end{figure}
 
     \subsection{Menù e Contenuto}
@@ -46,7 +55,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         La home di ShopChain contiene solamente alcune informazioni riguardanti il sito stesso.
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.2]{immagini/Home.png}
+            \includegraphics[scale=0.3]{immagini/Home.png}
             \caption{HomePage di ShopChain}
         \end{figure}
         \textbf{}\\
@@ -69,7 +78,13 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         La pagina di Checkout presenta un form con i campi ID e AMOUNT.\\
         Questa pagina risulta essere esclusivamente dimostrativa in quanto tali dati saranno successivamente reperiti direttamente dall'e-commerce\glo{} e saranno impossibili da cambiare.\\
         Al momento, allo scopo di mostrare il funzionamento dell'applicativo, in quanto il sito non risulta effettivamente collegato a nessun e-commerce\glo{}, è possibile scegliere un ammontare da pagare. \\
-        Una volta scelto l'importo sarà sufficiente cliccare il tasto \texttt{"Send"} per proseguire.\\\\
+        Una volta scelto l'importo sarà sufficiente cliccare il tasto \texttt{"Send"} per proseguire.\\
+        Ovviamente per proseguire è necessario inserire un importo superiore a 0. Nel caso in cui questo non dovesse verificarsi verrà segnalato un errore di avviso come segue:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.4]{immagini/Checkout/biggerThanZero.png}
+            \caption{L'importo deve essere superiore a 0}
+        \end{figure}
         A questo punto ci troveremo davanti alla pagina di scelta della modalità del pagamento:
         \begin{figure}[H]
             \centering
@@ -298,17 +313,17 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
                 \begin{minipage}{0.33\textwidth}
                     \centering
                     \includegraphics[scale=0.6]{immagini/Transaction/Paid.png} 
-                    \caption{Stato: Paid}
+                    \caption{Stato: "Paid"}
                 \end{minipage}\hfill
                 \begin{minipage}{0.33\textwidth}
                 \centering
                     \includegraphics[scale=0.6]{immagini/Transaction/Created.png} 
-                    \caption{Stato: Created}
+                    \caption{Stato: "Created"}
                 \end{minipage}
                 \begin{minipage}{0.33\textwidth}
                     \centering
                         \includegraphics[scale=0.6]{immagini/Transaction/Refunded.png} 
-                        \caption{Stato: Refunded}
+                        \caption{Stato: "Refunded"}
                     \end{minipage}
             \end{figure}
             \subparagraph{Icona che identifica lo stato del denaro}
