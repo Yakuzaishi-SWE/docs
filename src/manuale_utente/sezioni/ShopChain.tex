@@ -21,18 +21,18 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         \caption{Navbar}
     \end{figure}
     \textbf{}\\
-    La prima cosa da fare una volta all'interno del sito è effettuare quindi la connessione a MetaMask. Per farlo e sufficiente cliccare il bottone "Connect MetaMask".\\
+    La prima cosa da fare una volta all'interno del sito è effettuare la connessione a MetaMask. Per farlo è sufficiente cliccare il bottone "Connect MetaMask".\\
     A questo punto si aprirà un popup dell'estensione che chiederà di inserire la password scelta al momento dell'iscrizione.\\
-    Una volta inserita la Password la connessione sarà stabilita.\\
-    Qualora non si fosse connessi a MetaMask, ShopChain risulterà inutilizzabile nella gran parte delle pagine (praticamente tutte quelle in cui è necessaria l'interazione con lo stesso e, di conseguenza, le pagine figlie.), le quali saranno infatti oscurate da un overlay che richiede di effettuare la connessione:
+    Una volta inserita la password la connessione sarà stabilita.\\
+    Qualora non si fosse connessi a MetaMask, ShopChain risulterà inutilizzabile nella gran parte delle pagine (praticamente tutte quelle in cui è necessaria l'interazione con lo stesso e, di conseguenza, le pagine figlie.), le quali saranno oscurate da un overlay che richiederà di effettuare la connessione:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.4]{immagini/MetaMaskLayer.png}
         \caption{Overlay "METAMASK NON CONNESSO"}
     \end{figure}
     \textbf{}\\
-    L'icona alla sinistra dell'indirizzo del portafoglio segnala appunto lo stato della connessione alla rete Fantom\glo{}.\\
-    Posizionandosi sopra l'icona sarà possibile reperire eventuali messaggi di errore:
+    L'icona a sinistra dell'indirizzo del portafoglio segnala appunto lo stato della connessione alla rete Fantom\glo{}.\\
+    Posizionandosi sopra l'icona sarà possibile reperire un messaggio relativo allo stato della connessione a MetaMask. Di seguito alcuni esempi:
     \begin{figure}[H]
         \centering
         \includegraphics[scale=0.3]{immagini/stateSignal.png}
@@ -66,9 +66,9 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             \caption{Statistiche contratto}
         \end{figure}
         \textbf{}\\
-        Esse rappresentano gli ordini effettuati su ShopChain da quando è in funzione e quanto denaro è attualmente bloccato all'interno del contratto rispettivamente per ordine singolo per le icone di sinistra e per MoneyBox le icone di destra.
+        Esse rappresentano gli ordini effettuati su ShopChain da quando è in funzione e quanto denaro è attualmente depositato all'interno del contratto. Le icone di sinistra raccolgono le informazioni riguardanti gli ordini singoli, mentre quelle di destra riguardano le MoneyBox.
         \subsubsection{Checkout Page} \label{subsection: CheckoutPage}
-        Cliccando il link alla Checkout Page nel menù verremo reindirizzati alla seguente pagina:
+        Cliccando su Checkout Page, nel menù, verremo reindirizzati alla seguente pagina:
         \begin{figure}[H]
             \centering
             \includegraphics[scale=0.3]{immagini/Checkout/Checkout.png}
@@ -76,8 +76,8 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         \end{figure}
         \textbf{}\\
         La pagina di Checkout presenta un form con i campi ID e AMOUNT.\\
-        Questa pagina risulta essere esclusivamente dimostrativa in quanto tali dati saranno successivamente reperiti direttamente dall'e-commerce\glo{} e saranno impossibili da cambiare.\\
-        Al momento, allo scopo di mostrare il funzionamento dell'applicativo, in quanto il sito non risulta effettivamente collegato a nessun e-commerce\glo{}, è possibile scegliere un ammontare da pagare. \\
+        Questa pagina risulta essere esclusivamente dimostrativa in quanto tali dati saranno successivamente reperiti direttamente dall'e-commerce\glo{} e non saranno modificabili né dalla piattaforma né dall'utente.\\
+        Allo scopo di mostrare il funzionamento dell'applicativo, poiché il sito non risulta effettivamente collegato a nessun e-commerce\glo{}, è possibile scegliere un ammontare da pagare. \\
         Una volta scelto l'importo sarà sufficiente cliccare il tasto \texttt{"Send"} per proseguire.\\
         Ovviamente per proseguire è necessario inserire un importo superiore a 0. Nel caso in cui questo non dovesse verificarsi verrà segnalato un errore di avviso come segue:
         \begin{figure}[H]
@@ -92,8 +92,8 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             \caption{Pagina di scelta modalità di pagamento}
         \end{figure}
         \textbf{}\\
-        Nel particolare in questa pagina è possibile trovare il riassunto della transazione con i rispettivi indirizzi di uscita e di entrata e l'importo dell'ammontare totale della somma di pagamento.\\\\
-        Nel seguito analizzeremo le differenze e i dettagli delle due modalità di pagamento.
+        Nel particolare in questa pagina è possibile trovare il riassunto della transazione con  il suo identificativo, l'indirizzo del venditore a cui stiamo mandando il denaro e l'importo totale da pagare.\\\\
+        Successivamente analizzeremo le differenze e i dettagli delle due modalità di pagamento.
             \paragraph{Pagamento Singolo}
             \begin{figure}[H]
                 \centering
@@ -143,8 +143,9 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
                 \caption{Contributo MoneyBox in fase di creazione}
             \end{figure}
             \textbf{}\\
-            e in seguito cliccare il bottone \texttt{"Create MoneyBox"}.\\
-            A questo punto verrà aperto un popup dall'estensione MetaMask con i dettagli del pagamento e la possibilità di confermare o annullare il pagamento. Un overlay di caricamento apparirà nella pagina ShopChain fintantoché la transazione non sarà conclusa come mostrato nella figura seguente:
+            e in seguito cliccare il bottone \texttt{"Create MoneyBox"}.\\\\
+            \textbf{N.B.} \textit{Se si ha intenzione di versare una quota, è consigliato farlo al momento della creazione della MoneyBox, così da pagare una sola volta le gasfee necessarie all'interazione con il contratto.}\\\\
+            A questo punto verrà aperto un popup dall'estensione MetaMask con i dettagli del pagamento e la possibilità di confermare o annullare il pagamento. Un overlay di caricamento apparirà nella pagina ShopChain fintantoché la transazione non sarà conclusa, come mostrato nella figura seguente:
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale=0.2]{immagini/Checkout/MoneyBoxLayer.png}
@@ -198,7 +199,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             \caption{Popup di sblocco}
         \end{figure}
         \textbf{}\\
-        Nel caso di \textbf{rimborso} verrà mostrato un semplice popup di conferma così da evitare pagamenti erronei.
+        Nel caso di \textbf{rimborso} verrà mostrato un semplice popup di conferma così da assicurare una scelta consapevole.
         \begin{figure}[H]
             \centering
             \includegraphics[scale=0.3]{immagini/Checkout/RefundPopUp.png} 
@@ -209,23 +210,23 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         Tali sezioni vengono affrontate insieme in quanto molto simili tra di loro.\\
         In particolare:
         \begin{itemize}
-            \item \textbf{Your Transaction}: L'utente acquirente può trovare in questa sezione l'elenco dei pagamenti e dei contributi MoneyBox effettuati con ShopChain;
-            \item \textbf{Inbound Transaction}: L'utente venditore può trovare in questa sezione l'elenco dei pagamenti in entrata da ShopChain.
+            \item \textbf{Your Transactions}: L'utente acquirente può trovare in questa sezione l'elenco dei pagamenti e dei contributi MoneyBox effettuati con ShopChain;
+            \item \textbf{Inbound Transactions}: L'utente venditore può trovare in questa sezione l'elenco dei pagamenti in entrata da ShopChain.
         \end{itemize}
-        \paragraph{Your Transaction}
+        \paragraph{Your Transactions}
         La pagina delle transazioni in uscita, "Your Transactions", è divisa in due sezioni:
         \begin{itemize}
-            \item Yuor Transactions: in questa sezione sono riportati gli ordini \textbf{creati} dall'utente siano essi di tipo Single Payment o MoneyBox;
+            \item Your Transactions: in questa sezione sono riportati gli ordini \textbf{creati} dall'utente, siano essi di tipo Single Payment (ordine singolo) o MoneyBox;
             \item Your Contributions: in questa sezione sono riportati gli ordini di tipo MoneyBox a cui l'utente ha contribuito.
         \end{itemize}
         \begin{figure}[H]
         \centering
         \includegraphics[scale=0.2]{immagini/Transaction/YourTransaction.png}
-        \caption{Pagina Your Transaction}
+        \caption{Pagina Your Transactions}
         \end{figure}
         \paragraph{Inbound Transactions}
         La pagina delle transazioni in entrata, "Inbound Transactions", mostra la sezione con le transazioni in entrata verso il wallet dell'utente venditore.\\\\
-        \textbf{N.B.} \textit{L'utente venditore potrà vedere esclusivamente le transazioni già sbloccate.}\\
+        \textbf{N.B.} \textit{L'utente venditore potrà vedere esclusivamente le transazioni già pagate.}\\
         \begin{figure}[H]
             \centering
             \includegraphics[scale=0.4]{immagini/Transaction/inboundTransactions.png}
@@ -240,7 +241,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             \begin{itemize}
                 \item \textbf{All}: Seleziona tutti gli ordini;
                 \item \textbf{Single Payment}: Seleziona solo gli ordini di tipo Single Payment;
-                \item \textbf{MoneyBox Payment}: Seleziona solo gli ordini di tipo MoneyBox.
+                \item \textbf{MoneyBox}: Seleziona solo gli ordini di tipo MoneyBox.
             \end{itemize}
             \begin{figure}[H]
                 \centering
