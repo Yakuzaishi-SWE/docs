@@ -143,24 +143,24 @@ sono quindi presenti differenti attori nella gerarchia:
 \end{figure}
 
 \begin{itemize}
-    \item Attore primario: acquirente;
+    \item Attore primario: utente proprietario dell'ordine;
     \item Attore secondario: Metamask\glo{};
     \item Precondizioni: è stata selezionata una tipologia di pagamento per l'ordine interessato, dal proprietario dell'ordine [UC2.2], 
             l'acquirente ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
-    \item Postcondizioni: l'acquirente ha effettuato il pagamento;
+    \item Postcondizioni: l'utente proprietario dell'ordine ha effettuato il pagamento;
     \item Scenario principale:
           \begin{enumerate}
-              \item L'acquirente visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
-              \item L'acquirente visualizza un overlay di caricamento sulla pagina di ShopChain;
-              \item L'acquirente autorizza la transazione per l'importo impostato (che nel caso MoneyBox\glo{} può essere nullo o a scelta) a seconda della tipologia precedentemente selezionata dal proprietario dell'ordine (in UC2.2);
-              \item L'acquirente visualizza un messaggio di conferma di avvenuto pagamento o un riscontro dell'avvenuta creazione della MoneyBox\glo{}.
+              \item L'utente visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
+              \item L'utente visualizza un overlay di caricamento sulla pagina di ShopChain;
+              \item L'utente autorizza la transazione per l'importo impostato (che nel caso MoneyBox\glo{} può essere nullo o a scelta) a seconda della tipologia precedentemente selezionata dal proprietario dell'ordine (in UC2.2);
+              \item L'utente visualizza un messaggio di conferma di avvenuto pagamento o un riscontro dell'avvenuta creazione della MoneyBox\glo{}.
           \end{enumerate}
     \item Estensioni:
           \begin{enumerate}
-              \item Nel caso l'acquirente rifiuti il pagamento:
+              \item Nel caso l'utente rifiuti il pagamento:
               \begin{itemize}
                   \item La transazione viene annullata;
-                  \item L'acquirente visualizza errore transazione annullata [UC2.3.3].
+                  \item L'utente visualizza errore transazione annullata [UC2.3.3].
               \end{itemize}
           \end{enumerate}
     \item Generalizzazioni:
@@ -189,42 +189,30 @@ sono quindi presenti differenti attori nella gerarchia:
 \paragraph{UC2.3.2 - Pagamento MoneyBox}
 
 \begin{itemize}
-    \item Attore primario: partecipante MoneyBox\glo{};
+    \item Attore primario: proprietario della MoneyBox\glo{};
     \item Precondizioni: è stato selezionato Pagamento MoneyBox\glo{} come tipologia di pagamento per la transazione interessata [UC2.2.2], 
-            il partecipante MoneyBox\glo{} ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
-    \item Postcondizioni: la MoneyBox\glo{} è registrata in blockchain e il partecipante MoneyBox\glo{} ha pagato l'importo scelto se non nullo;
+            il proprietario della MoneyBox\glo{} ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Postcondizioni: la MoneyBox\glo{} è registrata in blockchain e il proprietario della MoneyBox\glo{} ha pagato l'importo scelto se non nullo;
     \item Scenario principale:
     \begin{enumerate}
-        \item Il partecipante MoneyBox\glo{} visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
-        \item Il partecipante MoneyBox\glo{} visualizza un overlay di caricamento sulla pagina di ShopChain;
-        \item Il partecipante MoneyBox\glo{} autorizza la transazione relativa alla creazione della MoneyBox\glo{} e ad un eventuale suo versamento a scelta;
-        \item Il partecipante MoneyBox\glo{} visualizza un messaggio di conferma di avvenuto pagamento.
+        \item Il proprietario della MoneyBox\glo{} visualizza una pagina con i dettagli dell'ordine e una casella per la selezione di un'eventuale quota iniziale da versare;
+        \item Il proprietario della MoneyBox\glo{} visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
+        \item Il proprietario della MoneyBox\glo{} visualizza un overlay di caricamento sulla pagina di ShopChain;
+        \item Il proprietario della MoneyBox\glo{} autorizza la transazione relativa alla creazione della MoneyBox\glo{} e ad un eventuale suo versamento (se inserito);
+        \item Il proprietario della MoneyBox\glo{} visualizza un messaggio di conferma di avvenuto pagamento.
     \end{enumerate}
 \end{itemize}
 
 \paragraph{UC2.3.3 - Visualizzazione Errore Transazione Annullata}
 
 \begin{itemize}
-    \item Attore primario: acquirente;
-    \item Precondizioni: la transazione non è andata a buon fine;
-    \item Postcondizioni: l'acquirente ha visualizzato l'errore e la transazione fallisce;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item L'acquirente visualizza un messaggio di errore per rifiuto della transazione;
-              \item L'acquirente clicca ”OK” per continuare.
-          \end{enumerate}
-\end{itemize}
-
-\subsection{UC2.4 - Visualizzazione Codice di Sblocco}
-
-\begin{itemize}
     \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: è stato effettuato il pagamento [UC2.3] raggiungendo la somma totale dovuta;
-    \item Postcondizioni: il proprietario dell'ordine ha visualizzato il codice di sblocco;
+    \item Precondizioni: la transazione non è andata a buon fine;
+    \item Postcondizioni: l'utente ha visualizzato l'errore e la transazione fallisce;
     \item Scenario principale:
           \begin{enumerate}
-              \item Viene generato il codice di sblocco;
-              \item Il proprietario dell'ordine visualizza il codice di sblocco.
+              \item L'utente visualizza un messaggio di errore per rifiuto della transazione;
+              \item L'utente clicca ”OK” per continuare.
           \end{enumerate}
 \end{itemize}
 
@@ -434,41 +422,6 @@ sono quindi presenti differenti attori nella gerarchia:
     \item Scenario principale: l'utente visualizza un avviso relativo la mancata connessione a Metamask\glo{}.
 \end{itemize}
 
-\subsection{UC6 - Sblocco Ordine}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.7]{immagini/UC6.png}
-    \caption{UC6}
-\end{figure}
-
-\begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
-    \item Attore secondario: Metamask\glo{};
-    \item Precondizioni: il sistema ha generato il codice di sblocco [UC2.3.3];
-    \item Postcondizioni: l'utente proprietario ha sbloccato l'ordine e il denaro è stato trasferito all'utente venditore;
-    \item Scenario principale:
-          \begin{enumerate}
-              \item Il proprietario dell'ordine inserisce il codice di sblocco;
-              \item Il proprietario dell'ordine conferma la transazione sul pop-up Metamask\glo{};
-              \item Il sistema trasferisce il denaro sul wallet\glo{} dell'utente venditore.
-          \end{enumerate}
-    \item Estensione: Nel caso in cui la transazione sia già stata sbloccata:
-          \begin{enumerate}
-              \item Viene impedito lo sblocco;
-              \item Viene mostrato un errore di Ordine Già Sbloccato [UC6.1].
-          \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC6.1 - Visualizza Errore Ordine Già Sbloccato}
-
-\begin{itemize}
-    \item Attore primario: utente proprietario dell'ordine;
-    \item Precondizioni: il sistema è raggiungibile e funzionante, l'ordine è già stato sbloccato;
-    \item Postcondizioni: il proprietario dell'ordine ha visualizzato l'errore di ordine già sbloccato;
-    \item Scenario principale: il proprietario dell'ordine visualizza l'errore di ordine già sbloccato.
-\end{itemize}
-
 \subsection{UC7 - Visualizzazione Transazioni}
 
 \begin{figure}[H]
@@ -603,7 +556,147 @@ sono quindi presenti differenti attori nella gerarchia:
     \item Scenario principale: l'utente visualizza la lista di transazioni cancellate.
 \end{itemize}
 
-\subsection{UC8 - Annullamento Ordine}
+\subsection{UC10 - Dettaglio Ordine}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UC10.png}
+    \caption{UC10}
+\end{figure}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine, venditore;
+    \item Attore secondario: Metamask\glo{};
+    \item Precondizioni: l'utente proprietario dell'ordine ha effettuato almeno un ordine [UC2.3];
+    \item Postcondizioni: l'utente proprietario dell'ordine ha visualizzato i dettagli dell'ordine e le funzionalità associate;
+    \item Scenario principale:
+          \begin{enumerate}
+              \item L'utente visualizza i dettagli dell'ordine [UC10.1];
+              \item L'utente visualizza un pulsante per effettuare lo sblocco [UC6];
+              \item L'utente e il venditore visualizzano un pulsante per effettuare la richiesta di rimborso [UC9];
+              \item Il venditore visualizzato nella stessa pagina un pulsante per effettuare l'annullamento dell'ordine [UC8].
+          \end{enumerate}
+    \item Generalizzazioni:
+          \begin{enumerate}
+              \item Visualizzazione dettagli ordine [UC10.1].
+          \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC10.1 - Visualizzazione dettagli ordine}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine, venditore;
+    \item Precondizioni: è stata selezionato Pagamento Unico come tipologia di pagamento per la transazione interessata [UC2.2.1], 
+            il proprietario dell'ordine ha connesso il proprio wallet\glo{} tramite Metamask\glo{} [UC4];
+    \item Postcondizioni: il proprietario dell'ordine ha pagato l'importo totale in un pagamento unico;
+    \item Scenario principale:
+    \begin{enumerate}
+        \item Il proprietario dell'ordine visualizza il pop-up di Metamask\glo{} con i dettagli della transazione;
+        \item Il proprietario dell'ordine visualizza un overlay di caricamento sulla pagina di ShopChain;
+        \item Il proprietario dell'ordine autorizza la transazione per un pagamento unico corrispondente all'importo totale;
+        \item Il proprietario dell'ordine visualizza un messaggio di conferma di avvenuto pagamento.
+    \end{enumerate}
+    \item Generalizzazioni:
+        \begin{enumerate}
+            \item Visualizzazione id ordine [UC10.1.1];
+            \item Visualizzazione indirizzo venditore [UC10.1.2];
+            \item Visualizzazione ammontare ordine [UC10.1.3];
+            \item Visualizzazione stato ordine [UC10.1.4];
+            \item Visualizzazione data ordine [UC10.1.5].
+        \end{enumerate}
+\end{itemize}
+
+\paragraph{UC10.1.1 - Visualizzazione id ordine}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine, venditore;
+    \item Precondizioni: il sistema è raggiungibile e funzionante, l'utente ha pagato l'ordine [UC2.3];
+    \item Postcondizioni: l'utente ha visualizzato l'id dell'ordine;
+    \item Scenario principale: l'utente visualizza l'id dell'ordine.
+\end{itemize}
+
+\paragraph{UC10.1.2 - Visualizzazione indirizzo venditore}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine, venditore;
+    \item Precondizioni: il sistema è raggiungibile e funzionante, l'utente ha pagato l'ordine [UC2.3];
+    \item Postcondizioni: l'utente ha visualizzato l'indirizzo del venditore;
+    \item Scenario principale: l'utente visualizza l'indirizzo del venditore.
+\end{itemize}
+
+\paragraph{UC10.1.3 - Visualizzazione ammontare ordine}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine, venditore;
+    \item Precondizioni: il sistema è raggiungibile e funzionante, l'utente ha pagato l'ordine [UC2.3];
+    \item Postcondizioni: l'utente ha visualizzato l'ammontare dell'ordine;
+    \item Scenario principale: l'utente visualizza l'ammontare dell'ordine.
+\end{itemize}
+
+\paragraph{UC10.1.4 - Visualizzazione stato ordine}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine, venditore;
+    \item Precondizioni: il sistema è raggiungibile e funzionante, l'utente ha pagato l'ordine [UC2.3];
+    \item Postcondizioni: l'utente ha visualizzato lo stato dell'ordine;
+    \item Scenario principale: l'utente visualizza lo stato dell'ordine.
+\end{itemize}
+
+\paragraph{UC10.1.5 - Visualizzazione data ordine}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine, venditore;
+    \item Precondizioni: il sistema è raggiungibile e funzionante, l'utente ha pagato l'ordine [UC2.3];
+    \item Postcondizioni: l'utente ha visualizzato la data dell'ordine;
+    \item Scenario principale: l'utente visualizza la data dell'ordine.
+\end{itemize}
+
+\subsubsection{UC6 - Sblocco Ordine}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{immagini/UC6.png}
+    \caption{UC6}
+\end{figure}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Attore secondario: Metamask\glo{};
+    \item Precondizioni: il sistema ha generato il codice di sblocco [UC2.3.3];
+    \item Postcondizioni: l'utente proprietario ha sbloccato l'ordine e il denaro è stato trasferito all'utente venditore;
+    \item Scenario principale:
+          \begin{enumerate}
+              \item Il proprietario dell'ordine visualizza il codice di sblocco [UC6.2];
+              \item Il proprietario dell'ordine inserisce il codice di sblocco;
+              \item Il proprietario dell'ordine conferma la transazione sul pop-up Metamask\glo{};
+              \item Il sistema trasferisce il denaro sul wallet\glo{} dell'utente venditore.
+          \end{enumerate}
+    \item Estensione: Nel caso in cui la transazione sia già stata sbloccata:
+          \begin{enumerate}
+              \item Viene impedito lo sblocco;
+              \item Viene mostrato un errore di Ordine Già Sbloccato [UC6.1].
+          \end{enumerate}
+\end{itemize}
+
+\paragraph{UC6.1 - Visualizza Errore Ordine Già Sbloccato}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Precondizioni: il sistema è raggiungibile e funzionante, l'ordine è già stato sbloccato;
+    \item Postcondizioni: il proprietario dell'ordine ha visualizzato l'errore di ordine già sbloccato;
+    \item Scenario principale: il proprietario dell'ordine visualizza l'errore di ordine già sbloccato.
+\end{itemize}
+
+\paragraph{UC6.2 - Visualizza codice di sblocco}
+
+\begin{itemize}
+    \item Attore primario: utente proprietario dell'ordine;
+    \item Precondizioni: il sistema è raggiungibile e funzionante, l'ordine è già stato sbloccato;
+    \item Postcondizioni: il proprietario dell'ordine ha visualizzato il codice di sblocco;
+    \item Scenario principale: il proprietario dell'ordine visualizza il codice di sblocco.
+\end{itemize}
+
+\subsubsection{UC8 - Annullamento Ordine}
 
 \begin{figure}[H]
     \centering
@@ -624,7 +717,7 @@ sono quindi presenti differenti attori nella gerarchia:
           \end{enumerate}
 \end{itemize}
 
-\subsection{UC9 - Richiesta Rimborso}
+\subsubsection{UC9 - Richiesta Rimborso}
 
 \begin{figure}[H]
     \centering
