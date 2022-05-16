@@ -49,23 +49,24 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \color[HTML]{FFFFFF}\textbf{ID Test}
               & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
               & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
-              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                      \\
+              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                                    \\
     \hline
-    TS1F5     & Verificare che l'utente possa pagare correttamente.                                                                      & R1F5     & S \\
-    TS1F5.1   & Verificare che il versamento per il pagamento unico copra l'intera somma richiesta.                                      & R1F5.1   & S \\
-    TS2F5.2   & Verificare che il versamento per il pagamento tramite MoneyBox\glo{} possa coprire solo una parte della somma richiesta. & R2F5.2   & S \\
-    TS1F5.4   & Verificare che l'utente possa visualizzare correttamente un messaggio d'errore nel caso in cui la transazione fallisca.  & R1F5.4   & S \\
-    TS1F6     & Verificare che la richiesta di rimborso funzioni correttamente.                                                          & R1F6     & S \\
-    TS1F7     & Verificare che l'acquirente possa sbloccare, correttamente, i fondi dallo Smart Contract\glo{} dopo avvenuta ricezione.  & R1F7     & S \\
-    TS1F8     & Verificare che l'utente possa visualizzare le transazioni.                                                               & R1F8     & S \\
-    TS2F8.1   & Verificare che il venditore possa visualizzare le transazioni in entrata pagate.                                         & R2F8.1   & S \\
-    TS2F8.1.1 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate ma non sbloccate.                        & R2F8.1.1 & S \\
-    TS2F8.1.2 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate e sbloccate.                             & R2F8.1.2 & S \\
-    TS2F8.1.3 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate cancellate.                              & R2F8.1.3 & S \\
-    TS1F8.2   & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita.                                  & R1F8.2   & S \\
-    TS2F8.2.1 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita non pagate.                       & R2F8.2.1 & S \\
-    TS2F8.2.2 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate ma non sbloccate.          & R2F8.2.2 & S \\
-    TS2F8.2.3 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate e sbloccate.               & R2F8.2.3 & S \\
+    TS1F5     & Verificare che l'utente possa pagare correttamente.                                                                                    & R1F5     & S \\
+    TS1F5.1   & Verificare che il versamento per il pagamento unico copra l'intera somma richiesta.                                                    & R1F5.1   & S \\
+    TS2F5.2   & Verificare che il versamento per il pagamento tramite MoneyBox\glo{} possa coprire solo una parte della somma richiesta.               & R2F5.2   & S \\
+    TS1F5.4   & Verificare che l'utente possa visualizzare correttamente un messaggio d'errore nel caso in cui la transazione fallisca.                & R1F5.4   & S \\
+    TS1F6     & Verificare che la richiesta di rimborso funzioni correttamente.                                                                        & R1F6     & S \\
+    TS1F7     & Verificare che il proprietario dell'ordine possa sbloccare, correttamente, i fondi dallo Smart Contract\glo{} dopo avvenuta ricezione. & R1F7     & S \\
+    TS1F7.1   & Verificare che il proprietario dell'ordine possa visualizzare correttamente il codice di sblocco.                                      & R1F7.1   & S \\
+    TS1F8     & Verificare che l'utente possa visualizzare le transazioni.                                                                             & R1F8     & S \\
+    TS2F8.1   & Verificare che il venditore possa visualizzare le transazioni in entrata pagate.                                                       & R2F8.1   & S \\
+    TS2F8.1.1 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate ma non sbloccate.                                      & R2F8.1.1 & S \\
+    TS2F8.1.2 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate e sbloccate.                                           & R2F8.1.2 & S \\
+    TS2F8.1.3 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate cancellate.                                            & R2F8.1.3 & S \\
+    TS1F8.2   & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita.                                                & R1F8.2   & S \\
+    TS2F8.2.1 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita non pagate.                                     & R2F8.2.1 & S \\
+    TS2F8.2.2 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate ma non sbloccate.                        & R2F8.2.2 & S \\
+    TS2F8.2.3 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate e sbloccate.                             & R2F8.2.3 & S \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -83,7 +84,7 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
               & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                                     \\
     \hline
     TS2F8.2.4 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita cancellate.                                     & R2F8.2.4 & S  \\
-    TS2F9     & Verificare che si possa convertire correttamente l'ammontare depositato in stable coin\glo{}.                                          & R2F9     & S  \\
+    TS3F9     & Verificare che si possa convertire correttamente l'ammontare depositato in stable coin\glo{}.                                          & R3F9     & NI  \\
     TS3F10    & Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente.                             & R3F10    & NI \\
     TS1F11    & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{}.                                             & R1F11    & S  \\
     TS1F11.1  & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} in forma testuale.                           & R1F11.1  & S  \\
@@ -108,12 +109,17 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
   \begin{tabular}{c|p{8cm}|c|c}
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
-           & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-           & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
-           & \color[HTML]{FFFFFF}\textbf{Stato}                                                                   \\
+              & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+              & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
+              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                       \\
     \hline
-    TS1F16 & Verificare che l'utente possa visualizzare una pagina con i dettagli dell'ordine pagato. & R1F16 & S \\
-    TS1F17 & Verificare che l'utente possa visualizzare il codice di sblocco.                         & R1F17 & S \\
+    TS1F16     & Verificare che l'utente possa visualizzare una pagina con i dettagli dell'ordine pagato. & R1F16     & S \\
+    TS1F16.1   & Verificare che l'utente possa visualizzare i dettagli dell'ordine pagato.                & R1F16.1   & S \\
+    TS1F16.1.1 & Verificare che l'utente possa visualizzare l'id dell'ordine pagato.                      & R1F16.1.1 & S \\
+    TS1F16.1.2 & Verificare che l'utente possa visualizzare l'indirizzo del venditore dell'ordine pagato. & R1F16.1.2 & S \\
+    TS1F16.1.3 & Verificare che l'utente possa visualizzare l'ammontare dell'ordine pagato.               & R1F16.1.3 & S \\
+    TS1F16.1.4 & Verificare che l'utente possa visualizzare lo stato dell'ordine pagato.                  & R1F16.1.4 & S \\
+    TS1F16.1.5 & Verificare che l'utente possa visualizzare la data dell'ordine pagato.                   & R1F16.1.5 & S \\
   \end{tabular}
   \caption{Test di sistema}
 \end{table}
