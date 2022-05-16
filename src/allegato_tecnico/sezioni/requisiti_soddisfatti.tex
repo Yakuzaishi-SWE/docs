@@ -45,10 +45,10 @@ Segue una tabella con l'elenco di tutti i requisiti funzionali soddisfatti.
         \hline
         R1F5.1                                                            & Obbligatorio & L'utente che ha scelto il metodo di pagamento unico deve pagare interamente la somma richiesta.                       & Soddisfatto      \\
         R2F5.2                                                            & Desiderabile & L'utente che partecipa al pagamento MoneyBox\glo{} deve poter pagare una parte della somma richiesta.                 & Soddisfatto      \\
-        R1F5.3                                                            & Obbligatorio & L'utente deve poter visualizzare il codice di sblocco generato dal sistema.                                           & Soddisfatto                                 \\
         R1F5.4                                                            & Obbligatorio & L'utente deve poter visualizzare un messaggio d'errore nel caso in cui la transazione fallisca.                       & Soddisfatto                               \\
         R1F6                                                              & Obbligatorio & Il proprietario dell'ordine o il venditore devono poter richiedere il rimborso della transazione.                     & Soddisfatto   \\
         R1F7                                                              & Obbligatorio & Il proprietario dell'ordine deve poter confermare la ricezione e quindi sbloccare i fondi dallo smart contract\glo{}. & Soddisfatto   \\
+        R1F7.1                                                            & Obbligatorio & Il proprietario dell'ordine deve poter visualizzare il codice di sblocco.                                             & Soddisfatto   \\
         R1F8                                                              & Obbligatorio & L'utente deve poter visualizzare le transazioni.                                                                      & Soddisfatto   \\
         R2F8.1                                                            & Desiderabile & Il venditore deve poter visualizzare le transazioni in entrata pagate.                                                & Soddisfatto \\
         R2F8.1.1                                                          & Desiderabile & Il venditore deve poter visualizzare le transazioni in entrata pagate non sbloccate.                                  & Soddisfatto                              \\
@@ -105,14 +105,19 @@ Segue una tabella con l'elenco di tutti i requisiti funzionali soddisfatti.
         R1F14.4                                                           & Obbligatorio & L'utente deve poter visualizzare un errore nel caso in cui non abbia connesso un account a ShopChain.                        & Soddisfatto   \\
         R1F15                                                             & Obbligatorio & L'utente deve poter visualizzare un messaggio di avviso nel caso in cui la transazione sia già presente in blockchain\glo{}. & Soddisfatto \\
         R1F16                                                             &Obbligatorio  & L'utente deve poter visualizzare una pagina con i dettagli dell' ordine pagato.                                               & Soddisfatto\\
-   
+        R1F16.1                                                           & Obbligatorio & L'utente deve poter visualizzare i dettagli dell'ordine pagato.                                                              & Soddisfatto   \\ 
+        R1F16.1.1                                                           & Obbligatorio & L'utente deve poter visualizzare l'id dell'ordine pagato.                                                                    & Soddisfatto \\ 
+        R1F16.1.2                                                           & Obbligatorio & L'utente deve poter visualizzare l'indirizzo del venditore dell'ordine pagato.                                               & Soddisfatto \\ 
+        R1F16.1.3                                                           & Obbligatorio & L'utente deve poter visualizzare l'ammontare dell'ordine pagato.                                                             & Soddisfatto \\ 
+        R1F16.1.4                                                           & Obbligatorio & L'utente deve poter visualizzare lo stato dell'ordine pagato.                                                                & Soddisfatto \\ 
+        R1F16.1.5                                                           & Obbligatorio & L'utente deve poter visualizzare la data dell'ordine pagato.                                                                 & Soddisfatto \\
     \end{tabular}
     \caption{Requisiti funzionali}
 \end{table}
 
 
 \subsection{Grafici requisiti soddisfatti}
-Per quanto riguarda i requisiti funzionali il gruppo \groupName{} è riuscito a soddisfarne 37 su 42, arrivando ad una copertura dell' 88\%.
+Per quanto riguarda i requisiti funzionali il gruppo \groupName{} è riuscito a soddisfarne 43 su 48, arrivando ad una copertura del 90\%.
 \begin{figure}[htbp]
     \begin{center}
      \includegraphics{immagini/requisitiFunzionali.png}
