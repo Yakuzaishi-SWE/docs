@@ -283,15 +283,6 @@ il cui significato viene spiegato nel seguito:
     \item \textbf{Y}: versione controllata, sottoposta a revisione da parte del \roleVerifierLow{} del documento;
     \item \textbf{Z}: versione modificata dal redattore del documento, seguita da una verifica di quanto scritto.
 \end{itemize}
-Per quanto riguarda il prodotto software, oltre a quanto descritto precedentemente, vengono aggiunti ancora 2 parametri trasformando il codice in un codice numerico di 5 cifre come segue:
-\begin{center}
-    \Large \textbf{[X].[Y].[Z]-[A].[B]}
-\end{center}
-in cui il significato dei primi tre numeri rimane inalterato rispetto a quanto spiegato prima, mentre per i due successivamente aggiunti:
-\begin{itemize}
-    \item \textbf{A}: Indica una versione completa e funzionante del prodotto che supera tutti i test, soddisfa le metriche e implementa i requisiti obbligatori;
-    \item \textbf{B}: Cresce al raggiungimento degli obiettivi degli incrementi pianificati nel \docNamePdPLow{}.
-\end{itemize}
 
 \subparagraph{Metriche del codice di versione}
 Le cifre del codice di versione precedentemente descritte seguono una particolare metrica di avanzamento:
@@ -301,7 +292,6 @@ Le cifre del codice di versione precedentemente descritte seguono una particolar
           \begin{itemize}
               \item Se la cifra \textbf{X} viene modificata, le cifre \textbf{Y} e \textbf{Z} ritornano al valore 0;
               \item Se la cifra \textbf{Y} viene modificata, la cifra \textbf{Z} ritorna al valore 0;
-              \item Le cifre \textbf{A} e \textbf{B} possono solo incrementare il loro valore.
           \end{itemize}
 \end{enumerate}
 
