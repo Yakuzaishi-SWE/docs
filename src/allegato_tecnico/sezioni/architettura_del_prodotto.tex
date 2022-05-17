@@ -37,7 +37,14 @@ cambiamento di un qualsiasi attributo observable.
 
 In questa sezione vverrà mostrato il diagramma delle classi dell'applicazione, 
 per una maggiore fruibilità è stato diviso in quattro parti qui riportate.
-Il diagramma completo è consultabile, in formato vettoriale scalabile, a questo link: diagramma-completo. %link all'svg
+Le classi colorate compaiono più volte nei vari diagrammi.
+
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[scale=0.5]{immagini/smartcontracts.png}
+    \caption{Classi Solidity}
+    \end{center}
+\end{figure}
 
 \begin{landscape}
 \begin{figure}[H]
@@ -140,8 +147,12 @@ Vengono di seguito riportati i diagrammi di sequenza per le operazioni più impo
 
 Sono stati utilizzati due design pattern nello sviluppo dell'applicazione:
 \begin{itemize}
-    \item Singleton: per istanziare le classi una sola volta, e risparmiare risorse;
-    \item Repository Pattern: le repository fanno da ponte tra modello e dati.
+    \item Singleton: è un design pattern che consente di garantire che una classe abbia una sola istanza, fornendo al contempo un punto di accesso globale a questa istanza;
+    \item Repository Pattern: un repository incapsula un insieme di oggetti memorizzati nel database e le operazioni che possono essere eseguite su di essi.
 \end{itemize}
+
+Il design singleton è stato usato per avere un'unica fonte detentrice dello stato di ogni modello.
+Il repository pattern ci ha permesso di racchiudere tutte le interazioni con sorgenti esterne in un oggetto unico, mantenendo la separazione tra implementazione e interfaccia.
+
 
 %Descrivo qui se abbiamo utilizzato qualche design pattern in particolare
