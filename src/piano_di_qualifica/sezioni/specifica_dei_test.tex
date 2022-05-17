@@ -24,49 +24,15 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
               & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
               & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                        \\
     \hline
-    TS1F1     & Verificare che la richiesta di checkout da un E-Commerce\glo{} avvenga correttamente.                                     & R1F1     & S  \\
-    TS1F2     & Verificare che l'utente visualizzi correttamente le diverse tipologie di pagamento.                                       & R1F2     & S  \\
-    TS1F2.1   & Verificare che l'utente possa scegliere la tipologia di pagamento unico correttamente.                                    & R1F2.1   & S  \\
-    TS2F2.2   & Verificare che l'utente possa scegliere la tipologia di pagamento MoneyBox\glo{} correttamente.                           & R2F2.2   & S  \\
-    TS2F2.2.1 & Verificare che l'utente possa visualizzare lo stato di completamento della MoneyBox\glo{} correttamente.                  & R2F2.2.1 & S  \\
-    TS2F2.2.2 & Verificare che l'utente possa copiare l'invito di partecipazione alla MoneyBox\glo{} correttamente.                       & R2F2.2.2 & S  \\
+    TS1F1     & Verificare che la richiesta di checkout da un E-Commerce\glo{} avvenga correttamente.                                     & R1F1     & NI \\
+    TS1F2     & Verificare che l'utente visualizzi correttamente le diverse tipologie di pagamento.                                       & R1F2     & NI \\
+    TS1F2.1   & Verificare che l'utente possa scegliere la tipologia di pagamento unico correttamente.                                    & R1F2.1   & NI \\
+    TS2F2.2   & Verificare che l'utente possa scegliere la tipologia di pagamento MoneyBox\glo{} correttamente.                           & R2F2.2   & NI \\
+    TS2F2.2.1 & Verificare che l'utente possa visualizzare lo stato di completamento della MoneyBox\glo{} correttamente.                  & R2F2.2.1 & NI \\
+    TS2F2.2.2 & Verificare che l'utente possa copiare l'invito di partecipazione alla MoneyBox\glo{} correttamente.                       & R2F2.2.2 & NI \\
     TS3F2.2.3 & Verificare che l'utente possa visualizzare una traduzione visiva della MoneyBox\glo{} correttamente.                      & R3F2.2.3 & NI \\
-    TS2F2.2.4 & Verificare che in caso di chiusura della MoneyBox\glo{} i soldi vengano restituiti correttamente.                         & R2F2.2.4 & S  \\
-    TS2F2.2.5 & Verificare che l'utente possa visualizzare l'elenco delle transazione dei partecipanti alla MoneyBox\glo{} correttamente. & R2F2.2.5 & S  \\
-    TS1F3     & Verificare che l'utente possa visualizzare il totale dell'ordine correttamente.                                           & R1F3     & S  \\
-    TS1F4     & Verificare che l'utente possa effettuare la connessione a Metamask\glo{} correttamente.                                   & R1F4     & S  \\
-  \end{tabular}
-\end{table}
-\begin{center}
-  \textit{\small Continua nella pagina successiva}
-\end{center}
-\begin{table}[H]
-  \centering
-  \renewcommand{\arraystretch}{1.8}
-  \rowcolors{2}{green!100!black!40}{green!100!black!30}
-  \begin{tabular}{c|p{8cm}|c|c}
-    \rowcolor[HTML]{125E28}
-    \color[HTML]{FFFFFF}\textbf{ID Test}
-              & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-              & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
-              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                                    \\
-    \hline
-    TS1F5     & Verificare che l'utente possa pagare correttamente.                                                                                    & R1F5     & S \\
-    TS1F5.1   & Verificare che il versamento per il pagamento unico copra l'intera somma richiesta.                                                    & R1F5.1   & S \\
-    TS2F5.2   & Verificare che il versamento per il pagamento tramite MoneyBox\glo{} possa coprire solo una parte della somma richiesta.               & R2F5.2   & S \\
-    TS1F5.4   & Verificare che l'utente possa visualizzare correttamente un messaggio d'errore nel caso in cui la transazione fallisca.                & R1F5.4   & S \\
-    TS1F6     & Verificare che la richiesta di rimborso funzioni correttamente.                                                                        & R1F6     & S \\
-    TS1F7     & Verificare che il proprietario dell'ordine possa sbloccare, correttamente, i fondi dallo Smart Contract\glo{} dopo avvenuta ricezione. & R1F7     & S \\
-    TS1F7.1   & Verificare che il proprietario dell'ordine possa visualizzare correttamente il codice di sblocco.                                      & R1F7.1   & S \\
-    TS1F8     & Verificare che l'utente possa visualizzare le transazioni.                                                                             & R1F8     & S \\
-    TS2F8.1   & Verificare che il venditore possa visualizzare le transazioni in entrata pagate.                                                       & R2F8.1   & S \\
-    TS2F8.1.1 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate ma non sbloccate.                                      & R2F8.1.1 & S \\
-    TS2F8.1.2 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate e sbloccate.                                           & R2F8.1.2 & S \\
-    TS2F8.1.3 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate cancellate.                                            & R2F8.1.3 & S \\
-    TS1F8.2   & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita.                                                & R1F8.2   & S \\
-    TS2F8.2.1 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita non pagate.                                     & R2F8.2.1 & S \\
-    TS2F8.2.2 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate ma non sbloccate.                        & R2F8.2.2 & S \\
-    TS2F8.2.3 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate e sbloccate.                             & R2F8.2.3 & S \\
+    TS2F2.2.4 & Verificare che in caso di chiusura della MoneyBox\glo{} i soldi vengano restituiti correttamente.                         & R2F2.2.4 & NI \\
+    TS2F2.2.5 & Verificare che l'utente possa visualizzare l'elenco delle transazione dei partecipanti alla MoneyBox\glo{} correttamente. & R2F2.2.5 & NI \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -83,20 +49,21 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
               & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
               & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                                     \\
     \hline
-    TS2F8.2.4 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita cancellate.                                     & R2F8.2.4 & S  \\
-    TS3F9     & Verificare che si possa convertire correttamente l'ammontare depositato in stable coin\glo{}.                                          & R3F9     & NI  \\
-    TS3F10    & Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente.                             & R3F10    & NI \\
-    TS1F11    & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{}.                                             & R1F11    & S  \\
-    TS1F11.1  & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} in forma testuale.                           & R1F11.1  & S  \\
-    TS1F11.2  & Verificare che l'utente possa visualizzare correttamente un avviso della mancata connessione a Metamask\glo{}.                         & R1F11.2  & S  \\
-    TS3F11.3  & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} sotto forma di sequenza di emoji.            & R3F11.3  & NI \\
-    TS3F12    & Verificare che gli utenti partecipanti ad una MoneyBox\glo{} possano ricevere una notifica al suo completamento.                       & R3F12    & NI \\
-    TS1F14    & Verificare che l'utente possa visualizzare correttamente lo stato di connessione a Metamask\glo{}.                                     & R1F14    & S  \\
-    TS1F14.1  & Verificare che l'utente possa visualizzare un suggerimento se connesso correttamente.                                                  & R1F14.1  & S  \\
-    TS1F14.2  & Verificare che l'utente possa visualizzare nel caso in cui non sia installato Metamask\glo{}.                                          & R1F14.2  & S  \\
-    TS1F14.3  & Verificare che l'utente possa visualizzare un errore nel caso in cui la blockchain\glo{} selezionata non sia corretta.                 & R1F14.3  & S  \\
-    TS1F14.4  & Verificare che l'utente possa visualizzare un errore nel caso in cui non abbia connesso un account a ShopChain.                        & R1F14.4  & S  \\
-    TS1F15    & Verificare che l'utente possa visualizzare un messaggio di avviso nel caso in cui la transazione sia già presente in blockchain\glo{}. & R1F15    & S  \\
+    TS1F3     & Verificare che l'utente possa visualizzare il totale dell'ordine correttamente.                                                        & R1F3     & NI \\
+    TS1F4     & Verificare che l'utente possa effettuare la connessione a Metamask\glo{} correttamente.                                                & R1F4     & NI \\
+    TS1F5     & Verificare che l'utente possa pagare correttamente.                                                                                    & R1F5     & NI \\
+    TS1F5.1   & Verificare che il versamento per il pagamento unico copra l'intera somma richiesta.                                                    & R1F5.1   & NI \\
+    TS2F5.2   & Verificare che il versamento per il pagamento tramite MoneyBox\glo{} possa coprire solo una parte della somma richiesta.               & R2F5.2   & NI \\
+    TS1F5.4   & Verificare che l'utente possa visualizzare correttamente un messaggio d'errore nel caso in cui la transazione fallisca.                & R1F5.4   & NI \\
+    TS1F6     & Verificare che la richiesta di rimborso funzioni correttamente.                                                                        & R1F6     & NI \\
+    TS1F7     & Verificare che il proprietario dell'ordine possa sbloccare, correttamente, i fondi dallo Smart Contract\glo{} dopo avvenuta ricezione. & R1F7     & NI \\
+    TS1F7.1   & Verificare che il proprietario dell'ordine possa visualizzare correttamente il codice di sblocco.                                      & R1F7.1   & NI \\
+    TS1F8     & Verificare che l'utente possa visualizzare le transazioni.                                                                             & R1F8     & NI \\
+    TS2F8.1   & Verificare che il venditore possa visualizzare le transazioni in entrata pagate.                                                       & R2F8.1   & NI \\
+    TS2F8.1.1 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate ma non sbloccate.                                      & R2F8.1.1 & NI \\
+    TS2F8.1.2 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate e sbloccate.                                           & R2F8.1.2 & NI \\
+    TS2F8.1.3 & Verificare che il venditore possa visualizzare le transazioni in entrata pagate cancellate.                                            & R2F8.1.3 & NI \\
+    TS1F8.2   & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita.                                                & R1F8.2   & NI \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -111,15 +78,48 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \color[HTML]{FFFFFF}\textbf{ID Test}
               & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
               & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
-              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                       \\
+              & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                          \\
     \hline
-    TS1F16     & Verificare che l'utente possa visualizzare una pagina con i dettagli dell'ordine pagato. & R1F16     & S \\
-    TS1F16.1   & Verificare che l'utente possa visualizzare i dettagli dell'ordine pagato.                & R1F16.1   & S \\
-    TS1F16.1.1 & Verificare che l'utente possa visualizzare l'id dell'ordine pagato.                      & R1F16.1.1 & S \\
-    TS1F16.1.2 & Verificare che l'utente possa visualizzare l'indirizzo del venditore dell'ordine pagato. & R1F16.1.2 & S \\
-    TS1F16.1.3 & Verificare che l'utente possa visualizzare l'ammontare dell'ordine pagato.               & R1F16.1.3 & S \\
-    TS1F16.1.4 & Verificare che l'utente possa visualizzare lo stato dell'ordine pagato.                  & R1F16.1.4 & S \\
-    TS1F16.1.5 & Verificare che l'utente possa visualizzare la data dell'ordine pagato.                   & R1F16.1.5 & S \\
+    TS2F8.2.1 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita non pagate.                          & R2F8.2.1 & NI \\
+    TS2F8.2.2 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate ma non sbloccate.             & R2F8.2.2 & NI \\
+    TS2F8.2.3 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita pagate e sbloccate.                  & R2F8.2.3 & NI \\
+    TS2F8.2.4 & Verificare che il proprietario dell'ordine possa visualizzare le transazioni in uscita cancellate.                          & R2F8.2.4 & NI \\
+    TS3F9     & Verificare che si possa convertire correttamente l'ammontare depositato in stable coin\glo{}.                               & R3F9     & NI \\
+    TS3F10    & Verificare che, dopo la transazione, una fee percentuale venga destinata al fondo ShopChain correttamente.                  & R3F10    & NI \\
+    TS1F11    & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{}.                                  & R1F11    & NI \\
+    TS1F11.1  & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} in forma testuale.                & R1F11.1  & NI \\
+    TS1F11.2  & Verificare che l'utente possa visualizzare correttamente un avviso della mancata connessione a Metamask\glo{}.              & R1F11.2  & NI \\
+    TS3F11.3  & Verificare che l'utente possa visualizzare correttamente l'indirizzo del suo wallet\glo{} sotto forma di sequenza di emoji. & R3F11.3  & NI \\
+    TS3F12    & Verificare che gli utenti partecipanti ad una MoneyBox\glo{} possano ricevere una notifica al suo completamento.            & R3F12    & NI \\
+    TS1F14    & Verificare che l'utente possa visualizzare correttamente lo stato di connessione a Metamask\glo{}.                          & R1F14    & NI \\
+    TS1F14.1  & Verificare che l'utente possa visualizzare un suggerimento se connesso correttamente.                                       & R1F14.1  & NI \\
+    TS1F14.2  & Verificare che l'utente possa visualizzare nel caso in cui non sia installato Metamask\glo{}.                               & R1F14.2  & NI \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+               & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+               & \color[HTML]{FFFFFF}\textbf{ID Requisiti}
+               & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                                      \\
+    \hline
+    TS1F14.3   & Verificare che l'utente possa visualizzare un errore nel caso in cui la blockchain\glo{} selezionata non sia corretta.                 & R1F14.3   & NI \\
+    TS1F14.4   & Verificare che l'utente possa visualizzare un errore nel caso in cui non abbia connesso un account a ShopChain.                        & R1F14.4   & NI \\
+    TS1F15     & Verificare che l'utente possa visualizzare un messaggio di avviso nel caso in cui la transazione sia già presente in blockchain\glo{}. & R1F15     & NI \\
+    TS1F16     & Verificare che l'utente possa visualizzare una pagina con i dettagli dell'ordine pagato.                                               & R1F16     & NI \\
+    TS1F16.1   & Verificare che l'utente possa visualizzare i dettagli dell'ordine pagato.                                                              & R1F16.1   & NI \\
+    TS1F16.1.1 & Verificare che l'utente possa visualizzare l'id dell'ordine pagato.                                                                    & R1F16.1.1 & NI \\
+    TS1F16.1.2 & Verificare che l'utente possa visualizzare l'indirizzo del venditore dell'ordine pagato.                                               & R1F16.1.2 & NI \\
+    TS1F16.1.3 & Verificare che l'utente possa visualizzare l'ammontare dell'ordine pagato.                                                             & R1F16.1.3 & NI \\
+    TS1F16.1.4 & Verificare che l'utente possa visualizzare lo stato dell'ordine pagato.                                                                & R1F16.1.4 & NI \\
+    TS1F16.1.5 & Verificare che l'utente possa visualizzare la data dell'ordine pagato.                                                                 & R1F16.1.5 & NI \\
   \end{tabular}
   \caption{Test di sistema}
 \end{table}
@@ -134,10 +134,10 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{Codice}
         & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-        & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                  \\
+        & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                   \\
     \hline
-    TI1 & Verificare che il collegamento con Metamask\glo{} avvenga correttamente.                                                        & S \\
-    TI2 & Verificare che il collegamento tra Front-End\glo{} e Smart Contract\glo{} tramite libreria Web3.js\glo{} avvenga correttamente. & S \\
+    TI1 & Verificare che il collegamento con Metamask\glo{} avvenga correttamente.                                                        & NI \\
+    TI2 & Verificare che il collegamento tra Front-End\glo{} e Smart Contract\glo{} tramite libreria Web3.js\glo{} avvenga correttamente. & NI \\
   \end{tabular}
   \caption{Test d'integrazione}
 \end{table}
@@ -391,33 +391,7 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     TUF49 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("unlock",()=$>$\{it("defined contract instance", ...)        \\
     TUF50 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("unlock",()=$>$\{it("undefined contract instance", ...)      \\
     TUF51 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("refund",()=$>$\{it("defined contract instance", ...)        \\
-  \end{tabular}
-\end{table}
-\begin{center}
-  \textit{\small Continua nella pagina successiva}
-\end{center}
-\begin{table}[H]
-  \centering
-  \renewcommand{\arraystretch}{1.8}
-  \rowcolors{2}{green!100!black!40}{green!100!black!30}
-  \begin{tabular}{c|p{15cm}}
-    \rowcolor[HTML]{125E28}
-    \color[HTML]{FFFFFF}\textbf{ID Test}
-          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                              \\
-    \hline
-    TUF52 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("refund",()=$>$\{it("undefined contract instance", ...)                              \\
-    TUF53 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrderById",()=$>$\{it("defined contract instance", ...)                          \\
-    TUF54 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrderById",()=$>$\{it("undefined contract instance", ...)                        \\
-    TUF55 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersBySeller",()=$>$\{it("defined contract instance", ...)                     \\
-    TUF56 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersBySeller",()=$>$\{it("undefined contract instance", ...)                   \\
-    TUF57 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersByBuyer",()=$>$\{it("defined contract instance", ...)                      \\
-    TUF58 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersByBuyer",()=$>$\{it("undefined contract instance", ...)                    \\
-    TUF59 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:it("should create an instance of MoneyBoxOrderRepo", ...)                             \\
-    TUF60 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should do a newPayment",()=$>$\{it("defined contract instance", ...)        \\
-    TUF61 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should do a newPayment",()=$>$\{it("undefined contract instance", ...)      \\
-    TUF62 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get payments",()=$>$\{it("defined contract instance", ...)           \\
-    TUF63 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get payments",()=$>$\{it("undefined contract instance", ...)         \\
-    TUF64 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get the amount to fill",()=$>$\{it("defined contract instance", ...) \\
+    TUF52 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("refund",()=$>$\{it("undefined contract instance", ...)      \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -432,9 +406,35 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \color[HTML]{FFFFFF}\textbf{ID Test}
           & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                                \\
     \hline
+    TUF53 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrderById",()=$>$\{it("defined contract instance", ...)                            \\
+    TUF54 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrderById",()=$>$\{it("undefined contract instance", ...)                          \\
+    TUF55 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersBySeller",()=$>$\{it("defined contract instance", ...)                       \\
+    TUF56 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersBySeller",()=$>$\{it("undefined contract instance", ...)                     \\
+    TUF57 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersByBuyer",()=$>$\{it("defined contract instance", ...)                        \\
+    TUF58 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline OrderRepo.test.ts:describe("getOrdersByBuyer",()=$>$\{it("undefined contract instance", ...)                      \\
+    TUF59 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:it("should create an instance of MoneyBoxOrderRepo", ...)                               \\
+    TUF60 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should do a newPayment",()=$>$\{it("defined contract instance", ...)          \\
+    TUF61 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should do a newPayment",()=$>$\{it("undefined contract instance", ...)        \\
+    TUF62 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get payments",()=$>$\{it("defined contract instance", ...)             \\
+    TUF63 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get payments",()=$>$\{it("undefined contract instance", ...)           \\
+    TUF64 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get the amount to fill",()=$>$\{it("defined contract instance", ...)   \\
     TUF65 & shopchain-frontend/src/core/modules/order/repo/implementations/\_\_test\_\_/\newline MoneyBoxOrderRepo.test.ts:describe("should get the amount to fill",()=$>$\{it("undefined contract instance", ...) \\
-    TUF66 & shopchain-frontend/src/core/modules/order/store/implementations/\_\_test\_\_/\newline OrderStore.test.ts:it("should create an order store", ...)                                                       \\
-    TUF67 & shopchain-frontend/src/core/modules/order/store/implementations/\_\_test\_\_/\newline OrderStore.test.ts:it("createOrder", ...)                                                                        \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                          \\
+    \hline
+    TUF66 & shopchain-frontend/src/core/modules/order/store/implementations/\_\_test\_\_/\newline OrderStore.test.ts:it("should create an order store", ...) \\
+    TUF67 & shopchain-frontend/src/core/modules/order/store/implementations/\_\_test\_\_/\newline OrderStore.test.ts:it("createOrder", ...)                  \\
   \end{tabular}
   \caption{Tracciamento test di unità - Frontend}
 \end{table}
@@ -450,23 +450,20 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
           & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                    \\
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                \\
     \hline
-    TUO01 & Si verifica che il contatore degli ordini sia inizializzato a zero.                                                               & S \\
-    TUO02 & Si verifica che l'ordine creato sia correttamente.                                                                                & S \\
-    TUO03 & Si verifica che il contratto abbia ricevuto l'ammontare corretto.                                                                 & S \\
-    TUO04 & Si verifica il caso fallimentare in cui l'utente tenta di inviare un importo inferiore a quello richiesto.                        & S \\
-    TUO05 & Si verifica il caso fallimentare in cui l'utente prova a registrare un ordine che ha come venditore se stesso.                    & S \\
-    TUO06 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine con un importo pari a zero.                             & S \\
-    TUO07 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine con un importo negativo.                                & S \\
-    TUO08 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine non avendo i fondi necessari.                           & S \\
-    TUO09 & Si verifica il caso fallimentare in cui il frontend\glo{} richiede la creazione di un ordine con un ID precedentemente usato.     & S \\
-    TUO10 & Si verifica che le informazioni di ritorno dell'ordine siano corrette.                                                            & S \\
-    TUO11 & Si verifica che lo stato dell'ordine sia modificato e settato su "CLOSED" una volta confermata la ricezione dall'acquirente.      & S \\
-    TUO12 & Si verifica che il venditore abbia ricevuto i fondi correttamente una volta confermata la ricezione dall'acquirente.              & S \\
-    TUO13 & Si verifica il caso fallimentare in cui l'ID dell'ordine da sbloccare sia errato.                                                 & S \\
-    TUO14 & Si verifica il caso fallimentare in cui il codice di sblocco non coincide con quello registrato in blockchain\glo{}.              & S \\
-    TUO15 & Si verifica il caso fallimentare in cui l'ordine viene confermato da un utente con indirizzo differente da quello del compratore. & S \\
+    TUO01 & Si verifica che il contatore degli ordini sia inizializzato a zero.                                                           & S \\
+    TUO02 & Si verifica che l'ordine creato sia correttamente.                                                                            & S \\
+    TUO03 & Si verifica che il contratto abbia ricevuto l'ammontare corretto.                                                             & S \\
+    TUO04 & Si verifica il caso fallimentare in cui l'utente tenta di inviare un importo inferiore a quello richiesto.                    & S \\
+    TUO05 & Si verifica il caso fallimentare in cui l'utente prova a registrare un ordine che ha come venditore se stesso.                & S \\
+    TUO06 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine con un importo pari a zero.                         & S \\
+    TUO07 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine con un importo negativo.                            & S \\
+    TUO08 & Si verifica il caso fallimentare in cui l'utente prova a creare un ordine non avendo i fondi necessari.                       & S \\
+    TUO09 & Si verifica il caso fallimentare in cui il frontend\glo{} richiede la creazione di un ordine con un ID precedentemente usato. & S \\
+    TUO10 & Si verifica che le informazioni di ritorno dell'ordine siano corrette.                                                        & S \\
+    TUO11 & Si verifica che lo stato dell'ordine sia modificato e settato su "CLOSED" una volta confermata la ricezione dall'acquirente.  & S \\
+    TUO12 & Si verifica che il venditore abbia ricevuto i fondi correttamente una volta confermata la ricezione dall'acquirente.          & S \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -480,22 +477,40 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \rowcolor[HTML]{125E28}
     \color[HTML]{FFFFFF}\textbf{ID Test}
           & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
-          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                         \\
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                    \\
     \hline
-    TUO16 & Si verifica che lo stato dell'ordine venga settato su "CANCELLED" alla richiesta di rimborso da parte del compratore.  & S \\
-    TUO17 & Si verifica che lo stato dell'ordine venga settato su "CANCELLED" alla richiesta di rimborso da parte del venditore.   & S \\
-    TUO18 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal compratore.    & S \\
-    TUO19 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal venditore.     & S \\
-    TUO20 & Si verifica che non sia possibile chiedere il rimborso di un ordine chiuso.                                            & S \\
-    TUO21 & Si verifica che un utente con indirizzo diverso da quello del compratore o venditore non possa richiedere il rimborso. & S \\
-    TUO22 & Si verifica che venga restituito correttamente il saldo del contratto.                                                 & S \\
-    TUO23 & Si verifica che venga restituito correttamente l'indirizzo del wallet\glo{} dell'acquirente.                           & S \\
-    TUO24 & Si verifica che venga restituito correttamente l'indirizzo del wallet\glo{} del venditore.                             & S \\
-    TUO25 & Si verifica che venga restituito correttamente l'ammontare da pagare.                                                  & S \\
-    TUO26 & Si verifica che venga restituito correttamente lo stato dell'ordine.                                                   & S \\
-    TUO27 & Si verifica che vengano restituiti correttamente tutti i dati dell'ordine, partendo dal suo ID.                        & S \\
-    TUO28 & Si verifica che vengano restituiti correttamente tutti gli ordini di un acquirente.                                    & S \\
-    TUO29 & Si verifica che vengano restituiti correttamente tutti gli ordini di un venditore.                                     & S \\
+    TUO13 & Si verifica il caso fallimentare in cui l'ID dell'ordine da sbloccare sia errato.                                                 & S \\
+    TUO14 & Si verifica il caso fallimentare in cui il codice di sblocco non coincide con quello registrato in blockchain\glo{}.              & S \\
+    TUO15 & Si verifica il caso fallimentare in cui l'ordine viene confermato da un utente con indirizzo differente da quello del compratore. & S \\
+    TUO16 & Si verifica che lo stato dell'ordine venga settato su "CANCELLED" alla richiesta di rimborso da parte del compratore.             & S \\
+    TUO17 & Si verifica che lo stato dell'ordine venga settato su "CANCELLED" alla richiesta di rimborso da parte del venditore.              & S \\
+    TUO18 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal compratore.               & S \\
+    TUO19 & Si verifica che i soldi siano restituiti correttamente al compratore quando è richiesto il rimborso dal venditore.                & S \\
+    TUO20 & Si verifica che non sia possibile chiedere il rimborso di un ordine chiuso.                                                       & S \\
+    TUO21 & Si verifica che un utente con indirizzo diverso da quello del compratore o venditore non possa richiedere il rimborso.            & S \\
+    TUO22 & Si verifica che venga restituito correttamente il saldo del contratto.                                                            & S \\
+    TUO23 & Si verifica che venga restituito correttamente l'indirizzo del wallet\glo{} dell'acquirente.                                      & S \\
+    TUO24 & Si verifica che venga restituito correttamente l'indirizzo del wallet\glo{} del venditore.                                        & S \\
+    TUO25 & Si verifica che venga restituito correttamente l'ammontare da pagare.                                                             & S \\
+    TUO26 & Si verifica che venga restituito correttamente lo stato dell'ordine.                                                              & S \\
+    TUO27 & Si verifica che vengano restituiti correttamente tutti i dati dell'ordine, partendo dal suo ID.                                   & S \\
+    TUO28 & Si verifica che vengano restituiti correttamente tutti gli ordini di un acquirente.                                               & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{10cm}|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                     \\
+    \hline
+    TUO29 & Si verifica che vengano restituiti correttamente tutti gli ordini di un venditore. & S \\
   \end{tabular}
   \caption{Test di unità - Solidity - OrderManager}
 \end{table}
@@ -523,7 +538,6 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     TUO10 & smart-contract/test/1\_OrderManager.test.js:describe("single payment order",\newline()=$>$\{it('get the correct order infos', ...)                                                                        \\
     TUO11 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{it("should update state", ...)                                                                                  \\
     TUO12 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{it("should release payment to seller", ...)                                                                     \\
-    TUO13 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order id isn't correct", ...)                                        \\
   \end{tabular}
 \end{table}
 \begin{center}
@@ -538,6 +552,7 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \color[HTML]{FFFFFF}\textbf{ID Test}
           & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                                                                  \\
     \hline
+    TUO13 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order id isn't correct", ...)                                       \\
     TUO14 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order unlock code doesn't match with unlock code saved", ...)       \\
     TUO15 & smart-contract/test/1\_OrderManager.test.js:describe("order confirmation",\newline()=$>$\{describe("failure cases",async ()=$>$\{it("order is unlock from an address different from buyer address", ...) \\
     TUO16 & smart-contract/test/1\_OrderManager.test.js:describe("order refund",\newline async ()=$>$\{describe("should set the cancelled state",()=$>$\{it("from buyer", ...)                                       \\
@@ -595,8 +610,23 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     TUM10 & Si verifica che vengano ritornate correttamente tutte le transazioni partecipanti alla MoneyBox\glo{}.                         & S \\
     TUM11 & Si verifica che venga ritornato il corretto ammontare mancante per il completamento della MoneyBox\glo{}.                      & S \\
     TUM12 & Si verifica che vengano ritornati correttamente tutti gli ordini relativi all'acquirente (registrati in entrambi i contratti). & S \\
-    TUM13 & Si verifica che vengano ritornati correttamente tutti gli ordini relativi al venditore (registrati in entrambi i contratti).   & S \\
-    TUM14 & Si verifica che vengano ritornati correttamente tutti gli ordini MoneyBox\glo{} relativi all'indirizzo di un partecipante.     & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{10cm}|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                               \\
+    \hline
+    TUM13 & Si verifica che vengano ritornati correttamente tutti gli ordini relativi al venditore (registrati in entrambi i contratti). & S \\
+    TUM14 & Si verifica che vengano ritornati correttamente tutti gli ordini MoneyBox\glo{} relativi all'indirizzo di un partecipante.   & S \\
   \end{tabular}
   \caption{Test di unità - Solidity - MoneyBox}
 \end{table}
@@ -625,9 +655,23 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     TUM09 & smart-contract/test/2\_MoneyBox.test.js:describe("moneybox management",\newline()=$>$\{describe("failure cases",()=$>$\{it("negative fee payment", ...)                              \\
     TUM10 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getMoneyBoxPayments(string)", ...)                                               \\
     TUM11 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAmountToFill(string)", ...)                                                   \\
-    TUM12 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAllBuyerOrders(supercontract, \_buyerAddress)", ...)                          \\
-    TUM13 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAllSellerOrders(OrderManager, address)", ...)                                 \\
-    TUM14 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getMoneyBoxesByParticipantAddress(address)", ...)                                \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{15cm}}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{ID Test}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Metodo}}                                                                                                     \\
+    \hline
+    TUM12 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAllBuyerOrders(supercontract, \_buyerAddress)", ...) \\
+    TUM13 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getAllSellerOrders(OrderManager, address)", ...)        \\
+    TUM14 & smart-contract/test/2\_MoneyBox.test.js:describe("check getter functions",\newline()=$>$\{it("check getMoneyBoxesByParticipantAddress(address)", ...)       \\
   \end{tabular}
   \caption{Tracciamento test di unità - Solidity - MoneyBox}
 \end{table}
