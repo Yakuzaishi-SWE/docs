@@ -13,16 +13,16 @@ La presente sezione espone le metriche selezionate dal gruppo \groupName{} per m
     \item Total Number of Initial Requirements (TNIR): Numero totale dei requisiti all'inizio di un determinato periodo.
 \end{itemize}
 
-\subsubsection{MPC01: Earned Value (EV)}
+\subsubsection{MPC01: Earned Value (EV)}\label{sssec:earned_value}
 È il valore del lavoro effettuato fino ad un determinato periodo.
 
-\subsubsection{MPC02: Actual Cost (AC)}
+\subsubsection{MPC02: Actual Cost (AC)}\label{sssec:actual_cost}
 È il costo effettivamente sostenuto fino ad un determinato periodo.
 
-\subsubsection{MPC03: Planned Value (PV)}
+\subsubsection{MPC03: Planned Value (PV)}\label{sssec:planned_value}
 È il costo stimato per il completamento di un determinato periodo.
 
-\subsubsection{MPC04: Cost Variance (CV)}
+\subsubsection{MPC04: Cost Variance (CV)}\label{sssec:cost_variance}
 Metrica che indica, in percentuale, se il gruppo è regolare rispetto al budget prestabilito.\\
 La formula adottata è la seguente:
 \begin{center}
@@ -30,7 +30,7 @@ La formula adottata è la seguente:
 \end{center}
 Se il valore risulta negativo si è fuori budget.
 
-\subsubsection{MPC05: Schedule Variance (SV)}
+\subsubsection{MPC05: Schedule Variance (SV)}\label{sssec:schedule_variance}
 Metrica che indica, in percentuale, se il gruppo è regolare rispetto i limiti temporali imposti.\\
 La formula adottata è la seguente:
 \begin{center}
@@ -38,42 +38,42 @@ La formula adottata è la seguente:
 \end{center}
 Se il valore risulta negativo si è indietro rispetto i tempi preventivati.
 
-\subsubsection{MPC06: Estimated At Completion (EAC)}
+\subsubsection{MPC06: Estimated At Completion (EAC)}\label{sssec:estimate_at_completition}
 Revisione del valore stimato per la realizzazione del progetto in un determinato periodo, ossia il BAC rivisto allo stato corrente del progetto.\\
 La formula adottata è la seguente:
 \begin{center}
     $EAC = AC + ETC$
 \end{center}
 
-\subsubsection{MPC07: Estimate To Complete (ETC)}
+\subsubsection{MPC07: Estimate To Complete (ETC)}\label{sssec:estimate_to_complete}
 Valore stimato del costo del lavoro rimanente in un determinato periodo.\\
 La formula adottata è la seguente:
 \begin{center}
     $ETC = BAC - EV$
 \end{center}
 
-\subsubsection{MPC08: Requirements Stability Index (RSI)}
+\subsubsection{MPC08: Requirements Stability Index (RSI)}\label{sssec:requirement_stability_index}
 Indice che misura la variazione dei requisiti nel tempo.\\
 La formula adottata è la seguente:
 \begin{center}
     $RSI = \displaystyle (1-\frac{NRA + NRC + NRR}{TNIR})*100$
 \end{center}
 
-\subsubsection{MPC09: Passed Tests}
+\subsubsection{MPC09: Passed Tests}\label{sssec:passed_tests}
 Indica la percentuale dei test che sono stati superati fino ad un determinato periodo.\\
 La formula adottata è la seguente:
 \begin{center}
     $Passed\ Tests = \displaystyle \frac{Number\ of\ Passed\ Tests}{Tot.\ Number\ of\ Tests}*100$
 \end{center}
 
-\subsubsection{MPC10: Metrics Satisfied}
+\subsubsection{MPC10: Metrics Satisfied}\label{sssec:metrics_satisfied}
 Indice che rappresenta la percentuale di metriche di qualità soddisfatte in un determinato periodo.
 La formula adottata è la seguente:
 \begin{center}
     $Metrics\ Satisfied = \displaystyle \frac{Number\ of\ Metrics\ Satisfied}{Tot.\ Number\ of\ Metrics}*100$
 \end{center}
 
-\subsubsection{MPC11: Risks Found}
+\subsubsection{MPC11: Risks Found}\label{sssec:risks_found}
 Indica il numero di rischi incontrati in un determinato periodo.
 
 \pagebreak
@@ -81,7 +81,7 @@ Indica il numero di rischi incontrati in un determinato periodo.
 \subsection{Metriche per la qualità di prodotto} \label{subsection:qualita_prodotto}
 La presente sezione espone le metriche selezionate dal gruppo \groupName{} per misurare il raggiungimento degli obiettivi di qualità del prodotto.
 
-\subsubsection{MPD01: Indice di Gulpease}
+\subsubsection{MPD01: Indice di Gulpease}\label{sssec:indice_gulpease}
 Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana.
 La formula adottata è la seguente:
 \begin{center}
@@ -97,10 +97,10 @@ L'indice così calcolato può assumere valori tra 0 e 100:
 Per facilitare il calcolo di questo indice, il gruppo si è appoggiato al sito \href{https://farfalla-project.org/readability_static/}, copiando
 l'intero contenuto dei documenti in formato pdf escludendo la prima pagina e gli indici.
 
-\subsubsection{MPD02: Errori ortografici}
+\subsubsection{MPD02: Errori ortografici}\label{sssec:errori_ortografici}
 Il controllo ortografico viene eseguito secondo quanto descritto in \ref{verifica_ortografica} del presente documento.
 
-\subsubsection{MPD03: Copertura requisiti obbligatori}
+\subsubsection{MPD03: Copertura requisiti obbligatori}\label{sssec:requisiti_obbligatori}
 Indice che misura in ogni istante la percentuale di requisiti obbligatori soddisfatti.
 La formula adottata è la seguente:
 \begin{center}
@@ -112,7 +112,7 @@ dove:
     \item \textbf{ROB:} indica il numero complessivo di requisiti obbligatori.
 \end{itemize}
 
-\subsubsection{MPD04: Copertura requisiti desiderabili}
+\subsubsection{MPD04: Copertura requisiti desiderabili}\label{sssec:requisiti_desiderabili}
 Indice che misura in ogni istante la percentuale di requisiti desiderabili soddisfatti.
 La formula adottata è la seguente:
 \begin{center}
@@ -124,7 +124,7 @@ dove:
     \item \textbf{RD:} indica il numero complessivo di requisiti opzionali.
 \end{itemize}
 
-\subsubsection{MPD05: Copertura requisiti opzionali}
+\subsubsection{MPD05: Copertura requisiti opzionali}\label{sssec:requisiti_opzionali}
 Indice che misura in ogni istante la percentuale di requisiti opzionali soddisfatti.
 La formula adottata è la seguente:
 \begin{center}
@@ -136,10 +136,10 @@ dove:
     \item \textbf{ROP:} indica il numero complessivo di requisiti opzionali accettati.
 \end{itemize}
 
-\subsubsection{MPD06: Facilità di utilizzo}
+\subsubsection{MPD06: Facilità di utilizzo}\label{sssec:facilita_utilizzo}
 Numero di click necessari con cui l'utente raggiunge la funzionalità cercata.
 
-\subsubsection{MPD07: Versioni browser supportate}
+\subsubsection{MPD07: Versioni browser supportate}\label{sssec:versioni_browser_supportate}
 Percentuale di versioni di browser supportate dal prodotto.
 Calcolabile con la seguente formula:
 \begin{center}
@@ -159,21 +159,40 @@ Dove in \textbf{Btot} i browser presi in considerazione sono i seguenti:
 \end {itemize} 
 L'integrazione con Metamask\glo{} in Safari non è supportata, di conseguenza l'applicativo non funziona in tale browser.
 
-\subsubsection{MPD08: Solidity Statement Coverage}
+\subsubsection{MPD08: Solidity Statement Coverage}\label{sssec:solidity_statement_coverage}
 Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.\\
 Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.\\
 Il valore è stato calcolato per mezzo di solidity-coverage.
 
-\subsubsection{MPD09: Solidity Branch Coverage}
+\subsubsection{MPD09: Solidity Branch Coverage}\label{sssec:solidity_branch_coverage}
 Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.\\
 Il valore è stato calcolato per mezzo di solidity-coverage.
 
-\subsubsection{MPD10: Solidity Function Coverage}
+\subsubsection{MPD10: Solidity Function Coverage}\label{sssec:solidity_function_coverage}
 Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.\\
 Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.\\
 Il valore è stato calcolato per mezzo di solidity-coverage.
 
-\subsubsection{MPD11: Solidity Line Coverage}
+\subsubsection{MPD11: Solidity Line Coverage}\label{sssec:solidity_line_coverage}
 Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.\\
 Vengono considerate solo le righe che contengono istruzioni eseguibili.
 Il valore è stato calcolato per mezzo di solidity-coverage.
+
+\subsubsection{MPD12: Frontend Statement Coverage}\label{sssec:frontend_statement_coverage}
+Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.\\
+Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.\\
+Il valore è stato calcolato per mezzo di Jest.
+
+\subsubsection{MPD13: Frontend Branch Coverage}\label{sssec:frontend_branch_coverage}
+Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.\\
+Il valore è stato calcolato per mezzo di Jest.
+
+\subsubsection{MPD17: Frontend Function Coverage}\label{sssec:frontend_function_coverage}
+Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.\\
+Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.\\
+Il valore è stato calcolato per mezzo di Jest.
+
+\subsubsection{MPD15: Frontend Line Coverage}\label{sssec:frontend_line_coverage}
+Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.\\
+Vengono considerate solo le righe che contengono istruzioni eseguibili.
+Il valore è stato calcolato per mezzo di Jest.
