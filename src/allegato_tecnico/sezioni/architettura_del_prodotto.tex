@@ -7,7 +7,8 @@ Essa consiste in un frontend Web che effettua chiamate dirette ad una infrastrut
 nostro caso una gerarchia di smartcontracts eseguiti su blockchain Fantom; 
 questa struttura ricorda quindi una architettura client-server, senza un supporto intermedio per le operazioni.
 Il frontend è stato scritto in Typescript utilizzando il framework React.js.
-
+\\
+\\
 Il pattern architetturale scelto dal gruppo per lo sviluppo di tale frontend è il Model-View-ViewModel. Il
 seguente pattern è tra i più diffusi nello sviluppo delle web application e permette di scrivere codice
 facilmente mantenibile e riusabile; questo è possibile grazie al forte disaccoppiamento che sussiste tra
@@ -29,7 +30,8 @@ componente in componente attraverso le props (ossia gli argomenti dei componenti
 vista). Nella radice dell'applicazione viene infatti creata un'istanza del ViewModel, che viene passata
 ad un Context.Provider, che fa da contenitore per tutta la View. All'interno di tale contenitore ogni
 componente puo' utilizzare un hook per accedere al Context React ed utilizzare il valore più recente del ViewModel.
-
+\\
+\\
 E' stato scelto di utilizzare un Context React per il passaggio dei dati in quanto la nostra applicazione è
 molto profonda e non risultava conveniente passare i dati per molti componenti rischiando, nel peggiore
 dei casi, di doverli utilizzare nell'ultimo della gerarchia.
@@ -40,6 +42,7 @@ scopo, Mobx permette di segnare delle classi (o attributi di esse) come "observa
 dei componenti della View come "observer". Quest'ultimi vengono automaticamente ri-renderizzati al
 cambiamento di un qualsiasi attributo observable.
 
+\clearpage
 \subsection{Diagramma delle classi}
 
 In questa sezione verrà mostrato il diagramma delle classi dell'applicazione, 
