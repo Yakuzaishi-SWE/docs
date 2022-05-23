@@ -1,7 +1,14 @@
 \section{Architettura del prodotto}\label{section:architettura del prodotto}
 %Descrizione pattern architetturale 
 \subsection{Descrizione generale}
-Il pattern architetturale scelto dal gruppo per lo sviluppo del frontend è il Model-View-ViewModel. Il
+
+Per lo sviluppo generale dell'applicazione, è stato seguita una architettura DApp, (Fully) Decentralised Application.
+Essa consiste in un frontend Web che effettua chiamate dirette ad una infrastruttura decentralizzata backend, nel 
+nostro caso una gerarchia di smartcontracts eseguiti su blockchain Fantom; 
+questa struttura ricorda quindi una architettura client-server, senza un supporto intermedio per le operazioni.
+Il frontend è stato scritto in Typescript utilizzando il framework React.js.
+
+Il pattern architetturale scelto dal gruppo per lo sviluppo di tale frontend è il Model-View-ViewModel. Il
 seguente pattern è tra i più diffusi nello sviluppo delle web application e permette di scrivere codice
 facilmente mantenibile e riusabile; questo è possibile grazie al forte disaccoppiamento che sussiste tra
 logica di presentazione e di business. Inoltre l'MVVM è risultato il più adatto per essere utilizzato con
