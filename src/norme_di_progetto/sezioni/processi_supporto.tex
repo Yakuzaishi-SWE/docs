@@ -26,7 +26,7 @@ Un altro scopo del template è quello di velocizzare la stesura dei documenti st
 Il template in particolare definisce la prima pagina, il registro delle modifiche e la presentazione del documento.
 \subparagraph{Struttura del documento}
 In questa sezione viene descritta la struttura dei documenti. Questi ultimi sono stati suddivisi in due macrofamiglie la cui struttura differisce in alcune parti. Le due macrofamiglie vengono identificate come \textit{verbali} e \textit{documentazione}.
-\subparagraph{\textit{Verbali}}
+\subparagraph{Verbali}
 I \textit{verbali} vengono redatti successivamente alla riunione del gruppo oppure dopo un incontro con il proponente, essi contengono il rapporto dettagliato delle tematiche discusse durante il meeting.
 Prevedono una singola stesura, dato che contengono delle decisioni che non vengono modificate successivamente.
 
@@ -141,8 +141,8 @@ La tabella del registro delle modifiche contiene le seguenti voci:
 \item \textbf{Contenuto} compreso tra l'intestazione e il piè di pagina.
 \end {itemize}
 
-\subsubsection{Convenzioni}
-\paragraph{Nomi dei file}
+\paragraph{Convenzioni}
+\subparagraph{Nomi dei file}
 Di seguito viene descritta la rappresentazione dei nomi dei file, i quali sono validi per tutti i documenti:
 \begin{itemize}
 \item I nomi dei file iniziano tutti con la lettera minuscola;
@@ -159,7 +159,7 @@ Esempi non corretti:
 \item NormeDiProgetto (sono presenti lettere maiuscole e sono assenti i caratteri separatori).
 \end {itemize}
 
-\paragraph{Stile di testo}
+\subparagraph{Stile di testo}
 Nella sezione sottostante vengono riportati i vari stili di testo utilizzati nei documenti e i contesti in cui essi sono utilizzati:
 \begin {itemize}
 \item \textbf{Grassetto}: lo stile grassetto viene utilizzato per indicare i termini negli elenchi puntati e per i titoli delle sezioni;
@@ -168,14 +168,14 @@ Nella sezione sottostante vengono riportati i vari stili di testo utilizzati nei
 \item \textbf{Nome dei documenti:} il nome dei documenti viene rappresentato in corsivo. Se si fa un riferimento specifico a un particolare documento bisogna indicarne anche la versione (sempre in corsivo);
 \item \textbf{Collegamenti interni:} le parole che si riferiscono a una parte del documento vanno sottolineate.
 \end {itemize}
-\paragraph{\docNameGlo}
+\subparagraph{Glossario}
 Le norme relative al \docNameGloLow{} sono:
 \begin{itemize}
     \item Ogni parola presente nel \docNameGloLow{} viene contrassegnata con una 'G' a pedice;
     \item Se un termine compare nella sua stessa definizione all'interno del \docNameGloLow{} esso viene contrassegnato.
 \end{itemize}
 
-\paragraph{Elenchi puntati e numerati}
+\subparagraph{Elenchi puntati e numerati}
 Di seguito viene la descrizione di come il team di sviluppo ha deciso di utilizzare gli elenchi puntati e numerati.
 \begin {itemize}
 \item Ogni punto dell'elenco inizia con la lettera maiuscola;
@@ -183,7 +183,7 @@ Di seguito viene la descrizione di come il team di sviluppo ha deciso di utilizz
 \item Dopo l'ultima voce vi è un '.';
 \item Se vi è un concetto da spiegare esso viene scritto in grassetto seguito da ':' e segue la spiegazione di esso.
 \end {itemize}
-\paragraph{Sigle}
+\subparagraph{Sigle}
 In questa sezione vengono raccolte e spiegate le sigle presenti nei vari documenti:
 \begin{itemize}
     \item Sigle che rappresentano i ruoli che ogni membro del gruppo a rotazione deve svolgere:
@@ -206,7 +206,7 @@ In questa sezione vengono raccolte e spiegate le sigle presenti nei vari documen
               \caption{Sigle dei ruoli}
           \end{table}
 \end{itemize}
-\paragraph{Formato della data}
+\subparagraph{Formato della data}
 Il team di sviluppo ha deciso di adottare la seguente convenzione per rappresentare le date che compaiono nei vari documenti:
 \begin{center}
     \large{\textbf{YYYY-MM-DD}}
@@ -218,19 +218,19 @@ dove:
     \item \textbf{DD}: indica il giorno.
 \end{itemize}
 
-\subsubsection{Elementi grafici}
-\paragraph{Tabelle}
+\paragraph{Elementi grafici}
+\subparagraph{Tabelle}
 Ad eccezione del registro delle modifiche, le tabelle di ogni documento seguono le seguenti convenzioni:
 \begin{itemize}
     \item Ogni tabella contiene al di sotto di essa, in posizione centrale, una didascalia descrittiva;
     \item Ogni tabella viene identificata con un numero progressivo a partire da 1, che la identifica univocamente all'interno del documento;
     \item Per chiarezza grafica e per aumentarne la leggibilità, verrà usato un trattino (-) nelle celle in cui è presente uno 0 (zero). Inoltre si precisa che laddove venga indicato un costo all'interno di una tabella, quest'ultimo verrà espresso in euro (€).
 \end{itemize}
-\paragraph{Immagini}
+\subparagraph{Immagini}
 Le immagini sono collocate al centro della pagina in questione e al di sotto di ciascuna di esse è presente, in posizione centrale, una descrizione esplicativa e un numero progressivo a partire da 1, che la identifica univocamente all'interno del documento.
-\paragraph{Diagrammi}
+\subparagraph{Diagrammi}
 Sia i diagrammi UML\glo{} che i diagrammi di Gantt\glo{} vengono riportati come immagini, quindi sono soggetti alle regole sopra riportate.
-\subsubsection{Verifica ortografica} \label{verifica_ortografica}
+\paragraph{Verifica ortografica} \label{verifica_ortografica}
 % ESEMPIO: Per la verifica ortografica dei documenti scritti in LATEX si utilizzerà lo strumento di correzione automatica presente nell'editor TexmakerG oppure lo strumento Aspell (versione > 0.60.5). Il primo fornisce avvisi di errore istantaneamente; il secondo deve essere utilizzato da terminale lanciando il comando direttamente sul file in formato tex: aspell –mode=tex –lang=it check NomeFile.tex
 Per la verifica ortografica dei documenti scritti in \LaTeX{} si utilizzerà lo strumento di correzione automatica \textbf{LanguageTool}:
 \begin{center}\url{https://languagetool.org}\end{center}
@@ -315,7 +315,7 @@ Per gestire i repository\glo{} Git\glo{} si è scelto di utilizzare il servizio 
 \end{itemize}
 
 
-\subsubsection{Struttura del repository}\label{paragraph: repository}
+\paragraph{Struttura del repository}\label{paragraph: repository}
 Al fine di organizzare meglio il lavoro si è deciso di creare quattro repository\glo{} distinti, tutti pubblici, con lo scopo di tenere separati i documenti e il software:
 \begin{itemize}
     \item \textbf{Yakuzaishi-SWE/docs}: per il versionamento dei documenti;
@@ -325,7 +325,7 @@ Al fine di organizzare meglio il lavoro si è deciso di creare quattro repositor
 
 \end{itemize}
 
-\paragraph{Yakuzaishi-SWE/docs}
+\subparagraph{Yakuzaishi-SWE/docs}
 L'organizzazione del repo è così riassunta:
 \begin{itemize}
     \item \textbf{Branch\glo{} master}: è il branch\glo{} principale in cui è presente la sola documentazione, in formato tex, pronta alla revisione;
@@ -337,7 +337,7 @@ L'organizzazione del repo è così riassunta:
           \end{center}
 \end{itemize}
 
-\subparagraph{Gestione dei cambiamenti}
+\subparagraph*{Gestione dei cambiamenti}
 La separazione del flusso di lavoro tra i vari documenti da redarre permette una notevole diminuzione dei conflitti. Il punto focale è che il branch\glo{} master rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo finché ciascun \roleProjectManagerLow{} non abbia dato l'approvazione al corrispettivo documento. Solo in quel momento è permesso il merge\glo{} di uno dei branch\glo{} minori nel master. I cambiamenti da gestire sui documenti possono essere:
 \begin{itemize}
     \item \textbf{Modifiche minori}: riguardano errori grammaticali, lessicali o di sintassi, che possono essere corretti dai \textit{redattori} o dai \textit{verificatori} senza l'approvazione del \roleProjectManagerLow;
@@ -345,7 +345,7 @@ La separazione del flusso di lavoro tra i vari documenti da redarre permette una
 \end{itemize}
 
 
-\paragraph{Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend e
+\subparagraph{Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend e
     \\ Yakuzaishi-SWE/smart-contract}
 Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend{} e Yakuzaishi-SWE/smart-contract{} sono organizzate allo stesso modo. In particolare:
 \begin{itemize}
@@ -354,7 +354,7 @@ Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend{} e Yakuzaishi-SWE/s
     \item \textbf{Branch\glo{} derivanti dal dev}: sono diversi in numero e ciascuno di questi ha un nome parlante riferito alla singola feature. Ognuno è dedicato allo sviluppo della feature da cui prende il nome e, quando il lavoro su uno di questi branch\glo{} sarà finito e sottoposto a revisione, verrà eseguito un merge\glo{} del branch\glo{} in questione con il dev.
 \end{itemize}
 
-\subparagraph{Gestione dei cambiamenti}
+\subparagraph*{Gestione dei cambiamenti}
 La separazione del flusso di lavoro tra le varie features da sviluppare permette una notevole diminuzione dei conflitti. Il punto focale è che il branch\glo{} master rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo finché ciascun \roleProjectManagerLow{} non abbia dato l'approvazione per il rilascio. Solo in quel momento è permesso il merge\glo{} di uno dei branch\glo{} minori nel master.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -423,7 +423,7 @@ Durante questo processo, il compito dei verificatori è quello di effettuare l'a
     \item \textbf{Analisi dinamica}: processo di valutazione di un sistema software o di un suo componente basato sull'osservazione del suo comportamento in esecuzione. Questo tipo di analisi viene generalmente chiamato testing e per motivi logici non può essere svolta sui documenti.
 \end{itemize}
 \subsubsection{Istanziazione del processo}
-\subsubsection{Verifica della documentazione}
+\paragraph{Verifica della documentazione}
 Il processo di verifica della documentazione può essere svolto mediante l'uso di strumenti automatici, oppure può essere condotta a mano. In questo secondo caso si possono utilizzare due diverse tecniche di analisi descritte nel seguito:
 \begin{itemize}
     \item \textbf{Walktrough}: Il \roleVerifierLow{} esegue un controllo completo del documento alla ricerca di eventuali errori;
@@ -431,17 +431,17 @@ Il processo di verifica della documentazione può essere svolto mediante l'uso d
 \end{itemize}
 La tecnica \textbf{Walkthrough} risulta molto onerosa a causa dell'adozione di una ricerca esaustiva degli errori. Questa metodologia sarà applicata come fase iniziale di verifica della documentazione. Con l'avanzare dell'attività di progetto e il ripetersi del processo di verifica sulla documentazione, si stilerà una lista di controllo\glo{} grazie alla quale, successivamente, sarà possibile passare alla tipologia di verifica \textbf{Inspection} che risulta essere più rapida.
 
-\subsubsection{Verifica del codice}
+\paragraph{Verifica del codice}
 Il processo di verifica del codice farà uso di test automatici appositamente creati e si servirà inoltre di analisi statica e dinamica per quanto riguarda il codice scritto e in particolare:
 \begin{itemize}
     \item \textbf{Analisi statica}: verificatori e programmatoti durante le fasi di stesura e verifica del codice si accertano che siano stati rispettati i principi di buona programmazione preimpostati dal team;
     \item \textbf{Analisi dinamica}: verificatori e programmatori durante la fase di test vanno alla ricerca di bug\glo{} ed errori tramite l'esecuzione del software.
 \end{itemize}
 
-\paragraph{Test}
+\subparagraph{Test}
 Come esposto in precedenza, questa attività ha lo scopo di evidenziare eventuali bug\glo{} e/o errori riscontrabili a runtime. L'esecuzione dei test deve essere ripetibile ed è quindi buona norma renderla quanto più possibile automatizzata.
 
-\subparagraph{Classificazione dei test}
+\subparagraph*{Classificazione dei test}
 I test sono identificati tramite un codice descritto dalla seguente espressione regolare:
 \begin{center}
     \large{\textbf{T[TipologiaTest][ImportanzaRequisito]*[TipologiaRequisito]*[IdNumerico]}}
