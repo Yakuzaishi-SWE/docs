@@ -1,1 +1,71 @@
 \section{Setup}\label{section:setup}
+
+In questa sezione vengono trattati i requisiti minimi necessari per l’utilizzo dell’applicazione ShopChain e successivamente come poter installare il prodotto in locale direttamente dal repository\glo
+pubblico GitHub\glo del gruppo Yakuzaishi, accessibile al seguente link: \href{https://yakuzaishi-swe.github.io}{link al repository}.
+
+\subsection{Requisiti di sistema}
+
+Per far si che le operazioni di installazione e avvio del prodotto avvengano correttamente e che si possa
+aver accesso a tutte le funzionalità, è necessario avere installati nella propria macchina i seguenti software.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.8}
+	\rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c | c | c}
+		\rowcolor[HTML]{125E28}
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Software}} &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Versione}} & 
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Link al download}}   \\ \hline
+        Docker & 4.9.0 & \href{https://www.docker.com/products/docker-desktop/}{https://www.docker.com/products/docker-desktop/} \\ \hline
+    \end{tabular}
+    \caption{Requisiti di sistema}
+\end{table}
+
+Grazie all'utilizzo di Docker\glo, abbiamo facilitato la procedura di setup dell'applicazione, in quanto Docker stesso si occupa di inizializzare tutte le tecnologie necessarie alla compilazione.
+
+\subsection{Requisiti hardware}
+
+Per avere delle prestazioni accettabili dell’applicazione è preferibile possedere almeno i seguenti componenti hardware.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.8}
+	\rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c | c}
+		\rowcolor[HTML]{125E28}
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Componente}} &
+		\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Requisito}}   \\ \hline
+        RAM & 4GB DDR4 \\ \hline
+        CPU & Processore 64-bit con Second Level Address Translation \href{https://en.wikipedia.org/wiki/Second_Level_Address_Translation}{(SLAT)} \\ \hline
+        SSD (o HDD) & 3GB \\ \hline
+    \end{tabular}
+    \caption{Requisiti hardware}
+\end{table}
+
+\underline{\textbf{Attenzione!}} In alcune CPU la virtualizzazione utilizzata da Docker per avviarsi non è abilitata di default, per abilitarla si deve accedere al BIOS\glo di sistema, e attivare l'impostazione correlata.
+Essend i BIOS molto variabili da macchina a macchina, non ci è possibile dare una indicazione precisa su dove trovare l'impostazione da cambiare, al seguente link troverete una guida generale di esempio: \href{https://www.bleepingcomputer.com/tutorials/how-to-enable-cpu-virtualization-in-your-computer-bios/}{CPU virtualization}.
+
+È necessaria inoltre una connessione internet stabile per garantire un servizio ottimale, senza vincoli di banda.
+
+\subsection{Browser}
+
+L’applicazione è stata testata e quindi resa compatibile con le ultime versioni dei browser che supportano l'estensione Metamask\glo, il cui setup verrà discusso nella sezione §\ref{subsection:Metamask}.
+
+\begin{table}[H]
+	\centering
+	\renewcommand{\arraystretch}{1.8}
+	\rowcolors{2}{green!100!black!40}{green!100!black!30}
+    \begin{tabular}{c | c}
+    \rowcolor[HTML]{125E28}
+	\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Componente}} &
+	\multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Requisito}}   \\ \hline
+    Google Chrome & 98 \\ \hline
+    Microsoft Edge & 98 \\ \hline
+    Mozilla Firefox & 97 \\ \hline
+    Brave Browser & 1.36 \\ \hline
+    \end{tabular}
+    \caption{Requisiti browser}
+\end{table}
+
+\subsection{Metamask} \label{subsection:Metamask}
