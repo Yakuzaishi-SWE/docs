@@ -69,3 +69,76 @@ L’applicazione è stata testata e quindi resa compatibile con le ultime versio
 \end{table}
 
 \subsection{Metamask} \label{subsection:Metamask}
+
+L'applicazione fa uso del plugin Metamask\glo per la gestione dei wallet e dei pagamenti, 
+al seguente link è possibile trovare la pagina ufficiale di download:
+ \begin{center}
+     \url{https://MetaMask.io/download/}
+ \end{center}
+ Alla pagina sarà presente un bottone con scritto \texttt{"Install MetaMask"}
+ \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/install-MetaMask.png}
+    \caption{Pagina download MetaMask}
+\end{figure}
+\textbf{}\\
+Cliccando il bottone si verrà reindirizzati alla seguente pagina web nella quale basterà cliccare il bottone \textit{"Aggiungi"}:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/MetaMaskExtensionPage.png}
+    \caption{Aggiungere l'estensione MetaMask al browser (1)}
+\end{figure}
+\textbf{}\\
+Si aprirà dunque il popup mostrato in seguito nel quale sarà sufficiente cliccare \texttt{"Aggiungi estensione"}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/AddExtenction.png}
+    \caption{Aggiungere l'estensione MetaMask al browser (2)}
+\end{figure}
+\textbf{}\\
+Una volta che l'estensione sarà stata aggiunta si verrà automaticamente reindirizzati alla pagina mostrata nella figura seguente nella quale sarà sufficiente cliccare \textit{Inizia}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/startMetamask.png}
+    \caption{Pagina iniziale MetaMask}
+\end{figure}
+
+\textbf{}\\
+A questo punto non resta che scegliere se iniziare creando un nuovo portafoglio o se caricarne uno già esistente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/chooseMetamask.png}
+    \caption{Scelta iniziale MetaMask: crea/importa portafogli}
+\end{figure}
+
+\textbf{}\\
+dopo aver scelto basterà seguire le semplici istruzioni riportate da MetaMask per completare il collegamento.
+
+\subsubsection{Configurazione}
+Per utilizzare l'applicazione \projectName{} è necessario disporre di un account MetaMask impostato sulla testnet Fantom.
+Per aggiungere una nuova rete al proprio account MetaMask, cliccare sull'estensione MetaMask, quindi su \texttt{"Rete Ethereum Principale"}  e infine \texttt{"Aggiungi Rete"} come mostrato di seguito:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{immagini/Configuration.png}
+    \caption{Inizio configurazione Fantom Testnet}
+\end{figure}
+\textbf{}\\
+Si verrà reindirizzati a una pagina contenente un form da riempire come mostrato di seguito:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/ConfData.png}
+    \caption{Form per l'aggiunta della rete Fantom Testnet}
+\end{figure} 
+\textbf{}\\
+Per comodità vengono riportati i dati:
+\begin{itemize}
+    \item Network Name: Fantom testnet;
+    \item New RPC Url: https://rpc.testnet.fantom.network/;
+    \item ChainID: 0xfa2
+    \item Symbol: FTM
+\end{itemize}
+Una volta riempito il form cliccare il tasto \texttt{Salva}.\\
+A questo punto, una volta caricato denaro nel portafogli tramite la \href{https://faucet.fantom.network/}{Fantom faucet}, il setup sarà completo.\\\\
+\underline{\textbf{Attenzione!}} Si raccomanda inoltre di notare che ciascuna operazione che prevede l'interazione con MetaMask (quali il pagamento, lo sblocco, il rimborso, la creazione della moneybox e il versamento di un contributo) prevedono il pagamento di gasfee, ovvero un ammontare variabile, generalmente piccolo, come commissione per il pagamento.\\
+Tale ammontare è indipendente da \projectName{} o MetaMask, risulta invece essere indispensabile per permettere alla blockchain\glo{} di registrare i blocchi all'interno dei quali è possibile reperire le transazioni.
