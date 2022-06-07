@@ -40,10 +40,48 @@ cambiamento di un qualsiasi attributo observable.
 
 \subsection{Diagrammi delle classi}
 
-%ahahaahhaha
+\subsubsection{Classi Frontend}
+
+\subsubsection{Classi Solidity}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.45]{immagini/smartcontract.png}
+    \caption{Le classi Solidity}
+\end{figure}
+
+Il diagramma delle classi Solidity, che gestiscono gli smartcontracts, è costituito da due classi:
+\begin{itemize}
+    \item \textbf{OrderManager}, si occupa della gestione di tutti i pagamenti singoli, salvati in più \textbf{map};
+    \item \textbf{MoneyBoxManager}, si occupa della gestione delle Moneybox, anche esse mappate; essendo un'estensione di OrderManager, ne eredita tutti i metodi.
+\end{itemize}
+Tra i metodi, \textit{refund(string memory id)} si occupa di ritornare ai vari proprietari degli ordini 
+(e a tutti i partecipanti nel caso di una MoneyBox) le somme di FTM interne al particolare contratto, identificato tramite \textit{id}.
+\\
+Per maggiori informazioni sulla parte dell'applicazione relativa alla Blockchain, si invita a consultare la sezione §\ref{section:blockchain}.
+
+
 
 \subsection{Diagrammi di sequenza}
 
 \subsection{Architettura di dettaglio}
 
-% repo pattern e singleton, observer pattern?
+\subsubsection{Repository pattern}
+
+
+
+\subsubsection{Singleton}
+
+Sono state implementate alcune classi seguendo il design pattern Singleton,
+ ciò consente di garantire che una classe abbia una sola istanza, fornendo al contempo un punto di accesso globale alla stessa.
+Il design singleton è stato usato per avere un'unica fonte detentrice dello stato di ogni modello.
+Le classi più importanti così create sono:
+
+\begin{itemize}
+    \item \textbf{RootStore}: 
+    \item \textbf{ProviderStore}:
+    \item \textbf{W3Store}:
+\end{itemize}
+
+\subsubsection{Observer pattern}
+
