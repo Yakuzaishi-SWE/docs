@@ -42,6 +42,26 @@ cambiamento di un qualsiasi attributo observable.
 
 \subsubsection{Classi Frontend}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{immagini/providerstore.png}
+    \caption{La gerarchia di ProviderStore}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{immagini/rootstore.png}
+    \caption{Rootstore, le classi per gli ordini e la gestione dei contratti}
+\end{figure}
+
+\begin{landscape}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{immagini/rsviewmodel.png}
+    \caption{Le classi viewmodel dipendenti da RootStore}
+\end{figure}
+\end{landscape}
+
 \subsubsection{Classi Solidity}
 
 \begin{figure}[H]
@@ -65,11 +85,42 @@ Per maggiori informazioni sulla parte dell'applicazione relativa alla Blockchain
 
 \subsection{Diagrammi di sequenza}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.45]{immagini/diagrammaMeta.png}
+    \caption{Diagramma di sequenza per la connessione a Metamask}
+\end{figure}
+
+Il diagramma di sequenza sopra riportato è cosi descritto:
+
+\begin{enumerate}
+    \item La connessione a MetaMask inizia quando nella \textbf{ConnnectMetamaskView} mediante l'apposito pulsante viene fatto l'onclick e viene chiamato il metodo \textit{connect()} sul \textbf{ConnectMetamaskViewModel};
+    \item Esso a sua volta chiama il metodo \textit{connect()} sul \textbf{ProviderStore} che a sua volta fa la chiamata asincrona del metodo \textit{connect} sul \textbf{ProviderRepo} che a sua volta fa la chiamata asincrona del metodo \textit{connect} su \textbf{MetamaskInpageProvider} e la connessione è così stabilita;
+    \item Successivamente dato che potrebbero esserci più account connessi il \textbf{ProviderStore} chiama il metodo asincrono \textit{getAccounts} sul \textbf{ProviderRepo} che lo chiama a sua volta sul \textbf{MetaMaskInpageProvider}, il quale ritorna tutti gli indirizzi degli account connessi mediante un array di stringhe;
+    \item Succcessivamente il \textbf{ProviderStore} setta l'indirizzo mediante il metodo \textit{setAddress} al quale viene passato in input il primo carattere dell'array di stringhe ritornato nel punto precedente;
+    \item Infine la \textbf{NavViewModel} prende gli indirizzi connessi mediante il metodo \textit{getAddress} chiamato sul \textbf{ProviderStore}, e li ritorna alla \textbf{AddressView} per essere visualizzati.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{immagini/refund.png}
+    \caption{Diagramma di sequenza della funzione di rimborso}
+\end{figure}
+
+Il diagramma di sequenza sopra riportato, molto semplice grazie ai pattern architetturali utilizzati, è cosi descritto:
+
+\begin{enumerate}
+    \item Dalla \textbf{OrderDetailsView}, dopo aver cliccato l'apposito bottone, parte la chiamata della funzione \textit{refund()} verso \textbf{OrderDetailsViewModel} per effettuare il rimborso dell'ordine corrente;
+    \item Dal view-model, vengono chiamate le funzioni \textit{refund()} fino ad arrivare a Web3Contract, che si occuperà di contattare lo smartcontract nella Blockchain;
+    \item Al ritorno delle varie funzioni, l'utente visualizzerà un messaggio di avvenuto rimborso dei pagamenti.
+\end{enumerate}
+
+\clearpage
 \subsection{Architettura di dettaglio}
 
 \subsubsection{Repository pattern}
 
-
+Il repository pattern ci ha permesso di racchiudere tutte le interazioni con sorgenti esterne in un oggetto unico, mantenendo la separazione tra implementazione e interfaccia.
 
 \subsubsection{Singleton}
 
@@ -86,4 +137,4 @@ Le classi più importanti create seguendo il pattern singleton sono:
 
 \subsubsection{Observer pattern}
 
-Attraverso Mobx abbiamousato l'observer pattern in quasi tutte le classi del frontend in modo tale che se viene modificato qualcosa in una classe observable, i cambiamenti si rifletteranno nelle classi observer.
+Attraverso Mobx abbiamo usato l'observer pattern in quasi tutte le classi del frontend in modo tale che, alla modifica di una classe observable, i cambiamenti si rifletteranno nelle classi observer.
