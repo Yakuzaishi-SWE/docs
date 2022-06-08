@@ -50,7 +50,8 @@ cambiamento di un qualsiasi attributo observable.
     \caption{Le classi Solidity}
 \end{figure}
 
-Il diagramma delle classi Solidity, che gestiscono gli smartcontracts, è costituito da due classi:
+Il diagramma delle classi Solidity, che gestiscono gli smartcontracts, è stato creato seguendo le indicazioni di \href{https://github.com/naddison36/sol2uml}{\textbf{sol2uml}}.
+Esso è costituito da due classi:
 \begin{itemize}
     \item \textbf{OrderManager}, si occupa della gestione di tutti i pagamenti singoli, salvati in più \textbf{map};
     \item \textbf{MoneyBoxManager}, si occupa della gestione delle Moneybox, anche esse mappate; essendo un'estensione di OrderManager, ne eredita tutti i metodi.
@@ -75,13 +76,14 @@ Per maggiori informazioni sulla parte dell'applicazione relativa alla Blockchain
 Sono state implementate alcune classi seguendo il design pattern Singleton,
  ciò consente di garantire che una classe abbia una sola istanza, fornendo al contempo un punto di accesso globale alla stessa.
 Il design singleton è stato usato per avere un'unica fonte detentrice dello stato di ogni modello.
-Le classi più importanti così create sono:
+Le classi più importanti create seguendo il pattern singleton sono:
 
 \begin{itemize}
     \item \textbf{RootStore}: 
-    \item \textbf{ProviderStore}:
-    \item \textbf{W3Store}:
+    \item \textbf{ProviderStore}: 
+    \item \textbf{W3Store}: classe che gestisce la connessione a Metamask.
 \end{itemize}
 
 \subsubsection{Observer pattern}
 
+Attraverso Mobx abbiamousato l'observer pattern in quasi tutte le classi del frontend in modo tale che se viene modificato qualcosa in una classe observable, i cambiamenti si rifletteranno nelle classi observer.
