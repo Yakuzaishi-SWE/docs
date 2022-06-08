@@ -2,6 +2,15 @@
 \input{../template/source/commands}
 \input{../template/source/styles}
 
+\newglossarystyle{myaltlistgroup}{
+  \setglossarystyle{altlistgroup}
+}
+
+
+\setglossarystyle{myaltlistgroup}
+
+\makeglossaries
+
 \begin{document}
 	%RIDEFINIZIONE COMANDI
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,4 +48,8 @@
 	\pagestyle{styleDocPages}
 	\input{contenuto/contenuto}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\glsaddall
+  	\printglossary[nonumberlist]
+
 \end{document}
