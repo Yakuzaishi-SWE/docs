@@ -15,7 +15,10 @@ Sono state individuate principalmente tre macro aree che potranno essere ampliat
 
 \subsection{Frontend}
 
-\subsubsection{Propic MoneyBox}
+\subsubsection{Immagine MoneyBox}
+
+Avevamo pensato di associare ad ogni MoneyBox una immagine generata automaticamente, o presa da un pool definito, usando come input l'id della MoneyBox stessa. 
+Questo potrebbe contribuire ad una maggiore sicurezza nel condividere la suddetta MoneyBox con amici, che potranno vedere a colpo d'occhio se il link è corretto dalla immagine incorporata.
 
 \subsubsection{Riflettere i cambiamenti del contratto}
 
@@ -23,7 +26,7 @@ Con i cambiamenti che possono venire apportati agli smartcontract è bene che il
 Nel caso dei cambiamenti proposti finora i cambiamenti individuati sono i seguenti:
 \begin{itemize}
     \item \textbf{Stable Coin}: nelle pagine di pagamento, di dettaglio dell'ordine e di dettagli della MoneyBox, viene mostrato anche l'ammontare in stable coin dei vari pagamenti, per una migliore visione dei costi da parte dell'utente;
-    \item \textbf{TheGraph}: nelle due pagine di elenco transazioni ....
+    \item \textbf{TheGraph}: le due pagine di elenco transazioni dovranno essere modificate per sfruttare appieno tutte le funzionalità portate dalla implementazione dei protocolli TheGraph;
     \item \textbf{Chain differenti}:  in un pop-up all'ingresso dell'applicazione, l'utente potrà selezionare la chain (e quindi la cryptovaluta correlata) con la quale procedere al pagamento. Tale scelta dovrà essere riportata anche nella breadcrumb come reminder testuale.
 \end{itemize}
 
