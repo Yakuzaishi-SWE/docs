@@ -11,7 +11,7 @@ Sono state individuate principalmente tre macro aree che potranno essere ampliat
 
 La funzionalità di convertire l'ammontare depositato sul contratto in stable coin è un'interessante funzionalità che il gruppo ha individuato. Per limiti 
 di tempo e costi legati al progetto, non è stata implementata in tutti i suoi punti, ma è stata affrontata sul lato smart contract.\\
-Il gruppo ha condotto quindi uno studio relativamente ai passaggi da affrontare per attuare il meccanisco di conversione dei token\glo{}.
+Il gruppo ha condotto quindi uno studio relativamente ai passaggi da affrontare per attuare il meccanismo di conversione dei token\glo{}.
 Prima di procedere è necessario descrivere e comprendere alcune componenti fondamentali che saranno necessarie:
 
 \begin{itemize}
@@ -72,15 +72,29 @@ Si compongono di tre componenti principali:
 \begin{itemize}
  \item Manifest (subgraph.yaml) che definisce quali dati il sottografo andrà a indicizzare;
 
-    %(screen)
+ \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/subgraf.png}
+    \caption{Esempio di un possibile subgraph configurato per il contratto OrderManager per la rete Ropsten.}
+ \end{figure}
+
 
  \item Schema (schema.graphql) che riporta quali dati si desiderà ricevere dal sottografo;
 
-    %(screen)
+ \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{immagini/schema.png}
+    \caption{Esempio di file schema per la definizione entità Order.}
+ \end{figure}
 
  \item AssemblyScript Mappings (mapping.ts) file che riporta la traduzione dei dati presenti in blockchain che il sottografo dovrà indicizzare.
 
-    %(screen)
+ \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{immagini/map.png}
+    \caption{Esempio di file mapping per l'indicizzazione degli eventi.}
+ \end{figure}
+
 \end{itemize}
 
 Questa funzionalità non è stata portata avanti perchè non è disponibile sulla testnet di Fantom, ma solo sulla mainnet. Se la si vuole implementare sarà quindi necessario eseguire lo sviluppo e i relativi test su una testnet di Ethereum in cui è disponibile il protocollo (es. Rinkeby\glo). Una volta che lo sviluppo sarà finito si potrà procedere a caricare il subgraph creato sulla mainnet di Fantom senza particolari modifiche, poichè quest'ultima è una blockchain EVM.
@@ -88,7 +102,7 @@ Questa funzionalità non è stata portata avanti perchè non è disponibile sull
 
 \subsection{Chain differenti}
 
-Un ovvio ampliamento per l'applicazione è il supporto a più blockchain, per raggiungere un bacino di utenza più ampio e garantire quindi il successo della stessa.\\
+Un ovvio ampliamento per l'applicazione è il supporto a più blockchain, per raggiungere un bacino di utenza più ampio e garantire quindi un maggior successo dell'applicazione.\\
 ....
 
 \subsection{Frontend}
