@@ -26,7 +26,6 @@ vista). Nella radice dell'applicazione viene infatti creata un'istanza del ViewM
 ad un Context.Provider, che fa da contenitore per tutta la View. All'interno di tale contenitore ogni
 componente puo' utilizzare un hook per accedere al Context React ed utilizzare il valore più recente del ViewModel.
 \\
-\\
 E' stato scelto di utilizzare un Context React per il passaggio dei dati in quanto la nostra applicazione è
 molto profonda e non risultava conveniente passare i dati per molti componenti rischiando, nel peggiore
 dei casi, di doverli utilizzare nell'ultimo della gerarchia.
@@ -34,7 +33,7 @@ Per poter fare in modo che una componente della View si renderizzi non solo al c
 suo stato interno ma anche al cambiamento dei dati nel Model, abbiamo utilizzato la libreria Mobx\glo.
 Questa ci permette di implementare l'observer pattern\glo, non supportato di default da React. A tale
 scopo, Mobx permette di segnare delle classi (o attributi di esse) come observable\glo\ e di costruire
-dei componenti della View come observer\glo\. Quest'ultimi vengono automaticamente ri-renderizzati al
+dei componenti della View come observer\glo. \\Quest'ultimi vengono automaticamente ri-renderizzati al
 cambiamento di un qualsiasi attributo observable.
 
 \subsection{Diagrammi delle classi}
@@ -47,13 +46,24 @@ cambiamento di un qualsiasi attributo observable.
     \caption{La gerarchia di ProviderStore}
 \end{figure}
 
-
+Si può notare la struttura ad albero degli store, in questo caso particolare il Provider Store, 
+il quale da come si può vedere fa ampio uso di ereditarietà proprio come avviene a livello di smart contract.
+La classe singleton \textbf{ProviderStore} si occupa di gestire la connessione alla blockchain, tramite l'istanziazione di \textbf{W3Store}; 
+l'istanziazione della connessione ai due contratti Order e Moneybox, 
+l’istanziazione della  connessione ai due contratti per ordini e moneybox, l'address del wallet collegato \textbf{Address}, la tipologia di blockchain a cui si è collegati \textbf{Chain} e, con tutte le precedenti, 
+ne deriva inoltre uno stato generale \textbf{ProviderState}, con relativi errori.
+\clearpage
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.5]{immagini/rootstore.png}
     \caption{Rootstore, le classi per gli ordini e la gestione dei contratti}
 \end{figure}
+
+Anch'esso con struttura ad albero, RootStore si occupa di gestire i dati di dominio, gli ordini singoli e moneybox e i pagamenti.
+Ci sarà quindi \textbf{OrderStore} e classi relative che si occupa di gestire tutti gli ordini di base 
+e \textbf{MoneyboxOrderStore} il quale estende OrderStore trattando non più ordini di base ma MoneyBox e aggiungendo la gestione dei pagamenti multipli.
+Stessa cosa accade a livello di \textbf{ContractStore}, ma in maniera più semplice in quanto la differenza effettiva sta nella repository assegnata: in base al caso base (order) o al caso derivato (moneybox) il resto delle chiamate rimarranno invariate.
 
 \begin{landscape}
 \begin{figure}[H]
@@ -62,6 +72,8 @@ cambiamento di un qualsiasi attributo observable.
     \caption{Le classi viewmodel dipendenti da RootStore}
 \end{figure}
 \end{landscape}
+
+Da \textbf{RootStore}, dipendono poi la grande maggioranza delle classi ViewModel, ognuna con una sua interfaccia, etc..
 
 \subsubsection{Classi Solidity}
 
@@ -122,7 +134,9 @@ Il diagramma di sequenza sopra riportato, molto semplice grazie ai pattern archi
 
 \subsubsection{Repository pattern}
 
-Il repository pattern ci ha permesso di racchiudere tutte le interazioni con sorgenti esterne in un oggetto unico, mantenendo la separazione tra implementazione e interfaccia.
+Il repository pattern è una astrazione del Data Access Layer (DAL\glo). Nasconde i dettagli su come esattamente i dati vengono salvati o recuperati dall'origine dati sottostante.\\
+I dettagli sul modo in cui i dati vengono salvati e recuperati si trovano nel rispettivo repository.
+Il repository pattern ci ha permesso di racchiudere tutte le interazioni il Data Access Layer (nel nostro caso la blockchain) in un oggetto unico, mantenendo la separazione tra implementazione e interfaccia. Tali Repository verranno utilizzati all’interno degli store, tramite Dependency Injection\glo.
 
 \subsubsection{Singleton}
 
@@ -132,8 +146,8 @@ Il design singleton è stato usato per avere un'unica fonte detentrice dello sta
 Le classi più importanti create seguendo il pattern singleton sono:
 
 \begin{itemize}
-    \item \textbf{RootStore}: 
-    \item \textbf{ProviderStore}: 
+    \item \textbf{RootStore}: classe che gestisce i dati di dominio, gli ordini, le moneybox e i pagamenti;
+    \item \textbf{ProviderStore}: classe che gestisce la connessione a blockchain e tutte le classi relative, e l'istanziazione di W3Store;
     \item \textbf{W3Store}: classe che gestisce la connessione a Metamask.
 \end{itemize}
 
