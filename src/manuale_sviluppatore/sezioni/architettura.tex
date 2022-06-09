@@ -1,17 +1,16 @@
 \section{Architettura} \label{section:architettura}
 
-Per lo sviluppo generale dell'applicazione, è stata seguita una architettura DApp, (Fully) Decentralised Application.
+Per lo sviluppo generale dell'applicazione, è stata seguita una architettura DApp\glo, (Fully) Decentralised Application.
 Essa consiste in un frontend Web che effettua chiamate dirette ad una infrastruttura decentralizzata backend, nel 
 nostro caso una gerarchia di smartcontracts eseguiti su blockchain Fantom; 
 questa struttura ricorda quindi una architettura client-server, senza un supporto intermedio per le operazioni.
 \\
 \\
-Il pattern architetturale scelto dal gruppo per lo sviluppo del frontend è il Model-View-ViewModel. Il
+Il pattern architetturale\glo scelto dal gruppo per lo sviluppo del frontend è il Model-View-ViewModel\glo. Il
 seguente pattern è tra i più diffusi nello sviluppo delle web application e permette di scrivere codice
 facilmente mantenibile e riusabile; questo è possibile grazie al forte disaccoppiamento che sussiste tra
 logica di presentazione e di business. Inoltre l'MVVM è risultato il più adatto per essere utilizzato con
-React, libreria impiegata per lo sviluppo dell'UI e che renderizza le componenti in base al loro stato
-interno.
+React, libreria impiegata per lo sviluppo dell'UI e che renderizza le componenti in base al loro stato\glo\ interno.
 
 \begin{figure}[H]
     \centering
@@ -32,10 +31,10 @@ E' stato scelto di utilizzare un Context React per il passaggio dei dati in quan
 molto profonda e non risultava conveniente passare i dati per molti componenti rischiando, nel peggiore
 dei casi, di doverli utilizzare nell'ultimo della gerarchia.
 Per poter fare in modo che una componente della View si renderizzi non solo al cambiamento del
-suo stato interno ma anche al cambiamento dei dati nel Model, abbiamo utilizzato la libreria Mobx.
-Questa ci permette di implementare l'observer pattern, non supportato di default da React. A tale
-scopo, Mobx permette di segnare delle classi (o attributi di esse) come "observable" e di costruire
-dei componenti della View come "observer". Quest'ultimi vengono automaticamente ri-renderizzati al
+suo stato interno ma anche al cambiamento dei dati nel Model, abbiamo utilizzato la libreria Mobx\glo.
+Questa ci permette di implementare l'observer pattern\glo, non supportato di default da React. A tale
+scopo, Mobx permette di segnare delle classi (o attributi di esse) come observable\glo\ e di costruire
+dei componenti della View come observer\glo\. Quest'ultimi vengono automaticamente ri-renderizzati al
 cambiamento di un qualsiasi attributo observable.
 
 \subsection{Diagrammi delle classi}
@@ -47,6 +46,8 @@ cambiamento di un qualsiasi attributo observable.
     \includegraphics[scale = 0.5]{immagini/providerstore.png}
     \caption{La gerarchia di ProviderStore}
 \end{figure}
+
+
 
 \begin{figure}[H]
     \centering
