@@ -67,7 +67,7 @@ cambiamento di un qualsiasi attributo observable.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{immagini/solidity.png}
+    \includegraphics[scale = 0.5]{immagini/smartcontract.png}
     \caption{Le classi Solidity}
 \end{figure}
 
@@ -78,7 +78,6 @@ Esso è costituito da due classi:
     \item \textbf{MoneyBoxManager}, si occupa della gestione delle Moneybox, anche esse mappate; essendo un'estensione di OrderManager, ne eredita tutti i metodi.
 \end{itemize}
 
-I primi cinque attributi di \textbf{OrderManager}, assieme alle funzioni \textit{isStableCoinPegged()}, \textit{getPriceStableCoin()}, \textit{stablecoinIsPegged}, servono alla conversione in stable coin\glo\ dei pagamenti in FTM.
 Tra i metodi, \textit{refund(string memory id)} si occupa di ritornare ai vari proprietari degli ordini 
 (e a tutti i partecipanti nel caso di una MoneyBox) le somme di FTM interne al particolare contratto, identificato tramite \textit{id}.
 \\
