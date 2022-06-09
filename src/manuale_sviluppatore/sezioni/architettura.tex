@@ -67,16 +67,18 @@ cambiamento di un qualsiasi attributo observable.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.45]{immagini/smartcontract.png}
+    \includegraphics[scale = 0.5]{immagini/solidity.png}
     \caption{Le classi Solidity}
 \end{figure}
 
 Il diagramma delle classi Solidity, che gestiscono gli smartcontracts, è stato creato seguendo le indicazioni di \href{https://github.com/naddison36/sol2uml}{\textbf{sol2uml}}.
 Esso è costituito da due classi:
 \begin{itemize}
-    \item \textbf{OrderManager}, si occupa della gestione di tutti i pagamenti singoli, salvati in più \textbf{map};
+    \item \textbf{OrderManager}, si occupa della gestione di tutti i pagamenti singoli, mappati per una migliore gestione degli stessi;
     \item \textbf{MoneyBoxManager}, si occupa della gestione delle Moneybox, anche esse mappate; essendo un'estensione di OrderManager, ne eredita tutti i metodi.
 \end{itemize}
+
+I primi cinque attributi di \textbf{OrderManager}, assieme alle funzioni \textit{isStableCoinPegged()}, \textit{getPriceStableCoin()}, \textit{stablecoinIsPegged}, servono alla conversione in stable coin\glo\ dei pagamenti in FTM.
 Tra i metodi, \textit{refund(string memory id)} si occupa di ritornare ai vari proprietari degli ordini 
 (e a tutti i partecipanti nel caso di una MoneyBox) le somme di FTM interne al particolare contratto, identificato tramite \textit{id}.
 \\
