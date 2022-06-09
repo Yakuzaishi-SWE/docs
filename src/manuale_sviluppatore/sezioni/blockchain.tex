@@ -1,7 +1,7 @@
 \section{Blockchain}\label{section:blockchain}
 
 La nostra applicazione non fa uso di alcun backend in quanto sfrutta appieno le funzionalità della blockchain: 
-sulla testnet\glo\ Fantom sono stati infatti implementati i due smart contract utilizzati per i diversi tipi di pagamento.
+i contratti che svolgono la funzione di business logic dell'applicazione sono stati caricati sulla testnet\glo\ Fantom.
 Tutti i file dedicati alla blockchain si trovano nel repository \textbf{smart-contract}, consultabili e clonabili al seguente link:
 
 \begin{center}
@@ -10,8 +10,8 @@ Tutti i file dedicati alla blockchain si trovano nel repository \textbf{smart-co
 
 I file sono cosi organizzati:
 \begin{itemize}
-    \item \textit{test} è la sottocartella contenente i file \textbf{1\_OrderManager.test.js} e \textbf{2\_MoneyBox.test.js}, utili a controllare che tutte le funzionalità dei contratti siano corrette;
+    \item \textit{test} è la sottocartella contenente i file \textbf{1\_OrderManager.test.js} e \textbf{2\_MoneyBox.test.js}, utili a verificare che i contratti siano corretti;
     \item \textit{contracts} è la sottocartella contenente i due smartcontract \textbf{OrderManager.sol} e \textbf{MoneyBoxManager.sol};
+    \item \textbf{hardhat.config.js}, locato nella cartella principale, è il file che configura la connessione alla testnet.
 \end{itemize}
 
-%to expand
