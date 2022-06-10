@@ -1,9 +1,8 @@
 \section{Conversione a Stable Coin}\label{section:stable_coin}
 
-La funzionalità di convertire l'ammontare depositato sul contratto in stable coin è un'interessante funzionalità che il gruppo ha individuato. Per limiti 
-di tempo e costi legati al progetto, non è stata implementata in tutti i suoi punti, ma è stata affrontata sul lato smart contract.\\
+La funzionalità di convertire l'ammontare depositato sul contratto in stable coin è un'interessante funzionalità che il gruppo ha individuato ed aggiunto ai requisiti.\\
 Il gruppo ha condotto quindi uno studio relativamente ai passaggi da affrontare per attuare il meccanismo di conversione dei token\glo{}.
-Prima di procedere è necessario descrivere e comprendere alcune componenti fondamentali che saranno necessarie:
+Prima di procedere è necessario descrivere e comprendere alcune componenti fondamentali che sono necessarie:
 
 \begin{itemize}
     \item Wrapped FTM: è un token crypto ancorato al valore del Fantom. Viene chiamato così oerchè l'asset originale viene messo in un wrapper che consente di crearne una versione su un'altra blockchain. Questo permette di creare ponti tra diverse blockchain e utilizzare asset non nativi su  un'altra blockchain. Ovviamente in genere può essere riscattato per il corrispettivo in qualsiasi momento. Il processo di "wrapping" permette quindi di rendere il token Fantom conforme allo standard ERC-20 e poter essere, ad esempio nel nostro caso, convertito;
