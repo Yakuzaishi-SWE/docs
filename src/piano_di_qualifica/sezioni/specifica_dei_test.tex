@@ -280,10 +280,163 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \hline
     TUF62 & Si verifica che ritorni la lista dei pagamenti relativi ad una MoneyBox\glo{} correttamente (MoneyBoxOrderRepo - istanza definita).     & S \\
     TUF63 & Si verifica che ritorni la lista dei pagamenti relativi ad una MoneyBox\glo{} correttamente (MoneyBoxOrderRepo - istanza non definita). & S \\
-    TUF63 & Si verifica che ritorni l'ammontare mancante al completamento di una MoneyBox\glo{} (MoneyBoxOrderRepo - istanza definita).             & S \\
-    TUF64 & Si verifica che ritorni l'ammontare mancante al completamento di una MoneyBox\glo{} (MoneyBoxOrderRepo - istanza non definita).         & S \\
-    TUF65 & Si verifica che un'istanza di OrderStore venga creata correttamente.                                                                    & S \\
-    TUF66 & Si verifica che un ordine venga creato correttamente tramite OrderStore.                                                                & S \\
+    TUF64 & Si verifica che ritorni l'ammontare mancante al completamento di una MoneyBox\glo{} (MoneyBoxOrderRepo - istanza definita).             & S \\
+    TUF65 & Si verifica che ritorni l'ammontare mancante al completamento di una MoneyBox\glo{} (MoneyBoxOrderRepo - istanza non definita).         & S \\
+    TUF66 & Si verifica che un'istanza di OrderStore venga creata correttamente.                                                                    & S \\
+    TUF67 & Si verifica che un ordine venga creato correttamente tramite OrderStore.                                                                & S \\
+    TUF68 & Si verifica che un istanza di LockOverlayViewModel venga creata correttamente.                                                          & S \\
+    TUF69 & Si verifica che il LockOverlayViewModel sia connesso al provider (provider corretto).                                                   & S \\
+    TUF70 & Si verifica che il LockOverlayViewModel sia connesso al provider (provider non corretto).                                               & S \\
+    TUF71 & Si verifica che makeAutoObservable sia chiamata alla creazione di ConnectMetamaskViewModel.                                             & S \\
+    TUF72 & Si verifica che la funzione connect di ConnectMetamaskViewModel sia chiamata correttamente.                                             & S \\
+    TUF73 & Si verifica che la severità di MetamaskErrorViewModel sia esattamente quella data dal provider.                                         & S \\
+    TUF74 & Si verifica che il nome di MetamaskErrorViewModel sia esattamente quello dato dal provider.                                             & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                          \\
+    \hline
+    TUF75 & Si verifica che la descrizione di MetamaskErrorViewModel sia esattamente quella data dal provider.                                      & S \\
+    TUF76 & Si verifica che makeAutoObservable sia chiamata alla creazione di NavViewModel.                                                         & S \\
+    TUF77 & Si verifica che l'address sia corretto in caso di connessione al provider di NavViewModel.                                              & S \\
+    TUF78 & Si verifica che l'address sia non corretto in caso di fallita connessione al provider di NavViewModel.                                  & S \\
+    TUF79 & Si verifica che un istanza di ECommerceViewModel sia creata correttamente.                                                              & S \\
+    TUF80 & Si verifica che l'istanza di ECommerceViewModel ritorni l'amount corretto.                                                              & S \\
+    TUF81 & Si verifica che l'istanza di ECommerceViewModel ritorni i wei corretti.                                                                 & S \\
+    TUF82 & Si verifica che l'istanza di ECommerceViewModel ritorni l'id corretto.                                                                  & S \\
+    TUF83 & Si verifica che setAmount di ECommerceViewModel sia corretta.                                                                           & S \\
+    TUF84 & Si verifica che handleSubmit di ECommerceViewModel sia corretta.                                                                        & S \\
+    TUF85 & Si verifica che l'istanza di ChoiceViewModel sia creata correttamente.                                                                  & S \\
+    TUF86 & Si verifica che createOrder di ChoiceViewModel sia corretta. & S \\
+    TUF87 & Si verifica che canRedirect di ChoiceViewModel sia corretta. & S \\
+    TUF88 & Si verifica che isBusy di ChoiceViewModel sia corretta. & S \\
+    TUF89 & Si verifica che isFailed di ChoiceViewModel sia corretta. & S \\
+    TUF90 & Si verifica che setAmount di ChoiceViewModel sia corretta. & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                          \\
+    \hline
+    TUF91 & Si verifica che setId di ChoiceViewModel sia corretta. & S \\
+    TUF92 & Si verifica che un'istanza di PickAmountViewModel venga creata correttamente. & S \\
+    TUF93 & Si verifica che createMoneyBox di PickAmountViewModel sia corretta. & S \\
+    TUF94 & Si verifica che canRedirect di PickAmountViewModel ritorni false. & S \\
+    TUF95 & Si verifica che isBusy di PickAmountViewModel ritorni false. & S \\
+    TUF96 & Si verifica che setAmount di PickAmountViewModel sia corretta. & S \\
+    TUF97 & Si verifica che setId di PickAmountViewModel sia corretta. & S \\
+    TUF98 & Si verifica che setInitFTM di PickAmountViewModel sia corretta. & S \\
+    TUF99 & Si verifica che un'istanza di TransactionInitViewModel sia creata correttamente. & S \\
+    TUF100 & Si verifica che createMoneyBox di TransactionInitViewModel sia corretta. & S \\
+    TUF101 & Si verifica che setAmount di TransactionInitViewModel sia corretta. & S \\
+    TUF102 & Si verifica che setId di TransactionInitViewModel sia corretta. & S \\
+    TUF103 & Si verifica che getSellerAddress di TransactionInitViewModel sia settato all'indirizzo corretto. & S \\
+    TUF104 & Si verifica che un'istanza di MoneyBoxBalanceViewModel sia creata correttamente. & S \\
+    TUF105 & Si verifica che isBusy di MoneyBoxBalanceViewModel ritorni false. & S \\
+    TUF106 & Si verifica che balanceFTM di MoneyBoxBalanceViewModel sia settato al valore di default. & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                          \\
+    \hline
+    TUF107 & Si verifica che balanceWEI di MoneyBoxBalanceViewModel sia settato al valore di default. & S \\
+    TUF108 & Si verifica che un'istanza di MoneyBoxCountViewModel sia creata correttamente. & S \\
+    TUF109 & Si verifica che isBusy di MoneyBoxCountViewModel ritorni false. & S \\
+    TUF110 & Si verifica che count di MoneyBoxCountViewModel sia impostato al valore di default. & S \\
+    TUF111 & Si verifica che un'istanza di OrderBalanceViewModel sia creata correttamente. & S \\
+    TUF112 & Si verifica che isBusy di OrderBalanceViewModel ritorni false. & S \\
+    TUF113 & Si verifica che balanceFTM di OrderBalanceViewModel sia impostato al valore di default. & S \\
+    TUF114 & Si verifica che balanceWEI di OrderBalanceViewModel sia impostato al valore di default. & S \\
+    TUF115 & Si verifica che un'istanza di OrderCountViewModel sia creata correttamente. & S \\
+    TUF116 & Si verifica che isBusy di OrderCountViewModel sia impostato a false. & S \\
+    TUF117 & Si verifica che count di OrderCountViewModel sia impostato al valore di default. & S \\
+    TUF118 & Si verifica che un'istanza di MoneyBoxDetailsViewModel sia creata correttamente. & S \\
+    TUF119 & Si verifica che l'id di MoneyBoxDetailsViewModel venga impostato correttamente. & S \\
+    TUF120 & Si verifica che ownerAddress di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF121 & Si verifica che sellerAddress di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF122 & Si verifica che ftm di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                          \\
+    \hline
+    TUF123 & Si verifica che wei di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF124 & Si verifica che filledFtm di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF125 & Si verifica che filledWei di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF126 & Si verifica che ftmToFill di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF127 & Si verifica che weiToFill di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF128 & Si verifica che state di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF129 & Si verifica che isPaid di MoneyBoxDetailsViewModel sia impostato a false. & S \\
+    TUF130 & Si verifica che isRefunded di MoneyBoxDetailsViewModel sia impostato a false. & S \\
+    TUF131 & Si verifica che isUnlocked di MoneyBoxDetailsViewModel sia impostato a false. & S \\
+    TUF132 & Si verifica che un'istanza di OrderDetailsViewModel sia creata correttamente & S \\
+    TUF133 & Si verifica che l'id di OrderDetailsViewModel venga impostato correttamente. & S \\
+    TUF134 & Si verifica che ownerAddress di OrderDetailsViewModel sia impostato al valore di default. & S \\
+    TUF135 & Si verifica che sellerAddress di OrderDetailsViewModel sia impostato al valore di default. & S \\
+    TUF136 & Si verifica che ftm di OrderDetailsViewModel sia impostato al valore di default. & S \\
+    TUF137 & Si verifica che wei di OrderDetailsViewModel sia impostato al valore di default. & S \\
+    TUF138 & Si verifica che state di OrderDetailsViewModel sia impostato al valore di default. & S \\
+  \end{tabular}
+\end{table}
+\begin{center}
+  \textit{\small Continua nella pagina successiva}
+\end{center}
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.8}
+  \rowcolors{2}{green!100!black!40}{green!100!black!30}
+  \begin{tabular}{c|p{8cm}|c|c}
+    \rowcolor[HTML]{125E28}
+    \color[HTML]{FFFFFF}\textbf{Codice}
+          & \multicolumn{1}{c}{\color[HTML]{FFFFFF}\textbf{Descrizione}}
+          & \color[HTML]{FFFFFF}\textbf{Stato}                                                                                                          \\
+    \hline
+    TUF139 & Si verifica che isPaid di OrderDetailsViewModel sia impostato a false. & S \\
+    TUF140 & Si verifica che code di MoneyBoxDetailsViewModel sia impostato al valore di default. & S \\
+    TUF141 & Si verifica che un'istanza di TransactionListElViewModel sia creata correttamente. & S \\
+    TUF142 & Si verifica che id di TransactionListElViewModel sia impostato al valore di default. & S \\
+    TUF143 & Si verifica che il tipo di ordine di TransactionListElViewModel sia corretto. & S \\
+    TUF144 & Si verifica che lo stato dell'ordine di TransactionListElViewModel sia corretto. & S \\
+    TUF145 & Si verifica che transaction di TransactionListElViewModel ritorni l'ordine corretto. & S \\
   \end{tabular}
   \caption{Test di unità - Frontend}
 \end{table}
@@ -435,6 +588,45 @@ gruppo che dall'azienda proponente, sotto supervisione del gruppo stesso.
     \hline
     TUF66 & shopchain-frontend/src/core/modules/order/store/implementations/\_\_test\_\_/\newline OrderStore.test.ts:it("should create an order store", ...) \\
     TUF67 & shopchain-frontend/src/core/modules/order/store/implementations/\_\_test\_\_/\newline OrderStore.test.ts:it("createOrder", ...)                  \\
+    TUF68 & shopchain-frontend/src/application/layout/LockOverlay/LockOverlayViewModel\newline LockOverlayViewModel.test.ts:it("creates LockOverlayViewModel",...) \\
+    TUF69 & shopchain-frontend/src/application/layout/LockOverlay/LockOverlayViewModel\newline LockOverlayViewModel.test.ts:it("successful", ()...) \\
+    TUF70 & shopchain-frontend/src/application/layout/LockOverlay/LockOverlayViewModel\newline LockOverlayViewModel.test.ts:it("not successful",..) \\
+    TUF71 & shopchain-frontend/src/application/layout/Nav/ConnectMetamask/ConnectMetamaskViewModel\newline ConnectMetamaskViewModel.test.ts:it("should call makeAutoObservable at creation",...) \\
+    TUF72 & shopchain-frontend/src/application/layout/Nav/ConnectMetamask/ConnectMetamaskViewModel\newline ConnectMetamaskViewModel.test.ts:it("should call connect",...) \\
+    TUF73 & shopchain-frontend/src/application/layout/Nav/MetamaskError/MetamaskErrorViewModel\newline MetamaskErrorViewModel.test.ts:itit("should return severity",...) \\
+    TUF74 & shopchain-frontend/src/application/layout/Nav/MetamaskError/MetamaskErrorViewModel\newline MetamaskErrorViewModel.test.ts:itit("should return name",...) \\
+    TUF75 & shopchain-frontend/src/application/layout/Nav/MetamaskError/MetamaskErrorViewModel\newline MetamaskErrorViewModel.test.ts:itit("should return description",...) \\
+    TUF76 & shopchain-frontend/src/application/layout/Nav/NavViewModel/NavViewModel.test.ts\newline :it("should call makeAutoObservable at creation",...) \\
+    TUF77 & shopchain-frontend/src/application/layout/Nav/NavViewModel/NavViewModel.test.ts\newline :it("should return the address",...OK) \\
+    TUF78 & shopchain-frontend/src/application/layout/Nav/NavViewModel/NavViewModel.test.ts\newline :it("should return the address",...FAIL) \\
+    TUF79 & shopchain-frontend/src/application/pages/ECommerce/ECommerceViewModel.test.ts\newline :it("should create an instance",...) \\
+    TUF80 & shopchain-frontend/src/application/pages/ECommerce/ECommerceViewModel.test.ts\newline :it("should return amount",...) \\
+    TUF81 & shopchain-frontend/src/application/pages/ECommerce/ECommerceViewModel.test.ts\newline :it("should return wei",...) \\
+    TUF82 & shopchain-frontend/src/application/pages/ECommerce/ECommerceViewModel.test.ts\newline :it("should return id",...) \\
+    TUF83 & shopchain-frontend/src/application/pages/ECommerce/ECommerceViewModel.test.ts\newline :it("should call setAmount",...) \\
+    TUF84 & shopchain-frontend/src/application/pages/ECommerce/ECommerceViewModel.test.ts\newline :it("should call handleSubmit",...) \\
+    TUF85 & shopchain-frontend/src/application/pages/TransactionInit/Choice/ChoiceViewModel.test.ts\newline :it("should create an instance",...) \\
+    TUF86 & shopchain-frontend/src/application/pages/TransactionInit/Choice/ChoiceViewModel.test.ts\newline :it("should call createOrder",...) \\
+    TUF87 & shopchain-frontend/src/application/pages/TransactionInit/Choice/ChoiceViewModel.test.ts\newline :it("should return canRedirect",...) \\
+    TUF88 & shopchain-frontend/src/application/pages/TransactionInit/Choice/ChoiceViewModel.test.ts\newline :it("should return isBusy",...) \\
+    TUF89 & shopchain-frontend/src/application/pages/TransactionInit/Choice/ChoiceViewModel.test.ts\newline :it("should return isFailed",...) \\
+    TUF90 & shopchain-frontend/src/application/pages/TransactionInit/Choice/ChoiceViewModel.test.ts\newline :it("setAmount",...) \\
+    TUF91 & shopchain-frontend/src/application/pages/TransactionInit/Choice/ChoiceViewModel.test.ts\newline :it("setId",...) \\
+    TUF92 & shopchain-frontend/src/application/pages/TransactionInit/PickAmount/PickAmountViewModel.test.ts\newline :it("should create an instance",...) \\
+    TUF93 & shopchain-frontend/src/application/pages/TransactionInit/PickAmount/PickAmountViewModel.test.ts\newline :it("should call createMoneyBox",...) \\
+    TUF94 & shopchain-frontend/src/application/pages/TransactionInit/PickAmount/PickAmountViewModel.test.ts\newline :it("should return canRedirect",...) \\
+    TUF95 & shopchain-frontend/src/application/pages/TransactionInit/PickAmount/PickAmountViewModel.test.ts\newline :it("should return isBusy",...) \\
+    TUF96 & shopchain-frontend/src/application/pages/TransactionInit/PickAmount/PickAmountViewModel.test.ts\newline :it("should call setAmount",...) \\
+    TUF97 & shopchain-frontend/src/application/pages/TransactionInit/PickAmount/PickAmountViewModel.test.ts\newline :it("should call setId",...) \\
+    TUF98 & shopchain-frontend/src/application/pages/TransactionInit/PickAmount/PickAmountViewModel.test.ts\newline :it("should call setInitFTM",...) \\
+    TUF99 & shopchain-frontend/src/application/pages/TransactionInit/TransactionInitViewModel.test.ts\newline :it("",...) \\
+    TUF100 & shopchain-frontend/src/application/pages/TransactionInit/TransactionInitViewModel.test.ts\newline :it("",...) \\
+    TUF101 & shopchain-frontend/src/application/pages/TransactionInit/TransactionInitViewModel.test.ts\newline :it("",...) \\
+    TUF102 & shopchain-frontend/src/application/pages/TransactionInit/TransactionInitViewModel.test.ts\newline :it("",...) \\
+    TUF103 & shopchain-frontend/src/application/pages/TransactionInit/TransactionInitViewModel.test.ts\newline :it("",...) \\
+    TUF104 & shopchain-frontend/src/application/pages/TransactionInit/TransactionInitViewModel.test.ts\newline :it("",...) \\
+
+
   \end{tabular}
   \caption{Tracciamento test di unità - Frontend}
 \end{table}
