@@ -5,7 +5,6 @@ Essa consiste in un frontend Web che effettua chiamate dirette ad una infrastrut
 nostro caso una gerarchia di smartcontracts eseguiti su blockchain Fantom; 
 questa struttura ricorda quindi una architettura client-server, senza un supporto intermedio per le operazioni.
 \\
-\\
 Il pattern architetturale\glo scelto dal gruppo per lo sviluppo del frontend è il Model-View-ViewModel\glo. Il
 seguente pattern è tra i più diffusi nello sviluppo delle web application e permette di scrivere codice
 facilmente mantenibile e riusabile; questo è possibile grazie al forte disaccoppiamento che sussiste tra
@@ -73,13 +72,13 @@ Stessa cosa accade a livello di \textbf{ContractStore}, ma in maniera più sempl
 \end{figure}
 \end{landscape}
 
-Da \textbf{RootStore}, dipendono poi la grande maggioranza delle classi ViewModel, ognuna con una sua interfaccia, etc..
+Da \textbf{RootStore}, dipendono poi la grande maggioranza delle classi ViewModel, ognuna con una sua interfaccia, che si occupano di gestire le chiamate dalla vista e apportare cambiamenti alla stessa.
 
 \subsubsection{Classi Solidity}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{immagini/smartcontract.png}
+    \includegraphics[scale = 0.5]{immagini/solidity.png}
     \caption{Le classi Solidity}
 \end{figure}
 
@@ -90,10 +89,12 @@ Esso è costituito da due classi:
     \item \textbf{MoneyBoxManager}, si occupa della gestione delle Moneybox, anche esse mappate; essendo un'estensione di OrderManager, ne eredita tutti i metodi.
 \end{itemize}
 
+I primi sei attributi di \textbf{OrderManager}, e le funzioni \textit{isStableCoinPegged()}, \textit{getPriceStableCoin()} e \textit{stablecoinIsPegged()} 
+servono alla conversione in stable coin\glo\ del pagamento effettuato in FTM, per garantire una maggiore stabilità della transazione. Per maggiori informazioni sulla implementazione della conversione in questo progetto, si visiti la sezione dedicata §\ref{section:stable_coin}.\\
 Tra i metodi, \textit{refund(string memory id)} si occupa di ritornare ai vari proprietari degli ordini 
 (e a tutti i partecipanti nel caso di una MoneyBox) le somme di FTM interne al particolare contratto, identificato tramite \textit{id}.
 \\
-Per maggiori informazioni sulla parte dell'applicazione relativa alla Blockchain, si invita a consultare la sezione §\ref{section:blockchain}.
+Per maggiori informazioni sulla parte generale dell'applicazione relativa alla Blockchain, si invita a consultare la sezione §\ref{section:blockchain}.
 
 
 
