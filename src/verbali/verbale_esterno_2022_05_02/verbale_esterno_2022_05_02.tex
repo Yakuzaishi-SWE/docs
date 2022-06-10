@@ -1,0 +1,39 @@
+\input{../../template/source/packages}
+\input{../../template/source/commands}
+\input{../../template/source/styles}
+
+\begin{document}
+	%RIDEFINIZIONE COMANDI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\renewcommand{\documentName}{Verbale esterno del \documentDate}
+	\renewcommand{\documentDate}{2022-05-02}
+	
+	\renewcommand{\documentApprovers}{Matteo Midena}
+	\renewcommand{\documentEditors}{Luca Carturan}
+	\renewcommand{\documentVerifiers}{Michele Filosofo}
+	\renewcommand{\documentAddressee}{Gruppo \groupName{}, \\&\commitNameM{}, \\&\commitNameS{}}
+	
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentSummary}{Vengono riportati gli argomenti discussi durante la riunione.}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%PRIMA PAGINA
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{gobble}
+	\pagestyle{empty}
+	\input{../template/source/firstpage}
+	\pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%INDICE
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents \pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CONTENUTO
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagestyle{styleDocPages}
+	\input{contenuto/contenuto}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
