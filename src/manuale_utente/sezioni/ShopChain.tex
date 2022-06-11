@@ -8,7 +8,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.2]{immagini/trePannelli.png}
+    \includegraphics[scale=0.5]{immagini/trePannelli.png}
     \caption{Schema a tre pannelli}
 \end{figure}
 
@@ -29,6 +29,13 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         \centering
         \includegraphics[scale=0.4]{immagini/MetaMaskLayer.png}
         \caption{Overlay "METAMASK NON CONNESSO"}
+    \end{figure}
+    \textbf{}\\
+    Una volta connessi, il proprio indirizzo verrà visualizzato sotto forma di stringa di Emoji e al passaggio del mouse sotto forma di semplice stringa.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.7]{immagini/emoji.png}
+        \caption{Indirizzo Emoji e stringa}
     \end{figure}
     \textbf{}\\
     L'icona a sinistra dell'indirizzo del portafoglio segnala appunto lo stato della connessione alla rete Fantom\glo{}.\\
@@ -55,7 +62,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         La home di \projectName{} contiene solamente alcune informazioni riguardanti il sito stesso.
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.3]{immagini/Home.png}
+            \includegraphics[scale=0.5]{immagini/Home.png}
             \caption{HomePage di \projectName{}}
         \end{figure}
         \textbf{}\\
@@ -88,7 +95,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         A questo punto ci troveremo davanti alla pagina di scelta della modalità del pagamento:
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.2]{immagini/Checkout/PaymentMode.png}
+            \includegraphics[scale=0.4]{immagini/Checkout/PaymentMode.png}
             \caption{Pagina di scelta modalità di pagamento}
         \end{figure}
         \textbf{}\\
@@ -103,7 +110,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             Cliccando il tasto \texttt{"Pay Alone"} verrà aperto un popup dall'estensione MetaMask con i dettagli del pagamento e la possibilità di confermare o annullare il pagamento. Un overlay di caricamento apparirà nella pagina \projectName{} fintantoché la transazione non sarà conclusa come mostrato nella figura seguente:
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.2]{immagini/Checkout/SinglePaymentLayer.png}
+                \includegraphics[scale=0.4]{immagini/Checkout/SinglePaymentLayer.png}
                 \caption{Fase di pagamento singolo}
             \end{figure}
             \textbf{}\\
@@ -117,7 +124,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             Da qui sarà possibile visualizzare il dettaglio della transazione semplicemente cliccando il link \texttt{"See your transaction here"} attraverso il quale si verrà reindirizzati alla pagina mostrata di seguito:
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.2]{immagini/Checkout/SinglePaymentDetails.png}
+                \includegraphics[scale=0.4]{immagini/Checkout/SinglePaymentDetails.png}
                 \caption{Dettaglio transazione singola}
             \end{figure}
             \textbf{}\\
@@ -131,7 +138,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             Cliccando il tasto \texttt{"Create MoneyBox"} verrà scelta la modalità di pagamento MoneyBox e la pagina mostrata sarà la seguente:
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.2]{immagini/Checkout/MoneyBoxCheckout.png}
+                \includegraphics[scale=0.4]{immagini/Checkout/MoneyBoxCheckout.png}
                 \caption{Pagina Checkout MoneyBox}
             \end{figure}
             \textbf{}\\
@@ -148,7 +155,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             A questo punto verrà aperto un popup dall'estensione MetaMask con i dettagli del pagamento e la possibilità di confermare o annullare il pagamento. Un overlay di caricamento apparirà nella pagina \projectName{} fintantoché la transazione non sarà conclusa, come mostrato nella figura seguente:
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.2]{immagini/Checkout/MoneyBoxLayer.png}
+                \includegraphics[scale=0.15]{immagini/Checkout/MoneyBoxLayer.png}
                 \caption{Fase di pagamento MoneyBox}
             \end{figure}
             \textbf{}\\
@@ -162,7 +169,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             Da qui sarà possibile visualizzare il dettaglio della transazione semplicemente cliccando il link \texttt{"See your transaction here"} attraverso il quale si verrà reindirizzati alla pagina mostrata di seguito:
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.2]{immagini/Checkout/MoneyBoxDetails.png}
+                \includegraphics[scale=0.4]{immagini/Checkout/MoneyBoxDetails.png}
                 \caption{Dettaglio transazione MoneyBox}
             \end{figure}
             \textbf{}\\
@@ -184,14 +191,14 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
             \end{figure}
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.2]{immagini/Checkout/FilledMoneyBox.png} 
+                \includegraphics[scale=0.4]{immagini/Checkout/FilledMoneyBox.png} 
                 \caption{Dettaglio MoneyBox in stato \texttt{"Paid"}}
             \end{figure}
             \textbf{}\\
             Da quest'ultima figura in particolare è possibile notare la comparsa del bottone di sblocco e la scomparsa del box per contribuire alla MoneyBox poiché, in quanto già piena, non è più possibile inserire denaro al suo interno.\\\\
             Da qui sarà quindi possibile sbloccare il denaro attraverso un codice di sblocco (una volta ricevuto l'ordine) o chiedere il rimborso (qualora l'ordine non venga mai recapitato) mediante gli appositi bottoni.
             \subsubsection{Sblocco e Rimborso}
-       Sia nel caso di \texttt{sblocco} che nel caso di \texttt{rimborso}, al click dell'apposito bottone si aprirà un popup in quanto quella che si compie in questa fase è un'operazione irreversibile e dunque considerata sensibile.\\\\
+        Sia nel caso di \texttt{sblocco} che nel caso di \texttt{rimborso}, al click dell'apposito bottone si aprirà un popup in quanto quella che si compie in questa fase è un'operazione irreversibile e dunque considerata sensibile.\\\\
         Nel caso di \textbf{sblocco} verrà mostrato un popup che mostrerà il codice di sblocco e un'input box nella quale replicare tale codice con l'aggiunta di due tasti per la conferma dell'inserimento del codice o la chiusura del popup stesso:
         \begin{figure}[H]
             \centering
@@ -221,7 +228,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         \end{itemize}
         \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.2]{immagini/Transaction/YourTransaction.png}
+        \includegraphics[scale=0.4]{immagini/Transaction/YourTransaction.png}
         \caption{Pagina Your Transactions}
         \end{figure}
         \paragraph{Inbound Transactions}
@@ -229,7 +236,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         \textbf{N.B.} \textit{L'utente venditore potrà vedere esclusivamente le transazioni già pagate.}\\
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.4]{immagini/Transaction/inboundTransactions.png}
+            \includegraphics[scale=0.3]{immagini/Transaction/inboundTransactions.png}
             \caption{Pagina Inbound Transactions}
         \end{figure}
         \paragraph{Filtri nelle pagine Transactions}
@@ -274,7 +281,7 @@ La figura seguente evidenzia in maniera specifica i tre pannelli usando i colori
         \textbf{}\\
         In dettaglio, le transazioni presentano le proprie informazioni più importanti, quali:
         \begin{itemize}
-             \item \textbf{Id del pagamento}: univoco, cliccabile, che rimanda alla pagina di riepilogo della transazione;
+            \item \textbf{Id del pagamento}: univoco, cliccabile, che rimanda alla pagina di riepilogo della transazione;
             \item \textbf{Indirizzo wallet acquirente} (o nel caso della MoneyBox, indirizzo del creatore della MoneyBox);
             \item \textbf{Icona che identifica il tipo del pagamento};
             \item \textbf{Icona che identifica lo stato del pagamento} (pagato, non pagato o rimborsato);
