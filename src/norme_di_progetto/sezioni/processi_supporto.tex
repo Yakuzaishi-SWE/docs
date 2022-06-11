@@ -27,6 +27,7 @@ Il template in particolare definisce la prima pagina, il registro delle modifich
 \subparagraph{Struttura del documento}
 In questa sezione viene descritta la struttura dei documenti. Questi ultimi sono stati suddivisi in due macrofamiglie la cui struttura differisce in alcune parti. Le due macrofamiglie vengono identificate come \textit{verbali} e \textit{documentazione}.
 \subparagraph{Verbali}
+
 I \textit{verbali} vengono redatti successivamente alla riunione del gruppo oppure dopo un incontro con il proponente, essi contengono il rapporto dettagliato delle tematiche discusse durante il meeting.
 Prevedono una singola stesura, dato che contengono delle decisioni che non vengono modificate successivamente.
 
@@ -283,15 +284,6 @@ il cui significato viene spiegato nel seguito:
     \item \textbf{Y}: versione controllata, sottoposta a revisione da parte del \roleVerifierLow{} del documento;
     \item \textbf{Z}: versione modificata dal redattore del documento, seguita da una verifica di quanto scritto.
 \end{itemize}
-Per quanto riguarda il prodotto software, oltre a quanto descritto precedentemente, vengono aggiunti ancora 2 parametri trasformando il codice in un codice numerico di 5 cifre come segue:
-\begin{center}
-    \Large \textbf{[X].[Y].[Z]-[A].[B]}
-\end{center}
-in cui il significato dei primi tre numeri rimane inalterato rispetto a quanto spiegato prima, mentre per i due successivamente aggiunti:
-\begin{itemize}
-    \item \textbf{A}: Indica una versione completa e funzionante del prodotto che supera tutti i test, soddisfa le metriche e implementa i requisiti obbligatori;
-    \item \textbf{B}: Cresce al raggiungimento degli obiettivi degli incrementi pianificati nel \docNamePdPLow{}.
-\end{itemize}
 
 \subparagraph{Metriche del codice di versione}
 Le cifre del codice di versione precedentemente descritte seguono una particolare metrica di avanzamento:
@@ -301,7 +293,6 @@ Le cifre del codice di versione precedentemente descritte seguono una particolar
           \begin{itemize}
               \item Se la cifra \textbf{X} viene modificata, le cifre \textbf{Y} e \textbf{Z} ritornano al valore 0;
               \item Se la cifra \textbf{Y} viene modificata, la cifra \textbf{Z} ritorna al valore 0;
-              \item Le cifre \textbf{A} e \textbf{B} possono solo incrementare il loro valore.
           \end{itemize}
 \end{enumerate}
 
@@ -345,7 +336,9 @@ La separazione del flusso di lavoro tra i vari documenti da redarre permette una
 \end{itemize}
 
 
+
 \subparagraph{Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend e
+
     \\ Yakuzaishi-SWE/smart-contract}
 Yakuzaishi-SWE/shopchain, Yakuzaishi-SWE/shopchain-frontend{} e Yakuzaishi-SWE/smart-contract{} sono organizzate allo stesso modo. In particolare:
 \begin{itemize}
@@ -423,7 +416,9 @@ Durante questo processo, il compito dei verificatori è quello di effettuare l'a
     \item \textbf{Analisi dinamica}: processo di valutazione di un sistema software o di un suo componente basato sull'osservazione del suo comportamento in esecuzione. Questo tipo di analisi viene generalmente chiamato testing e per motivi logici non può essere svolta sui documenti.
 \end{itemize}
 \subsubsection{Istanziazione del processo}
+
 \paragraph{Verifica della documentazione}
+
 Il processo di verifica della documentazione può essere svolto mediante l'uso di strumenti automatici, oppure può essere condotta a mano. In questo secondo caso si possono utilizzare due diverse tecniche di analisi descritte nel seguito:
 \begin{itemize}
     \item \textbf{Walktrough}: Il \roleVerifierLow{} esegue un controllo completo del documento alla ricerca di eventuali errori;
