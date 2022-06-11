@@ -21,9 +21,9 @@ accedere al valore corrente del ViewModel in qualsiasi porzione della View, senz
 componente in componente attraverso le props (ossia gli argomenti dei componenti che compongono la
 vista). Nella radice dell'applicazione viene infatti creata un'istanza del ViewModel, che viene passata
 ad un Context.Provider, che fa da contenitore per tutta la View. All'interno di tale contenitore ogni
-componente puo' utilizzare un hook per accedere al Context React ed utilizzare il valore più recente del ViewModel.
+componente può utilizzare un hook per accedere al Context React ed utilizzare il valore più recente del ViewModel.
 
-E' stato scelto di utilizzare un Context React per il passaggio dei dati in quanto la nostra applicazione è
+È stato scelto di utilizzare un Context React per il passaggio dei dati in quanto la nostra applicazione è
 molto profonda e non risultava conveniente passare i dati per molti componenti rischiando, nel peggiore
 dei casi, di doverli utilizzare nell'ultimo della gerarchia.
 Per poter fare in modo che una componente della View si renderizzi non solo al cambiamento del

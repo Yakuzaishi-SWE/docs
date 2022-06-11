@@ -1,0 +1,61 @@
+
+
+\section{Introduzione} \label{section:introduzione}
+\subsection{Scopo del documento}
+Il fine di questo documento è quello di creare una linea guida per gli sviluppatori che andranno ad estendere o a manutenere il prodotto \textit{ShopChain}.
+Di seguito lo sviluppatore troverà nel documento tutte le informazioni riguardanti i linguaggi e le tecnologie utilizzate, l'architettura del sistema e le scelte progettuali effettuate per il prodotto.
+Questo documento ha anche il fine di illustrare la procedura di avvio dell' applicazione.
+\subsection{Scopo del prodotto}
+L'avvento delle tecnologie blockchain\glo{} ha portato e porterà nei prossimi anni a grandi cambiamenti nella società.
+In particolare, ha aperto le porte a una nuova forma di finanza, la cosiddetta "DeFi" (Finanza Decentralizzata) che ha permesso a chiunque sia dotato di connessione internet di creare un wallet\glo{} e possedere quindi criptovalute\glo{}.
+Questo ha delineato due profili critici strettamente legati; da un lato il controllo del proprio portafoglio è passato completamente nelle mani dell'utente, dall'altro ha comportato la mancanza di un ente terzo che si occupi di gestire transazioni e offrire garanzie.
+\newline
+Lo scopo di \textit{ShopChain} è quindi il seguente: creare un e-commerce\glo{} basato su blockchain\glo{}, dove il pagamento avviene tramite cryptovalute\glo{}, tutelando le parti coinvolte nell'acquisto.
+\newline
+Il risultato finale è la realizzazione di un prototipo di una piattaforma integrabile con un "crypto-ecommerce\glo{}", che si occupi di gestire gli ordini dalla fase di pagamento fino alla consegna del prodotto.
+
+\subsection{Glossario}
+Per evitare ambiguità relative alle terminologie utilizzate, queste verranno evidenziati da una 'G' a pedice e riportate nel glossario alla fine del documento.
+\subsection{Riferimenti}
+\subsubsection{Riferimenti normativi}
+\begin{itemize}
+    \item Capitolato d'appalto C2 - ShopChain: Exchange platform on blockchain.
+    \begin{center}
+       \url{https://www.math.unipd.it/~tullio/IS-1/2021/Progetto/C2.pdf}
+    \end{center} 
+\end{itemize}
+
+\subsubsection{Riferimenti informativi}
+\begin{itemize}
+    \item Slide corso di Ingegneria del Software, in particolare:
+    \begin{itemize}
+        \item Slide P2 - Diagrammi delle classi e dei package
+        \begin{center}
+            \url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi%20delle%20Classi_4x4.pdf}
+        \end{center}
+        \item Slide P5 - Diagrammi di sequenza
+        \begin{center}
+            \url{https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20di%20Sequenza.pdf}
+        \end{center}
+        \item Slide L03 - Principi SOLID
+        \begin{center}
+            \url{https://www.math.unipd.it/~rcardin/sweb/2022/L03.pdf}
+        \end{center}
+        \item Slide L01 - Design pattern comportamentali
+        \begin{center}
+            \url{https://www.math.unipd.it/~rcardin/sweb/2022/L01.pdf}
+        \end{center}
+        \item Slide L02 - Design pattern architetturali: Model View Controller e derivati
+        \begin{center}
+            \url{https://www.math.unipd.it/~rcardin/sweb/2022/L02.pdf}
+        \end{center}    
+    \end{itemize}
+    \item Libreria per l'implementazione dell' observer pattern:
+    \begin{center}
+        \url{https://mobx.js.org/README.html}
+    \end{center}
+    \item Documentazione Solidity:
+    \begin{center}
+        \url{https://docs.soliditylang.org/en/v0.8.14/}
+    \end{center}
+\end{itemize}    
