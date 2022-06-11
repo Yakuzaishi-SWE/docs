@@ -1,0 +1,54 @@
+\input{../template/source/packages}
+\input{../template/source/commands}
+\input{../template/source/styles}
+
+\newglossarystyle{myaltlistgroup}{%
+	\setglossarystyle{altlistgroup}%
+}%
+
+
+\setglossarystyle{myaltlistgroup}
+
+
+\makeglossaries
+
+\begin{document}
+	%RIDEFINIZIONE COMANDI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\renewcommand{\documentName}{Manuale Utente}
+	\renewcommand{\documentVersion}{1.0.0}
+	
+	\renewcommand{\documentEditors}{Luca Busacca, Luca Carturan}
+	\renewcommand{\documentVerifiers}{Matteo Midena, Francesco Mattarello}
+	\renewcommand{\documentApprovers}{Francesco Bugno}
+	
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentAddressee}{\commitNameM\\&\commitNameS\\&\proposerName}
+	\renewcommand{\documentSummary}{Questo documento racchiude le istruzioni per l’utilizzo corretto e consapevole del software ShopChain.}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%PRIMA PAGINA
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{gobble}
+	\pagestyle{empty}
+	\input{../template/source/firstpage}
+	\pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CHANGELOG E INDICI
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{contenuto/changelog} \pagebreak
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents \pagebreak
+	\listoffigures \pagebreak
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%CONTENUTO
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagestyle{styleDocPages}
+	\input{contenuto/contenuto}
+
+	\glsaddall
+	\printglossary[nonumberlist]
+
+\end{document}
